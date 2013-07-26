@@ -1,0 +1,23 @@
+<table cellspacing="0" cellpadding="0" border="0" class="trips_list">
+	<thead>
+	  <tr>
+	    <th width="150px">{%amount_text}</th>
+	    <th width="100px">{%member_cashlog_type}</th>
+	    <th width="300px">{%member_cashlog_event}</th>
+	    <th width="150px">{%member_cashlog_time}</th>
+	  </tr>
+	</thead>
+    <tbody>
+		<volist name="cash_logsdata" id="vo">
+        <tr>
+          <td class="txc">&yen;{$vo.val|abs}</td>
+          <td class="txc"><if condition="abs($vo['val']) eq $vo['val']">{%member_cashlog_inc}<else />{%member_cashlog_dec}</if></td>
+          <td class="txc">{$vo.content|getCashContent}</td>
+          <td class="txc">{$vo.addtime}</td>
+        </tr>
+        </volist>
+		<tr>
+		<td colspan="10"><div class="jvf_page">{$page}</div></td>
+		</tr>
+	</tbody>
+</table>

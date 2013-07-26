@@ -1,0 +1,48 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>主人：</label>
+				<input type="hidden" name="main" group="member" field="id" value="{$vo.main}">
+				<input class="required" name="member_name" type="text" readonly="readonly" group="member" field="name" value="{$vo.main|getParent='Member',###}"/>
+				<a onclick="clearGroup(this);" class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>组：</label>
+				<input type="hidden" name="gid" group="friends_group" field="id" value="{$vo.gid}">
+				<input class="textInput" name="friends_group_name" type="text" readonly="readonly" group="friends_group" field="name" value="{$vo.gid|getParent='Friends_group',###}"/>
+				<a onclick="getGroup(this);" class="btnLook" href="{:U('Friends_group/lookUp/group/friends_group/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="friends_group_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>接收者：</label>
+				<input type="hidden" name="friend" group="member1" field="id" value="{$vo.friend}">
+				<input class="required" name="member1_name" type="text" readonly="readonly" group="member1" field="name" value="{$vo.friend|getParent='Member',###}"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member1/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>备注：</label>
+				<input type="text" name="remark" value="{$vo.remark}">
+			</div>
+			
+			<div class="unit">
+				<label>添加时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{$vo.addtime}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

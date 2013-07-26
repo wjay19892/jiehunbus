@@ -1,0 +1,75 @@
+<include file="Public:pagerForm" />
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>地区名称：</label>
+				<input type="text" name="name" class="medium" >
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add/level/{$level}" target="dialog" rel="__MODULE___add"><span>新增</span></a></li>
+			<li><a class="delete" href="__URL__/foreverdelete/id/{sid_node}/navTabId/__MODULE__" target="ajaxTodo" calback="navTabAjaxMenu" title="你确定要删除吗？" warn="请选择"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{sid_node}" target="dialog" rel="__MODULE___edit" warn="请选择"><span>修改</span></a></li>
+			<li class="line">line</li>
+			<li class=""><a target="dialog" href="__URL__/tree/" rel="__MODULE___tree" class="icon"><span>树形</span></a></li>
+			<li class="line">line</li>
+			<li><a class="back" href="__URL__/index/nav/back" target="navTab" rel="Region" title="地区"><span>后退</span></a></li>
+		</ul>
+		<div style="line-height: 20px;margin-left: 55px;float: left;">{$path_str}</div>
+	</div>
+
+
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="800" orderField="name" <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>>分类名称</th>
+			<th width="100">父类</th>
+			<th width="60" orderField="isdefault" <if condition="$_REQUEST._order eq 'isdefault'">class="{$_REQUEST._sort}"</if>>默认</th>
+			<th width="60" orderField="sort" <if condition="$_REQUEST._order eq 'sort'">class="{$_REQUEST._sort}"</if>>序号</th>
+			<th width="100">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td><a href="__URL__/index/pid/{$vo['id']}/" target="navTab" rel="__MODULE__">{$vo['name']}</a></td>
+				<td>{$vo['pid']|getParent='Region',###}</td>
+				<td>{$vo['isdefault']|getWhether}</td>
+				<td>
+					<div class="jvf_fl">{$vo['sort']}</div>
+                	<div style=" height: 17px; padding: 2px 6px 0 0; float:right;">
+                    	<a class="jvf_jia" href="__URL__/sortInc/id/{$vo['id']}"></a>
+                        <a class="jvf_jian" href="__URL__/sortDec/id/{$vo['id']}"></a>
+                    </div>
+                    <div class="jvf_cl"></div>
+				</td>
+				<td><a href="__URL__/edit/id/{$vo['id']}" target="dialog" rel="__MODULE___edit">编辑</a></td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
+

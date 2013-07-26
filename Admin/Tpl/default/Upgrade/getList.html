@@ -1,0 +1,38 @@
+<empty name="error">
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="400">名称</th>
+	           <th width="80">适用版本</th>
+	           <th width="80">类型</th>
+	           <th width="80">大小</th>
+			<th width="80">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['name']}</td>
+				<td>{$vo['version']}</td>
+	            <td>{$vo['type']}</td>
+				<td>{$vo['size']|byte_format}</td>
+				<td><a href="__URL__/explain/id/{$vo['id']}" target="dialog" rel="__MODULE___explain">说明</a> 
+					<eq name="vo.downstatus" value="0">
+					<a href="__URL__/down/id/{$vo['id']}" class="__MODULE___down">下载</a>
+					</eq>
+					<eq name="vo.downstatus" value="1">
+					<a href="__URL__/agreement/id/{$vo['id']}" target="dialog" rel="__MODULE___agreement">安装</a>
+					</eq>
+					<eq name="vo.downstatus" value="2">
+						<span>正在下载<span rel="downing">{$vo.downing}</span>%</span>
+					</eq>
+				</td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+<else />
+<div class="jvf_uptishi">{$error}</div>
+</empty>

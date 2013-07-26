@@ -1,0 +1,20 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	$('.article img').ieImg({maxWidth:918});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<div class="jvf_lists_detail jvf_frame">
+        	<h2 class="tc">{$data.title}</h2>
+            <p class="tc"><span class="f10">{$data.addtime|toDate}</span></p>
+        	<div class="article">
+        	{$data.content}
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="Public:footer" />

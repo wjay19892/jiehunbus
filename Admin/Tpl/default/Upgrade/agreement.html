@@ -1,0 +1,41 @@
+<script type="text/javascript">
+$(function(){
+	$('#agreement_next').unbind();
+	$('#agreement_next').click(function(){
+		var isagree = $('input[name="agree_agreement"]').attr('checked');
+		if(isagree){
+			var url = '__URL__/installation/id/{$_REQUEST["id"]}';
+			$.pdialog.reload(url);
+		}else{
+			alertMsg.error('请详细阅读说明并同意升级条款!');
+		}
+	});
+});
+</script>
+<div class="pageContent">
+		<div class="pageFormContent" layoutH="58">
+			<div style="line-height:25px;">
+			<h1>升级条款</h1>
+            <p></p>
+
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好，感谢您使用佳弗网络网站程序。您必须同意本条款才能进行升级。<br />
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您安装或以其它方式安装了本升级程序，则视为您已同意下列条款，并已和佳弗网络签定了本《升级条款》（以下简称&#8220;协议&#8221;）。如您不同意本协议中的条款，请不要升级。 <br />
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>您需要确认以下工作您已经完成：</strong><br />
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.升级前已经备份您的网站程序以及数据，方便恢复。<br />
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.确保网站没有对程序以及目录做过更改或进二次开发。<br />
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.详细阅读升级说明并已理解说明。 <br />
+              <p></p>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如因您未尽到以上应尽事宜，导致网站出现问题，或瘫痪。佳弗网络不承担任何责任！<br />
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本升级协议适用中华人民共和国有关法律。以上协议只用于建立我们的客户服务系统，以使我们能够更好的为您提供技术支持和售后服务。 <br />
+			</div>
+		</div>
+		<div class="formBar">
+			<ul style="width: 100%">
+				<li style="float: left;line-height: 25px;"><label><input type="checkbox" style="vertical-align: middle;margin-top: 0px;" name="agree_agreement">同意</label></li>
+				<li style="float: right;"><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+				<li style="float: right;"><div class="button"><div class="buttonContent"><button type="button" id="agreement_next">下一步</button></div></div></li>
+			</ul>
+		</div>
+</div>
+
+

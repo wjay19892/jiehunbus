@@ -1,0 +1,71 @@
+<include file="Public:pagerForm" />
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>级别名称：</label>
+				<input type="text" name="name" class="medium" >
+			</li>
+			<li>
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+    <!--  功能操作区域  -->
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add" target="dialog" rel="__MODULE___add"><span>新增</span></a></li>
+			<li><a class="delete" href="__URL__/foreverdelete/id/{sid_node}/navTabId/__MODULE__" target="ajaxTodo" calback="navTabAjaxMenu" title="你确定要删除吗？" warn="请选择"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{sid_node}" target="dialog" rel="__MODULE___edit" warn="请选择"><span>修改</span></a></li>
+		</ul>
+	</div>
+   <!-- 功能操作区域结束 -->
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="800" orderField="name" <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>>级别名称</th>
+			<th width="80" orderField="min" <if condition="$_REQUEST._order eq 'min'">class="{$_REQUEST._sort}"</if>>最小{&sysconfig.site_credits_name}</th>
+			<th width="80" orderField="max" <if condition="$_REQUEST._order eq 'max'">class="{$_REQUEST._sort}"</if>>最大{&sysconfig.site_credits_name}</th>
+			<th width="80" orderField="status" <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>>状态</th>
+			<th width="80">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['name']}</td>
+				<td>{$vo['min']}</td>
+				<td>{$vo['max']}</td>
+				<td>{$vo['status']|getStatus}</td>
+				<td>{$vo['status']|showStatus=$vo['id']} <a href="__URL__/edit/id/{$vo['id']}" target="dialog" rel="__MODULE___edit">编辑</a></td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
+

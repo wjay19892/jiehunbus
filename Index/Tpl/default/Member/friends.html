@@ -1,0 +1,69 @@
+<script>
+$(function(){
+	memberFriends();
+});
+</script>
+<div class="clearfix friends_gl">
+	<div class="sidebar jvf_fr">
+	    <div class="boxC jvf_frame">
+	    <h3>{%member_friends_group}</h3>
+	    <ul class="ulE">
+	    	<li id="dt_all" <if condition='$gid heq ""'>class="curr"</if>><a href="{:U('Member/friends')}">{%member_friends_all}</a> [<span id="fcount">{$total}</span>]</li>
+	        <volist name="friendgroups" id="vo">
+	        <li gid="{$vo.id}" <eq name="gid" value="$vo['id']">class="curr"</eq>>
+	        	<div class="lis">
+	        	<a class="mr5 groupname jvf_onlin jvf_fl maxw" href="{:U('Member/friends/gid/'.$vo['id'])}">{$vo.name}</a>
+	          <span class="jvf_fl">[{$vo.count}]</span>
+	          
+	        	</div>
+	          <div class="jvf_cl"></div>
+	        </li>
+	        </volist>
+	        <li id="dt_ng" <eq name="gid" value="0">class="curr"</eq>><a href="{:U('Member/friends/gid/0')}">{%no_group}</a> [<span id="fcount">{$ngcount}</span>]</li>
+	    </ul>
+	    <div class="addBox"></div>
+	    <div class="pd5">
+	      <span class="cp addImg">{%member_friends_add_group}</span></div>
+	    </div>
+	</div>
+                          
+                          
+                          
+     <div class="clearfix jvf_fl friends_list">
+     <div class="contentB p_lr_10">
+    <div class="friList mb10" id="friList">
+      <empty  name='friendsdata'>
+        <div style="width:510px;" id="like_space" class="block-space shop_all">
+                <div class="index-space">
+                    <i></i>您在这里还没有结识新的朋友。赶快行动起来，和他们一起分享快乐吧！
+                </div>
+        </div>
+    <else />
+       <volist name="friendsdata" id="vo">
+       		<dl uid="{$vo.frienddata.id}" class="clearfix nadlA">
+           <div class="jvf_fl friends_im"><a href="{:U('User/space/id/'.$vo['frienddata']['id'])}" class="img_50 _cardshow"><img width="50" height="50" src="{$vo.frienddata.header.thumbnail}"></a></div>
+             <div class="nadlCon">
+               <div class="nadlCon_l jvf_fl">
+                 <p class="mb5"> <a href="{:U('User/space/id/'.$vo['frienddata']['id'])}" class="b _cardshow">{$vo.frienddata.name}</a> </p>
+                 <p class="mb5"></p>
+                 <p>{%be_concerned}：<span class="mr20">{$vo.frienddata.attention_num}</span>{%last_sign}: {$vo.frienddata.lastlog.addtime|toDateRefer}</p>
+               </div>
+               <div class="nadlCon_r jvf_fl pr">
+                   <a href="javascript:;" class="link_down" title="{%member_friends_re_group}"><empty name="vo.groupdata"><span>{%no_group}</span><else /><span class="jvf_onlin maxw">{$vo.groupdata.name}</span></empty></a>
+               </div>
+               <div class="nadlCon_c jvf_fr pr">
+                 <p class="mb5"><img src="../Public/images/feed/mnfollow.png"></p>
+               </div>
+               <div class="jvf_cl"></div>
+             </div>
+       </dl>
+       </volist>
+       </empty>
+       </div>
+       <div class="jvf_page">
+		{$page}
+		</div>
+       <div class="mb10 clearfix"></div>
+     </div>
+ </div>   
+</div>

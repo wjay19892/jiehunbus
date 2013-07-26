@@ -1,0 +1,74 @@
+<form id="pagerForm" action="__URL__/lookUp">
+	<input type="hidden" name="pageNum" value="1" />
+</form>
+<div class="pageHeader">
+	<form rel="pagerForm" method="post" action="__URL__/lookUp" onsubmit="return dwzSearch(this, 'dialog');">
+	<input type="hidden" name="dialogId" value="{$_REQUEST.dialogId}">
+	<input type="hidden" name="group" value="{$_REQUEST.group}">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>用户帐号：</label>
+				<input type="text" name="name" class="medium" >
+			</li>
+			<li>
+				<label>电子邮件：</label>
+				<input type="text" name="mail" class="medium" >
+			</li>
+			<li>
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="">所有</option>
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+
+	<table class="table" layoutH="118" targetType="dialog" width="100%">
+		<thead>
+		<tr>
+			<th width="40">编号</th>
+			<th width="100" orderField="name" <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>>用户帐号</th>
+            <th width="150" orderField="mail" <if condition="$_REQUEST._order eq 'mail'">class="{$_REQUEST._sort}"</if>>电子邮件</th>
+            <th width="160" orderField="regtime" <if condition="$_REQUEST._order eq 'regtime'">class="{$_REQUEST._sort}"</if>>注册时间</th>
+			<th width="80" orderField="regip" <if condition="$_REQUEST._order eq 'regip'">class="{$_REQUEST._sort}"</if>>注册IP</th>
+            <th width="50" orderField="value" <if condition="$_REQUEST._order eq 'value'">class="{$_REQUEST._sort}"</if>>{&sysconfig.site_credits_name}</th>
+			<th width="40" orderField="status" <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>>状态</th>
+			<th width="40">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['name']}</td>
+                <td>{$vo['mail']}</td>
+                <td>{$vo['regtime']}</td>
+				<td>{$vo['regip']}</td>
+                <td>{$vo['value']}</td>
+				<td>{$vo['status']|getStatus}</td>
+				<td>
+				<a class="btnSelect" href="javascript:lookUpBack({:getJsStr($vo,array('id','name','mail'))},'{$_REQUEST.dialogId}','{$_REQUEST.group}')" title="查找带回">选择</a>
+				</td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="dialog" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>

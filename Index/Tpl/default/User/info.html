@@ -1,0 +1,126 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	userInfo();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<!--资料-->
+            <h2 class="jvf_space_tit">{%ta_information}</h2>
+            <div class="jvf_info">
+            	<div class="jvf_info_tit">{%basic_info}</div>
+                <div class="jvf_info_con">
+                    <ul class="clearfix">
+                        <li><label>{%username_text}：</label>{$userdata.name}</li>
+                        <li><label>{%level_text}：</label>{$userdata.level.name}</li>
+                        <li class="meber_name"><label>{%gender}：<eq name="userdata.sex" value="0"><span class="jvf_ico unman linebl vmid"></span></eq>
+							       	<eq name="userdata.sex" value="1"><span class="jvf_ico man linebl vmid"></span></eq>
+							       	<eq name="userdata.sex" value="2"><span class="jvf_ico woman linebl vmid"></span></eq>
+       					</li>
+                        <li><label>{%mail_text}：</label>{$userdata.mail}</li>
+                        <li><label>{%reg_time}：</label>{$userdata.regtime|toDateRefer}</li>
+                        <li><label>{%goods_index_last_login_time}：</label>{$userdata.lastlog.addtime|dgmdate}</li>
+                    </ul>
+                    <p><label>{%homeland}：</label>{$userdata.address}</p>
+                    <p><label>{%common_position}：</label>{$userdata.location.address}</p>
+                    <p><label>{%personalized_signature}：</label>{$userdata.self_introduction}</p>
+                </div>
+                <div class="jvf_info_tit">{%member_edit_help}</div>
+                <div class="jvf_info_con">
+                	<ul class="clearfix" style="border-bottom:none;">
+                        <volist name="mattlist" id="att">
+			                <li class="bder_topno">
+			                    <label for="user_att{$att.id}">{$att.key}：</label>
+			                    <if condition="$att['type'] eq 0"><!-- 手动输入 -->
+			                        <empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <span>{$att.val}</span>
+			                        </empty>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 1">
+			                        <empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <span>{$att.val}</span>
+			                        </empty>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 2">
+			                        <empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <span>{$att.val}</span>
+			                        </empty>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 3"><!-- 文本域 -->
+			                    	<empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <span>{$att.val}</span>
+			                        </empty>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 4">
+			                    <empty name="att.val">
+		                        <span>{$att.default}</span>
+		                        <else />
+		                        <iterate name="att.val" id="val">
+		                        <span>{$val}</span>
+		                        </iterate>
+		                        </empty>
+			                    </if>     
+			                                                   
+			                    <if condition="$att['type'] eq 5"><!-- 图片域 -->
+			                        <empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <img src="__ROOT__{$att.val}">
+			                        </empty>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 6"><!-- 日历控件 -->
+			                        <empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <span>{$att.val}</span>
+			                        </empty>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 7"><!-- 编辑器 -->
+			                        <empty name="att.val">
+			                        <span>{$att.default}</span>
+			                        <else />
+			                        <span>{$att.val}</span>
+			                        </empty>      
+			                    </if>
+			                    <div class="form_helper">{$att.explain}</div>
+			                </li>
+			                </volist>
+                     </ul>
+                </div>
+                <div class="jvf_info_tit">{%user_quanzi}</div>
+                <div class="user_quanzi">
+                	<volist name="mycircle" id="vo">
+		        	<a class="qz qzlist" href="{:U('Circle/index/lid/'.$vo['id'])}" target="_blank">{$vo.name}</a>
+		        	</volist>
+                </div>
+                <div class="jvf_info_tit">{%user_biaoqian}</div>
+                <div class="user_biaoqian">
+					<volist name="mylabel" id="vo">
+		        	<a class="bq bqlist" href="{:U('Circle/index/lid/'.$vo['id'])}" target="_blank">{$vo.name}</a>
+		        	</volist>                	
+                </div>
+            <!--资料-->
+            </div>
+       </div>
+       <include file="User:right" />
+       </div>
+	</div>
+</div>
+<include file="Public:footer" />

@@ -1,0 +1,93 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品标题：</label>
+				<input type="text" class="required" name="title" style="width: 385px;" value="{$vo.title}">
+			</div>
+            
+            <div class="unit">
+				<label>分类：</label>
+				<SELECT name="category" class="combox">
+					<option value="">无</option>
+					<volist name="list" id="v">
+					<php>$n = (substr_count($vo['path'],',') - 1) * 24 + 3</php>
+						<option value="{$v.id}" <eq name="v.id" value="$vo['category']">selected="selected"</eq>>{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$vo.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+         
+			<div class="unit">
+				<label>地区：</label>
+				<SELECT name="region" class="combox">
+					<option value="">无</option>
+					<volist name="region" id="v">
+					<php>$n = (substr_count($vo['path'],',') - 1) * 24 + 3</php>
+						<option value="{$v.id}" <eq name="v.id" value="$vo['region']">selected="selected"</eq>>{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$vo.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>发布者：</label>
+				<input type="hidden" name="promulgator" group="member" field="id" value="{$vo.promulgator}">
+				<input name="member_name" type="text" readonly="readonly" group="member" field="name" value="{$vo.promulgator|getParent='Member',###}" />
+				<a class="btnLook" href="{:U('Member/lookUp/isbusiness/1/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>数量：</label>
+				<input type="text" class="digits textInput valid" name="num" value="{$vo.num}">
+			</div>
+			
+			<div class="unit" id="price">
+				<label>价格：</label>
+				<input type="text" class="number textInput valid" name="price" value="{$vo.price}">
+			</div>
+			
+			<div class="unit">
+				<label>描述：</label>
+				<textarea rows="2" cols="60" name="description" class="textInput">{$vo.description}</textarea>
+			</div>
+			
+			<div class="unit">
+				<label>姓名：</label>
+				<input type="text" class="textInput" name="name" id="name" value="{$vo.name}">
+			</div>
+			
+			<div class="unit">
+				<label>邮箱：</label>
+				<input type="text" class="textInput" name="mail" id="mail" value="{$vo.mail}">
+			</div>
+            
+            <div class="unit">
+				<label>电话：</label>
+				<input type="text" class="textInput" name="phone" id="phone" value="{$vo.phone}">
+			</div>
+            
+            <div class="unit">
+				<label>发布时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{$vo.addtime}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1" <eq name="vo.state" value="1">selected="selected"</eq>>已处理</option>
+					<option value="0" <eq name="vo.state" value="0">selected="selected"</eq>>未处理</option>
+				</SELECT>
+			</div>
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

@@ -1,0 +1,46 @@
+	 <!--发表感受-->
+<div class="jvf_frame detail_left_con clearfix">
+	<div class="jvf_sendcnt_tit">{%jvf_sendcnt_tit}</div>
+	<form id="talk_aboutBox">
+	<div class="jvf_sendcnt">
+    	<div class="jvf_cntbox">
+    	<textarea tabindex="1" autocomplete="off" name="content"></textarea></div>
+    	<div class="jvf_insertfun pr clearfix">
+			<div class="jvf_fl">
+				<a href="javascript:;" id="face"><em class="inserttximg jvf_allimg"></em>{%face_text}</a>
+				<a href="javascript:;" id="imgs"><em class="insertimg jvf_allimg"></em>{%photos_text}</a>
+				<a href="javascript:;" id="label"><em class="newtopicimg jvf_allimg"></em>{%topic}</a>
+				<a href="javascript:;" id="friend"><em class="friendimg jvf_ico"></em>{%friend}</a>
+			</div>
+            <div class="together jvf_fr">
+            	<span class="hackie right_f share_published"> <span style="top:-3px; *top:0px; position: relative;">同步到：</span>  
+				<?php if($_SESSION['sina']['bind']){ ?>
+				<a class="jvf_tongbu go_sina" title="取消同步到新浪微博" href="{:U('Member/removeWeibo')}"></a>
+				<?php }else{ ?>
+				<a class="jvf_tongbu close_sina" <?php if(empty($_SESSION['sina'])){ ?>type="0"<?php } ?> title="你还没有授权新浪微博，点击去授权" href="{:U('Member/bindWeibo')}"></a>
+				<?php } ?>
+				<?php if($_SESSION['qq']['bind']){ ?>
+				<a class="jvf_tongbu go_qzone" title="取消同步到QQ空间" href="{:U('Member/removeQQ')}"></a>
+				<?php }else{ ?>
+				<a class="jvf_tongbu close_qzone" <?php if(empty($_SESSION['qq'])){ ?>type="0"<?php } ?> title="你还没有授权QQ空间，点击去授权" href="{:U('Member/bindQQ')}"></a>
+				<?php } ?>
+				</span>
+            </div>
+        </div>
+        <div class="jvf_sample_list clearfix" style="display: none;"></div>
+    </div>
+    <div class="jvf_sendbutj clearfix">
+    	<span class="jvf_quanzi jvf_fl" id="quanzhi"><span>{%circle}：</span>
+    		<volist name="oftenLabel" id="vo">
+    		<a href="javascript:;" lid="{$vo.id}">{$vo.name}</a>
+    		</volist>
+    	</span>
+		<div class="jvf_fr">
+        <span class="jvf_sendbut"><a class="jvf_allimg" href="javascript:;" id="submit">{%post_text}</a></span>
+        <span class="jvf_counttxt" id="textNum">{%can_enter}<em>140</em>{%word_text}</span>
+		</div>
+    </div>
+    </form>
+</div>
+<div class="detail_bot jvf_allimg"></div>
+ <!--发表感受-->

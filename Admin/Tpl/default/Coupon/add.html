@@ -1,0 +1,77 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label>
+				<input name="gid" type="hidden" group="goods" field="id"/>
+				<input class="required" name="title" type="text" readonly="readonly" group="goods" field="title"/>
+				<a class="btnLook" href="{:U('Goods/lookUp/group/goods/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="goods_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>发布者：</label>
+				<input type="hidden" name="promulgator" group="member" field="id">
+				<input class="required" name="member_name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/isbusiness/1/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>所属者：</label>
+				<input type="hidden" name="uid" group="member1" field="id">
+				<input class="required" name="member1_name" type="text" readonly="readonly" group="member1" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member1/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>详单：</label>
+				<input class="required" name="oid" type="text" readonly="readonly" group="order_details" field="id"/>
+				<a class="btnLook" href="{:U('Order_details/lookUp/group/order_details/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="order_details_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>序号：</label>
+				<input type="text" name="sn">
+			</div>
+			
+			<div class="unit">
+				<label>密码：</label>
+				<input type="text" name="pass">
+			</div>
+            
+            <div class="unit">
+				<label>有效期：</label>
+				<input type="text" name="starttime" class="date" readonly="true" value="{:toDateYmd(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+				<span style="float: left;" >&nbsp;～&nbsp;</span>
+				<input type="text" name="endtime" class="date" readonly="true" value="{:toDateYmd(time() + 86400*30)}"/>
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			<div class="unit">
+				<label>创建时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="0">未消费</option>
+					<option value="1">已消费</option>
+					<option value="2">已冻结</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

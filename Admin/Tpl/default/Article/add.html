@@ -1,0 +1,75 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>文章标题：</label>
+				<input type="text" class="required" name="title" style="width: 376px;">
+			</div>
+			
+            <div class="unit">
+				<label>分类：</label>
+				<SELECT name="cid" class="combox">
+					<option value="">无</option>
+					<volist name="list" id="vo">
+					<php>$n = (substr_count($vo['path'],',') - 1) * 24 + 3</php>
+						<option value="{$vo.id}" <eq name="vo.id" value="$_REQUEST['cid']">selected="selected"</eq>>{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$vo.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>外部连接：</label>
+				<input type="text" name="link" class="url" style="width: 376px;">
+			</div>
+			
+			<div class="unit">
+				<label>排序：</label>
+				<input type="text" class="digits textInput valid" name="sort">
+			</div>
+            
+   			<div class="unit">
+				<label>SEO关键字：</label>
+				<textarea rows="2" cols="60" name="keywords" class="textInput"></textarea>
+			</div>
+			<div class="unit">
+				<label>SEO描述：</label>
+				<textarea rows="2" cols="60" name="description" class="textInput"></textarea>
+			</div>
+			
+			<div class="unit">
+				<label>内容：</label>
+				<textarea class="editor" name="content" rows="15" cols="100"
+					upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" 
+					upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" 
+					upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf"
+					upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">
+				</textarea>
+			</div>
+			
+			<div class="unit">
+				<label>发表时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+            
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

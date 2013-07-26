@@ -1,0 +1,33 @@
+<div class="edit_head_top clearfix">
+     <h2> <span class="edit_icon jvf_mbpng jvf_fl"></span>
+         <p class="jvf_fl">{%member_avatar_p}</p>
+         <div class="jvf_fl">{%member_avatar_div_before}{&sysconfig.site_name}{%member_avatar_div_after}</div>
+     </h2>
+ </div>
+ <div class="edit_head_con clearfix">
+ 	<div class="edit_left jvf_fl">
+     	<div class="edit_img jvf_fl edit_bimg"><img src="{$memberdata.header.path}" /></div>
+         <div class="edit_img jvf_fl edit_simg"><img src="{$memberdata.header.thumbnail}" /></div>
+     </div>
+     
+     <div class="edit_right jvf_fr clearfix">
+     	<div class="edit_show phot_bg">
+         	<div class="show_t">{%member_avatar_h3_span}</div>
+         	<form name="avatar_upload_form" method="post" id="avatar_upload_form" enctype="multipart/form-data" action="{:U('Avatar/avatar_upload')}" style="display:none;">
+              <input type="file" name="header_pic" id="user_header_pic">
+            </form>
+             <div class="phot_bg show_img"></div>
+         </div>
+         <div class="up_img clearfix">
+         	<div class="jvf_fl ima">
+                 <div class=" im up_img1 phot_bg"><a class="phot_bg" href="javascript:;" id="cam"></a></div>
+                 <span>{%member_avatar_span}</span>
+             </div>
+             <div class="jvf_fl ima">
+                 <div class="im up_img2 phot_bg"><a class="phot_bg" href="javascript:;" id="up"></a></div>
+                 <span>{%member_avatar_li_span}</span>
+             </div>
+         </div>
+     </div>
+     
+ </div>

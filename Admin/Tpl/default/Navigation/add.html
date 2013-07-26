@@ -1,0 +1,64 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>导航名称：</label>
+				<input type="text" class="required" name="title">
+			</div>
+			
+            <div class="unit">
+				<label>导航类型：</label>
+				<select class="combox" name="type">
+					<option value="1">主菜单</option>
+					<option value="2">顶部菜单</option>
+					<option value="3">底部菜单</option>
+				</select>
+			</div>
+			
+			<div class="unit">
+				<label>URL：</label>
+				<input type="text" name="url" style="width: 385px;">
+			</div>
+			
+			<div class="unit">
+				<label>序号：</label>
+				<input type="text" class="digits textInput valid" name="sort">
+			</div>
+            
+   			<div class="unit">
+				<label>是否新窗口：</label>
+				<select class="combox" name="isblank">
+					<option value="0">否</option>
+					<option value="1">是</option>
+				</select>
+			</div>
+			
+			<div class="unit">
+				<label>是否默认：</label>
+				<select class="combox" name="isdefault">
+					<option value="0">否</option>
+					<option value="1">是</option>
+				</select>
+			</div>
+            
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT class="combox" name="status">
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

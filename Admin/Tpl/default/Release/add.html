@@ -1,0 +1,92 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品标题：</label>
+				<input type="text" class="required" name="title" style="width: 385px;">
+			</div>
+            
+            <div class="unit">
+				<label>分类：</label>
+				<SELECT name="category" class="combox">
+					<option value="">无</option>
+					<volist name="list" id="vo">
+					<php>$n = (substr_count($vo['path'],',') - 1) * 24 + 3</php>
+						<option value="{$vo.id}">{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$vo.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>地区：</label>
+				<SELECT name="region" class="combox">
+					<option value="">无</option>
+					<volist name="region" id="vo">
+					<php>$n = (substr_count($vo['path'],',') - 1) * 24 + 3</php>
+						<option value="{$vo.id}">{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$vo.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			<div class="unit">
+				<label>发布者：</label>
+				<input type="hidden" name="promulgator" group="member" field="id">
+				<input name="member_name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/isbusiness/1/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+						
+			<div class="unit">
+				<label>数量：</label>
+				<input type="text" class="digits textInput valid" name="num">
+			</div>
+			
+			<div class="unit" id="price">
+				<label>价格：</label>
+				<input type="text" class="number textInput valid" name="price">
+			</div>
+			
+			<div class="unit">
+				<label>描述：</label>
+				<textarea rows="2" cols="60" name="description" class="textInput"></textarea>
+			</div>
+			
+			<div class="unit">
+				<label>姓名：</label>
+				<input type="text" class="textInput" name="name" id="name">
+			</div>
+			
+			<div class="unit">
+				<label>邮箱：</label>
+				<input type="text" class="textInput" name="mail" id="mail">
+			</div>
+            
+            <div class="unit">
+				<label>电话：</label>
+				<input type="text" class="textInput" name="phone" id="phone">
+			</div>
+            
+            <div class="unit">
+				<label>发布时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1">已处理</option>
+					<option value="0">未处理</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

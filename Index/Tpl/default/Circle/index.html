@@ -1,0 +1,38 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	circleIndex({$condition});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+       <div class="category_shop clearfix" style="margin-top:0px;">
+                <div class="shop_all">
+                    <div class="jvf_frame w225">
+                    	<div class="circle clearfix">
+                    	<volist name="circledata" id="vo">
+                        	<div class="circle_list">
+                                <div class="circle_title">{$vo.name}</div>
+                                <ul class="clearfix">
+                                <php>
+                                	$label = explode(',', $vo['label']);
+                                	$lids = explode(',', $vo['lids']);
+                                </php>
+                                <volist name="label" id="v">
+                                    <li><a href="javascript:;" lid="{$lids[$key]}">{$v}</a></li>
+                                </volist>
+                                </ul>
+                            </div>
+                        </volist>
+                   		</div>
+                    </div>
+                    <div class="jvf_allimg shop_bot"></div>
+                </div>
+       </div>
+		<div class="jvf_page" style="display:none;">
+		</div>
+    </div>
+</div>
+
+<include file="Public:footer" />

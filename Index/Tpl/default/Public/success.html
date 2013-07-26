@@ -1,0 +1,32 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body clearfix" style="padding:50px 0;">
+        <div class="suc_new_modal jvf_frame " id="forgot_password_container">
+            <h2>{%page_prompts}</h2>
+            <div class="segment" style="height:39px; line-height:39px;">
+            <if condition="$status eq 1"><img src="../Public/images/success.gif" style="float:left;"><else /><img src="../Public/images/error.gif" style="float:left;"></if><span style="float:left; margin-left:10px;">{$message}</span>
+            </div>
+            <div class="segment suc_bot">
+            {%success_before} <span style="color:blue;font-weight:bold" id="time">{$waitSecond}</span> {%success_after} <a href="{$jumpUrl}" style="font-size: 15px; color: blue;">{%success_a}</a> {%clost_text}
+            </div>
+        </div>
+        <div class="jvf_520_bot jvf_allimg mg0a"></div>
+    
+    </div>
+</div>
+<script language="javascript">
+var timeLast={$waitSecond};
+function dup(){
+	if(timeLast>0){
+		timeLast--;
+		document.getElementById('time').innerHTML=timeLast;
+		setTimeout("dup()",1000);
+	}else{
+		location.href='{$jumpUrl}';
+	}
+}
+dup();
+</script>
+
+<include file="Public:footer" />

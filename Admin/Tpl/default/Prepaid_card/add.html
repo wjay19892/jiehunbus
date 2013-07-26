@@ -1,0 +1,94 @@
+
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+						
+			<div class="unit">
+				<label>前缀：</label>
+				<input type="text" name="pre">
+			</div>
+			<div class="unit">
+				<label>金额：</label>
+				<input type="text" name="cash" class="required number">
+			</div>
+			<div class="unit">
+				<label>卡号格式：</label>
+				<label style="width: 45px"><input type="radio" name="sn_format" value="0" checked="checked" onclick="$('#random').hide();$('#custom').show();" />随机</label>
+				<label style="width: 60px"><input type="radio" name="sn_format" value="1" onclick="$('#custom').hide();$('#random').show();" />自定义</label>
+			</div>
+			<div id="random" style="display: none;">
+				<div class="unit">
+					<label>开始：</label>
+					<input type="text" name="start" class="digits">
+					<span class="info">(例如000001)</span>
+				</div>
+				
+				<div class="unit">
+					<label>结束：</label>
+					<input type="text" name="end" class="digits">
+					<span class="info">(例如000999)</span>
+				</div>
+			</div>
+			<div id="custom">
+				<div class="unit">
+					<label>生成数量：</label>
+					<input type="text" name="num" class="digits" min="1" max="10000">
+					<span class="info">(一次最大生成10000个)</span>
+				</div>
+				
+				<div class="unit">
+					<label>卡号位数：</label>
+					<input type="text" name="sn_num" class="digits" min="6" max="20" value="6">
+					<span class="info">(位)</span>
+				</div>
+				<div class="unit">
+					<label>序号类型：</label>
+					<SELECT name="sn_type" class="combox">
+						<option value="0">字母</option>
+						<option value="1">数字</option>
+						<option value="2">大写字母</option>
+						<option value="3">小写字母</option>
+						<option value="4">中文</option>
+						<option value="5">混合</option>
+					</SELECT>
+				</div>
+			</div>
+			<div class="unit">
+				<label>密码位数：</label>
+				<input type="text" name="pwd_num" class="required digits" min="6" max="20" value="6">
+				<span class="info">(位)</span>
+			</div>
+			<div class="unit">
+				<label>密码类型：</label>
+				<SELECT name="pwd_type" class="combox">
+					<option value="0">字母</option>
+					<option value="1">数字</option>
+					<option value="2">大写字母</option>
+					<option value="3">小写字母</option>
+					<option value="4">中文</option>
+					<option value="5">混合</option>
+				</SELECT>
+			</div>
+            
+            <div class="unit">
+				<label>有效期：</label>
+				<input type="text" name="starttime" class="date" readonly="true" value="{:toDateYmd(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+				<span style="float: left;" >&nbsp;～&nbsp;</span>
+				<input type="text" name="endtime" class="date" readonly="true" value="{:toDateYmd(time() + 86400)}"/>
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

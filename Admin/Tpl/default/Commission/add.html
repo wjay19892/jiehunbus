@@ -1,0 +1,35 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>等级名称：</label>
+				<input name="lid" type="hidden" group="level" field="id"/>
+				<input name="title" type="text" readonly="readonly" group="level" field="name"/>
+				<a class="btnLook" href="{:U('Level/lookUp/group/level/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="level_lookup">查找带回</a>
+			</div>
+			
+			
+			<div class="unit">
+				<label>佣金类型：</label>
+				<label class="radioButton"><input type="radio" name="type" value="0" checked="checked" />固定</label>
+				<label class="radioButton"><input type="radio" name="type" value="1" />比例</label>
+			</div>
+			
+			<div class="unit">
+				<label>佣金：</label>
+				<input type="text" class="number textInput valid" name="value" value="0">
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

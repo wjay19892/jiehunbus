@@ -1,0 +1,47 @@
+<include file="Public:top" />
+<include file="Public:header" />
+
+
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    <div class="jvf_frame veri_con">
+    <div class="new-modal " id="forgot_password_container">
+            <h2>{%please_verification_mail}</h2>
+            <empty name="verificationdata">
+            <div class="segment">
+                <p>{%verification_mail_tip_2_before}{$Think.config.sysconfig.site_smtp_account}{%verification_mail_tip_2_after}</p>
+                <p>{%verification_mail_tip_3_before}{$memberdata.mail}{%verification_mail_tip_3_after}</p>
+            </div>
+            <form class="cmxform" id="resendmail" action="{:U('User/resendmail')}" method="post">
+                <input type="hidden" name="email" id="email" value="{$memberdata.mail}">
+                <div class="segment buttons">
+                    <input type="submit" value="{%mail_verification}" name="commit" class="btn p2153 f26">
+                </div>
+            </form>
+            <else />
+            <div class="segment">
+                <p style="margin-bottom:15px;">{%verification_mail_tip_3d_before}{$memberdata.mail}{%verification_mail_tip_3_after}</p>
+                <div class="clearfix">
+                <a class="btn p2153 f20 jvf_bold jvf_fl" target="_blank" href="{$gocheck_url}" id="gomailcheck">{%activate_account}</a>
+                </div>
+            </div>
+            <h2>{%not_receive}</h2>
+            <div class="segment">
+                <p>{%may_spam}</p>
+                <p>{%verification_mail_tip_2_before}{$Think.config.sysconfig.site_smtp_account}{%verification_mail_tip_2_after}</p>
+            </div>
+            <form class="cmxform" id="resendmail" action="{:U('User/resendmail')}" method="post">
+                <input type="hidden" name="email" id="email" value="{$memberdata.mail}">
+                <div class="segment border_bot0">
+                    <input type="submit" value="{%send_re}" name="commit" id="sendmail" class="btn p2153 f20 jvf_bold"><span id="forgotnotice" style="display:none;"></span>
+                </div>
+            </form>
+            </empty>   
+        </div>
+
+    </div>
+     <div class="jvf_520_bot jvf_allimg mg0a" style="margin-bottom:50px;"></div>
+    </div>
+</div>
+
+<include file="Public:footer" />

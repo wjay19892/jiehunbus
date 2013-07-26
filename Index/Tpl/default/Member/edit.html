@@ -1,0 +1,182 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	memberEdit("{$_REQUEST['item']}");
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<div class="mb_left_con">
+            <include file="Member:sharebox" />
+      			<div class="extension_top">
+                	<ul class="clearfix">
+                        <li class="selected"><a href="javascript:;">{%my_profile}</a></li>
+                        <li><a href="javascript:;">{%user_space_avatar}</a></li>
+                        <li><a href="{:U('Member/location')}" get="get">{%common_position_setting}</a></li>
+                        <li><a href="{:U('Member/verification')}" get="get">{%authentication_account}</a></li>
+                        <li><a href="{:U('Member/privacy')}" get="get">{%privacy_settings}</a></li>
+                        <li><a href="{:U('Member/modifyPwd')}" get="get">{%change_password}</a></li>
+                    </ul>
+                </div>
+                
+                <div class="jvf_edit_box">
+                	<div class="jvf_edit_item jvf_edit">
+                	<form method="post" id="updateform" enctype="multipart/form-data" action="{:U('Member/update')}">
+                	<div style="display: none;"><input name="useless" type="file"></div>
+                	<div class="top">
+              			<h2><span class="edit_room_icon complete"></span>{%basic_info}</h2>
+           			</div>
+                    <ul>
+                    	<li class="bder_topno"><label for="user_name">{%username_text}:</label>
+                        	<input type="text" name="name" size="30" value="{$memberdata.name}">
+                        </li>
+                        <li class="bder_topno"><label for="">性别：</label>
+                        	<select class="jvf_sel" name="sex">
+                                <option value="0" <eq name="memberdata.sex" value="0">selected="selected"</eq>>保密</option>
+                                <option value="1" <eq name="memberdata.sex" value="1">selected="selected"</eq>>男</option>
+                                <option value="2" <eq name="memberdata.sex" value="2">selected="selected"</eq>>女</option>
+							</select>
+                        </li>
+                        <li><label for="user_email">{%mail_text}:</label>
+                        	<input type="text" name="mail" size="30" value="{$memberdata.mail}" id="user_email">
+                            <div class="form_helper">{%member_edit_form_helper}</div>
+                        </li>
+                         <li><label for="user_phone">{%phone_text}:</label>
+                         <div class="phone-numbers-container">
+                         <table cellspacing="0" cellpadding="0" class="phone-numbers-table">
+	                        <tbody>
+	                          <tr data-number="{$memberdata.phone}" class="verified">
+	                            <th>{$memberdata.phone}</th>
+	                            <td style="position:relative;"><eq name="memberdata.phonestatus" value="1"><span class="verified"><span class="icon"></span>{%verification_text}</span><else /><span class="unverified"><a id="smsauthcode" class="jvf_addphone" href="javascript:void(0);">{%verification_code_send}</a></span></eq></td>
+	                          </tr>
+	                        </tbody>
+	                      </table>
+                      	<a id="addphone" class="jvf_addphone" href="javascript:void(0);"><span class="icon"></span>{%member_edit_editphone}</a>
+                           </div>
+                         <div class="jvf_cl"></div>
+                         <div class="phoneBox" style="display: none;">
+	                         <div class="form_helper">{%member_edit_div_form_helper}</div>
+	                         <div class="phone-number-verify jvf_frame">
+		                      <div class="pnaw-step1 clearfix">
+		                          <p class="send-verification-error"></p>
+		                          <p>{%verification_code_input_phone}</p>
+		                          <label for="phone_number">{%phone_text}：</label>
+		                          <input type="text" id="phone_number" name="phone_number"value="">
+		                           <a id="smsphone" href="javascript:void(0);" class="btn linebl f12 p115">{%verification_code_send}</a>
+		                      </div>
+		                      <div class="pnaw-step2 clearfix">
+		                        <p class="pnaw-verification-error"></p>
+		                        <p>{%verification_code_sended}</p>
+		                        <label for="phone_number_verification">{%verification_code}：</label>
+		                        <input type="text" id="phone_authcode" name="authcode" value="">
+		                        <a id="verifyphone" href="javascript:void(0);" class="btn linebl f12 p115"> {%verification_text} </a> 
+		                      </div>
+	                        </div>
+	                    </div>
+                        </li>
+                         <li><label for="user_address">{%member_edit_user_address}:</label>
+                        	<input type="text" name="address" size="30" value="{$memberdata.address}" placeholder="{%member_edit_user_address}" id="user_address">
+                        </li>
+                        <li><label for="user_self_introduction">{%member_edit_user_self_introduction}:</label>
+                        	<textarea name="content" autocomplete="off" tabindex="1" rows="8" id="user_self_introduction">{$memberdata.self_introduction}</textarea>
+                            <div class="form_helper">{%member_edit_div}</div>
+                        </li>
+                    </ul>
+                    <div class="top" style="border-top:solid 1px #ccc;">
+              			<h2><span class="edit_room_icon complete"></span>{%member_edit_help}</h2>
+           			</div>
+                     <ul>
+                        <volist name="mattlist" id="att">
+			                <li class="bder_topno clearfix">
+			                    <label for="user_att{$att.id}">{$att.key}</label>
+			                    <if condition="$att['type'] eq 0"><!-- 手动输入 -->
+			                        <input id="user_att{$att.id}" type="text" name="{$att.id}" size="30" value="{$att.val}" />
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 1">
+			                        <foreach name="att['enum']" item="enum_item" ><!-- 单选 -->
+			                        <input id="user_att{$att.id}" type="radio" name="{$att.id}" value="{$enum_item}" class="mtradio" <if condition="($enum_item eq $att['val']) OR (empty($att['val']) AND ($enum_item eq $att['default'])) ">checked="checked" </if> />{$enum_item}
+			                        </foreach>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 2">        
+			                        <select class="jvf_inputb" id="user_att{$att.id}" name="{$att.id}">
+			                            <foreach name="att['enum']" item="enum_item" ><!-- 下拉 -->
+			                            <option value="{$enum_item}" <if condition="($enum_item eq $att['val']) OR (empty($att['val']) AND ($enum_item eq $att['default'])) ">selected="selected"</if>>{$enum_item}</option>
+			                            </foreach>
+			                        </select>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 3"><!-- 文本域 -->
+			                        <textarea id="user_att{$att.id}" cols="40" name="{$att.id}">{$att['val']}</textarea>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 4">
+			                    <div class="lnh17 clearfix jvf_fl" style="width:570px;">
+			                        <iterate name="att.enum" id="enum_item" key="k"><!-- 多选 -->
+			                        <div class="jvf_fl" style="margin-bottom:5px;">
+			                        <input class="jvf_fl edit_checkbox" id="user_att{$att.id}{$k}" type="checkbox" name="{$att.id}[]" value="{$enum_item}" <if condition="in_array($enum_item,$att['val']) OR (empty($att['val']) AND ($enum_item eq $att['default'])) ">checked="checked"</if> /><label class="jvf_la jvf_fl edit_label" for="user_att{$att.id}{$k}">{$enum_item}</label>
+			                        </div>
+			                       
+			                        </iterate>
+			                         <div class="jvf_cl"></div>
+			                    <div>
+			                    </if>     
+			                                                   
+			                    <if condition="$att['type'] eq 5"><!-- 图片域 -->
+			                        <input id="user_att{$att.id}" type="file"  name="{$att.id}" class="mtfile" /> 
+			                        <if condition="$att['val'] neq ''">
+			                            <div class="form_helper"><img src="__ROOT__{$att.val}" alt="{$att.key}"></div>
+			                        </if>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 6"><!-- 日历控件 -->
+			                        <input id="user_att{$att.id}" class="jvf_date mttime" type="text" readonly="true" size="25" name="{$att.id}" value="{$att['val']}">
+			                        <script>
+									$(function() {
+										$( "#user_att{$att.id}" ).datepicker({changeMonth: true,changeYear: true,shortYearCutoff: 50});
+									});
+								    </script>
+			                    </if>
+			                    
+			                    <if condition="$att['type'] eq 7"><!-- 编辑器 -->
+			                        <div class="lnh22 clearfix">
+			                        <textarea id="user_att{$att.id}" class="editor" name="{$att.id}" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" cols="40"rows="8" >{$att.val}</textarea>
+			                        </div>       
+			                    </if>
+			                    <div class="form_helper">{$att.explain}</div>
+			                </li>
+			                </volist>
+                     </ul>
+                     </form>
+                     <div class="jvf_box_buttom">
+                    	<span class="jvf_mgf"><a class="btn p2153 f20 jvf_bold" href="javascript:;" id="updateSubmit">{%member_edit_submit}</a></span>
+                    </div>
+                	</div>
+                    <!--编辑头像-->
+                	<div class="jvf_edit_item jvf_edit_head" style="display:none;">
+                		<include file="Member:avatar" />
+                    </div>
+                    <!--编辑头像——end-->
+                    <!--常用位置设置-->
+                	<div class="jvf_edit_item" style="display:none;"></div>
+                    <!--常用位置设置——end-->
+                    <!--验证和账户绑定-->
+                	<div class="jvf_edit_item" style="display:none;"></div>
+                    <!--验证和账户绑定——end-->
+                    <!--隐私设置-->
+                	<div class="jvf_edit_item" style="display:none;"></div>
+                    <!--隐私设置——end-->
+                    
+                    <!--修改密码-->
+                	<div class="jvf_edit_item" style="display:none;"></div>
+                    <!--修改密码——end-->
+                </div>
+           </div>
+       </div>
+       <include file="Member:right" />
+	</div>
+</div>
+<include file="Public:footer" />

@@ -1,0 +1,72 @@
+<include file="Public:pagerForm" />
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>会员名：</label>
+				<input name="uid" type="hidden" group="member" field="id"/>
+				<input name="name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member')}" target="dialog" rel="goods_lookup">查找带回</a>
+			</li>
+			<li>
+				<label>评论者：</label>
+				<input type="hidden" name="reviewer" group="member1" field="id">
+				<input name="name" type="text" readonly="readonly" group="member1" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member1')}" target="dialog" rel="member_lookup">查找带回</a>
+			</li>
+			<li style="width: 600px;">
+				<label>评论时间：</label>
+				<input type="text" name="mintime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss"/>
+				<a class="inputDateButton" href="javascript:;">选择</a>
+				<span style="float: left;" >&nbsp;～&nbsp;</span>
+				<input type="text" name="maxtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss"/>
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+   <!-- 功能操作区域结束 -->
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="500">会员名</th>
+			<th width="80">评论者</th>
+			<th width="80" orderField="addtime" <if condition="$_REQUEST._order eq 'addtime'">class="{$_REQUEST._sort}"</if>>评论时间</th>
+			<th width="80">查找带回</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['uid']|getParent='Member',###,'name'}</td>
+				<td>{$vo['reviewer']|getParent='Member',###,'name'}</td>
+				<td>{$vo['addtime']}</td>
+				<td>
+				<a class="btnSelect" href="javascript:lookUpBack({:getJsStr($vo)},'{$_REQUEST.dialogId}','{$_REQUEST.group}')" title="查找带回">选择</a>
+				</td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
+

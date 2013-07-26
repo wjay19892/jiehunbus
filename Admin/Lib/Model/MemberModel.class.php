@@ -1,0 +1,30 @@
+<?php
+//系统配置
+class MemberModel extends CommonModel {
+	protected $_filter = array(
+				'id'=>array('GetNum'),
+				'name'=>array('Char_cv'),
+				'mail'=>array('Char_cv'),
+				'phone'=>array('Char_cv'),
+				'address'=>array('Char_cv'),
+				'self_introduction'=>array('h'),
+				'header'=>array('GetNum'),
+				'sex'=>array('GetNum'),
+				'inviteid'=>array('GetNum'),
+				'regip'=>array('Char_cv'),
+				'regtime'=>array('','toDate'),
+				'value'=>array('','GetNum'),
+				'mailstatus'=>array('GetNum'),
+				'phonestatus'=>array('GetNum'),
+				'online'=>array('GetNum'),
+				'cash'=>array('','toPrice'),
+				'sina_id'=>array('Char_cv'),
+				'renren_id'=>array('Char_cv'),
+				'kaixin_id'=>array('Char_cv'),
+				'taobao_id'=>array('Char_cv'),
+				'qq_id'=>array('Char_cv'),
+				'alipay_id'=>array('Char_cv'),
+				'status'=>array('GetNum'),	
+			  );
+}
+?>

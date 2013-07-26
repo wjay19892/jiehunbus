@@ -1,0 +1,43 @@
+<script type="text/javascript">
+qqface('Comment_add');
+</script>
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label>
+				<input name="gid" type="hidden" group="goods" field="id"/>
+				<input class="required" name="title" type="text" readonly="readonly" group="goods" field="title"/>
+				<a class="btnLook" href="{:U('Goods/lookUp/group/goods/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="goods_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>评论者：</label>
+				<input type="hidden" name="reviewer" group="member" field="id">
+				<input class="required" name="name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>内容：</label>
+				<div style="float: left;">
+				<textarea rows="2" cols="60" name="content" class="textInput" id="message_Comment_add"></textarea>
+				<a id="face_Comment_add" class="faceBtn"></a>
+				</div>
+			</div>
+			<div class="unit">
+				<label>评论时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

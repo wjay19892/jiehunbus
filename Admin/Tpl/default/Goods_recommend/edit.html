@@ -1,0 +1,29 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label>
+				<input name="gid" type="hidden" group="goods" field="id" value="{$vo.gid}"/>
+				<input class="required" name="title" type="text" readonly="readonly" group="goods" field="title" value="{$vo.gid|getParent='Goods',###,'title'}"/>
+				<a class="btnLook" href="{:U('Goods/lookUp/group/goods/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="goods_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>序号：</label>
+				<input type="text" class="digits textInput valid" name="sort" value="{$vo.sort}">
+			</div>
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

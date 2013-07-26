@@ -1,0 +1,39 @@
+<div style="width:400px" title="{%member_view_withdraw_title}">
+        <table class="jvf_txian">
+        	<tr>
+            	<th width="150px"></th>
+                <th width="250px"></th>
+            </tr>
+            <tr>
+              <td class="tr"><span>{%withdraw_cash}：</span></td>
+              <td class="weic">&yen;{$withdrawdata.cash}</td>
+            </tr>
+            <tr>
+              <td class="tr"><span>{%withdraw_bank_id}：</span></td>
+              <td class="jvf_txc">{$withdrawdata.bank_id}</td>
+            </tr>
+            <tr>
+              <td class="tr"><span>{%withdraw_bank_card}：</span></div>
+              <td class="jvf_txc">{$withdrawdata.bank_card}</td>
+            </tr>
+            <tr>
+              <td class="tr"><span>{%withdraw_realname}：</span></td>
+              <td class="jvf_txc">{$withdrawdata.realname}</td>
+            </tr>
+            <tr>
+                <td class="tr"><span>{%remark_text}：</span></td>
+                <td class="jvf_txc">{$withdrawdata.remark}</td>
+            </tr>
+            <tr>
+                <td class="tr"><span>{%status_text}：</span></td>
+                <td class="jvf_txc"><eq name="withdrawdata.status" value="3">{%status_revocation}</eq>
+                <eq name="withdrawdata.status" value="2">{%status_handle}</eq>
+                <eq name="withdrawdata.status" value="1">{%status_processing}</eq>
+                <eq name="withdrawdata.status" value="0">{%status_unhandled}</eq></td>
+            </tr>
+        </table>
+   
+</div>
+
+
+		

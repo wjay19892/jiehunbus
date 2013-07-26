@@ -1,0 +1,64 @@
+<script type="text/javascript" src="../Public/js/baidumap_location.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3&callback=load_map_wrapper"></script>
+<script>
+$(function(){
+	memberLocation();
+});
+
+function load_map_wrapper(){
+	initialize("allmap_canvas");
+  <notempty name="locationdata">
+	<volist name="locationdata" id="vo">
+	<eq name="vo.type" value="1">
+	addTags("{$vo.lat}","{$vo.lng}","{$vo.address}","allmap_canvas",'{$vo.address}<br /><br /><a id="editaddress" href="'+"{:U('Member/editlocation/id/'.$vo['id'])}"+'">{%edit}</a>&nbsp;&nbsp;<a id="deladdress" href="'+"{:U('Member/dellocation/id/'.$vo['id'])}"+'">{%delete}</a>');
+	<else />
+	addTags("{$vo.lat}","{$vo.lng}","{$vo.address}","allmap_canvas",'{$vo.address}<br /><br /><a id="editaddress" href="'+"{:U('Member/editlocation/id/'.$vo['id'])}"+'">{%edit}</a>&nbsp;&nbsp;<a id="deladdress" href="'+"{:U('Member/dellocation/id/'.$vo['id'])}"+'">{%delete}</a>&nbsp;&nbsp;<a id="address" href="'+"{:U('Member/setlocation/id/'.$vo['id'])}"+'">{%setdefault}</span></a>');
+	</eq>
+	</volist>
+  </notempty>
+}
+</script>
+
+<div class="edit_setmap_top clearfix">
+    <h2> <span class="set_icon jvf_mbpng jvf_fl"></span>
+        <p class="jvf_fl">{%member_location_title}</p>
+        <div class="jvf_fl">{%member_location_div}</div>
+        <div class="jvf_cl"></div>
+        <a class="btn linebl f12 p2153 jvf_fr" id="addaddress" href="javascript:;">+{%member_location_add}</a>
+    </h2>
+</div>
+
+<div class="edit_setmap_con jvf_frame" id="addlocation" style="display:none;">
+	<form class="cmxform" id="addlocationform" action="{:U('Member/addlocation')}" method="post">
+	    <input name="id" type="hidden" id="id" value="" readonly="readonly" />
+	    <input name="type" type="hidden" id="type" value="" readonly="readonly" />
+		<div class="setmap_tit">
+		     <label for="user_name">{%member_location_address}</label>
+		     <input class="jvf_inputt" type="text" value="" placeholder="{%member_location_address}" name="address" id="address">
+		     <a href="javascript:;" id="addmarker">{%map_addmarker}</a>
+		     <a href="javascript:;" id="showmarker">{%map_showmarker}</a>
+		</div>
+	    <div>
+	    <input name="longitude" type="hidden" id="longitude" value="" readonly="readonly" />
+        <input name="latitude" type="hidden" id="latitude" value="" readonly="readonly" />
+        <input name="zoom" type="hidden" id="zoom" value="12" readonly="readonly" />
+	    <div id="map_canvas" style="width:698px;height:302px;"></div>
+	    </div>
+	    <div class="jvf_box_buttom">
+	    	<input type="button" id="submit" class="btn p2153 f20 jvf_bold linebl" name="commit" value="{%submit_text}">
+	        <a href="javascript:;" class="cancel">{%cancel}</a>
+	    </div>
+	</form>
+</div>
+
+<div class="map-view jvf_frame edit_setmap_con ">
+<notempty name="locationdata">
+  <volist name='locationdata' id='vo'>
+  <include file="Member:addlocation" />
+  </volist>
+<else />
+<h3 class="map-description">{%member_location_empty}</h3>
+</notempty>
+  <div id="allmap_canvas" style="width:698px;height:302px;" ></div>
+  <div class="jvf_page">{$page}</div>
+</div>

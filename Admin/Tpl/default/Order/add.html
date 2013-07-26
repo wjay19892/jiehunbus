@@ -1,0 +1,85 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">			
+			<div class="unit">
+				<label>会员：</label>
+				<input type="hidden" name="uid" group="member" field="id">
+				<input class="required" name="name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>订单号：</label>
+				<input type="text" name="sn">
+			</div>
+			
+			<div class="unit">
+				<label>手机：</label>
+				<input type="text" name="phone" class="phone textInput">
+			</div>
+			
+			<div class="unit">
+				<label>手续费：</label>
+				<input type="text" name="fee" class="number textInput">
+			</div>
+			
+			<div class="unit">
+				<label>已支付：</label>
+				<input type="text" name="incharge" class="number textInput">
+			</div>
+			
+			<div class="unit">
+				<label>应付金额：</label>
+				<input type="text" name="cope" class="number textInput">
+			</div>
+			
+			<div class="unit">
+				<label>总价：</label>
+				<input type="text" name="total" class="number textInput">
+			</div>
+			
+			
+			<div class="unit">
+				<label>支付方式：</label>
+				<input type="text" name="paytype">
+			</div>
+			
+			<div class="unit">
+				<label>支付状态：</label>
+				<SELECT name="money_status" class="combox">
+					<option value="0">未支付</option>
+                    <option value="1">部分支付</option>
+                    <option value="2">全部支付</option>
+                    <option value="3">部分退款</option>
+                    <option value="4">全部退款</option>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>下单时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="0">未支付</option>
+                    <option value="1">已支付</option>
+                    <option value="2">已作废</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

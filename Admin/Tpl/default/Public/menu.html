@@ -1,0 +1,24 @@
+	
+<div class="accordion" fillSpace="sideBar">
+    <volist name="groupdata" id="vo">
+	<div class="accordionHeader">
+		<h2><span>Folder</span>{$vo.title}</h2>
+	</div>
+	<div class="accordionContent">
+	
+		<ul class="tree treeFolder">
+			<iterate id="item" name="vo.menu" >
+			<neq name="item['name']|strtolower" value="public" >
+				<neq name="item['name']|strtolower" value="index" >
+				<eq name="item['access']" value="1">
+				<li><a href="__APP__/{$item['name']}/index/" target="navTab" rel="{$item['name']}">{$item['title']}</a></li>
+				</eq>
+				</neq>
+			</neq>
+			</iterate>
+		</ul>
+
+	</div>
+    </volist>
+
+</div>

@@ -1,0 +1,109 @@
+.jvf_upload{background-image: url("../images/upbut.gif");display: block;height: 21px;width: 63px;}
+.searchContent .textInput{float: left;}
+.searchBar ul.searchContent {overflow: visible;}
+
+#map_canvas { border-style:solid; border-width:1px; border-color:#A2BAC0 #B8D0D6 #B8D0D6 #A2BAC0; height:300px; width:605px;}
+#map_canvas label{ float:none; width:auto;}
+#map_canvas p{ float:none; width:auto; padding:0px; height:15px;}
+#map_canvas .gmnoprint div { line-height:18px;}
+.fl{float: left;}
+.fr{float: right;}
+.ml10{margin-left: 10px;}
+.w70{width: 70px;}
+.unit span{float: left; line-height: 21px;}
+#imgBox li{float: left;}
+
+.sortableitem
+{
+	cursor:move;
+	list-style: none;
+	float: left;
+	height: 122px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-bottom: 1px solid b;
+	margin-right: 2px;
+	margin-bottom:2px;
+}
+.sortableitem a
+{
+	display: block;
+	float: left;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+
+}
+.sortableitem img
+{
+	width:100px;
+	height:100px;
+	margin:2px 10px 10px;
+	display:inline;
+}
+.sortHelper
+{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #9c0;
+	background-color: #fff;
+}
+#dragHelper{ z-index:999999;}
+.jvf_clos{padding-right: 3px;text-align: center;}
+.jvf_clos span{ color: #990000;
+    height: 10px;
+    line-height: 10px;
+    padding: 0;
+	float:right;
+	cursor:pointer;
+	width:10px;
+}
+.comboxop a{
+	text-decoration: none;
+}
+
+.jvf_ad_ind ul li{ padding: 5px 20px;}
+.jvf_ad_ind ul li a{ font-size:22px; font-weight:bold; color:#285A96; text-decoration:none;font-style: italic; padding:0 5px;}
+
+.jvf_ad_ind ul li a:hover{ color:#FF5500;}
+
+.faceBtn {
+	background: url(../images/face.gif) no-repeat;
+	display: block;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+    clear: both;
+}
+
+.jvf_biaoqing{ background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    position: absolute;
+    z-index: 999999999;}
+.jvf_biaoqing table{background:transparent url("../images/jvf_biaoqing.gif") no-repeat; width:450px;}
+.jvf_biaoqing table td{ cursor: pointer;
+height: 33px;
+    *height: 31px;
+    padding-top: 2px;
+    width: 24px;
+	*width: 25px;}
+.jvf_biaoqing table td a{ width:24px; height:24px; display:block; margin:0 auto;}
+.jvf_biaoqing table td a:hover{ border:#03C 1px solid;}
+.panelBar .toolBar a.back span {
+	background: url("../images/htbut.gif") no-repeat;
+	background-position: 0 4px;
+}
+.dialogContent .tree{height: 742px;overflow: scroll;}
+.jvf_update{margin-left: 25px;}
+.jvf_update ul li{float: left;line-height: 25px;margin-right: 20px;}
+#upgradeContent td span{line-height: 21px;}
+
+.jvf_uptishi{background: url("../images/jvf_tishi.gif") no-repeat scroll 0 0 transparent;
+    font-size: 28px;
+    font-weight: bold;
+	line-height:35px;
+    margin: 30px 30px 0;
+    padding: 14px 0 0 60px;}
+.pageFormContent p {width:auto;}

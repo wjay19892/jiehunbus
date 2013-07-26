@@ -1,0 +1,48 @@
+<script type="text/javascript">
+qqface('Comment_reply_edit');
+</script>
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>评论：</label>
+				<input class="required" name="cid" type="text" value="{$vo.cid}" readonly="readonly" group="comment" field="id"/>
+				<a class="btnLook" href="{:U('Comment/lookUp/group/comment/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="comment_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>回复者：</label>
+				<input type="hidden" name="uid" group="member1" field="id" value="{$vo.uid}">
+				<input class="required" name="name" type="text" readonly="readonly" group="member1" field="name" value="{$vo.uid|getParent='Member',###,'name'}"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member1/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>接收者：</label>
+				<input type="hidden" name="reviewer" group="member2" field="id" value="{$vo.reviewer}" >
+				<input class="required" name="name" type="text" readonly="readonly" group="member2" field="name" value="{$vo.reviewer|getParent='Member',###,'name'}"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member2/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>内容：</label>
+				<div style="float: left;">
+				<textarea rows="2" cols="60" name="content" class="textInput" id="message_Comment_reply_edit">{$vo.content|replaceFace}</textarea>
+				<a id="face_Comment_reply_edit" class="faceBtn"></a>
+				</div>
+			</div>
+			<div class="unit">
+				<label>回复时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{$vo.addtime}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

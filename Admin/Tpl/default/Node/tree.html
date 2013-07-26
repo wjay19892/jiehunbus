@@ -1,0 +1,89 @@
+<script>
+$(function(){
+	$(".__MODULE__Tree li a").contextMenu('__MODULE__TreeCM', {
+
+	      bindings:{
+	    	  
+	            addData:function(t){
+	            	var cid = t.attr('cid');
+	            	var url = APP+'/__MODULE__/add/id/'+cid;
+	            	var dlgId = '__MODULE___add';
+					$.pdialog.open(url,dlgId,'添加',{height: 300,width: 580,close:function(data){
+							var urls = APP+'/__MODULE__/tree';
+							var tree_dlgId = '__MODULE___tree';
+							$.pdialog.open(urls,tree_dlgId);
+							return true;
+					}});
+	                  // TODO
+	            },
+	            editData:function(t){
+					var cid = t.attr('cid');
+					var url = APP+'/__MODULE__/edit/id/'+cid;
+					var dlgId = '__MODULE___edit';
+					$.pdialog.open(url,dlgId,'编辑',{height: 300,width: 580,close:function(){
+							var urls = APP+'/__MODULE__/tree';
+							var tree_dlgId = '__MODULE___tree';
+							$.pdialog.open(urls,tree_dlgId);
+							return true;
+					}});
+	                  // TODO
+	            },
+	            deleteData:function(t){
+	            	var cid = t.attr('cid');
+					var url = APP+'/__MODULE__/foreverdelete/id/'+cid;
+					var title=' 确定要删除吗？';
+					alertMsg.confirm(title, {
+	                        okCall: function(){
+	                              ajaxTodo(url,function(data){
+	  	                        	 if(data.status == 1){
+	  	                        		  var url = APP+'/__MODULE__/tree';
+			          					  var dlgId = '__MODULE___tree';
+			          					  $.pdialog.reload(url,'',dlgId);
+	  	                        	 }else{
+	  	                        		alertMsg.error(data.info);
+	  	                        	 }
+	                              });
+	                        }
+	               });
+	                // TODO
+
+	            }
+
+	      },
+
+	      ctrSub:function(t,m){
+				$('#__MODULE__Tree div[class="selected"]').removeClass('selected');
+	            t.parent().addClass('selected');
+	      }
+
+	});
+})
+</script>
+<div style="float:left; display:block; overflow:auto; width:100%; border:solid 1px #CCC; line-height:21px; background:#fff">
+<!--     <ul class="tree collapse" id="__MODULE__Tree"> -->
+    <ul class="tree __MODULE__Tree">
+    <li><a href="javascript:;" cid="0">无</a>
+    <ul>
+    <volist name="data" id="vo">
+		<li><a href="javascript:;" cid="{$vo['id']}">{$vo.title}</a>
+		<notempty name="vo.children">
+		<ul>
+			<iterate name="vo.children" id="v">
+				<li><a href="javascript:;" cid="{$v['id']}">{$v.title}</a>
+				<notempty name="v.children">
+					<ul>
+					<volist name="v.children" id="t">
+						<li><a href="javascript:;" cid="{$t['id']}">{$t.title}</a></li>
+					</volist>
+					</ul>
+				</notempty>
+				</li>
+			</iterate>
+		</ul>
+		</notempty>
+		</li>
+	</volist>
+	</ul>
+	</li>
+     </ul>
+</div>

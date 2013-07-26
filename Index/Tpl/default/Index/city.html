@@ -1,0 +1,100 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<link type="text/css" rel="stylesheet" media="screen" href="../Public/css/slide_style.css" /> 
+<script>
+$(function(){
+	city();
+});
+</script>
+
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+        <div class="choosecities jvf_w100_con">
+            <div class="hotcities">
+                <h2>
+                    {%city_enter}
+                    <a href="__APP__/{$switch_region.crr.spelling}">
+                        {$switch_region.crr.name}
+                        <span>
+                            »
+                        </span>
+                    </a>
+                </h2>
+                <p>
+                    <label>
+                       {%hot_cities}：
+                    </label>
+                    <volist name="citydata.default" id="vo">
+                    <a href="__APP__/{$vo.spelling}">
+                        {$vo.name}
+                    </a>
+                    </volist>
+                </p>
+            </div>
+            <div class="filter">
+                <div id="changeCity">
+                    <label>
+                        {%city_province}：
+                    </label>
+                         <select name="province">
+                            <option value="-1" selected="selected">
+                                {%city_select_province}
+                            </option>
+                            <volist name="citydata.top" id="vo">
+                            <option value="{$vo.id}">
+                                {$vo.name}
+                            </option>
+                            </volist>
+                        </select>
+                        <select name="city">
+                            <option value="-1">
+                                {%city_select_city}
+                            </option>
+                        </select>
+                        <div id="defaultCity" style="display:none;">
+                        	<option value="-1">
+                                {%city_select_city}
+                            </option>
+                        </div>
+                    </span>
+                    <span class="jvf_mgf"><input type="button" value="{%enter_text}" class="btn p2153 f14"></span>
+                </div>
+            </div>
+            <div class="citieslist">
+                <h2 class="jvf_fl">
+                    {%city_letter}
+                    <span class="arrow">
+                        »
+                    </span>
+                </h2>
+                <div class="jvf_cl"></div>
+                <ol class="hasallcity">
+                <volist name="citydata.all" id="vo">
+                <neq name="vo.letter" value="$citydata['all'][$key-1]['letter']">
+	                 <li <eq name="i" value="1">class="hover"</eq>>
+                        <p class="clearfix">
+                            <label>
+                                <strong>
+                                    {$vo.letter}
+                                </strong>
+                            </label>
+                            <span>
+                </neq>
+                    
+                                <a href="__APP__/{$vo.spelling}" class="isonline">
+                                    	{$vo.name}
+                                </a>
+                <neq name="vo.letter" value="$citydata['all'][$key+1]['letter']">
+							</span>
+                        </p>
+                    </li>
+                </neq>
+                </volist>
+                </ol>
+            </div>
+        </div>
+        <div class="jvf_w100"></div>
+    </div>
+</div>
+
+<include file="Public:footer" />

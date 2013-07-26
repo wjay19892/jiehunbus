@@ -1,0 +1,31 @@
+<div title="{%category_text}" class="new-modal" id="filters_lightbox" style="width:300px;">
+        <div class="jvf_box_sear">
+        <div class="jvf_ovy">
+        <notempty name="categorydata">
+          <ul class="search_filter_content" id="category_box">
+          <volist name="categorydata" id="vo">
+          	<php>$n = substr_count($vo['path'],',')</php>
+        	<li class="clearfix" style="padding-left: {$n*20}px;">
+        		<notempty name="vo.count">
+        		<span class="facet_count">{$vo.count}</span>
+        		</notempty>
+        		<input type="{$inputType}" id="category_{$vo.id}" value="{$vo.id}" name="category[]" <if condition="in_array($vo['id'],$category_arr)">checked="checked"</if>>
+        		<label class="jvf_lin" for="category_{$vo.id}">{$vo.name}</label>
+        	</li>
+          </volist>
+          </ul>
+         <else />
+         	<div style="width: 100%;" id="like_space" class="block-space">
+			<div class="index-space">
+				<i></i>{%search_categoryall_empty_data}！
+			</div>
+         </notempty>
+         </div>
+        </div>
+
+    <div class="jvf_box_buttom" id="lightbox_filter_category">
+      
+      <input type="button" id="category_submit" class="btn p2153 f14 linebl" value="{%submit_text}">
+      
+    </div>
+  </div><!-- filters_lightbox -->

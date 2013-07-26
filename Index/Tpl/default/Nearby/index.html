@@ -1,0 +1,50 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	nearbyIndex({$condition});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+      	<div class="jvf_advertising">
+        	{%jvf_advertising}
+        </div>
+        <div class="shop_nav clearfix">
+        	<ul class="nav_left jvf_fl">
+            	<li><a class="fontbold" href="{:U('Nearby/index')}">{%nerby_goods}</a></li>
+                <li><a href="{:U('Nearby/friend')}">{%nearby_friends}</a></li>
+            </ul>
+            
+            <ul class="nav_right jvf_fr">
+            	<li>{%sort_by}：</li>
+                <li><a class="fontbold" href="javascript:;" field="" sort="">{%search_index_default}</a></li>
+                <li><a href="javascript:;" field="addtime" sort="asc">{%search_index_addtime}<em class="jvf_allimg mor"></em></a></li>
+                <li><a href="javascript:;" field="price" sort="asc">{%search_index_price}<em class="jvf_allimg mor"></em></a></li>
+            </ul>
+            <div class="jvf_fr xsort_all">
+            	<span class="xsort"><a href="javascript:;">{%select_category}</a></span>
+                <ul class="xsort_nav">
+                <volist name="goods_categorydata" id="vo">
+                	<li><a href="javascript:;" cid="{$vo.id}">{$vo.name}</a>
+                	<ul class="xsort_nav">
+                	<iterate name="vo.child" id="v">
+                	<li><a href="javascript:;" cid="{$v.id}">{$v.name}</a>
+                	</iterate>
+                	</ul>
+                	</li>
+               	</volist>
+                </ul>
+            </div>
+        </div>
+        <div class="linkbg"></div>
+        
+        <div class="category_shop clearfix">
+                 
+        </div>
+        <div class="jvf_page" style="display:none;">
+		</div>
+    </div>
+</div>
+
+<include file="Public:footer" />

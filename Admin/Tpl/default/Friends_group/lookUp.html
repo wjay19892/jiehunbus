@@ -1,0 +1,54 @@
+<form id="pagerForm" action="__URL__/lookUp">
+	<input type="hidden" name="pageNum" value="1" />
+</form>
+<div class="pageHeader">
+	<form rel="pagerForm" method="post" action="__URL__/lookUp" onsubmit="return dwzSearch(this, 'dialog');">
+	<input type="hidden" name="dialogId" value="{$_REQUEST.dialogId}">
+	<input type="hidden" name="group" value="{$_REQUEST.group}">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>组名：</label>
+				<input type="text" name="name" class="medium" >
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+
+	<table class="table" layoutH="118" targetType="dialog" width="100%">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="100" orderField="uid" <if condition="$_REQUEST._order eq 'uid'">class="{$_REQUEST._sort}"</if>>会员</th>
+			<th width="800" orderField="name" <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>>组名</th>
+			<th width="80">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['uid']|getParent='Member',###,'name'}</td>
+				<td>{$vo['name']}</td>
+				<td>
+				<a class="btnSelect" href="javascript:lookUpBack({:getJsStr($vo)},'{$_REQUEST.dialogId}','{$_REQUEST.group}')" title="查找带回">选择</a>
+				</td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="dialog" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>

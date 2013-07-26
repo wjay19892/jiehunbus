@@ -1,0 +1,66 @@
+<include file="Public:pagerForm" />
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>名称：</label>
+				<input type="text" name="name" class="medium" >
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+    <!--  功能操作区域  -->
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add" target="dialog" rel="__MODULE___add" width="650"><span>新增</span></a></li>
+			<li><a class="delete" href="__URL__/foreverdelete/id/{s_node}/navTabId/__MODULE__" target="ajaxTodo" calback="navTabAjaxMenu" title="你确定要删除吗？" warn="请选择"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{s_node}" target="dialog" rel="__MODULE___edit" warn="请选择" width="650"><span>修改</span></a></li>
+		</ul>
+	</div>
+   <!-- 功能操作区域结束 -->
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="100" orderField="name" <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>>名称</th>
+			<th width="100" orderField="remark" <if condition="$_REQUEST._order eq 'remark'">class="{$_REQUEST._sort}"</if>>英文标识</th>
+			<th width="150" orderField="appkey" <if condition="$_REQUEST._order eq 'appkey'">class="{$_REQUEST._sort}"</if>>帐户KEY</strong></th>
+			<th width="150" orderField="appsecret" <if condition="$_REQUEST._order eq 'appsecret'">class="{$_REQUEST._sort}"</if>>帐户SECRET</th>
+			<th width="80" orderField="status" <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>>状态</th>
+			<th width="80">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="s_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['name']}</td>
+				<td>{$vo['remark']}</td>
+                <td>{$vo['appkey']}</td>
+				<td>{$vo['appsecret']}</td>
+				<td>{$vo['status']|getStatus}</td>
+				<td>{$vo['status']|showStatus=$vo['id']} <a href="__URL__/edit/id/{$vo['id']}" target="dialog" rel="__MODULE___edit" width="650">编辑</a></td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
+

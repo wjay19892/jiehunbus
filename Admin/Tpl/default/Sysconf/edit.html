@@ -1,0 +1,67 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>参数键：</label>
+				<input type="text" class="required alphanumeric" name="key" value="{$vo.key}">
+			</div>
+            
+            <div class="unit">
+				<label>参数名称：</label>
+				<input type="text" class="required"  name="name" value="{$vo.name}">
+			</div>
+            
+            <div class="unit">
+				<label>参数值：</label>
+				<input type="text" class="textInput"  name="val" value="{$vo.val}">
+			</div>
+             
+            <div class="unit">
+				<label>参数类型：</label>
+                <input type="radio" name="list_type" value="0" <eq name="vo.list_type" value="0" >checked="checked"</eq> />单行文本框        
+                <input type="radio" name="list_type" value="1" <eq name="vo.list_type" value="1" >checked="checked"</eq> />单选框
+                <input type="radio" name="list_type" value="2" <eq name="vo.list_type" value="2" >checked="checked"</eq> />下拉框
+                <input type="radio" name="list_type" value="3" <eq name="vo.list_type" value="3" >checked="checked"</eq> />多行文本框
+                <input type="radio" name="list_type" value="4" <eq name="vo.list_type" value="4" >checked="checked"</eq> />图片
+			</div>
+            
+            <div class="unit">
+				<label>参数可选值：</label>
+				<input type="text" class="textInput"  name="val_arr" value="{$vo.val_arr}">
+			</div> 
+			
+			<div class="unit">
+				<label>排序：</label>
+				<input type="text" class="digits textInput valid"  name="sort"  value="{$vo.sort}">
+			</div>
+            
+            <div class="unit">
+				<label>所属系统设置分组：</label>
+				<SELECT name="group_id" class="combox">
+					<option value="">未分组</option>
+					<volist name="list" id="group">
+						<option value="{$group.id}" <eq name="group.id" value="$vo['group_id']">selected</eq>>{$group.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option <eq name="vo.status" value="1" >selected</eq> value="1">启用</option>
+					<option <eq name="vo.status" value="0" >selected</eq> value="0">禁用</option>
+				</SELECT>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

@@ -1,0 +1,16 @@
+<dl uid="{$uid}" style="display: block;">
+<volist name="logdata" id="vo">
+	<dd <eq name="vo.receive" value="$uid">class="wbim_msgl"<else />class="wbim_msgr"</eq>>
+	    <div class="wbim_msgpos">
+	        <div class="msg_time">
+	            {$vo.send_name} {$vo.addtime|toDate}
+	        </div>
+	        <div class="msg_box">
+	            <p class="txt">
+	                {$vo.content|contentFilter}
+	            </p>
+	        </div>
+	    </div>
+	</dd>
+</volist>
+</dl>

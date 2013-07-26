@@ -1,0 +1,87 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">			
+			<div class="unit">
+				<label>会员：</label>
+				<input type="hidden" name="uid" group="member" field="id" value="{$vo.uid}">
+				<input class="required" name="name" type="text" readonly="readonly" group="member" field="name" value="{$vo.uid|getParent='Member',###}"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>订单号：</label>
+				<input type="text" name="sn" value="{$vo.sn}">
+			</div>
+			
+			<div class="unit">
+				<label>手机：</label>
+				<input type="text" name="phone" class="phone textInput" value="{$vo.phone}">
+			</div>
+			
+			<div class="unit">
+				<label>手续费：</label>
+				<input type="text" name="fee" class="number textInput" value="{$vo.fee}">
+			</div>
+			
+			<div class="unit">
+				<label>已支付：</label>
+				<input type="text" name="incharge" class="number textInput" value="{$vo.incharge}">
+			</div>
+			
+			<div class="unit">
+				<label>应付金额：</label>
+				<input type="text" name="cope" class="number textInput" value="{$vo.cope}">
+			</div>
+			
+			<div class="unit">
+				<label>总价：</label>
+				<input type="text" name="total" class="number textInput" value="{$vo.total}">
+			</div>
+			
+			
+			<div class="unit">
+				<label>支付方式：</label>
+				<input type="text" name="paytype" value="{$vo.paytype}">
+			</div>
+			
+			<div class="unit">
+				<label>支付状态：</label>
+				<SELECT name="money_status" class="combox">
+					<option value="0" <eq name="vo.money_status" value="0">selected="selected"</eq>>未支付</option>
+                    <option value="1" <eq name="vo.money_status" value="1">selected="selected"</eq>>部分支付</option>
+                    <option value="2" <eq name="vo.money_status" value="2">selected="selected"</eq>>全部支付</option>
+                    <option value="3" <eq name="vo.money_status" value="3">selected="selected"</eq>>部分退款</option>
+                    <option value="4" <eq name="vo.money_status" value="4">selected="selected"</eq>>全部退款</option>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>下单时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{$vo.addtime}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+                    <option value="0" <eq name="vo.status" value="0">selected="selected"</eq>>未支付</option>
+					<option value="1" <eq name="vo.status" value="1">selected="selected"</eq>>已支付</option>
+                    <option value="2" <eq name="vo.status" value="2">selected="selected"</eq>>已作废</option>
+				</SELECT>
+			</div>
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

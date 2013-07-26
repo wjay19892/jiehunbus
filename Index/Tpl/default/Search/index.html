@@ -1,0 +1,92 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+    var mp={$minprice1};
+    var fenggeid={$fenggeid};
+    if(mp!=-1){
+        $('.category_f li a').removeClass('fontbold');
+        $('.category_f li a[min="{$minprice1}"]').addClass('fontbold'); 
+    }
+    if(fenggeid!=-1){
+        $('.category_j li a').removeClass('fontbold');
+        $('.category_j li a[cid="{$fenggeid}"]').addClass('fontbold');
+    }
+    
+	searchIndex({$condition});
+    $('.category_f li a[min="{$minprice1}"]').click();
+    $('.category_j li a[cid="{$fenggeid}"]').click();
+
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+		<div class="category">
+        	<div class="category_j bod_bot clearfix">
+            	<span class="category_th">{%category_text}：</span>
+                <ul class="clearfix">
+                	<li><a class="fontbold" href="javascript:;" cid="0">{%all_text}</a></li>
+                	<volist name="categorydata" id="vo">
+                    <li><a href="javascript:;" cid="{$vo.id}">{$vo.name}({$vo.count})</a></li>
+                    </volist>
+                </ul>
+                <div class="jvf_cl"></div>
+                <ul class="category_sun" style="display:none">
+                
+                </ul>
+            </div>
+            <div class="category_v bod_bot clearfix">
+            	<span class="category_th">{%region_text}：</span>
+                <ul class="clearfix">
+                	<li><a class="fontbold" href="javascript:;" rid="0">{%all_text}</a></li>
+                	<volist name="regiondata" id="vo">
+                    <li><a href="javascript:;" rid="{$vo.id}">{$vo.name}({$vo.count})</a></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="category_f bod_bot clearfix">
+            	<span class="category_th">{%price_text}：</span>
+                <ul class="clearfix">
+                	<li><a class="fontbold" href="javascript:;" min="0" max="0">{%all_text}</a></li>
+                	<volist name="price_rangedata" id="vo">
+                    <li><a href="javascript:;" min="{$vo.min}" max="{$vo.max}">{$vo.name}({$vo.count})</a></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="category_n clearfix">
+            	<span class="category_th">{%distance}：</span>
+                <ul class="clearfix">
+                	<li><a class="fontbold" href="javascript:;" min="0" max="0">{%all_text}</a></li>
+                	<volist name="distance_rangedata" id="vo">
+                    <li><a href="javascript:;" min="{$vo.min}" max="{$vo.max}">{$vo.name}</a></li>
+                    </volist>
+                </ul>
+            </div>
+        
+        </div>
+        <div class="category_bot"></div>
+        
+        <div class="shop_nav clearfix">
+        	<ul class="nav_left jvf_fl">
+            	<li><a class="fontbold" href="javascript:;" rel="all">{%all_goods}</a></li>
+            	<li><a href="javascript:;" rel="new">{%new_goods}</a></li>
+            </ul>
+            <ul class="nav_right jvf_fr">
+            	<li>{%sort_by}：</li>
+                <li><a class="fontbold" href="javascript:;" field="" sort="">{%search_index_default}</a></li>
+                <li><a href="javascript:;" field="addtime" sort="asc">{%search_index_addtime}<em class="jvf_allimg mor"></em></a></li>
+                <li><a href="javascript:;" field="price" sort="asc">{%search_index_price}<em class="jvf_allimg mor"></em></a></li>
+            </ul>
+        </div>
+        <div class="linkbg"></div>
+        
+        <div class="category_shop clearfix">
+            	         
+        </div>
+        
+        <div class="jvf_page" style="display:none;">
+		</div>
+    </div>
+</div>
+
+<include file="Public:footer" />

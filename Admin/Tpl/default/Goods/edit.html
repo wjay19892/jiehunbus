@@ -1,0 +1,296 @@
+<div class="pageContent">
+<script src="__PUBLIC__/dwz/js/baidumap.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	try{
+	<if condition="($vo.latitude neq '') AND ($vo.longitude neq '')">
+	initialize({$vo.latitude},{$vo.longitude},{$vo.zoom});
+	addTags({$vo.latitude},{$vo.longitude},"{$vo.address}","map_canvas",{$vo.zoom});
+	<else /> 
+	initialize();
+	</if>
+	}catch(e){
+		
+	}
+	new AjaxUpload('#upload_button', {
+	    action: APP+'/Xheditor/goodsImgLoad',
+	    name: 'images',
+	    onSubmit : function(file , ext){
+	        if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)){
+	            this.setData({
+	            'ext': ext
+	            });
+	            this.disable();
+	        } else {
+	            return false;
+	        }
+
+	    },
+	    onComplete : function(file,response){
+	    	var data=eval("("+response+")");
+	    	insertGoodsImg(data);
+	        this.enable();
+	    }
+	});
+	imgBoxdrag();
+	
+	$('input[name="payment"]').click(function(){
+		var type = $('input[name="payment"]:checked').val();
+		if(type == 0){
+			$('#price').show();
+			$('#deposit').hide();
+		}else if(type == 1){
+			$('#price').hide();
+			$('#deposit').show();
+		}
+	});
+});
+function selectExpand_group(Id,Gid){
+	var url = "__URL__/expand/id/"+ Id +"/gid/"+ Gid;
+	$("#expandBox", $.pdialog.getCurrent()).loadUrl(url);
+}
+</script>
+	<form method="post" action="__URL__/update/navTabId/{$_REQUEST.module|default=__MODULE__}" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<input type="hidden" name="audit" value="{$vo.audit}">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品标题：</label>
+				<input type="text" class="required" name="title" style="width: 385px;" value="{$vo.title}">
+			</div>
+            
+			<div class="unit">
+				<label>商品简略标题：</label>
+				<input type="text" class="required" name="short_title" maxlength="20" style="width: 385px;" value="{$vo.short_title}">
+			</div>
+            
+            <div class="unit">
+				<label>分类：</label>
+				<SELECT name="cid" class="combox">
+					<option value="">无</option>
+					<volist name="list" id="v">
+					<php>$n = (substr_count($v['path'],',') - 1) * 24 + 3</php>
+						<option value="{$v.id}" <eq name="v.id" value="$vo['cid']">selected="selected"</eq>>{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$v.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+         
+			<div class="unit">
+				<label>地区：</label>
+				<SELECT name="rid" class="combox">
+					<option value="">无</option>
+					<volist name="region" id="v">
+					<php>$n = (substr_count($v['path'],',') - 1) * 24 + 3</php>
+						<option value="{$v.id}" <eq name="v.id" value="$vo['rid']">selected="selected"</eq>>{:str_pad('∟',$n,'&nbsp;',STR_PAD_LEFT)}{$v.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			<div class="unit">
+				<label>发布者：</label>
+				<input type="hidden" name="promulgator" group="member" field="id" value="{$vo.promulgator}">
+				<input name="member_name" type="text" readonly="readonly" group="member" field="name" value="{$vo.promulgator|getParent='Member',###}" />
+				<a class="btnLook" href="{:U('Member/lookUp/isbusiness/1/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>排序：</label>
+				<input type="text" class="digits textInput valid" name="sort" value="{$vo.sort}">
+			</div>
+			
+			<div class="unit">
+				<label>数量：</label>
+				<input type="text" class="digits textInput valid" name="num" value="{$vo.num}">
+			</div>
+			
+			<div class="unit">
+				<label>限购：</label>
+				<input type="text" class="digits textInput valid" name="onenum" value="{$vo.onenum}">
+				<span>(单用户购买数量)</span>
+			</div>
+			
+			<div class="unit">
+				<label>原价：</label>
+				<input type="text" class="number textInput valid" name="original" value="{$vo.original}">
+			</div>
+			
+			<if condition="C('sysconfig.distribution_goods_open') eq 1">
+			<div class="unit">
+				<label>佣金类型：</label>
+				<label class="radioButton"><input type="radio" name="commission_type" value="0" <eq name="vo.commission_type" value="0">checked="checked"</eq> />固定</label>
+				<label class="radioButton"><input type="radio" name="commission_type" value="1" <eq name="vo.commission_type" value="1">checked="checked"</eq> />比例</label>
+			</div>
+			
+			<div class="unit">
+				<label>佣金：</label>
+				<input type="text" class="number textInput valid" name="commission" value="{$vo.commission}">
+			</div>
+			</if>
+			
+			<div class="unit">
+				<label>支付方式：</label>
+				<label class="radioButton"><input type="radio" name="payment" value="0" <eq name="vo.payment" value="0">checked="checked"</eq> />现价</label>
+				<label class="radioButton"><input type="radio" name="payment" value="1" <eq name="vo.payment" value="1">checked="checked"</eq> />定金</label>
+			</div>
+			
+			<div class="unit">
+				<label id="price" <eq name="vo.payment" value="1">style="display: none;"</eq>>现价：</label>
+				<label id="deposit" <eq name="vo.payment" value="0">style="display: none;"</eq>>定金：</label>
+				<input type="text" class="number textInput valid" name="price" value="{$vo.price}">
+			</div>
+			
+			<div class="unit">
+				<label>{&sysconfig.site_couponname}前缀：</label>
+				<input type="text" name="pre" value="{$vo.pre}">
+			</div>
+            
+            <div class="unit">
+				<label>{&sysconfig.site_couponname}有效期：</label>
+				<input type="text" name="starttime" class="date" readonly="true" value="{$vo.starttime}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+				<span style="float: left;" >&nbsp;～&nbsp;</span>
+				<input type="text" name="endtime" class="date" readonly="true" value="{$vo.endtime}"/>
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+            
+   			<div class="unit">
+				<label>SEO关键字：</label>
+				<textarea rows="2" cols="60" name="keywords" class="textInput">{$vo.keywords}</textarea>
+			</div>
+			
+			<div class="unit">
+				<label>SEO描述：</label>
+				<textarea rows="2" cols="60" name="description" class="textInput">{$vo.description}</textarea>
+			</div>
+			
+			<div class="unit">
+				<label>内容：</label>
+				<textarea class="editor" name="detail" rows="15" cols="55" tools="mfull"
+					upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" 
+					upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" 
+					upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf"
+					upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">
+					{$vo.detail}
+				</textarea>
+			</div>
+            <div class="unit">
+				<label>电话：</label>
+				<input type="text" class="required textInput" name="tel" id="tel" style="width:330px;" value="{$vo.tel}">
+			</div>
+            <div class="unit">
+				<label>地址：</label>
+				<input type="text" class="required textInput" name="address" id="address" style="width:330px;" value="{$vo.address}"><input type="button" value="标记" onClick="codeAddress()"><input onClick="showMarker();" type="button" value="显示标记"/>
+			</div>
+			<div class="unit">
+				<label>地图：</label>
+				<div id="map_canvas"></div>
+			</div>
+            <div class="unit">
+                <label>地图属性：</label>
+                <div class="fl"><span>经度：</span><input name="longitude" type="text" id="longitude" value="{$vo.longitude}" readonly="readonly" class="w70"/></div>
+                <div class="fl ml10"><span>纬度：</span><input name="latitude" type="text" id="latitude" value="{$vo.latitude}" readonly="readonly" class="w70"/></div>
+                <div class="fl ml10"><span>缩放级别：</span><input name="zoom" type="text" id="zoom" value="{$vo.zoom}" readonly="readonly" class="w70"/></div>
+            </div>
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1" <eq name="vo.state" value="1">selected="selected"</eq>>启用</option>
+					<option value="0" <eq name="vo.state" value="0">selected="selected"</eq>>禁用</option>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>图片：</label>
+				<div style="float: left;">
+				<div class="button" id="upload_button"><div class="buttonContent"><button type="button">上传</button></div></div>
+				</div>
+			</div>
+			
+			<div class="unit">
+				<label>已上传图片：</label>
+                <div style="width:475px; float:left">
+				<ul id="imgBox">
+				<volist name="ardata" id="vm">
+					<li class="sortableitem">
+						<div class="jvf_clos"><span onclick="deleteImg(this);">×</span></div>
+						<input type="hidden" name="imgs[]" value="{$vm.accessoryid}">
+						<img src="__ROOT__{$vm.thumbnail}"/>
+					</li>
+				</volist>
+				</ul>
+                </div>
+                
+			</div>
+            
+            <div class="unit">
+                <label>商品扩展:</label>
+                <select name="egid" class="" onchange="selectExpand_group(this.value,{$vo.id})">
+                    <option value="0">请选择</option>
+                    <volist name="expand_groupList" id="item">
+                    <option value="{$item.id}"  <eq name="item.id" value="$vo['egid']">selected="selected"</eq>>{$item.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div id="expandBox">
+            <volist name="expand" id="att">
+            <div class="unit">
+				<label>{$att.key}：</label>
+                <if condition="$att['type'] eq 0"><!-- 手动输入 -->
+                    <input type="text" name="{$att.id}" class="textInput" value="{$att.val}" />
+                </if>
+                
+                <if condition="$att['type'] eq 1">
+                  <div style="width:475px; float:left">
+                    <foreach name="att['enum']" item="enum_item" ><!-- 单选 -->
+                    <label class="radioButton"><input type="radio" name="{$att.id}" value="{$enum_item}"  <if condition="$enum_item eq $att['val']">checked="checked" </if> />{$enum_item}</label>
+                    </foreach>
+                  </div>
+                </if>
+                
+                <if condition="$att['type'] eq 2">        
+                    <select name="{$att.id}">
+                        <foreach name="att['enum']" item="enum_item" ><!-- 下拉 -->
+                        <option value="{$enum_item}" <if condition="$enum_item eq $att['val']">selected="selected"</if>>{$enum_item}</option>
+                        </foreach>
+                    </select>
+                </if>
+                
+                <if condition="$att['type'] eq 3"><!-- 文本域 -->
+                    <textarea rows="3" cols="55" name="{$att.id}" class="textInput">{$att['val']}</textarea>
+                </if>
+                
+                <if condition="$att['type'] eq 4">
+                  <div style="width:475px; float:left">
+                    <foreach name="att['enum']" item="enum_item" ><!-- 多选 -->
+                    <label class="radioButton"><input type="checkbox" name="{$att.id}[]" value="{$enum_item}"  <if condition="in_array($enum_item,$att['val'])">checked="checked"</if> />{$enum_item}</label>
+                    </foreach>
+                  </div>
+                </if>     
+                                               
+                <if condition="$att['type'] eq 5"><!-- 图片域 -->
+                    <input type="file"  name="{$att.id}" class="valid" /> 
+                    <if condition="$att['val'] neq ''">
+                        <a href="__ROOT__{$att.val}" target="_blank" >查看</a>
+                    </if>
+                </if>
+                
+                <if condition="$att['type'] eq 6"><!-- 日历控件 -->
+                    <input type="text" readonly="true" format="yyyy-MM-dd" class="date textInput readonly valid focus" name="{$att.id}" value="{$att['val']}"><a class="inputDateButton" href="#">选择</a>
+                </if>
+                
+                <if condition="$att['type'] eq 7"><!-- 编辑器 -->
+                    <textarea id="{$att.id}"  class="editor" name="{$att.id}" rows="6" cols="55" tools="mfull" upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf" upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">{$att.val}</textarea>       
+                </if>
+			</div>
+            </volist>
+            </div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

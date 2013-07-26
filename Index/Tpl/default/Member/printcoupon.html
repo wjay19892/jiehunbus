@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="{$INI['sn']['sn']}">
+<head>
+<meta http-equiv=content-type content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{&sysconfig.site_couponname}</title>
+</head>
+<style type="text/css">
+body {
+	background:#fff;
+}
+* {
+	margin: 0 auto;
+}
+#ecard {
+	width:660px;
+	clear:both;
+	border:1px solid #000;
+	margin-top:40px;
+}
+#econ {
+	padding: 0 25px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#etop {
+	height:75px;
+	border-bottom:1px solid #000;
+}
+#couponlogo {
+	width:320px;
+	height:75px;
+	float:left;
+	font-family:"黑体";
+	font-size:36px;
+	line-height:80px;
+	text-align:left;
+}
+#welcome {
+	float:left;
+	font-family:"黑体";
+	font-size:36px;
+	margin-top:16px;
+	text-align:right;
+	width:280px;
+}
+#teamtitle {
+	width:620px;
+	text-align:left;
+	font-size:25px;
+	font-weight:bold;
+	margin-top:8px;
+	margin-bottom:10px;
+}
+#main {
+	width:620px;
+	margin-bottom:20px;
+}
+#mleft {
+	float:left;
+	width:320px;
+	line-height:150%;
+}
+#name {
+	font-size:20px;
+	font-weight:bold;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+#relname {
+	font-size:14px;
+	padding-left:8px;
+}
+#coupon {
+	margin-top:20px;
+	font-size:26px;
+	font-family:"黑体";
+	font-weight:bold;
+	text-align:left;
+}
+#coupon p {
+	line-height:120%;
+}
+#mright {
+	float:right;
+	width:300px;
+}
+#thenotice {
+	font-size:14px;
+	padding-top:8px;
+}
+#thenotice ul {
+	margin:0px;
+	list-style:none;
+	padding-left:0px;
+}
+#thenotice ul li {
+	line-height:26px;
+}
+#server {
+	background-color: #DCDCDC;
+	clear: both;
+	color: #000000;
+	font-size: 14px;
+	line-height: 32px;
+	margin-top: 20px;
+	text-align: center;
+}
+ @media print {
+.noprint {
+	display:none;
+}
+}
+</style>
+<body>
+<div class="jvf_yhq" style="">
+  <div id="ecard">
+    <div id="econ">
+      <!--top -->
+      <div id="etop">
+        <div id="couponlogo">{&sysconfig.site_name}{&sysconfig.site_couponname} </div>
+        <div id="welcome">{%member_printcoupon_welcome}</div>
+      </div>
+      <!--endtop -->
+      <div id="teamtitle">{$coupondata.good.title}</div>
+      <!--main -->
+      <div id="main">
+        <div id="mleft">
+          <div id="name">{%member_printcoupon_name}</div>
+          <div id="relname">{$memberdata.name}（{$memberdata.mail}）</div>
+          <div id="name">{%voucher_date}</div>
+          <div id="relname">{$coupondata.starttime|toDate=###,'Y-m-d'}～{$coupondata.endtime|toDate=###,'Y-m-d'}</div>
+          <div id="name">{%address_text}</div>
+          <div id="relname">{$coupondata.good.address}</div>
+          <div id="coupon">
+            <p>{%voucher_sn}:{$coupondata.sn}</p>
+            <p>{%voucher_pass}:{$coupondata.pass}</p>
+          </div>
+        </div>
+        <!--right -->
+        <div id="mright">
+          <div id="name"></div>
+          <div id="thenotice"></div>
+          <div id="name">{%member_printcoupon_mright_name}</div>
+          <div id="thenotice">
+            <ul>
+              <li>{%member_printcoupon_tip1_before}”{$coupondata.good.title}“{%member_printcoupon_tip1_after}</li>
+              {%member_printcoupon_tip}
+            </ul>
+            <img src="{:U('Index/qrcode/sn/'.$coupondata['sn'].'/pw/'.$coupondata['pass'])}" /> </div>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+      <!--endmain -->
+    </div>
+    <div id="server">{%member_printcoupon_server}：{$coupondata.good.tel}{%address_text}：{$coupondata.good.address}</div>
+  </div>
+  <div class="noprint" style="text-align:center; margin:20px;">
+    <button style="padding:10px 20px; font-size:16px; cursor:pointer;" onclick="window.print();">{%member_printcoupon_print}</button>
+  </div>
+</div>
+</body>
+</html>

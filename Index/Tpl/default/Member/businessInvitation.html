@@ -1,0 +1,43 @@
+<script>
+$(function(){
+	memberBusinessInvitation();
+});
+</script>
+<ul id="nav_references_panels" class="panels">
+   <li class="selected">
+     <div class="info-box">{%member_references_info_box}</div>
+     <h2>{%member_references_h2}</h2>
+     <div class="padded-text email_your_friends clearfix">
+       <form method="post" id="references_emails" class="clearfix" action="{:U('Member/references_emails')}">
+         <textarea class="jvf_inputt" placeholder="friend@example.com" name="friends" id="email_addresses"></textarea>
+         <span id="forgotnotice" style="display:none; float:left;"></span>
+         <input type="button" value="{%member_references_submit}" name="commit" class="btn p2153 f14 linebl">
+       </form>
+       <p class="description">{%member_references_description}</p>
+     </div>
+     <span class="button-steel green-flat" style="display: none;" id="requested-template"> Requested </span>
+     <h2>{%share_to}</h2>
+     <div class="clearfix padded-text">
+       <div class="share"> <span>{%share_to}：</span>
+         <ul style="float:left;" class="clearfix">
+           <li class="sina"><a href="http://v.t.sina.com.cn/share/share.php?url={$references_urllink}&title={$references_name}&pic={$references_pic}" target="_blank">{%sina_weibo}</a></li>
+           <li class="tengx"><a href="http://v.t.qq.com/share/share.php?title={$references_name}&url={$references_urllink}&pic={$references_pic}" target="_blank">{%qq_weibo}</a></li>
+           <li class="renren"><a href="http://share.renren.com/share/buttonshare.do?link={$references_urllink}&title={$references_name}" target="_blank">{%renren}</a></li>
+           <li class="douban"><a href="http://www.douban.com/recommend/?url={$references_urllink}&title={$references_name}" target="_blank">{%douban}</a></li>
+           <li class="kaixin"><a href="http://www.kaixin001.com/repaste/share.php?rurl={$references_urllink}&rcontent={$references_urllink}&rtitle={$references_name}" target="_blank">{%kaixin}</a></li>
+           <li class="sohu"><a href="http://t.sohu.com/third/post.jsp?url={$references_urllink}&title={$references_name}&&content=utf-8" target="_blank">{%sohu_weibo}</a></li>
+           <li class="qq"><a target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={$references_urllink}&amp;title={$references_name}&amp;pics={$references_pic}">{%qq_kongjian}</a> </li>
+         </ul>
+       </div>
+       <span class="inner_text">{%share_links_title}:</span><br />
+       <input style="width:500px;" class="jvf_inputt" type="text" value="{$references_urllink}" id="fb_message" name="fcxad" readonly="readonly" >
+       <a href="javascript:void(0);" style="color:#fff;" class="btn p2153 f12 linebl" id="fb-send-button">{%copy_links}</a>
+     </div>
+     <h2>{%member_references_p_1}</h2>
+         <div class="mb_pj">
+           <ul id="recommend_content">
+         </ul>
+           <div id="recommend_page" class="jvf_page">      </div>
+       </div>
+   </li>
+ </ul>

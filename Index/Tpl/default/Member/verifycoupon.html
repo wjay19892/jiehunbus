@@ -1,0 +1,21 @@
+<script>
+$(function(){
+	memberVerifycoupon();
+});
+</script>
+<div class="goods_registration jvf_frame">
+	<form method="post" id="couponform" action="{:U('Member/consumecoupon')}" method="post">
+ 	<div class="goods_registration_top"><img src="../Public/images/jvf_yellow.png" />{%member_verifycoupon_info}</div>
+ 	<span class="textinput jvf_allimg inp_id">
+ 		<input id="coupon-input-sn" class="jvf_inputt" type="text" name="sn"  placeholder="{&sysconfig.site_couponname}{%voucher_sn}">
+ 	</span>
+    <span class="textinput jvf_allimg inp_pas">
+    	<input id="coupon-input-pass" class="jvf_inputt" type="pass" name="pass" placeholder="{&sysconfig.site_couponname}{%voucher_pass}">
+    </span>
+    <div class="goods_btn">
+	<input type="button" name="query" value="{%member_verifycoupon_query}" class="btn linebl f14 p2153" id="coupon-query">&nbsp;&nbsp;&nbsp;
+	<input type="button" value="{%member_verifycoupon_consume}" name="consume" class="btn linebl f14 p2153" id="coupon-consume">
+   	</div>
+   	</form>
+</div>
+<div class="jvf_520_bot jvf_allimg mg0a"></div>

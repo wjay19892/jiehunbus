@@ -1,0 +1,32 @@
+<volist name="commentdata" id="vo">
+<div class="shop_all">
+    <div class="jvf_frame w225 pr">
+        	<div class="comwit">
+        	<a href="{:U('Goods/index/id/'.$vo['gid'])}">
+        		<img width="213" src="{$vo.goods.accessory.0.thumbnail}">
+        	</a>
+        	</div>
+        	<div class="comwit_c circle_con">
+	        	<div class="jvf_star mb clearfix">
+	               <span class="jvf_fl">{%evaluate}：</span>
+	               <div class="jvf_fl rating">
+	                   <div class="filled star_{$vo.goods.evaluate.total.star}"></div>
+	               </div>
+	            </div>
+        	</div>
+            <div class="comwit_c circle_con">
+            	<span class="marks_star jvf_ico"></span>
+            	{$vo.content}
+                <span class="marks_end jvf_ico"></span>
+            </div>
+            <div class="jvf_frame_bot clearfix">
+            	<div class="user_head jvf_fl"><a href="{:U('User/space/id/'.$vo['reviewer']['id'])}" uid="{$vo['reviewer']['id']}" class="jvf_getUser"><img width="35" height="35" src="{$vo.reviewer.header.thumbnail}"></a></div>
+                <div class="user_at jvf_fl"><span class="user_name"><a href="{:U('User/space/id/'.$vo['reviewer']['uid'])}">{$vo.reviewer.name}</a></span>
+	                    <span class="jvf_ico at"></span>
+	                    <a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.goods.title}</a>
+                </div>
+            </div>
+    </div>
+    <div class="jvf_allimg shop_bot"></div>
+</div>
+</volist>

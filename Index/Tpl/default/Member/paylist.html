@@ -1,0 +1,123 @@
+<script type="text/javascript">
+$(function(){
+	$('#hideBank').click(function(){
+		var input = $('input[name="payblank"]');
+		input.attr('checked',false);
+	});
+	
+	$('input[name="paytype"]').click(function(){
+		var li = $(this).parents('li');
+		var lis = li.siblings();
+		lis.removeClass('checked');
+		li.addClass('checked');
+	});
+
+	if($.browser.msie){
+		$('label').click(function(){
+			$('#'+$(this).attr('for')).trigger('click');
+		});
+	}
+})
+
+</script>
+<ul class="bank_select_bor mt10">
+	<volist name="paymentdata" id="vo">
+	<li <eq name="key" value="0">class="checked"</eq>><span>
+	  <input name="paytype" <eq name="key" value="0">checked="checked"</eq> type="radio" value="{$vo.mark}" id="{$vo.mark}" /></span>
+	    <label for="{$vo.mark}"><img src="__ROOT__{$vo.logo}" alt="{$vo.name}" /></label>
+	</li>
+	</volist>
+</ul>
+ <ul class="bank_select_bor mt10" id="showBanks">
+    <li><span>
+      <input name="payblank" type="radio" value="ABC" id="ABC-NET-B2C"  />
+      </span>
+      <label for="ABC-NET-B2C"><img src="../Public/images/bank/ABC-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="CCB" id="CCB-NET-B2C" />
+      </span>
+      <label for="CCB-NET-B2C"><img src="../Public/images/bank/CCB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="CMB" id="CMBCHINA-NET-B2C" />
+      </span>
+      <label for="CMBCHINA-NET-B2C"><img src="../Public/images/bank/CMBCHINA-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="BOC" id="BOC-NET-B2C" />
+      </span>
+      <label for="BOC-NET-B2C"><img src="../Public/images/bank/BOC-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="BCM" id="BOCO-NET-B2C" />
+      </span>
+      <label for="BOCO-NET-B2C"><img src="../Public/images/bank/BOCO-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="CEB" id="CEB-NET-B2C" />
+      </span>
+      <label for="CEB-NET-B2C"><img src="../Public/images/bank/CEB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="CMBC" id="CMBC-NET-B2C" />
+      </span>
+      <label for="CMBC-NET-B2C"><img src="../Public/images/bank/CMBC-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="SPDB" id="SPDB-NET-B2C" />
+      </span>
+      <label for="SPDB-NET-B2C"><img src="../Public/images/bank/SPDB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="CIB" id="CIB-NET-B2C" />
+      </span>
+      <label for="CIB-NET-B2C"><img src="../Public/images/bank/CIB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="GDB" id="GDB-NET-B2C" />
+      </span>
+      <label for="GDB-NET-B2C"><img src="../Public/images/bank/GDB-NET-B2C.png" /></label>
+    </li>         
+    <li><span>
+      <input name="payblank" type="radio" value="CITIC" id="ECITIC-NET-B2C" />
+      </span>
+      <label for="ECITIC-NET-B2C"><img src="../Public/images/bank/ECITIC-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="SDB" id="SDB-NET-B2C" />
+      </span>
+      <label for="SDB-NET-B2C"><img src="../Public/images/bank/SDB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="PAB" id="PINGANBANK-NET" />
+      </span>
+      <label for="PINGANBANK-NET"><img src="../Public/images/bank/PINGANBANK-NET.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="BJB" id="BCCB-NET-B2C" />
+      </span>
+      <label for="BCCB-NET-B2C"><img src="../Public/images/bank/BCCB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="PSBC" id="POST-NET-B2C" />
+      </span>
+      <label for="POST-NET-B2C"><img src="../Public/images/bank/POST-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="BJNB" id="BJRCB-NET-B2C" />
+      </span>
+      <label for="BJRCB-NET-B2C"><img src="../Public/images/bank/BJRCB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="NBB" id="NBCB-NET-B2C" />
+      </span>
+      <label for="NBCB-NET-B2C"><img src="../Public/images/bank/NBCB-NET-B2C.png" /></label>
+    </li>
+    <li><span>
+      <input name="payblank" type="radio" value="SHB" id="SHB-NET-B2C" />
+      </span>
+      <label for="SHB-NET-B2C"><img src="../Public/images/bank/SHB-NET-B2C.png" /></label>
+    </li>
+    <li><a href="javascript:;" id="hideBank">{%member_paylist_hidebank}</a></li>
+</ul>

@@ -1,0 +1,86 @@
+<div class="mb_right jvf_fr">
+<div class="mb_head_user mg0a" style="padding-top:10px;">
+       <div class="mb_head_img">
+  	<a href="{:U('User/space/id/'.$userdata['id'])}"><img src="{$userdata.header.path}" /></a>
+      <div class="space_operation clearfix" style="padding-left:1px; z-index:1;">
+          <a href="{:U('Member/addfriend/id/'.$userdata['id'])}">{%addfriend}</a>
+          <a href="{:U('Member/sendpm/id/'.$userdata['id'])}">{%send_message}</a>
+          <a href="javascript:;" uid="{$userdata['id']}" class="jvf_callme">{%to_chat}</a>
+      </div>
+      <div class="attestation"></div>
+  </div>
+  <div class="mb_username clearfix"><a charset="jvf_fl" href="{:U('User/space/id/'.$userdata['id'])}">
+	<eq name="userdata.isbusiness" value="1">
+	{$userdata.business.name}</br>
+	({%goods_manager}:{$userdata.name})
+	<else />
+	{$userdata.name}
+	</eq>
+  	<eq name="userdata.sex" value="0">
+  	<span class="jvf_ico unman" >
+  	</eq>
+  	<eq name="userdata.sex" value="1">
+  	<span class="jvf_ico man" >
+  	</eq>
+  	<eq name="userdata.sex" value="2">
+  	<span class="jvf_ico woman" >
+  	</eq>
+  </span></a></div>
+ 
+  <div class="jvf_space clearfix">
+      <ul>
+          <li class="jvf_fl">
+              <a href="{:U('User/evaluate/id/'.$userdata['id'])}">({$userdata.evaluate})</a><br>
+              {%ta_evaluation_goods}
+          </li>
+          <li class="jvf_fr">
+              <a href="{:U('User/recommend/id/'.$userdata['id'])}">({$userdata.recommend})</a><br>
+              {%ta_recommend_goods}
+          </li>
+      </ul>
+  </div>  
+  <div class="space_verification clearfix">
+  	<span class="sp1 jvf_fl">{%verification_text}：</span>
+      <div class="sp2 jvf_fl clearfix"><span class="mail jvf_allimg jvf_fl"  title="{%mail_verification}"></span><span class="jvf_fl"><eq name="userdata.mailstatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+      <div class="sp3 jvf_fl clearfix"><span class="mobile jvf_allimg jvf_fl" title="{%phone_verification}"></span><span class="jvf_fl"><eq name="userdata.phonestatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+      <div class="sp4 jvf_fl clearfix"><span class="tmall jvf_allimg jvf_fl" title="商家验证"></span><span class="jvf_fl"><eq name="userdata.phonestatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+  </div>
+  		
+<div class="jvf_spaadr">{%default_location}：<a href="javascript:;" class="jvf_address" uid="{$userdata.id}">{$userdata.address}<span class="jvf_juli fujin_ico">{:distance($locate['lat'],$locate['lng'],$userdata['location']['lat'],$userdata['location']['lng'])}</span></a></div>
+<div class="clearfix shop_renzheng">
+	<!-- <div class="jvf_shopman jvf_fl">
+      <span class="shopman_ico jvf_allimg jvf_fl" title="{%businesses_certified}"></span>
+      <span class="jvf_fl" style="line-height: 28px;margin-left: 7px;">{%businesses_certified}</span>
+    </div> -->
+    <div  class="space_guanzhu jvf_fr">
+    	<if condition="!in_array($userdata['id'],$memberdata['attention_ids'])">
+    	<a href="{:U('Member/attention/id/'.$userdata['id'])}" add="add">{%user_add_attention}</a>
+    	<else />
+    	<a href="{:U('Member/removeattention/id/'.$userdata['id'])}" remove="remove">{%user_remove_attention}</a>
+    	</if>
+    	</div>
+    </div>
+</div>
+<div class="mb_nav">
+	<div class="jvf_shuo <eq name="ACTION_NAME" value="space">current</eq>">
+    	<a class="jvf_allimg" href="{:U('User/space/id/'.$userdata['id'])}"><em class="jvf_allimg jvf_shuo_ico"></em>{%ta_talk_about}<span>({$userdata.talk_about})</span></a>
+    </div>
+    <div class="jvf_fesi <eq name="ACTION_NAME" value="attention">current</eq>">
+    	<a class="jvf_allimg" href="{:U('User/attention/id/'.$userdata['id'])}"><em class="jvf_allimg jvf_fesi_ico"></em>{%ta_audience}<span>({$userdata.was_attention})</span></a>
+    </div>
+    <div class="jvf_guzu <eq name="ACTION_NAME" value="wasAttention">current</eq>">
+    	<a class="jvf_allimg" href="{:U('User/wasAttention/id/'.$userdata['id'])}"><em class="jvf_allimg jvf_guzu_ico"></em>{%ta_listen}<span>({$userdata.attention})</span></a>
+    </div>
+    <div class="jvf_hayo <eq name="ACTION_NAME" value="friends">current</eq>">
+    	<a class="jvf_allimg" href="{:U('User/friends/id/'.$userdata['id'])}"><em class="jvf_allimg jvf_hayo_ico"></em>{%ta_friends}<span>({$userdata.friends})</span></a>
+    </div>
+    <div class="jvf_zila <eq name="ACTION_NAME" value="info">current</eq>">
+    	<a class="jvf_allimg" href="{:U('User/info/id/'.$userdata['id'])}"><em class="jvf_allimg jvf_zila_ico"></em>{%ta_data}</a>
+    </div>
+	<eq name="userdata.isbusiness" value="1">
+    <div class="jvf_zila <eq name="ACTION_NAME" value="goods">current</eq>">
+    	<a class="jvf_allimg" href="{:U('User/goods/id/'.$userdata['id'])}"><em class="jvf_allimg jvf_shop_ico"></em>TA发布的商品<span>({$userdata.goodsnum})</span></a>
+    </div>
+	</eq>
+    </div>
+</div>

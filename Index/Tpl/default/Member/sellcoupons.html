@@ -1,0 +1,59 @@
+<script>
+$(function(){
+	memberSellcoupons();
+});
+</script>
+
+<div class="coupon_list">
+    <form action="{:U('Member/sellcoupons')}" id="inbox_filter_form" method="get">        
+       <span>{%member_show}：</span>
+        <select class="jvf_inputb" id="filter" name="filter">
+            <option <if condition='($filter eq "") OR ($filter eq "all")'>selected="selected"</if> value="all">{%all_text}</option>
+            <option <if condition='($filter eq "unused")'>selected="selected"</if> value="unused">{%coupon_unused}</option>
+            <option <if condition='($filter eq "used")'>selected="selected"</if> value="used">{%coupon_used}</option>
+            <option <if condition='($filter eq "freeze")'>selected="selected"</if> value="freeze">{%coupon_freeze}</option>
+            <option <if condition='($filter eq "expired")'>selected="selected"</if> value="expired">{%coupon_expired}</option>
+        </select>
+        <span>{%goods_title}：</span><input class="jvf_inputt" type="text" value="" name="title">
+        <span>{&sysconfig.site_couponname}{%voucher_sn}：</span><input class="jvf_inputt" type="text" value="" name="sn">
+        <input class="btn p2153 f14 linebl" type="submit" value="{%member_sellcoupons_submit}">
+    </form>
+</div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="trips_list">
+   <thead>
+     <tr>
+       <th width="300px">{%goods_title}</th>
+       <th width="100px">{&sysconfig.site_couponname}{%voucher_sn}</th>
+       <th width="100px">{%voucher_pass}</th>
+       <th width="100px">{%voucher_date}</th>
+       <th width="100px">{%status_text}</th>
+     </tr>
+   </thead>
+   <tbody>
+    <volist name="couponsdata" id="vo">
+		<tr>
+		  <td class="txc"><span><a class="shpc" href="{:U('Goods/index/id/'.$vo['good']['id'])}" target="_blank">{$vo.good.title}</a></span></td>
+		  <td class="txc"><span>{$vo.sn}</span></td>
+		  <td class="txc"><span>******</span></td>
+		  <td class="txc"><span>{$vo.starttime|toDate=###,'Y-m-d'}<br />～<br />{$vo.endtime|toDate=###,'Y-m-d'}</span></td>
+		  <td class="txc">
+		    <if condition="($vo.status eq 0) AND ($vo.endtime gt $now)">
+		    <span>{%coupon_unused}</span>
+		    </if>
+		    <if condition="$vo.status eq 1">
+		    <span>{%coupon_used}</span>
+		    </if>
+		    <if condition="$vo.status eq 2">
+		    <span>{%coupon_freeze}</span>
+		    </if>
+		    <if condition="($vo.status eq 0) AND ($vo.endtime lt $now)">
+		    <span>{%coupon_expired}</span>
+		    </if>
+		  </td>
+		</tr>
+	</volist>
+	<tr>
+		<td colspan="10"><div class="jvf_page">{$page}</div></td>
+	</tr>
+   </tbody>
+ </table>

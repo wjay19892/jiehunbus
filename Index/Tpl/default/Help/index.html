@@ -1,0 +1,43 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	$('.help_con img').ieImg({maxWidth:745});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body help_all">
+        <div class="jvf_frame jvf_fl jvf_help">
+            <div class="help_nav">
+                <div class="rig_title">
+                    <h2 class="title">
+                        {&sysconfig.site_name}{%help_text}
+                    </h2>
+                </div>
+                <div class="help_nav_list">
+                	<volist name="articles_categorydata" id="vo">
+                    <h3>
+                        {$vo.name}
+                    </h3>
+                    <ul class="disc">
+                    <volist name="vo.articles" id="v">
+                        <li>
+                            <a href="{:U('Help/index/id/'.$v['id'])}">
+                               {$v.title}
+                            </a>
+                        </li>
+                    </volist>
+                    </ul>
+                    </volist>
+                </div>
+            </div>
+        </div>
+        
+        <div class="jvf_fr help_con">
+        <h1>{$data.title}</h1>
+        	<div class="article">{$data.content}</div>
+       </div>
+    </div>
+</div>
+
+<include file="Public:footer" />

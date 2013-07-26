@@ -1,0 +1,32 @@
+<volist name="goodsdata" id="vo">
+<div class="shop_all">
+     <div class="jvf_frame w225">
+         <div class="shopall_img"><a href="{:U('Goods/index/id/'.$vo['id'])}"><img width="213" src="{$vo.accessory.thumbnail}" height="{$vo.accessory.thumbnail_height}"></a></div>
+         <div class="shop_name"><a href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a></div>
+         <div class="shop_adr clearfix"><a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" gid="{$vo.id}">{$vo.address}</a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em>{:distance($locate['lat'],$locate['lng'],$vo['latitude'],$vo['longitude'])}</span></div>
+         <div class="shop_conbot clearfix">
+         	<a href="{:U('Goods/index/id/'.$vo['id'])}">{%detail_text}</a>
+             <a href="{:U('Goods/index/id/'.$vo['id'])}">{%recommend}({$vo.recommend})</a>
+             <a href="{:U('Goods/index/id/'.$vo['id'])}">{%evaluate}({$vo.comment})</a>
+             <if condition="in_array($vo['id'],$collection_arr)">
+             <a class="jvf_ico collHover icow" href="{:U('Member/removeFavorites/gid/'.$vo['id'])}"></a>
+             <else />
+             <a class="jvf_ico coll icow" href="{:U('Member/saveFavorites/gid/'.$vo['id'])}"></a>
+             </if>
+         </div>
+         <div class="jvf_frame_bot clearfix">
+         	<div class="jvf_fl">
+         	<a href="{:U('User/space/id/'.$vo['promulgator']['id'])}" uid="{$vo['promulgator']['id']}" class="jvf_getUser"><img width="35" height="35" src="{$vo.promulgator.header.thumbnail}"></a>
+             </div>
+             <div class="shop_zur jvf_fl clearfix">
+             	<span class="jvf_fl">{%cost_price}：</span><span class="yuanjia">&yen;{$vo.original}</span>
+                 <div class="jvf_cl"></div>
+                 <span class="jvf_fl">{%goods_manager}：</span><span class="jvf_fl jvf_over w100 user_name"><a href="{:U('User/space/id/'.$vo['promulgator']['id'])}">{$vo.promulgator.name}</a></span>
+             </div>
+             <div class="jvf_xianjia">&yen;{$vo.price}</div>
+         </div>
+         
+     </div>
+     <div class="jvf_allimg shop_bot"></div>
+</div>
+</volist>

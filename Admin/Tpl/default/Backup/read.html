@@ -1,0 +1,26 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/import/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, repeatAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<input name="folder" value="{$folder}" type="hidden">
+			<dl>
+				<dt>备份卷：</dt>
+				<dd>
+				<volist name="list" id="vo">
+					<input type="checkbox" name="files[]" value="{$vo.filename}" checked="checked" />{$vo.filename}({$vo.size|formatsize})<br>
+				</volist>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<label style="float:left"><input type="checkbox" class="checkboxCtrl" group="files[]" checked="checked" />全选</label>
+			<ul>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="checkboxCtrl" group="files[]" selectType="invert">反选</button></div></div></li>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+

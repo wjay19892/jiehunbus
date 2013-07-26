@@ -1,0 +1,17 @@
+<div title="{%member_gooddetail_title}" style="width:580px;">
+	<div class="jvf_box_con">
+	<table width="100%" align="center" class="trips_list" style=" margin-top:0px;">
+		<tr><td width="80"><b>{%goods_title}：</b></td><td><b>{$gooddata.title}</b></td></tr>
+		<tr><td><b>{%member_gooddetail_category}：</b></td><td><b>{$gooddata.category_name}</b></td></tr>
+
+		<tr><td><b>{%member_gooddetail_crr_status}：</b></td><td><span style="color:#F00;font-weight:bold;"><if condition="$gooddata.audit eq 0"><eq name="gooddata.status" value="1">{%ing_status}<else />{%over_status}</eq><else />{%ing_audit}</if></span></td></tr>
+		<tr><td><b>{%member_gooddetail_sales_quota}：</b></td><td>{%member_gooddetail_one_high}：{$gooddata.onenum}&nbsp;&nbsp;&nbsp;&nbsp;{%member_gooddetail_all_high}：{$gooddata.num}</td></tr>
+		<tr><td><b>{%member_gooddetail_pricing}：</b></td><td>{%member_gooddetail_market_price}：<b class="weic">&yen;{$gooddata.original}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{%unit_price}：<b class="weic">&yen;{$gooddata.price}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{%required_pay}<eq name="gooddata.payment" value="1">{%payment_deposit}：<b style="font-weight:bold; color:#FF0000;">&yen;{$gooddata.price}</b><else />{%payment_price}</eq></td></tr>
+		<tr><td><b>{%member_gooddetail_region}:</b></td><td><b>{$gooddata.region_name}</b></td></tr>
+		<tr><td><b>{%member_gooddetail_turnover}：</b></td><td><b>{$gooddata.crrnum}</b>&nbsp;{%member_gooddetail_actual}&nbsp;<b>{$paycount}</b>&nbsp;{%member_gooddetail_purchase}&nbsp;<b>{$buycount}</b>&nbsp;{%member_gooddetail_part}
+		</td></tr>
+		<tr><td><b>{%member_gooddetail_total}：</b></td><td>{%member_gooddetail_total_amount}：<b class="weic">&yen;&nbsp;{$paymoney}</b></td></tr>
+	</table>
+	</div>
+     
+</div>

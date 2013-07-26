@@ -1,0 +1,42 @@
+<script>
+$(function(){
+	memberChatLog();
+});
+</script>
+<div class="clearfix" id="inbox_filters">
+    <form method="get" id="inbox_filter_form" action="{:U('Member/chatLog')}">  
+    <div class="mb_ltjl">      
+        <label for="filter">{%member_chatlog_friends_name}：</label>
+        <input name="name" type="text" value="{$name}" />
+        <a class="btn linebl f14 p2153" href="javascript:;" id="filter">{%search_text}</a>
+    </div>
+    </form>
+
+  </div>
+  <div class="e jvf_mbpd" id="feed_div">
+    
+    <empty  name='chatlogsdata'>
+	<div style="width:680px;" id="like_space" class="block-space shop_all">
+			<div class="index-space">
+				<i></i>没有您和朋友聊天的记录！
+			</div>
+	</div>
+<else />
+<ul class="el">
+    <iterate name="chatlogsdata" id="vo">
+      <li class="clearfix">
+        <div class="clearfix">
+        <div class="jvf_fl">
+        <a href="{:U('/User/space/id/'.$vo['send'])}"><eq name="vo.send" value="$memberdata['id']">{%member_chatlog_your} <else />{$vo.send_name}</eq></a>&nbsp;{%member_chatlog_to}&nbsp;<a href="{:U('/User/space/id/'.$vo['receive'])}"><eq name="vo.receive" value="$memberdata['id']">{%member_chatlog_your}<else />{$vo.receive_name}</eq></a>{%member_chatlog_say}：{$vo.content|contentFilter}<span class="xg1"><span title="{$vo.addtime|toDate}">&nbsp;&nbsp;{$vo.addtime|dgmdate}</span></span>
+        </div>
+        
+        <a title="{%delete}" class="o del" href="javascript:;" rid="{$vo.id}">{%delete}</a></div>
+      </li>
+    </iterate>
+    
+    </ul>
+  </div>
+<div class="jvf_page">
+{$page}
+</div>
+</empty>

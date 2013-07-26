@@ -1,0 +1,24 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+	$(function(){
+		userFriends({$userdata['id']});
+	});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<!--粉丝-->
+            <div class="mb_left_con">
+            	<h2 class="jvf_space_tit">{%ta_friend_said}</h2>
+            	<div class="left_box"></div>
+            	<div class="jvf_page" style="display:none;">
+				</div>
+            </div>
+            <!--粉丝-->
+       </div>
+       <include file="User:right" />
+       </div>
+	</div>
+</div>
+<include file="Public:footer" />

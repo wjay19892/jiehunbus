@@ -1,0 +1,31 @@
+<empty  name='commentdata'>
+<li class="reviews-list-item">{%comment_reviewslist_empty}</li>
+<else />
+<volist name='commentdata' id='vo'>
+	<li class="reviews-list-item clearfix" >
+	         <div class="jvf_fl userpic1">
+	              <a rel="no-follow" href="{:U('User/space/id/'.$vo['reviewer']['id'])}"><img width="50px" height="50px" src="{$vo.reviewer.header.thumbnail}" alt="{$vo.reviewer.name}"></a><br>
+	              {%evaluators}</div>
+	       <div class="bubble jvf_fl jvf_frame">
+	          <p class="message">
+	          {%evaluators}：<a href="{:U('User/space/id/'.$vo['reviewer']['id'])}" class="name">{$vo.reviewer.name}</a><br>
+	           {%goods_title}：<a href="{:U('Goods/index/id/'.$vo['goods']['id'])}">{$vo.goods.title}</a><br>
+	        </p><div class="pdl10 clearfix">
+	          <span style="line-height:16px;" class="jvf_fl">{%evaluate}：</span>
+	         <div class="jvf_fl rating">
+	             <div class="filled star_{$vo.goods.evaluate.total.star}"></div>
+	         </div>
+	      </div>
+	     <div class="clearfix pd510">
+	      <span class="jvf_ico yh1 jvf_fl"></span>
+	      <span class="jvf_fl">{$vo.content}</span>
+	      <span class="jvf_ico yh2 jvf_fl"></span></div>
+	      <div class="bubble_bot">
+	      <span class="date">
+	          <span title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span>
+	      </span>
+	                  </div>
+	     </div>
+	</li>
+</volist>
+</empty>

@@ -1,0 +1,57 @@
+<!--jvf_list-->
+<div class="jvf_list body_bot">
+	<div class="pad10 clearfix">
+		<volist name="footerArticle" id="vo">
+        <div class="jvf_list_con jvf_fl">
+            <ul>
+            <volist name="vo.article" id="v">
+                <li><a href="{:U('Help/index/id/'.$v['id'])}">{$v.title}</a></li>
+            </volist>
+            </ul>
+        </div>
+        </volist>
+        
+       
+        <!--logo显示 <div class="jvf_list_con jvf_logobot jvf_fl">
+            <a href=""><img width="200" height="114" src="../Public/images/jvf_logo.jpg"></a>
+        </div>-->
+    </div>
+</div>
+<!--jvf_list_end-->
+<!--footer-->
+<div class="footer">
+	<div class="body_con">
+        <div class="link clearfix">
+            <span class="jvf_fl">{%links}：</span>
+            <ul class="jvf_fl">
+               <volist name="linkdata" id="vo">
+				  <li>
+					<a href="{$vo.url}">
+					<eq name="vo.type" value="1"> <img src="__ROOT__{$vo.logo}"><else />{$vo.name} </eq>
+					</a>
+				  </li>
+			  </volist>
+            </ul>
+        </div>
+    </div>
+    <div class="linkbg"></div>
+    <div class="body_con">
+    <div class="footernav">
+		  <volist name="footernav" id="vo">
+		  <neq name="key" value="0"><span>|</span></neq>
+		  <span> <a href="{$vo.url}" title="{$vo.title}" 
+		  <eq name="vo.isblank" value="1">target="_blank"</eq>
+		  >{$vo.title}</a> </span> 
+        </volist>
+	</div>
+          <div id="copyright">
+      {%services_tel}：{&sysconfig.site_services_tel}&nbsp;&nbsp;&nbsp;&nbsp;{%services_mail}：{&sysconfig.site_services_email}&nbsp;&nbsp;&nbsp;&nbsp;{%work_times}：{&sysconfig.site_work_times} </div>
+    	  <div id="copyright">{&sysconfig.site_powerby}&nbsp;&nbsp;<a target="_blank" href="http://www.miibeian.gov.cn/">{&sysconfig.site_beian}</a></div>
+		  <div id="copyright">{:stripslashes(C('sysconfig.site_tongji'))}</div>
+     </div>
+</div>
+<!--footer_end-->
+</body>
+</html>
+
+

@@ -1,0 +1,78 @@
+<script type="text/javascript">
+$(function(){
+	$('#unzip').unbind();
+	$('#unzip').click(function(){
+		var li = $(this).parents('li');
+		var url = '__URL__/unzip/id/{$data.id}';
+		li.hide();
+		var unziping = li.prev();
+		var up = li.next().next();
+		unziping.show();
+		ajaxTodo(url,function(data){
+      	  if(data.status == 1){
+      		  alertMsg.correct(data.info);
+          	  up.show();
+      	  }else{
+      		  alertMsg.error(data.info);
+      		  li.show();
+      	  }
+      		unziping.hide();
+        });
+	});
+	
+	$('#installation_next').unbind();
+	$('#installation_next').click(function(){
+		var url = '__URL__/checkFiles/id/{$data.id}';
+		var li = $(this).parents('li');
+		li.hide();
+		$('#checkfiles').show();
+		$.pdialog.reload(url);
+	});
+});
+</script>
+<div class="pageContent">
+		<div class="pageFormContent" layoutH="58">
+		<empty name="error">
+			<div class="unit">
+				<label>名称：</label>
+				<span>{$data.name}</span>
+			</div>
+			<div class="unit">
+				<label>当前版本：</label>
+				<span>{$crrversion}</span>
+			</div>
+			<div class="unit">
+				<label>适用版本：</label>
+				<span>{$data.version}</span>
+			</div>
+			<div class="unit">
+				<label>类型：</label>
+				<span>{$data.type}</span>
+			</div>
+			<div class="unit">
+				<label>升级文件地址：</label>
+				<span>__PUBLIC__/upgrade{$data.filename}</span>
+			</div>
+			<div class="unit">
+				<label>升级文件大小：</label>
+				<span>{$data.size|byte_format}</span>
+			</div>
+			
+		<else />
+			<div class="jvf_uptishi">
+				{$error}
+			</div>
+		</empty>
+		</div>
+		<div class="formBar">
+			<ul style="width: 100%">
+				<li style="display: none;float: left;" id="checkfiles"><div style="margin-right: 10px;float: left;line-height: 25px;color: red;">请不要关闭页面,正在检测文件...</div></li>
+				<li style="display: none;float: left;"><div style="margin-right: 10px;float: left;line-height: 25px;color: red;">请不要关闭页面,正在解压缩...</div></li>
+				<li <notempty name="unzip">style="display: none;float: left;"</notempty>><div class="button"><div class="buttonContent" id="unzip"><button type="button">解压缩</button></div></div></li>
+				<li style="float: right;"><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+				<li <empty name="unzip">style="display: none;float: right;"<else />style="float: right;"</empty>><div class="button"><div class="buttonContent"><button type="button" id="installation_next">下一步</button></div></div></li>
+			</ul>
+		</div>
+</div>
+
+

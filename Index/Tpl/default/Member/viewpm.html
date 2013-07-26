@@ -1,0 +1,20 @@
+<script>
+$(function(){
+	memberViewpm();
+});
+</script>
+        <div style="width:450px;" title="{%member_viewpm_title}">
+                <div class="segment box_viewpm" >
+                    <p><a title="{%view_profile}" href="{:U('User/space/id/'.$mebmessage['send'])}">{$mebmessage.sendname}</a>&nbsp;{%send_in}&nbsp;{$mebmessage.addtime|dgmdate}</p>
+                        <div class="bgWrapper">{$mebmessage.content}
+                        </div>
+                </div>
+                 <div class="jvf_box_buttom">
+            <a href="javascript:;" class="btn p2153 f14 linebl" style="color:#FFF;">{%clost_text}</a>
+            <span id="forgotnotice" style="display:none;"></span>
+        </div>
+                  
+        </div>
+
+
+		

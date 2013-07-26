@@ -1,0 +1,35 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript">
+$(function() { 
+	userNoverifymail();
+}); 
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body" style=" padding-bottom:10px;">
+
+        <div class="new_modal jvf_frame" id="forgot_password_container">
+            <h2>{%please_verification_mail}</h2>
+            <div class="segment">
+                <p>{%verification_mail_tip_1_before}{$memberdata.mail}{%verification_mail_tip_1_after}</p>
+                <p>{%verification_mail_tip_3d_before}{$memberdata.mail}{%verification_mail_tip_3_after}</p>
+                <div class="segment_m clearfix" style="padding-left:0px;">
+                <a target="_blank" class="btn p2153 f14 jvf_fl" href="{$gocheck_url}" id="gomailcheck">{%activate_account}</a>
+                </div>
+            </div>
+            <h2>{%not_receive}</h2>
+            <div class="segment">
+                <p>{%may_spam}</p>
+                <p>{%verification_mail_tip_2_before}{$Think.config.sysconfig.site_smtp_account}{%verification_mail_tip_2_after}</p>
+            </div>
+            <form class="cmxform" id="resendmail" action="{:U('User/resendmail')}" method="post">
+                <input type="hidden" name="email" id="email" value="{$memberdata.mail}">
+                <div class="segment_m">
+                    <input type="button" value="{%send_re}" id="sendmail" name="commit" class="btn p2153 f14">
+                </div>
+            </form>
+        </div>
+        <div class="jvf_520_bot jvf_allimg mg0a"></div>
+</div>
+</div>
+<include file="Public:footer" />

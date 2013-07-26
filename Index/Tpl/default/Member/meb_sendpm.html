@@ -1,0 +1,28 @@
+<script>
+$(function(){
+	memberRelpypm();
+});
+</script>
+<div style="width:390px;" title="{%member_replypm_title}">
+    <form class="cmxform" action="{:U('Member/pmsend')}" method="post">
+        <div class="segment box_replypm">
+            <div class="clearfix mb10">
+                <label>{%addressee}：</label>
+                <input class="jvf_user_id" id="name" name="name" type="text" value="{$membinfo.name}" readonly="readonly" />
+                <input type="hidden" id="receive" name="receive" value="{$membinfo.id}"/>
+            </div>
+            <div class="clearfix">
+               <label>{%content_text}：</label>
+               <textarea id="content" class="jvf_user_id" name="content" rows="5" placeholder="{%content_text}"></textarea>
+            </div>
+        </div>
+        <div class="jvf_box_buttom">
+            <input type="button" id="submit" value="{%send_text}" name="commit" class="btn p2153 f14 linebl">
+            <span id="forgotnotice" style="display:none;"></span>
+        </div>
+    </form>
+     
+</div>
+
+
+		

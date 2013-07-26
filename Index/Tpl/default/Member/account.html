@@ -1,0 +1,74 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	memberAccount("{$_REQUEST['item']}");
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<div class="mb_left_con">
+            <include file="Member:sharebox" />
+      			<div class="extension_top">
+                	<ul class="clearfix">
+                        <li class="selected"><a href="javascript:;">{%my_account}</a></li>
+                        <li><a href="{:U('Member/mycoupons')}" get="get">{%my_coupons}</a></li>
+                        <li><a href="{:U('Member/cashlogs')}" get="get">{%account_log}</a></li>
+                        <li><a href="{:U('Member/rechargeList')}" get="get">{%recharge_log}</a></li>
+                        <li><a href="{:U('Member/withdraw_log')}" get="get">{%withdraw_log}</a></li>
+                        <li><a href="{:U('Member/valueLog')}" get="get">{%integral_log}</a></li>
+                    </ul>
+                </div>
+                
+                <div class="jvf_account_box">
+                	<div class="jvf_account_item jvf_account">
+                		<div class="jvf_account1">	
+		                	<div class="jvf_allimg acclin"></div>
+		                	<ul class="clearfix">
+		                    	<li>
+		                        	<div class="jvf_zhxx"></div>
+		                        	<div class="zhxx_wz">{%account_balance}:{$memberdata.cash}</div>
+		                            <div class="jvf_center">
+		                                <span><a href="{:U('Member/recharge')}" id="recharge">{%online_recharge}</a></span>
+		                                <span>|</span>
+		                                <span><a href="{:U('Member/prepaidCard')}">{&sysconfig.site_prepaid_card_name}</a></span>
+		                                <span>|</span>
+		                                <span><a href="{:U('Member/withdraw')}" id="recharge">{%withdraw}</a></span>                
+		                    		</div>
+		                        </li>
+		                        <li>
+		                        	<div class="jvf_zhxx zhjf_bg"></div>
+		                        	<div class="zhxx_wz">{&sysconfig.site_credits_name}：{$memberdata.value}</div>
+		                            <div><a href="javascript:;" id="value_log">{&sysconfig.site_credits_name}{%log_text}</a></div>
+		                        </li>
+		                        <li>
+		                        	<div class="jvf_zhxx zhdj_bg "></div>
+		                        	<div class="zhxx_wz">{%level_text}：{$memberdata.level.name}</div>
+		                            <div><a href="{:U('Member/levelList')}" id="level_list">{%level_list}</a></div>
+		                        </li>
+		                    </ul>
+		                </div>
+                	</div>
+                    <!--我的优惠券-->
+                	<div class="jvf_account_item" style="display:none;"></div>
+                    <!--我的优惠券——end-->
+                    <!--账户日志-->
+                	<div class="jvf_account_item" style="display:none; padding:10px;"></div>
+                    <!--账户日志——end-->
+                    <!--充值日志-->
+                	<div class="jvf_account_item" style="display:none; padding:10px;"></div>
+                    <!--充值日志——end-->
+                    <!--提现记录-->
+                	<div class="jvf_account_item" style="display:none; padding:10px;"></div>
+                    <!--充值日志——end-->
+                    <!--积分日志-->
+                	<div class="jvf_account_item" style="display:none; padding:10px;"></div>
+                </div>
+                
+            </div>
+       </div>
+       <include file="Member:right" />
+	</div>
+</div>
+<include file="Public:footer" />

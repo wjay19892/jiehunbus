@@ -1,0 +1,28 @@
+
+	<div class="information_box_top clearfix">
+            <div class="information_box_head jvf_fl">
+                <div class="userpic"><a href="{:U('User/space/id/'.$data['id'])}"><img src="{$data.header}"></a></div>
+                <if condition="!in_array($data['id'],$memberdata['attention_ids'])">
+                <a class="but_a" href="{:U('Member/attention/id/'.$data['id'])}" add="add">{%add_attention}</a>
+                <else />
+                <a class="but_a" href="{:U('Member/removeattention/id/'.$data['id'])}" remove="remove">{%remove_attention}</a>
+                </if>
+            </div>
+        
+            <div class="jvf_fl information_user">
+                <p class="information_usname"><a href="{:U('User/space/id/'.$data['id'])}">{$data.name}</a></p>
+                <p><span class="j">{%mood}：{$data.talkcount}</span><span class="v">|</span><span class="f">{%add_attention}：{$data.listencount}</span></p>
+                <div class="jvf_boxnav">
+                <a href="{:U('Member/addfriend/id/'.$data['id'])}">{%addfriend}</a>
+                <a href="{:U('Member/sendpm/id/'.$data['id'])}">{%private_letter}</a>
+                <a href="javascript:;" uid="{$data['id']}" class="jvf_callme">{%chat}</a> </div>
+            </div>
+    </div>
+    
+    <div class="jvf_cl"></div>
+    <div class="box_signature">
+    	<p><span class="marks_star jvf_ico"></span>{$data.self_introduction}<span class="marks_end jvf_ico"></span ></p>
+    </div>
+    <div class="user_grade">{%level_text}：{$data.level}</div>
+    <div class="box_jvf jvf_allimg"></div>
+    

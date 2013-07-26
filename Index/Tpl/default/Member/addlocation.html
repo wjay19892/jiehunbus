@@ -1,0 +1,7 @@
+<h3 class="map-description <eq name="vo.type" value="1">exact<else />public</eq>" lid="{$vo.id}">
+   <span class="icon"></span>
+   {%member_location_address}<span class="address">{$vo.address}</span>
+   <a class="editaddress" href="{:U('Member/editlocation/id/'.$vo['id'])}">{%edit}</a>
+   <a class="deladdress" href="{:U('Member/dellocation/id/'.$vo['id'])}">{%delete}</a>
+   <a class="defaultaddress" href="{:U('Member/setlocation/id/'.$vo['id'])}" <eq name="vo.type" value="1">style="display:none;"</eq>><span class="protip">{%setdefault}</span></a>
+</h3>

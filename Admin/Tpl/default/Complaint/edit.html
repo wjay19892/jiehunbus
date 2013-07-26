@@ -1,0 +1,51 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label>
+				<input name="gid" type="hidden" group="goods" field="id" value="{$vo.gid}"/>
+				<input class="required" name="title" type="text" readonly="readonly" group="goods" field="title" value="{$vo.gid|getParent='Goods',###,'title'}"/>
+				<a class="btnLook" href="{:U('Goods/lookUp/group/goods/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="goods_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>会员：</label>
+				<input type="hidden" name="uid" group="member" field="id" value="{$vo.uid}">
+				<input class="required" name="name" type="text" readonly="readonly" group="member" field="name" value="{$vo.uid|getParent='Member',###,'name'}"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>投诉项：</label>
+				<SELECT name="item" class="combox">
+					<volist name="list" id="v">
+						<option value="{$v.id}" <eq name="v.id" value="$vo['item']">selected="selected"</eq>>{$v.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			
+			<div class="unit">
+				<label>其他：</label>
+				<textarea rows="5" cols="50" name="other">{$vo.other}</textarea>
+			</div>
+			
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1" <eq name="vo.state" value="1">selected="selected"</eq>>已处理</option>
+					<option value="0" <eq name="vo.state" value="0">selected="selected"</eq>>未处理</option>
+				</SELECT>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

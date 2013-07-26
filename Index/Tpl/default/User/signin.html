@@ -1,0 +1,51 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript">
+$(function(){
+	signin();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<!--登陆页面-->
+        <div class="jvf_frame signin_con">
+        	<h2 class="other_login_tit signin_h">{%user_register_h2}</h2>
+            <div style="text-align:center;" class="other_login clearfix">
+           	  <volist name='login_portdata' id='vo'>
+                 <a href="{:U('Login_port/index/id/'.$vo['id'])}" class="big"><img src="__ROOT__{$vo.logo}" alt="{$vo.name}" /></a>
+              </volist>
+              </div>
+              <h3 class="signpainter signin_h jvf_allimg">{%or_text}</h3>
+              <h2 class="signin_h">{%user_signin_h2}</h2>
+              
+              <form id="signinform" action="{:U('User/login')}" method="post">
+                <div class="textinput jvf_allimg mail_pos" id="inputEmail">
+                    <input type="text" name="email" tabindex="1" id="signin_email"  value="" placeholder="{%mail_text}" />
+                </div>
+                <div class="textinput jvf_allimg pas_pos" id="inputPassword">
+                    <input type="password" name="password" id="signin_password" tabindex="2" placeholder="{%password_text}" />
+                </div>
+                <div class="forgotPassword"><a id="forgotPassword" href="{:U('User/ajaxforgot_password')}" tabindex="5">{%forgot_password}</a></div>
+                <div class="formactions clearfix">
+                	 <span class="jvf_mgf"><input type="button" class="btn p2153 f20 jvf_bold" value="{%login_text}" tabindex="4" id="submit" /></span>
+                    <label class="checkbox remember_me" for="remember_me2">
+                        <span><input type="checkbox" tabindex="3" value="true" id="remember_me2" name="remember_me" ></span>
+                        <span>{%user_signin_remember_me}</span>
+                    </label>
+                </div>
+                </form>
+              
+      </div>
+      </div>
+      <div class="jvf_520_bot jvf_allimg mg0a"></div>
+      
+      <div class="jvf_frame signin_con jvf_pad">
+    				<h2>{%user_signin_pad} <a href="{:U('User/register')}">{%immediately_reg_text}</a></h2>
+       </div>
+       <div class="jvf_520_bot jvf_allimg mg0a"></div>
+           
+        <!--登陆页面——end-->
+    </div>
+</div>
+
+<include file="Public:footer" />

@@ -1,0 +1,82 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+        <input type="hidden" name="uid" value="{$vo.uid}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label><label style="width:390px;">{$vo.gid|getParent='Goods',###,'title'}</label>
+			</div>
+			
+			<div class="unit">
+				<label>会员：</label><label style="width:390px;">{$vo.uid|getParent='Member',###}</label></label>
+			</div>
+			
+			<div class="unit">
+				<label>订单：</label><label style="width:390px;">{$vo['oid']|getParent='Order',###,'sn'}</label>
+			</div>
+			
+			<div class="unit">
+				<label>数量：</label><label style="width:390px;">{$vo.num}</label>
+			</div>
+			
+			<div class="unit">
+				<label>下单时间：</label><label style="width:390px;">{$vo.addtime}</label>
+			</div>
+						
+			<div class="unit">
+				<label>单价：</label><label style="width:390px;">{$vo.price}</label>
+			</div>
+			
+			<div class="unit">
+				<label>总价：</label><label style="width:390px;">{$vo.total}</label>
+			</div>
+						
+			<div class="unit">
+				<label>订单状态：</label>
+			    <label style="width:390px;">
+                    <eq name="vo.status" value="0">未支付</eq>
+					<eq name="vo.status" value="1">已支付</eq>
+                    <eq name="vo.status" value="2">已作废</eq>
+				</label>
+			</div>
+        	<div class="unit">
+				<label>{&sysconfig.site_couponname}：</label>			
+            <volist name="couponsdata" id="val">                
+                <input type="checkbox" name="cid[]" value="{$val.id}" <eq name="val.status" value="1">disabled="disabled"</eq>> {$val.sn} &nbsp;&nbsp;<font color="red"><eq name="val.status" value="1">已消费<else />未消费</eq></font><br/>                    	
+            </volist>
+            </div>
+            
+		    <div class="unit">
+				<label>退款原因：</label><label style="width:390px;">{$vo.refund_reason}</label>
+			</div>
+            
+		    <div class="unit">
+				<label>申请时间：</label><label style="width:390px;">{$vo.refund_applytime}</label>
+			</div> 
+            
+			<div class="unit">
+				<label>退款处理：</label>
+			    <label style="width:390px;">
+                <select id="refundtype" name="refundtype">
+                    <option selected="" value="">请选择退款方式</option>
+                    <option value="norefund">审核未通过</option>
+                    <option value="cash">退款到账户余额</option>
+                    <option value="other">其他途径已退款</option>
+                </select>
+				</label>
+			</div>
+            
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

@@ -1,0 +1,80 @@
+<script>
+$(function(){
+	memberViewo_details();
+})
+</script>
+<div title="{%order_detail}" style=" width:790px;">
+  <div class="middle view_detail">
+    <!-- new begin -->
+    <table cellspacing="0" width="100%" cellpadding="0" border="0" class="trips_list">
+      <thead>
+        <tr>
+          <th width="10%">{%order_status}</th>
+          <th width="30%">{%order_info}</th>
+          <th width="20%">{%order_cost}</th>
+          <th width="20%">{%other_message}</th>
+          <th width="15%">{%operational_text}</th>
+        </tr>
+      </thead>
+      <tbody>
+      <volist name="o_detailsdata" id="vo">
+        <tr>
+          <td class="tc">
+            <eq name="vo.status" value="2">
+            <div class="trips_status Cancelled">
+              <p class="trips_title"> {%status_invalid} </p>
+            </div>
+            </eq>
+            <eq name="vo.status" value="1">
+            <div class="trips_status PaymentCompleted">
+              <p class="trips_title"> {%status_pay} </p>
+            </div>
+            </eq>
+            <eq name="vo.status" value="0">
+            <div class="trips_status NotPaid">
+              <p class="trips_title"> {%status_nopay} </p>
+            </div>
+            </eq>
+          </td>
+          <td>
+            <div class="home_info">
+              <p class="home_name"><a href="{:U('Goods/index/id/'.$vo['good']['id'])}" target="_blank">{$vo.good.title}</a></p>
+              <p class="home_address">{%nums_text}：{$vo.num}</p>
+              <p class="home_date">{%order_time}：{$vo.addtime|toDate}</p>
+              <p class="bookRoomId"> {%order_sn}：{$vo.order_info.sn}</p>
+              <p>{%order_mark}：{%mark_sell}</p>
+            </div>
+          </td>
+          <td align="tl">
+
+                  {%goods_total}：<strong class="weic">&yen;<?php echo $vo['good']['price']*$vo['num']; ?></strong><br />
+                  <eq name="vo.status" value="1">{%status_pay}<else />{%required_pay}</eq><eq name="vo.good.payment" value="1">{%payment_deposit}<else />{%payment_price}</eq>：<strong class="weic"> &yen;{$vo.total}</strong>
+
+          </td>
+          <td>
+            <dl class="people">
+              <dt></dt>
+              <dd class="p_name">{%purchaser}：<a href="{:U('User/space/id/'.$vo['order_info']['orderer']['id'])}" target="_blank">{$vo.order_info.orderer.name}</a> </dd>
+              <dd class="SendAMessage"></dd>
+            </dl>
+          </td>
+          <td class="tc">
+            <eq name="vo.status" value="1">
+              <php>if(C('sysconfig.site_refund_isallow') == 1){</php>
+                <eq name="vo.refund_state" value="0">
+                <empty name="vo.comment_id"><a class="commentadd" href="{:U('Member/commentorder/id/'.$vo['id'])}">{%evaluate}</a></empty>
+                </eq>
+                <eq name="vo.refund_state" value="1">{%member_viewo_audit}</eq>
+                <eq name="vo.refund_state" value="2">{%member_viewo_success}</eq>
+                <eq name="vo.refund_state" value="3">{%member_viewo_error}</eq>
+              <php>}</php>
+            </eq>
+          </td>
+        </tr>
+       </volist>
+      </tbody>
+    </table>
+    <!-- new end -->
+  </div>
+   
+</div>

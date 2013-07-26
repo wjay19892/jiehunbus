@@ -1,0 +1,44 @@
+		<li class="clearfix">
+        	<div class="userpic jvf_fl">
+            	<a href="{:U('User/space/id/'.$vo['uid'])}" class="jvf_getUser" uid="{$vo.uid}"><img src="{$vo.header}"></a>
+            </div>
+            <div class="msgbox jvf_fl">
+            	<div class="user_say"><span><a href="{:U('User/space/id/'.$vo['uid'])}">{$vo.name}：</a></span>{$vo.content}<br />
+            	<notempty name="vo.source">
+                	<div class="jvf_relay"><span><a href="{:U('User/space/id/'.$vo['source']['uid'])}">{$vo.source.name}：</a></span>
+                		{$vo.source.content}
+                		<div class="mediawrap">
+			                	<ul class="clearfix">
+			                		<volist name="vo.source.accessory" id="v">
+			                    	<li><a href="{$v.origin}"><img src="{$v.thumbnail}" /></a></li>
+			                    	</volist>
+			                    </ul>
+			             </div>
+                    </div>
+                </notempty>
+                </div>
+                <empty name="vo.source">
+                <div class="mediawrap">
+                	<ul class="clearfix">
+                	<volist name="vo.accessory" id="v">
+                    	<li><a href="{$v.origin}"><img src="{$v.thumbnail}" /></a></li>
+                    </volist>
+                    </ul>
+                </div>
+                </empty>
+                <div class="user_say_bot clearfix">
+                	<div class="jvf_fl">{$vo.addtime|dgmdate}</div>
+                    <div class="jvf_fr">
+                    	<a href="javascript:;" class="tabroadcast" tid="{$vo['tid']?$vo['tid']:$vo['id']}">{%broadcast}({$vo.forwarding})</a>
+                    	<span class="lin">|</span>
+                    	<a href="javascript:;" class="comment" tid="{$vo.id}">{%comment}(<span>{$vo.comment}</span>)</a>
+                    	<span class="lin">|</span>
+                    	<a href="javascript:;" class="likes" tid="{$vo.id}">{%like}(<span>{$vo.likes}</span>)</a>
+                    </div>
+                </div>
+                
+                        <ul class="jvf_insertping_list" style="display:none;">
+                        	
+                        </ul>
+            </div>
+        </li>

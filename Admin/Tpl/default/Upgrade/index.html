@@ -1,0 +1,106 @@
+<include file="Public:pagerForm" />
+<script type="text/javascript">
+<!--
+var CHECKDOWNSATUS = false;
+$(function(){
+	$('#getList').unbind();
+	$('#getList').click(function(){
+		getUpgradeList();
+	});
+	$('.__MODULE___down').die('click');
+	$('.__MODULE___down').live('click',function(){
+		var t = $(this);
+		var div = $(this).parent();
+		var url = t.attr('href');
+		$.getJSON(url,function(data){
+			if(data.status == 0){
+				alertMsg.error(data.info);
+			}else{
+				t.remove();
+				div.append('<span>正在下载<span rel="downing">0</span>%</span>');
+				checkInit();
+			}
+		});		
+		return false;
+	});
+});
+
+function getUpgradeList(){
+	var url = '__URL__/getList';
+	$.getJSON(url,function(data){
+		if(data.status == 1){
+			$('#upgradeContent').html(data.info);
+			initUI('#upgradeContent');
+			checkInit();
+		}
+	});
+}
+
+function checkDowning(id){
+	if(id){
+		var span = $('tr[rel="'+id+'"]').find('span[rel="downing"]');
+		var url = '__ROOT__/thread.php/Upgrade/check/id/'+id;
+		$.getJSON(url,function(data){
+			if(data.status == 1){
+				if(data.info.downing == 100){
+					var parent = span.parent();
+					var div = parent.parent();
+					span.parent().remove();
+					div.append('<a href="__URL__/agreement/id/'+id+'" target="dialog" rel="__MODULE___agreement">安装</a>');
+					initUI('#upgradeContent');
+				}else{
+					span.html(data.info.downing);
+				}
+				CHECKDOWNSATUS = false;
+				checkInit();
+			}
+		});
+	}
+}
+
+function checkInit(){
+	if(!CHECKDOWNSATUS){
+		var next = getCrrDown();
+		if(next){
+			checkRun(next);
+			CHECKDOWNSATUS = true;
+		}else{
+			CHECKDOWNSATUS = false;
+		}
+	}
+}
+
+
+function checkRun(id){
+	setTimeout(function(){
+		checkDowning(id);
+	},1000);
+}
+
+function getCrrDown(){
+	var span = $('span[rel="downing"]').first();
+	if(span.context){
+		var id = span.parents('tr').attr('rel');
+		return id;
+	}
+	return false;
+}
+//-->
+</script>
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="jvf_update">
+		<ul>
+			<li>当前更新时间 :&nbsp;&nbsp;{$crrtime}</li>
+			<li>当前版本:&nbsp;&nbsp;{$crrversion}</li>
+			<li><div class="buttonActive"><div class="buttonContent"><button type="button" id="getList">在线获取更新列表</button></div></div></li>
+		</ul>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent" id="upgradeContent">
+
+</div>
+

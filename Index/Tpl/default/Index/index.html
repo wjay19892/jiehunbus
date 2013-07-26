@@ -1,0 +1,260 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<link type="text/css" rel="stylesheet" media="screen" href="../Public/css/slide_style.css" />
+<script src="../Public/js/slides.min.jquery.js"></script>
+<script>
+		$(function(){
+			index();
+		});
+</script>
+<!----搜索开始---->
+
+<form id="searchForm" action="{:U('Search/index')}" method="get">
+<div id="car_top" class="clearfix">
+    <div id="main_box">
+        <div class="hr70"></div>
+        <h1 class="h3_title">请选择一款您喜欢的婚纱照风格</h1>
+        <div class="hr28"></div>
+        <div id="select_box">
+            <div class="searchbg">
+<!--TOP搜索下拉框开始-->
+<script type="text/javascript" src="../Public/js/selectbox.js"></script>
+<!--TOP搜索下拉框结束-->
+                <div class="search_fg">
+                    <p>请选择风格</p>
+                    <input type="text" id="search_fg" name="fgid" style="display:none;">
+                    <div class="search_display">
+                        <div class="fgaitop"></div>
+                        <div class="fgaicenter">
+                            <div class="alphabetbrand">
+                                <ul>
+                                    <li>
+                                        <div class="alphabetbrand2">           
+                                            <volist name="goods_categorydata" id="vo">
+                                                <a ref="{$vo.name}" mid="{$vo.id}" href="javascript:void(0);">{$vo.name}</a>
+                                            </volist>
+                                        </div>
+                                    </li>
+                                </ul>        
+                            </div>
+                        </div>
+                        <div class="ppaibottom">
+                            收起
+                            <img align="absmiddle" src="../Public/images/up.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="search_jg">
+                    <p>请选择价格</p>
+                    <input type="text" id="search_jgmin" name="minprice1" style="display:none;">
+                    <input type="text" id="search_jgmax" name="maxprice1" style="display:none;">
+                    <div class="search_display">
+                        <div class="jgaitop"></div>
+                        <div class="jgaicenter">
+                            <div class="alphabetbrand4">
+                                <ul>
+                                    <li>
+                                        <div class="alphabetbrand5">           
+                                            
+                                                
+                                            <volist name="price_rangedata" id="vo">
+                                                <a ref="{$vo.name}" min="{$vo.min}" max="{$vo.max}" href="javascript:void(0);">{$vo.name}</a>
+                                            </volist>
+                                        </div>
+                                    </li>
+                                </ul>        
+                            </div>
+                        </div>
+                        <div class="jgaibottom">
+                            收起
+                            <img align="absmiddle" src="../Public/images/up.png">
+                        </div>
+                    </div>
+                </div>
+                <input class="search_sp" type="text" placeholder="您还可以直接输入商品名搜索" name="search_key">
+                <div class="searchbg2">
+                    <input class="searchbg1" type="button" value="搜 索" name="submit_button">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>
+<!----搜索结束---->
+
+<div class="mainbody0 body_bot body_con clearfix">
+	<div class="jvf_body">  
+        <!--为您推荐的商品-->
+        <div class="jvf_tuijian">
+            <div class="tuijian_title">
+                <h2>{%index_recommend}</h2>
+            </div>
+            <div class="tuijian_con clearfix">
+            <volist name="sortgoods" id="vo">
+                <div class="shop_all jvf_fl">
+                    <div class="jvf_frame w225">
+                        <div class="tuijian_img"><a href="{:U('Goods/index/id/'.$vo['id'])}"><img src="{$vo.accessory.thumbnail}" width="213" height="143" ></a></div>
+                        <div class="index_shop_name"><a href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a></div>
+                        <div class="shop_adr clearfix"><a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" gid="{$vo.id}">{$vo.address}</a><span class="jvf_juli fujin_ico">{:distance($locate['lat'],$locate['lng'],$vo['latitude'],$vo['longitude'])}</span></div>
+                        <div class="shop_conbot clearfix">
+                            <a href="{:U('Goods/index/id/'.$vo['id'])}">{%detail_text}</a>
+                            <a href="{:U('Goods/index/id/'.$vo['id'])}">{%recommend}({$vo.recommend})</a>
+                            <a href="{:U('Goods/index/id/'.$vo['id'])}">{%evaluate}({$vo.comment})</a>
+                            
+                            <if condition="in_array($vo['id'],$collection_arr)">
+                            <a class="jvf_ico collHover icow" href="{:U('Member/removeFavorites/gid/'.$vo['id'])}"></a>
+                            <else />
+                            <a class="jvf_ico coll icow" href="{:U('Member/saveFavorites/gid/'.$vo['id'])}"></a>
+                            </if>
+                        </div>
+                        <div class="jvf_frame_bot clearfix">
+                            <div class="jvf_fl">
+                            <a href="{:U('User/space/id/'.$vo['promulgator']['id'])}" uid="{$vo['promulgator']['id']}" class="jvf_getUser"><img width="35" height="35" src="{$vo.promulgator.header.thumbnail}"></a>
+                            </div>
+                            <div class="shop_zur jvf_fl clearfix">
+                                <span class="jvf_fl">{%cost_price}：</span><span class="yuanjia">&yen;{$vo.original}</span>
+                                <div class="jvf_cl"></div>
+                                <span class="jvf_fl">{%goods_manager}：</span><span class="jvf_fl jvf_over w100 user_name"><a href="{:U('User/space/id/'.$vo['promulgator']['id'])}">{$vo.promulgator.name}</a></span>
+                            </div>
+                            <div class="jvf_xianjia">&yen;{$vo.price}</div>
+                        </div>
+                    </div>
+                    <div class="jvf_allimg shop_bot"></div>
+                </div>
+             </volist>
+            </div>
+        </div>
+        
+
+        <div class="mainbody_right jvf_fr">
+            <div class="jvf_title">
+                <h2>{%announcement}<span><a target="_blank" href="{:U('Article/lists/cid/2')}">{%more_text}</a></span></h2>
+                <div class="mainbody_right_list">
+                    <ul class="clearfix">
+                    <volist name="announcement" id="vo">
+                        <li><a target="_blank" href="{:U('Article/detail/id/'.$vo['id'])}" >{$vo.title}</a> <span>{$vo.addtime|toDate}</span></li>
+                    </volist>
+                    </ul>
+                </div class="mainbody_right_list2">
+                
+                <h2>{%recently_talk_about}<span><a target="_blank" href="{:U('Circle/index')}">{%more_text}</a></span></h2>
+                <div class="mainbody_right_listj">
+                    <ul>
+                    <volist name="recentlyTalk_about" id="vo">
+                        <li>
+                        <span class="user_name"><a href="{:U('User/space/id/'.$vo['uid'])}">{$vo.name}</a></span>
+                        <notempty name="vo.gid">
+                        <span class="jvf_ico at"></span>
+                        <a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.title}：</a>
+                        <else />
+	                        <notempty name="vo.member">
+	                        <span class="jvf_ico at"></span>
+	                        <volist name="vo.member" id="v">
+	                        <a href="{:U('User/space/id/'.$v['uid'])}">{$v.name}：</a>
+	                        </volist>
+	                        <else />
+	                        <span class="jvf_ico bo"></span>
+	                        <volist name="vo.label" id="v">
+	                        <a href="{:U('Circle/index/lid/'.$v['lid'])}">{$v.name}：</a>
+	                        </volist>
+	                        </notempty>
+                        </notempty>
+                        {$vo.content}
+                        <notempty name="vo.source">
+                        <span class="jvf_ico at"></span>
+                        <a href="{:U('User/space/id/'.$vo['source']['uid'])}">{$vo.source.name}</a>
+                        {$vo.source.content}
+                        </notempty>
+                        </li>
+                    </volist>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="jvf_cl"></div>
+        <!--显示欢迎词<div class="jvf_advertising">{%jvf_advertising}</div>-->
+        
+        <div class="mainbody_con clearfix">
+            <div class="mainbody_conj jvf_con_cm jvf_fl">
+                <h2 class="clearfix"><span class="jvf_fl">{%nerby_goods}</span><span class="jvf_fr mor"><a target="_blank" href="{:U('Nearby/index')}">{%more_text}</a></span></h2>
+                <div class="mainbody_conj_list">
+                    <ul id="nerby">
+                    <volist name="nerbygoods" id="vo">
+                        <li>
+                            <div class="big_nerby pr clearfix fujin_xx fujin_{$i}" <neq name="i" value="1">style="display:none;"</neq>>
+                            	<em class="fujin_ico a_em"></em>
+                                <div class="fujin_img boder_img jvf_fl">
+                                    <a href="{:U('Goods/index/id/'.$vo['id'])}"><img src="{$vo.accessory.thumbnail}"></a>
+                                </div>
+                                <div class="fujin_xx_right jvf_fl">
+                                    <a class="jvf_over w325" href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a>
+                                    <div class="jvf_star clearfix">
+                                        <span class="jvf_fl">{%evaluate}：</span>
+                                        <div class="jvf_fl rating pr">
+                                            <div class="filled star_{$vo.evaluate.total.star}"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="jvf_fl">{%address_text}：</span><span class="jvf_fl" style="width: 210px;height: 19px;overflow: hidden;">{$vo.address}</span>
+                                        
+                                        <span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em>{:distance($locate['lat'],$locate['lng'],$vo['latitude'],$vo['longitude'])}</span>
+                                    </div>
+                                    <div class="fujin_dinw">&yen;{$vo.price}</div>
+                                </div>
+                            </div>
+                            
+                            <div class="small_nerby pr clearfix fujin_li_{$i}" <eq name="i" value="1">style="display:none;"</eq>>
+                                <em class="fujin_ico b_em"></em>
+                                <a class="fujin_a jvf_over jvf_fl" href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a>
+                                <div class="jvf_fr jvf_jitj">
+                                   
+                                    <div class="jvf_tuijianb pr fr"><em class="fujin_ico"></em>{$vo.comment}</div>
+                                     <div class="jvf_julia pr fr"><em class="fujin_ico"></em>{$vo.distance|formatDistance}</div>
+                                </div>
+                            </div>
+                       </li>
+                    </volist>
+          
+                    </ul>
+                    
+                </div>
+                
+                
+            </div>
+            <div class=" jvf_fl mainbody_conv"></div>
+            <div class="mainbody_conf jvf_con_cm jvf_fr">
+                <h2 class="clearfix"><span class="jvf_fl">{%new_comment}</span><span class="jvf_fr mor"><a href="{:U('Comment/index')}" target="_blank">{%more_text}</a></span></h2>
+                <div class="pingjj">
+                <div id="newComment">
+                <volist name="newcomment" id="vo">
+                <div class="pingjia_con clearfix">
+                    <div class="pingjia_img jvf_fl boder_img">
+                        <img width="35" height="35" src="{$vo.reviewer.header.thumbnail}">
+                    </div>
+                    <div class="jvf_fl pingjia_rig">
+                        <div class="pingjia_tit jvf_over w382">
+                        	<span class="user_name"><a href="{:U('User/space/id/'.$vo['reviewer']['id'])}">{$vo.reviewer.name}</a></span>
+                        	<span class="jvf_ico at"></span><a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.title}</a>
+                            <div class="jvf_star mb clearfix">
+                                        <span class="jvf_fl">{%evaluate}：</span>
+                                        <div class="jvf_fl rating">
+                                            <div class="filled star_{$vo.evaluate.total.star}"></div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jvf_cl"></div>
+                    <div class="pingjia_hf clearfix"><span class="jvf_ico yh1 jvf_fl"></span><span class="jvf_fl jvf_over mw420">{$vo.content}</span><span class="jvf_ico yh2 jvf_fl"></span></div>
+                </div>
+                </volist>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+
+    
+	</div>
+</div>
+<include file="Public:footer" />

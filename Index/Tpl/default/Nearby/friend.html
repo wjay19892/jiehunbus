@@ -1,0 +1,36 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	nearbyFriend({$condition});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+      	<div class="jvf_advertising">
+        	{%jvf_advertising}
+        </div>
+        <div class="shop_nav clearfix">
+        	<ul class="nav_left jvf_fl">
+            	<li><a href="{:U('Nearby/index')}">{%nerby_goods}</a></li>
+                <li><a class="fontbold" href="{:U('Nearby/friend')}">{%nearby_friends}</a></li>
+            </ul>
+            <ul class="nav_right jvf_fr">
+                <li>{%sort_by}：</li>
+                <li><a class="fontbold" href="javascript:;" sex="">{%all_text}</a></li>
+                <li><a href="javascript:;" sex="1">{%man}</a></li>
+                <li><a href="javascript:;" sex="2">{%woman}</a></li>
+                <li><a href="javascript:;" sex="0">{%unman}</a></li>
+            </ul>
+        </div>
+        <div class="linkbg"></div>
+        
+        <div class="category_shop clearfix">
+                 
+        </div>
+        <div class="jvf_page" style="display:none;">
+		</div>
+    </div>
+</div>
+
+<include file="Public:footer" />

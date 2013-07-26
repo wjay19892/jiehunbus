@@ -1,0 +1,57 @@
+<div style="width:525px;" title="{%send_short_message}">
+<script>
+$(function(){
+	memberSendpm();
+});
+</script>
+            <form class="cmxform" id="pmsendform" action="{:U('Member/pmsend')}" method="post">
+                <div class="clearfix jvf_sendpm_all">
+                	<div class=" jvf_fl">
+                    <div class="jvf_sendpm">
+                        <div class="sender">
+                            <label >{%addressee}：</label >
+                            <input id="name" name="name" placeholder="{%addressee}"type="text" value="{$membinfo.name}" readonly="readonly" />
+                        </div>
+                        <div>
+                            <label >{%content_text}：</label >
+                            <textarea id="content" name="content" rows="5" placeholder="{%content_text}"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="jvf_box_buttom">
+                    <input type="button" value="{%send_text}" name="commit" id="submit" class="btn p2153 f14 linebl">
+                    </div>
+                    </div>
+
+                    <div id="showfsbox" class="fsbox jvf_fl">
+                        <div class="fsg">
+                            <select class="fsgs">
+                                <option value="0">{%member_sendpm_all}</option>
+                                <volist name='friendgroups' id='vo' >
+                                <option value="{$vo.id}">{$vo.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                        <div class="selbox">
+                            <ul id="selectorbox">
+                                <volist name='mebfriends' id='vo' >
+                                <li class="clearfix" gid="vo.gid">  
+                                <input class="jvf_fl" type="checkbox" id="fsid_{$vo.friend}" value="{$vo.friend}" name="receive[]">
+                                <label class="jvf_lin" for="fsid_{$vo.friend}">{$vo.friendname}</label>
+                                <div class="jvf_cl"></div>
+                                </li>
+                                </volist>
+                            </ul>
+                        </div>
+                        <div class="clfsbox">
+                             <a href="javascript:void(0);">{%clost_text}</a>
+                        </div>
+                    </div>
+                    
+                    <div class="jvf_cl"></div>
+                    
+                </div>
+
+            </form>
+             
+        </div>

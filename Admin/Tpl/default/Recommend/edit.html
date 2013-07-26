@@ -1,0 +1,38 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label>
+				<input type="hidden" name="gid" value="{$vo.gid}" group="goods" field="id">
+				<input class="required" name="title" type="text" readonly="readonly" group="goods" field="title" value="{$vo.gid|getParent='Goods',###,'title'}"/>
+				<a class="btnLook" href="{:U('Goods/lookUp/group/goods/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="goods_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>推荐者：</label>
+				<input type="hidden" name="reviewer" group="member" field="id" value="{$vo.reviewer}">
+				<input class="required" name="name" type="text" readonly="readonly" group="member" field="name" value="{$vo.reviewer|getParent='Member',###,'name'}"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			<div class="unit">
+				<label>内容：</label>
+				<textarea rows="2" cols="60" name="content" class="textInput">{$vo.content}</textarea>
+			</div>
+			<div class="unit">
+				<label>推荐时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{$vo.addtime}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

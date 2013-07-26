@@ -1,0 +1,21 @@
+<script>
+$(function(){
+	memberPrepaidCard();
+})
+</script>
+<div style="width:300px; padding-bottom:10px;" title="{%member_prepaidcard_title}">
+	<div class="jvf_box_con">
+    		<div style=" margin: 0 auto; width: 190px;">
+               <form action="{:U('Member/rechargePrepaidCard')}" id="prepaidCardForm">
+			   <input name="recharge" value="1" type="hidden">
+               <div class="lbm"><label>{%member_prepaidcard_sn}：<input class="jvf_inputt" type="text" value="" placeholder="{%member_prepaidcard_sn}" name="sn" /></label></div>
+               <div class="lbm"><label>{%password_text}：<input class="jvf_inputt" type="text" value="" placeholder="{%password_text}" name="pwd" /></label></div>
+               </form>
+           </div>
+    </div>
+           <div class="jvf_box_buttom">
+           <a href="javascript:;" style="color:#FFF;" id="submitCardForm" class="btn p2153 f14 linebl" >{%member_prepaidcard_submit}</a>
+           </div>
+    
+ 
+</div>

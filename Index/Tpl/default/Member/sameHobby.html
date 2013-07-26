@@ -1,0 +1,6 @@
+<volist name="users" id="vo">
+<li>
+	<a href="{:U('User/space/id/'.$vo['id'])}" class="jvf_getUser" uid="{$vo.id}"><img width="50" height="50" src="{$vo.header.thumbnail}" /></a>
+    <div>{$vo.name}</div>
+</li>
+</volist>

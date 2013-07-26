@@ -1,0 +1,41 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	memberIndex("{$_REQUEST['item']}");
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<div class="mb_left_con">
+            	<div class="mb_index_j">
+<include file="Member:sharebox" />
+             <div class="extension_top">
+                	<ul class="clearfix">
+                    	<li class="selected"><a href="{:U('Circle/ajaxCircle/uid/'.$memberdata['id'])}">{%my_say}</a></li>
+                        <li><a href="{:U('Member/reminds')}" get="get">{%my_remind}</a></li>
+                        <li><a href="{:U('Member/trips')}" get="get">{%my_dynamic}</a></li>
+                        <li><a href="{:U('Member/otherDynamic')}" get="get">{%friends_dynamic}</a></li>
+                        <li><a href="{:U('Member/buyOrderList')}" get="get">{%purchase_order}</a></li>
+                    </ul>
+                </div>
+                <div class="jvf_member_box">
+                    <div class="jvf_member_item" style="display:block;"></div>
+                    <div class="jvf_member_item jvf_remind"></div>
+                    <div class="jvf_member_item"></div>
+                    <div class="jvf_member_item"></div>
+                    <!--购买订单-->
+                    <div class="jvf_member_item"  style="padding:10px;"></div>
+                    <!--购买订单——end-->
+                </div>
+                <div class="jvf_all_page" style="display:none;">
+                	<div class="jvf_page" ></div>
+				</div>
+                </div>      	
+            </div>
+       </div>
+       <include file="Member:right" />
+	</div>
+</div>
+<include file="Public:footer" />

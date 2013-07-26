@@ -1,0 +1,57 @@
+<script type="text/javascript">
+$(function(){
+	$('#checkfiles_next').unbind();
+	$('#checkfiles_next').click(function(){
+		if($('#modifyContent').html()){
+			alertMsg.confirm('您的文件被修改,是否强制升级,如果强制升级可能会覆盖已修改的文件,请先备份程序', {
+                okCall: function(){
+                	execution();
+	            }
+	       });
+		}else{
+			execution();
+		}
+	});
+});
+
+function execution(){
+	$('#executioning').show();
+	$('#checkfiles_next').hide();
+	url = '__URL__/execution/id/{$_REQUEST["id"]}';
+	ajaxTodo(url,function(data){
+    	  if(data.status == 1){
+	   		  alertMsg.correct(data.info);
+	   		  $.pdialog.closeCurrent();
+	   		  navTab.reload('__URL__');
+	   		  getUpgradeList();
+	   	  }else{
+	   		  alertMsg.error(data.info);
+	   		  $('#executioning').hide();
+	   		  $('#checkfiles_next').show();
+	   	  }
+    });	
+}
+</script>
+<div class="pageContent">
+		<div class="pageFormContent" layoutH="58">
+			<empty name="list">
+				<div>无被修改文件</div>
+			<else />
+				<div>以下文件被修改</div>
+			</empty>
+			<ul style="margin: 10px;" id="modifyContent">
+			<volist name="list" id="vo">
+			<li style="height: 15px;">{$vo}</li>
+			</volist>
+			</ul>
+		</div>
+		<div class="formBar">
+			<ul style="width: 100%">
+				<li style="display: none;float: left;" id="executioning"><div style="margin-right: 10px;float: left;line-height: 25px;color: red;">请不要关闭页面,正在检测文件...</div></li>
+				<li style="float: right;"><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+				<li style="float: right;"><div class="button"><div class="buttonContent"><button type="button" id="checkfiles_next">执行升级</button></div></div></li>
+			</ul>
+		</div>
+</div>
+
+

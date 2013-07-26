@@ -1,0 +1,50 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript">
+$(function(){
+	memberAddreferences();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+<div class=" jvf_body">
+	<div id="recommendation_container" class="clearfix  jvf_frame">
+  <h2>{%member_addreferences_h2_before}“{$userdata.name}”{%member_addreferences_h2_after}</h2>
+  <p class="reputation-description">{&sysconfig.site_name}{%member_addreferences_description_1}“{$userdata.name}”{%member_addreferences_description_2}{&sysconfig.site_name}{%member_addreferences_description_3}<strong>{%member_addreferences_strong}</strong></p>
+  <div class="helpful-tips">
+    <h4>{%member_addreferences_h4}:</h4>
+    <ul class="helpful-tips-list">
+      <li>{%member_addreferences_tips_list_1}</li>
+      <li>{%member_addreferences_tips_list_2}</li>
+      <li>{%member_addreferences_tips_list_3}</li>
+      <li>{%member_addreferences_tips_list_4}</li>
+      <li>{%member_addreferences_tips_list_5_before}{&sysconfig.site_name}{%member_addreferences_tips_list_5_after} </li>
+    </ul>
+  </div>
+  <div class="jvf_pm_container jvf_fl">
+        <img width="50" height="50" title="{$userdata.name}" src="{$userdata.header.path}" alt="{$userdata.name}">
+    </div>
+  <div class="reviews-list">
+    <div class="reviews-list-item">
+      <form method="post" id="recommendform" class="bubble" action="{:U('Member/addrecommend')}">
+        <input type="hidden" value="{$userdata.id}" name="uid" id="recommend_reviewer">
+        <input type="hidden" value="{$memberdata.id}" name="reviewer" id="recommend_reviewer">
+        <div class="input-row clearfix">
+          <label for="gid">{%member_addreferences_label}</label>
+          <select class="jvf_inputb" name="gid" id="recommend_good">
+            <option value="0">{%member_addreferences_option}</option>
+            <volist name='user_goods' id='vo' >
+            <option value="{$vo.id}">{$vo.title|msubstr=###,0,20}</option>
+            </volist>
+          </select>
+          <span id="viewgood" style="display:none; margin-left:5px;"><a href="javascript:;" target="_blank">{%member_addreferences_viewgood}</a></span>
+        </div>
+        <textarea class="jvf_inputt" rows="5" placeholder="{%member_addreferences_textarea_placeholder}" name="content" id="recommend_content" cols="40"></textarea>
+        <input type="button" value="{%member_addreferences_submit}" name="commit" class="btn p2153 f14 linebl">
+        <span id="forgotnotice" style="display:none;"></span>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+<include file="Public:footer" /> 

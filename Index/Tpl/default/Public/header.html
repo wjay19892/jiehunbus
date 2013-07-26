@@ -1,0 +1,85 @@
+<!--头部——开始-->
+	<div class="header ie6fixedTL">
+    	<div class="header_top clearfix">
+            <ul class="top_menul jvf_fl clearfix">
+            	<if condition="C('sysconfig.is_switch_region')">
+            	<li class="header_top_mubg left_mu1 clearfix">
+                	<span class="jvf_fl spanno1" ><em class="jvf_ico"></em>{$switch_region.crr.name}</span>
+                    <a class="jvf_fl" href="{:U('Index/city')}">[{%select_city}]</a></li>
+            	<li>|</li>
+            	</if>
+                <li class="header_top_mubg left_mu2"><a href="{:U('Index/visit_location')}">
+                <em></em> {%visit_location}</a>
+                	<span class="weizhi_con" style="display:none;">{$locate.address}<em class="weizhi_top_j jvf_allimg"></em></span>
+                </li>
+                <notempty name="memberdata">
+                <li>|</li>
+                <li class="header_top_mubg left_mu3"><a href="{:U('Member/inbox')}">
+                <em></em>
+                {%inbox_text}<span>({$memberdata.message})</span></a> </li>
+                <li>|</li>
+                <li class="header_top_mubg left_mu4"><a href="{:U('Search/index/favorites/my')}">				
+                <em></em>
+                {%favorites_text}<span>({$memberdata.favorites})</span></a></li>
+                </notempty>
+                <!--购物车<li>|</li>
+                <li class="header_top_mubg left_mu5"><a href="{:U('Goods/shoppingCart')}">
+                <em></em>
+                {%shoppingcart}<span>(<span id="shoppingCartNum">{$shoppingCartNum}</span>)</span></a></li>-->
+            </ul>
+            
+            <ul class="top_menur jvf_fr clearfix">
+            	<empty name="memberdata">
+            	<li>{%please_first}</li>
+                <li><a href="{:U('User/signin')}">[&nbsp;{%login_text}&nbsp;]</a></li>
+                <li>{%please_after}</li>
+                <li><a href="{:U('User/register')}">[&nbsp;{%reg_text}&nbsp;]</a></li>
+                <else />
+                <li class="left_mu1">{%welcome_home}</li>
+                <li>，</li>
+                <li><a href="{:U('User/space/id/'.$memberdata['id'])}">{$memberdata.name}</a></li>
+                <li>|</li>
+                <li><a href="{:U('Member/index')}">{%member_center}</a> </li>
+                <li>|</li>
+				<eq name="memberdata.isbusiness" value="1">
+                <li><a href="{:U('Goods/release')}">发布商品</a></li>
+                <li>|</li>
+				</eq>
+                <li><a href="{:U('User/logout')}">{%login_out}</a></li>
+                </empty>
+                <!--<li>|</li>
+                <li class="header_top_mubg right_mu1"><a href="{:U('Help/index')}">
+                <em></em>
+                {%help_text}</a></li>
+                -->
+            </ul>
+        </div>
+        
+        <div class="header_con clearfix">
+        	<div class="header_logo jvf_fl">
+            	<h1><a href="__ROOT__"><img src="__ROOT__{&sysconfig.site_logo}" alt="{&sysconfig.site_name}" /></a></h1>
+            </div>
+            <div class="jvf_fl header_con_menu">
+            	<ul>
+            	<volist name="mainnav" id="vo">
+                	<li <if condition="($vo.isdefault eq 1) OR (__SELF__ eq $vo['url']) ">class="menu_active"</if>><a href="{$vo.url}" <eq name="vo.isblank" value="1">target="_blank"</eq> >{$vo.title}</a></li>
+                </volist>
+                </ul>
+            </div>
+           <!--搜索
+            <div class="header_search jvf_fr clearfix">
+            	<form id="searchForm" action="{:U('Search/index')}" method="get">
+                <span class="header_search_inp1">
+                	<div class="moren">{%search_goods}</div>
+                	<ul style="display: none;">
+                    	<li><a href="javascript:;" rel="{:U('Search/index')}">{%search_goods}</a></li>
+                    </ul>
+                </span>
+                <span class="header_search_inp2"><input type="text" placeholder="{%search_input_tip}" name="search_key"></span>
+                <span class="header_search_but"><input type="button" value="{%search_text}" name="submit_button"></span>
+                </form>
+        	</div>
+            -->
+        </div>
+    </div>
+<!--头部——结束-->

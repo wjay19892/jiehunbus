@@ -1,0 +1,37 @@
+<script>
+$(function(){
+	memberEditLabel();
+});
+</script>
+<div title="{%my_interested}" style="width:500px;">
+	<div style="" class="set_cent">
+    	<div style="margin-top:5px;" class="jvf_frame">
+        	<div class="h3list">{%my_interested}</div>
+        	<form id="label_form" action="{:U('Member/labelAdds')}">
+            <div class="quaned_list">
+            	<div>{%quaned_list}</div>
+            	<volist name="mycircle" id="vo">
+            	<a class="qz qzlist" href="javascript:;" lid="{$vo.id}">{$vo.name}<input name="lids[]" type="hidden" value="{$vo.id}"></a>
+            	</volist>
+            	<volist name="mylabel" id="vo">
+	        	<a class="bq bqlist" href="javascript:;" lid="{$vo.id}">{$vo.name}<input name="lids[]" type="hidden" value="{$vo.id}"></a>
+	        	</volist>
+            </div>
+            </form>
+        </div>
+        <div style="margin-top:5px;" class="jvf_frame">
+            <div class="h3list">{%quanz_list}</div>
+            <div class="quanz_list"></div>
+            <div class="gengh"><a class="quanz_btn" href="javascript:;">{%for_a_group}</a></div>
+            
+            <div class="h3list">{%biaoq_list}</div>
+            <div class="biaoq_list"></div>
+            <div class="gengh clearfix"><a class="biaoq_btn" href="javascript:;">{%for_a_group}</a></div>
+       </div>
+    </div>
+    <div class="set_btn">
+	   <a class="btn p2153 f14 linebl exit" href="javascript:;" id="edit_submit">{%submit_text}</a>
+    </div>
+
+ 
+</div>

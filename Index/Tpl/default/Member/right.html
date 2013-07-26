@@ -1,0 +1,113 @@
+<div class="mb_right jvf_fr">
+
+		<div class="mb_nav">
+     	<div class="mb_index <eq name="ACTION_NAME" value="index">current</eq>">
+         	<a class="jvf_allimg" href="{:U('Member/index')}"><em class="jvf_allimg mb_index_ico"></em>{%member_goods_mbtit}</a>
+         </div>
+         <div class="mb_inbox <eq name="ACTION_NAME" value="inbox">current</eq>">
+         	<a class="jvf_allimg" href="{:U('Member/inbox')}"><em class="jvf_allimg mb_inbox_ico"></em>{%inbox_text}</a>
+         </div>
+         <div class="mb_listings <eq name="ACTION_NAME" value="listings">current</eq>">
+         	<a class="jvf_allimg" href="{:U('Member/listings')}"><em class="jvf_allimg mb_listings_ico"></em>{%my_interaction}</a>
+         </div>
+         <div class="mb_listings <eq name="ACTION_NAME" value="administration">current</eq>">
+         	<a class="jvf_allimg" href="{:U('Member/administration')}"><em class="jvf_allimg mb_administration_ico"></em>{%interaction_management}</a>
+         </div>
+         <div class="mb_edit <eq name="ACTION_NAME" value="edit">current</eq>">
+         	<a class="jvf_allimg" href="{:U('Member/edit')}"><em class="jvf_allimg mb_edit_ico"></em>{%personal_settings}</a>
+         </div>
+         <div class="mb_account <eq name="ACTION_NAME" value="account">current</eq>">
+         	<a class="jvf_allimg" href="{:U('Member/account')}"><em class="jvf_allimg mb_account_ico"></em>{%account_info}</a>
+         </div>
+         <div class="mb_goods <eq name="ACTION_NAME" value="goods">current</eq>">
+         	<eq name="memberdata.isbusiness" value="1">
+			<a class="jvf_allimg" href="{:U('Member/goods')}"><em class="jvf_allimg mb_goods_ico"></em>{%seller_center}
+            </a>
+         	<else />
+			<a style="color: #CCCCCC;" class="jvf_allimg" href="{:U('Member/apply_seller')}"><em class="jvf_allimg mb_goods_ico"></em>{%seller_center}
+			<empty name="applying">
+            <span class="shenqingsj">申请商家平台！</span>
+			<else />
+			<span class="shenqingsj">正在审核</span>
+			</empty>
+            </a>
+			</eq>
+         </div>
+     </div>
+     
+     
+		<div class="mb_head_user mg0a">
+     	<div class="mb_head_img">
+         <a href="{:U('User/space/id/'.$memberdata['id'])}"><img src="{$memberdata.header.path}" /></a>
+         <div class="space_operation clearfix">
+                 <a href="{:U('Member/edit')}">{%edit_data}</a>
+                 <a href="{:U('Member/edit/item/upLoad')}">{%upload_header}</a>
+         </div>
+         </div>
+         <div class="mb_username"><a href="{:U('User/space/id/'.$memberdata['id'])}">{$memberdata.name}</a></div>
+         
+         <div class="mb_jvf">
+             <ul class="clearfix">
+                 <li>
+                     {%audience}：<a href="{:U('Member/listings')}">{$allNum.attention}</a><br>
+                     
+                 </li>
+                 <li>
+                     {%listen}：<a href="{:U('Member/listings/item/ajaxCircle')}">{$allNum.was_attention}</a><br>
+                    
+                 </li>
+                 <li>
+                     {%my_say}：<a href="{:U('Member/index')}">{$allNum.talk_about}</a><br>
+                     
+                 </li>
+                 <li>
+                     {%favorites}：<a href="{:U('Search/index/favorites/my')}">{$allNum.favorites}</a><br>
+                     
+                 </li>
+                 <li>
+                     {%like}：<a href="{:U('Member/listings/item/like')}">{$allNum.like}</a><br>
+                     
+                 </li>
+                 <li>
+                     {%user_space_goods_order}：<a href="{:U('Member/index/item/buyOrderList')}">{$allNum.order}</a><br>
+                     
+                 </li>
+             </ul>
+         </div>
+         <div class="space_verification clearfix">
+         	<span class="sp1 jvf_fl">{%verification_text}：</span>
+             <div class="sp2 jvf_fl clearfix"><span class="mail jvf_allimg jvf_fl"  title="{%mail_verification}"></span><span class="jvf_fl"><eq name="memberdata.mailstatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+             <div class="sp3 jvf_fl clearfix"><span class="mobile jvf_allimg jvf_fl" title="{%phone_verification}"></span><span class="jvf_fl"><eq name="memberdata.phonestatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+         </div>
+         
+         <!-- <div class="shop_renzheng">
+       	 <div class="jvf_shopman clearfix">
+             <span title="{%businesses_certified}" class="shopman_ico jvf_allimg jvf_fl"></span>
+             <span style="line-height: 28px;margin-left: 7px;" class="jvf_fl">{%certified_businesses}</span>
+             <div  class="space_guanzhu jvf_fr"><a href="{:U('User/space/id/'.$memberdata['id'])}">{%look_my_homepage}</a></div>
+         </div>
+         </div> -->
+         
+         <div class="jvf_frame mbinqz">
+         	<div class="mbinqz_tit">{%my_interested_circle}</div>
+            <div style="padding:10px;">
+            <volist name="mycircle" id="vo">
+        	<a class="qz qzlist" href="{:U('Circle/index/lid/'.$vo['id'])}" target="_blank">{$vo.name}</a>
+        	</volist>
+            <div class="tr">
+            	<a href="{:U('Member/editLabel')}" class="editLabel">{%edit}</a>
+            </div>
+            
+            </div>
+            <div class="mbinqz_tit">{%my_interested_topic}</div>
+	        <div style="padding:10px;">
+	            <volist name="mylabel" id="vo">
+	        	<a class="bq bqlist" href="{:U('Circle/index/lid/'.$vo['id'])}" target="_blank">{$vo.name}</a>
+	        	</volist>
+	            <div class="tr">
+	            	<a href="{:U('Member/editLabel')}" class="editLabel">{%edit}</a>
+	            </div>
+	         </div>
+	     </div>
+     </div>
+</div>

@@ -1,0 +1,179 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	new AjaxUpload('#upload_button', {
+	    action: APP+'/Xheditor/avatarUpload',
+	    name: 'images',
+	    onSubmit : function(file , ext){
+	        if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)){
+	            /* Setting data */
+	            this.setData({
+	            'ext': ext
+	            });
+	            this.disable();
+	        } else {
+	            return false;
+	        }
+
+	    },
+	    onComplete : function(file,response){
+	    	var data=eval("("+response+")");
+	    	uploadOne('img','header',data,true);
+	        this.enable();
+	    }
+	});
+});
+</script>
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>用户帐号：</label>
+				<input type="text" class="required" minlength="2" name="name">
+			</div>
+            
+			<div class="unit">
+				<label>电子邮件：</label>
+				<input type="text" class="required email"  name="mail">
+			</div>
+            
+			<div class="unit">
+				<label>用户密码：</label>
+                <input type="password" id="password" class="required alphanumeric" minlength="2" name="password">
+			</div>
+            
+			<div class="unit">
+				<label>确认密码：</label>
+                <input type="password" class="required alphanumeric" minlength="6" name="repassword" equalto="#password">
+			</div>
+            
+    		<div class="unit">
+				<label>联系电话或手机：</label>
+				<input type="text" class="phone" name="phone">
+			</div>
+            
+            <div class="unit">
+				<label>地址：</label>
+				<input type="text" class="address" name="address">
+			</div>
+            
+            <div class="unit">
+				<label>自我介绍：</label>
+				<textarea name="self_introduction" class="editor" rows="6" cols="55" tools="mfull" upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf" upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi"></textarea>
+			</div>
+            
+          	<div class="unit">
+				<label>用户头像：</label>
+				<input type="hidden" name="header" id="header">
+				<div style="float: left;">
+				<img id="img" width="100" height="100" style="margin-left:5px; display:none;"/>
+                <div class="button" id="upload_button"><div class="buttonContent"><button type="button">上传</button></div></div>
+                </div>
+			</div>
+            
+          	<div class="unit">
+				<label>注册IP：</label>
+				<input type="text" class="textInput" name="regip">
+			</div>
+            			
+            <div class="unit">
+				<label>邮箱验证：</label>
+                <label class="radioButton"><input type="radio" name="mailstatus" value="0" checked="checked">未验证</label>
+                <label class="radioButton"><input type="radio" name="mailstatus" value="1">已验证</label>
+			</div>
+            
+            <div class="unit">
+				<label>手机验证：</label>
+                <label class="radioButton"><input type="radio" name="phonestatus" value="0" checked="checked">未验证</label>
+                <label class="radioButton"><input type="radio" name="phonestatus" value="1">已验证</label>
+			</div>
+			
+			<div class="unit">
+				<label>性别：</label>
+				<SELECT name="sex" class="combox">
+					<option value="0">保密</option>
+					<option value="1">男</option>
+					<option value="2">女</option>
+				</SELECT>
+			</div>
+
+			<div class="unit">
+				<label>会员类型：</label>
+				<SELECT name="isbusiness" class="combox">
+					<option value="0">用户</option>
+					<option value="1">商家</option>
+				</SELECT>
+			</div>
+            
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</div>
+            
+            <volist name="list" id="att">
+            <div class="unit">
+				<label>{$att.key}：</label>
+                <if condition="$att['type'] eq 0"><!-- 手动输入 -->
+                    <input type="text" name="{$att.id}" class="textInput" value="{$att.default}" />
+                </if>
+                
+                <if condition="$att['type'] eq 1">
+                  <div style="width:475px; float:left">
+                    <foreach name="att['enum']" item="enum_item" ><!-- 单选 -->
+                    <label class="radioButton"><input type="radio" name="{$att.id}" value="{$enum_item}"  <if condition="$enum_item eq $att['default']">checked="checked" </if> />{$enum_item}</label>
+                    </foreach>
+                  </div>
+                </if>
+                
+                <if condition="$att['type'] eq 2">        
+                    <select name="{$att.id}">
+                        <foreach name="att['enum']" item="enum_item" ><!-- 下拉 -->
+                        <option value="{$enum_item}" <if condition="$enum_item eq $att['default']">selected="selected"</if>>{$enum_item}</option>
+                        </foreach>
+                    </select>
+                </if>
+                
+                <if condition="$att['type'] eq 3"><!-- 文本域 -->
+                    <textarea rows="3" cols="55" name="{$att.id}" class="textInput">{$att['default']}</textarea>
+                </if>
+                
+                <if condition="$att['type'] eq 4">
+                  <div style="width:475px; float:left">
+                    <foreach name="att['enum']" item="enum_item" ><!-- 多选 -->
+                    <label class="radioButton"><input type="checkbox" name="{$att.id}[]" value="{$enum_item}"  <if condition="$enum_item eq $att['default']">checked="checked" </if> />{$enum_item}</label>
+                    </foreach>
+                  </div>
+                </if>     
+                                               
+                <if condition="$att['type'] eq 5"><!-- 图片域 -->
+                    <input type="file"  name="{$att.id}" class="valid" /> 
+                    <if condition="$att['default'] neq ''">
+                        <a href="__ROOT__{$att.default}" target="_blank" >查看</a>
+                    </if>
+                </if>
+                
+                <if condition="$att['type'] eq 6"><!-- 日历控件 -->
+                    <input type="text" readonly="true" format="yyyy-MM-dd" class="date textInput valid focus" name="{$att.id}"><a class="inputDateButton" href="#">选择</a>
+                </if>
+                
+                <if condition="$att['type'] eq 7"><!-- 编辑器 -->
+                    <textarea id="{$att.id}"  class="editor" name="{$att.id}" rows="6" cols="55" tools="mfull" upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf" upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">{$att.default}</textarea>       
+                </if>
+			</div>
+            </volist>
+            
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

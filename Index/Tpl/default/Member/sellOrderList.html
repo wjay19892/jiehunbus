@@ -1,0 +1,59 @@
+<table cellspacing="0" width="100%" cellpadding="0" border="0" class="trips_list jvf_mbwid">
+	<thead>
+		<tr>
+		  <th width="90px">{%order_status}</th>
+		  <th width="400px">{%order_info}</th>
+		  <th width="160px">{%order_cost}</th>
+		  <th width="150px">{%other_message}</th>
+		</tr>
+	</thead>
+	<tbody>
+	<volist name="order_detailsdata" id="vo">
+	    <tr>
+	      <td>
+	        <eq name="vo.status" value="2">
+	        <div class="trips_status Cancelled">
+	          <p class="trips_title"> {%status_invalid} </p>
+	        </div>
+	        </eq>
+	        <eq name="vo.status" value="1">
+	        <div class="trips_status PaymentCompleted">
+	          <p class="trips_title"> {%status_pay} </p>
+	        </div>
+	        </eq>
+	        <eq name="vo.status" value="0">
+	        <div class="trips_status NotPaid">
+	          <p class="trips_title"> {%status_nopay} </p>
+	        </div>
+	        </eq>
+	      </td>
+	      <td>
+	        <div class="home_info">
+	          <p class="home_name"><a class="shpc" href="{:U('Goods/index/id/'.$vo['good']['id'])}" target="_blank">{$vo.good.title}</a></p>
+	          <p class="home_address">{%nums_text}：{$vo.num}</p>
+	          <p class="home_date">{%order_time}：{$vo.addtime|toDate}</p>
+	          <p class="bookRoomId">{%order_sn}：{$vo.order_info.sn}（{%order_mark}：{%mark_sell}）</p>
+	        </div>
+	      </td>
+	      <td align="txc">
+	        <div class="mylistings-price">
+	          <ul class="mylistings-price">
+	              <li>{%goods_total}：<span class="weic">&yen;</span><strong class="weic" ><?php echo $vo['good']['price']*$vo['num']; ?></strong></li>
+	              <li>{%status_pay}<eq name="vo.good.payment" value="1">{%payment_deposit}<else />{%payment_price}</eq>：<span class="weic">&yen;</span><strong class="weic">{$vo.total}</strong></li>
+	          </ul>
+	        </div>
+	      </td>
+	      <td>
+	        <dl class="people">
+	          <dt></dt>
+	          <dd class="p_name">{%purchaser}：<a href="{:U('User/space/id/'.$vo['order_info']['orderer']['id'])}" target="_blank">{$vo.order_info.orderer.name}</a> </dd>
+	          <dd class="SendAMessage"></dd>
+	        </dl>
+	      </td>
+	    </tr>
+	</volist>
+		<tr>
+			<td colspan="10"><div class="jvf_page">{$page}</div></td>
+		</tr>
+	</tbody>
+</table>

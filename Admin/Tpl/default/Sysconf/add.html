@@ -1,0 +1,65 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>参数键：</label>
+				<input type="text" class="required alphanumeric" name="key">
+			</div>
+            
+            <div class="unit">
+				<label>参数名称：</label>
+				<input type="text" class="required"  name="name">
+			</div>
+            
+            <div class="unit">
+				<label>参数值：</label>
+				<input type="text" class="textInput"  name="val">
+			</div>
+             
+            <div class="unit">
+				<label>参数类型：</label>
+                <input type="radio" name="list_type" value="0" checked="checked" />单行文本框        
+                <input type="radio" name="list_type" value="1" />单选框
+                <input type="radio" name="list_type" value="2" />下拉框
+                <input type="radio" name="list_type" value="3" />多行文本框
+                <input type="radio" name="list_type" value="4" />图片
+			</div>
+            
+            <div class="unit">
+				<label>参数可选值：</label>
+				<input type="text" class="textInput"  name="val_arr">
+			</div>
+            
+			<div class="unit">
+				<label>排序：</label>
+				<input type="text" class="digits textInput valid"  name="sort">
+			</div>
+            
+            <div class="unit">
+				<label>所属系统设置分组：</label>
+				<SELECT name="group_id" class="combox">
+					<option value="">未分组</option>
+					<volist name="list" id="group">
+						<option value="{$group.id}">{$group.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>

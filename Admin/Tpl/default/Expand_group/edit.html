@@ -1,0 +1,42 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+           <div class="unit">
+				<label>扩展字段分组名称：</label>
+				<input type="text" class="required" name="name" value="{$vo.name}">
+			</div>
+			
+            <div class="unit">
+				<label>所属扩展字段：</label>
+                <div style="width:425px; float:left">
+     			<volist name="list" id="item">
+					<label class="radioButton"><input type="checkbox" value="{$item.id}" name="expand_ids[]" <if condition="in_array($item['id'],$vo['expand_ids'])">checked="checked"</if>>{$item.key}</label>
+				</volist>
+                </div>
+			</div>
+            
+			<div class="unit">
+				<label>排序：</label>
+				<input type="text" class="digits textInput valid" name="sort" value="{$vo.sort}">
+			</div>
+            
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option <eq name="vo.status" value="1" >selected</eq> value="1">启用</option>
+					<option <eq name="vo.status" value="0" >selected</eq> value="0">禁用</option>
+				</SELECT>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

@@ -1,0 +1,43 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+<script src="../Public/js/baidumap_location.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	try{
+		setTimeout(function() {
+			initialize("map_canvas");
+			addTags('{$locate.lat}','{$locate.lng}','{$locate.address}',"map_canvas",'');
+		},0);
+	}catch(e){
+	}
+	visit_location();
+});
+
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<div class="jvf_w100_con jvf_visit">
+        	<div class="jvf_w100_tit"><h2>{%setvisit_location}</h2></div>
+            <div class="clearfix visit_tit2">
+        <form method="post" action="{:U('Index/setvisit_location')}" class="clearfix" id="setvisit_locationform">
+          <span class="visit_pd">{%visit_location_address}：</span>
+          <input type="text" placeholder="{%visit_location_address}" value="{$locate.address}" id="address" name="address" class="visit_address">
+          <a href="javascript:;" id="addmarker">{%map_addmarker}</a>
+          <a href="javascript:;" id="showmarker">{%map_showmarker}</a>
+          <input type="hidden" readonly="readonly" value="" id="longitude" name="longitude">
+          <input type="hidden" readonly="readonly" value="" id="latitude" name="latitude">
+          <input type="hidden" readonly="readonly" value="" id="zoom" name="zoom">
+          <span class="jvf_mgf f14"><input type="button" id="submit" class="btn p2153" name="commit" value="{%submit_text}"></span>
+        </form>
+    </div>
+        </div>
+        <div class="jvf_w100"></div>
+        <div class="jvf_w100_con" style="padding: 10px;">
+        <div id="map_canvas" style="height:500px;"></div>
+        </div>
+        <div class="jvf_w100"></div>
+    </div>
+</div>
+
+<include file="Public:footer" />

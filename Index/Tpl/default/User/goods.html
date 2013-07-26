@@ -1,0 +1,21 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	userGoods({$userdata['id']});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<!--资料-->
+            <h2 class="jvf_space_tit"><span>商品</span>列表</h2>
+            <div class="left_box"></div>
+			<div class="jvf_page" style="display:none;">
+			</div>
+       </div>
+       <include file="User:right" />
+       </div>
+	</div>
+</div>
+<include file="Public:footer" />

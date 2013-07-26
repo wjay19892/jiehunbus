@@ -1,0 +1,27 @@
+<script>
+$(function(){
+	memberReminds();
+});
+</script>
+<div class="jvf_remind_top">      
+    <label for="filter">{%member_show}:</label>
+    <select id="filter" name="filter">
+        <option <if condition='($filter eq "") OR ($filter eq "all")'>selected="selected"</if> value="all">{%member_reminds_all}</option>
+                    <option <if condition='($filter eq "unread")'>selected="selected"</if> value="unread">{%member_reminds_unread}</option>
+                    <option <if condition='($filter eq "read")'>selected="selected"</if> value="read">{%member_reminds_read}</option>
+    </select>
+</div>
+      
+<div id="feed_div" class="e jvf_mbpd">
+       <ul class="el">
+       <volist name="remindsdata" id="vo">
+	       <li class="clearfix">
+	       		<div class="clearfix">{$vo.content} <span class="xg1"><span title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span></span><a title="{%delete}" class="o del" href="{:U('Member/delremind/id/'.$vo['id'])}">{%delete}</a></div>
+	       </li>
+       </volist>
+       </ul>
+</div>
+
+<div class="jvf_page">
+{$page}
+</div>

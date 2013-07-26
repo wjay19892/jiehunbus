@@ -1,0 +1,102 @@
+<script>
+$(function(){
+	memberVerification();
+})
+</script>
+
+<div class="edit_verification">
+       <div class="box">
+         <div class="middle_edit description">
+           <p>{%member_verification_description}</p>
+         </div>
+       </div>
+       <div class="box">
+         <div class="top">
+           <h2><span class="jvf_mbpng tion_ico1"></span>{%verification_text}</h2>
+         </div>
+         <div class="middle_edit">
+           <ul class="edit_verification_list">
+             <li class="edit_verification_list_item clearfix">
+             <eq name="memberdata.mailstatus" value="1">
+             	<h3><span class="icon yes"></span>{%member_verification_mail_verified}</h3>
+               <p class="description">{%member_verification_no_public}</p>
+             <else />
+               <h3><span class="icon no"></span>{%member_verification_mail_verified}</h3>
+               <p class="description">{%member_verification_no_public}</p>
+				<div class="segment">
+				    <div>{%verification_mail_tip_1_before}{$memberdata.mail}{%verification_mail_tip_1_after}</div>
+				    <div>{%verification_mail_tip_2_before}{$Think.config.sysconfig.site_smtp_account}{%verification_mail_tip_2_after}</div>
+				    <div>{%verification_mail_tip_3_before}{$memberdata.mail}{%verification_mail_tip_3_after}</div>
+				</div>
+				<form class="cmxform" id="resendmail" action="{:U('User/resendmail')}" method="post">
+				    <input type="hidden" name="email" id="email" value="{$memberdata.mail}">
+				    <div class="segment buttons">
+				        <input type="button" value="{%mail_verification}" name="commit" id="sendmail" class="btn p2153 f14 linebl"><span id="forgotnotice" style="display:none;"></span>
+				    </div>
+				</form>
+     				 </eq>
+                </li>
+                <li class="edit_verification_list_item clearfix">
+                <eq name="memberdata.phonestatus" value="1">
+                  <h3><span class="icon yes"></span>{%phone_verification}</h3>
+                  <p class="description">{%member_verification_phone_description}</p>
+                <else />
+                  	<h3><span class="icon no"></span>{%phone_verification}</h3>
+				      <p class="description">{%member_verification_phone_description_code}</p>
+				      <p class="description">{%member_verification_phone_description}</p>
+                </eq>
+                <div class="phone-numbers-container has-phone-numbers">
+				        <div class="phone-numbers-hide-during-verify">
+				          <div class="no-phone-numbers">
+				            <p>{%member_edit_no_phone_numbers}</p>
+				          </div>
+		                 <table cellspacing="0" cellpadding="0" class="phone-numbers-table">
+		                   <tbody>
+		                     <tr data-number="{$memberdata.phone}" class="verified">
+		                       <th>{$memberdata.phone}</th>
+		                       <td><eq name="memberdata.phonestatus" value="1"><span class="verified"><span class="icon"></span>{%verification_text}</span><else /><span class="unverified"><a id="smsauthcode_verification" href="javascript:void(0);" class="jvf_addphone">{%verification_code_send}</a></span></eq></td>
+		                     </tr>
+		                   </tbody>
+		                 </table>
+                 		<a id="addphone_verification" href="javascript:void(0);" class="jvf_addphone"> <span class="icon"></span>{%member_edit_editphone}</a> 
+               			</div>
+	               <div class="phone-number-verify jvf_frame" style="display:none;">
+	                 <div class="pnaw-step1 clearfix">
+	                     <p class="send-verification-error"></p>
+	                     <p>{%verification_code_input_phone}</p>
+	                     <label for="phone_number_verification">{%phone_text}：</label>
+	                     <input type="text" id="phone_number_verification" name="phone_number" class="jvf_inputt" value="">
+	                     <a id="smsphone_verification" href="javascript:void(0);" class="btn linebl f12 p115">{%verification_code_send}</a><a href="javascript:void(0);" id="cancel" class="cancel"> {%cancel} </a>
+	                 </div>
+	                 <div class="pnaw-step2 clearfix">
+	                   <p class="pnaw-verification-error"></p>
+	                   <p>{%verification_code_sended}</p>
+	                   <label for="phone_number_verification">{%verification_code}：</label>
+	                   <input type="text" id="phone_authcode_verification" class="jvf_inputt" name="authcode" value="">
+	                   <a id="verifyphone_verification" href="javascript:void(0);" class="btn linebl f12 p115"> {%verification_text} </a> <a href="javascript:void(0);" id="cancel" class="cancel"> {%cancel} </a>
+	                 </div>
+	               </div>
+               <div class="spinner"></div>
+             </div>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+                 <div class="box">
+                   <div class="top">
+                     <h2><span class="jvf_mbpng tion_ico2"></span>{%member_verification_bind}</h2>
+                   </div>
+                   <div class="middle_edit">
+                     <ul class="edit_verification_list">
+                     <notempty name="login_portdata">
+ 					<volist name='login_portdata' id='vo'>
+                     <li class="edit_verification_list_item clearfix">
+                         <h3><span class="icon <eq name="vo.verified" value="1">yes<else />no</eq>"></span>{%member_verification_vo_before}{$vo.name}{%member_verification_vo_after}</h3>
+                         <p class="description">{$vo.description}</p>
+                         <a href="{:U('Login_port/index/id/'.$vo['id'])}"><img class="jvf_fr" alt="{$vo.name}" src="__ROOT__{$vo.logo}"></a>
+                     </li>
+                     </volist>
+                     </notempty>
+                   </div>
+                 </div>
+</div>

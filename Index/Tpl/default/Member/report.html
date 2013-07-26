@@ -1,0 +1,23 @@
+<script>
+$(function(){
+	memberReport();
+});
+</script>
+<div title="{%report}" style="width:300px;">
+	<div class="box_fk">{%report_box_fk}</div>
+	<form id="complaintForm" action="{:U('Member/complaint')}">
+		<input type="hidden" name="gid" value="{$_REQUEST['gid']}">
+	<div  class="box_ju">
+    	<ul>
+    	<volist name="complaint_item_data" id="vo">
+       		<li><input type="radio" name="item" <eq name="i" value="1">checked="checked"</eq>><span>{$vo.name}</span></li>
+       	</volist>
+            <li><input class="jvf_inputt" type="text" name="other" placeholder="{%input_reason}" size="30"></li>
+        </ul>
+    </div>
+   	<div class="jvf_box_buttom" style=" border-top:1px solid #E4E4E4;">
+           <input type="button" class="btn p2153 f14 linebl" name="commit" value="{%submit_text}" id="submit">
+    </div>
+	</form>
+ 
+</div>

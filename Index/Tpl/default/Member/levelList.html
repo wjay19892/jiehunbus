@@ -1,0 +1,29 @@
+<div style="width:400px;" title="{%level_list}">
+    <div class="segment jvf_box_con">
+    	<table cellspacing="0" width="100%" cellpadding="0" border="0" class="trips_list">
+      <thead>
+        <tr>
+          <th class="t_book_info" style="width: 20%">{%level_text}</th>
+          <th class="t_price" style="width: 30%">{%min_text}{&sysconfig.site_credits_name} </th>
+          <th class="t_operate " style="width: 50%">{%max_text}{&sysconfig.site_credits_name} </th>
+        </tr>
+      </thead>
+      <tbody>
+      <volist name="leveldata" id="vo">
+        <tr>
+          <td class="txc">
+              <span>{$vo.name}</span>
+          </td>
+          <td class="txc">
+              <span>{$vo.min}</span>
+          </td>
+          <td class="txc">
+            <span>{$vo.max}</span>
+          </td>
+        </tr>
+        </volist>
+      </tbody>
+    </table>
+   </div>
+	 
+</div>

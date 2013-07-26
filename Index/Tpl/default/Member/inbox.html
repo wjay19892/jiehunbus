@@ -1,0 +1,58 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	memberInbox();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<div class="mb_left_con">
+            <include file="Member:sharebox" />
+      			<div class="extension_top">
+                	<ul class="clearfix">
+                    	<li class="selected"><a href="javascript:;">{%inbox_text}</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix shaix">
+                <form method="get" id="inbox_filter_form" action="{:U('Member/inbox')}">
+                		<div class="jvf_fl" style="margin-top:3px;">{%member_show}：
+                           <select id="filter" name="filter" onchange="jQuery('form#inbox_filter_form').submit();">
+                                <option <if condition='($filter eq "") OR ($filter eq "all")'>selected="selected"</if> value="all">{%member_inbox_all}  ({$mebcount})</option>
+                    <option <if condition='($filter eq "site")'>selected="selected"</if> value="site">{%member_inbox_site} ({$sitecount})</option>
+                    <option <if condition='($filter eq "friends")'>selected="selected"</if> value="friends">{%member_inbox_friends} ({$friendscount})</option>
+                    <option <if condition='($filter eq "unread")'>selected="selected"</if> value="unread">{%member_inbox_unread} ({$unreadcount})</option>
+                            </select>
+                        </div>
+                 </form>
+                        <div class="jvf_fr">
+                            <a class="btn linebl f14 p2153" style="margin-left:10px;" id="sendpm" href="{:U('Member/sendpm')}">{%send_message}</a>
+                        </div>
+                     </div>
+                <div class="middle clearfix">
+                	
+                    	<ul id="inbox_box">
+                    	<volist name='mebmessages' id='vo' >
+                        	<li class="clearfix">
+                        		<a class="jvf_fl jvf_over detail" href="{:U('Member/viewpm/id/'.$vo['id'])}" title="{%member_viewpm}">{$vo.content|msubstr=###,0,30}</a>
+            					<span class="jvf_fr">
+            						<a href="{:U('User/space/id/'.$vo['send'])}" title="{%view_profile}">{$vo.sendname}</a>
+            						&nbsp;{%send_in}&nbsp;
+            						<span title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span>
+            						&nbsp;&nbsp;
+            						<a href="{:U('Member/replypm/id/'.$vo['id'])}" title="{%reply}" class="reply">{%reply}</a>
+            						&nbsp;&nbsp;
+            						<a href="{:U('Member/deletepm/id/'.$vo['id'])}" title="{%delete}" class="delete">{%delete}</a>
+            					</span>
+            				</li>
+            			</volist>
+            			
+                        </ul>
+                    </div>
+            </div>
+       </div>
+       <include file="Member:right" />
+	</div>
+</div>
+<include file="Public:footer" />

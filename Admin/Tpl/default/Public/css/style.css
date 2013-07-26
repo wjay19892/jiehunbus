@@ -1,0 +1,10 @@
+body{ font-size:12px;}
+.message{ margin:auto; margin-top:5%; width:640px;}
+.jvf_msg_title{background-image:url(../images/msg.gif); height:15px; width:640px; background-repeat:no-repeat; }
+.msg_bod{width:618px; margin:0 auto; border:1px solid #E7E7E7; padding:10px; border-top:none;}
+.mag_tishi{border-bottom: 1px solid #E7E7E7;font-size: 20px; font-weight: bold;height: 40px;line-height: 40px; text-indent:2em;}
+.tiaoz_chengg{  background-image: url("../images/msg.gif"); background-position: -71px -37px; background-repeat: no-repeat;height: 75px;width: 70px;}
+.tiaoz_shib{ background-image: url("../images/msg.gif"); background-position:0px -37px; background-repeat: no-repeat;height: 75px;width: 70px;}
+.jvf_cl{ clear:both; height:0px; display:block; overflow:hidden;}
+.bottomTd{background-image: url("../images/msg.gif"); width:140px; background-position:bottom; background-repeat:no-repeat;}
+.jvf_upload{background-image: url("../images/upbut.gif");display: block;float: left;height: 21px;width: 63px;}

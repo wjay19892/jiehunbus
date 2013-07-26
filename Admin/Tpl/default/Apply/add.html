@@ -1,0 +1,110 @@
+<div class="pageContent">
+<script src="__PUBLIC__/dwz/js/baidumap.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+	$(document).ready(function(){
+		try{
+			initialize();
+		}catch(e){
+		}
+	});
+//-->
+</script>
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商家名称：</label>
+				<input type="text" class="required" name="name">
+			</div>
+
+			<div class="unit">
+				<label>会员：</label>
+				<input type="hidden" name="uid" group="member" field="id" value="">
+				<input name="member_name" type="text" readonly="readonly" group="member" field="name" value="{$releasedata.promulgator|getParent='Member',###}" />
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+            
+			<div class="unit">
+				<label>负责人：</label>
+				<input type="text" class="required" name="fz_name">
+			</div>
+
+			<div class="unit">
+				<label>公司名称：</label>
+				<input type="text" class="required" name="companyname">
+			</div>
+            
+			<div class="unit">
+				<label>LOGO：</label>
+                <input type="file" class="textInput" name="logo">
+			</div>
+            
+   			<div class="unit">
+				<label>预约电话：</label>
+				<input type="text" class="textInput" name="tel">
+			</div>
+
+			<div class="unit">
+				<label>营业时间：</label>
+				<input type="text" class="textInput" name="opening">
+			</div>
+
+			<div class="unit">
+				<label>商家类型：</label>
+				<input type="text" class="textInput" name="type">
+			</div>
+
+			<div class="unit">
+				<label>商家特色：</label>
+				<input type="text" class="textInput" name="characteristic">
+			</div>
+
+			<div class="unit">
+				<label>服务范围：</label>
+				<input type="text" class="textInput" name="services">
+			</div>
+
+			<div class="unit">
+				<label>地址：</label>
+				<input type="text" class="required textInput" name="address" id="address" style="width:330px;"><input type="button" value="标记" onClick="codeAddress()"><input onClick="showMarker();" type="button" value="显示标记"/>
+			</div>
+			
+			<div class="unit">
+				<label>地图：</label>
+				<div id="map_canvas"></div>
+			</div>
+			
+            <div class="unit">
+                <label>地图属性：</label>
+			      <div class="fl"><span>经度：</span><input name="longitude" type="text" id="longitude" value="" readonly="readonly" class="w70"/></div>
+			      <div class="fl ml10"><span>纬度：</span><input name="latitude" type="text" id="latitude" value="" readonly="readonly" class="w70"/></div>
+			      <div class="fl ml10"><span>缩放级别：</span><input name="zoom" type="text" id="zoom" value="" readonly="readonly" class="w70"/></div>
+            </div>
+
+			<div class="unit">
+				<label>申请时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1">已审核</option>
+					<option value="0">未审核</option>
+					<option value="2">已撤销</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

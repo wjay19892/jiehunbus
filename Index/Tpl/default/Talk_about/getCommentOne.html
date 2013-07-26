@@ -1,0 +1,6 @@
+<li>
+	<div class="msgcnt"><strong><a target="_blank" href="{:U('User/space/id/'.$vo['uid'])}">{$vo.name}</a>:</strong>
+	<span class="content">{$vo.content|contentFilter}</span>
+	<span from="1729" class="cNote"><a href="javascript:;">{$vo.addtime|dgmdate}<i class="l"></i></a></span>
+	<a class="replycite" href="javascript:;" username="{$vo.name}">{%reply}</a></div>
+</li>

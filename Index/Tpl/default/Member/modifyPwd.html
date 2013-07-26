@@ -1,0 +1,28 @@
+<script>
+$(function(){
+	memberModifyPwd();
+});
+</script>
+<div class="jvf_gpasword">
+<form id="setPwdForm" action="{:U('Member/savePwd')}">
+   <table>
+       <tbody>
+       <tr>
+           <th class="tr">{%member_modifypwd_oldpwd}：</th>
+           <td><input class="jvf_inputt" type="password" name="oldpwd" placeholder="{%member_modifypwd_oldpwd}" value=""></td>
+       </tr>
+       <tr>
+           <th class="tr">{%member_modifypwd_newpwd}：</th>
+           <td><input class="jvf_inputt" type="password" name="newpwd" placeholder="{%member_modifypwd_newpwd}" value=""></td>
+       </tr>
+       <tr>
+           <th class="tr">{%member_modifypwd_newpw2}：</th>
+           <td><input class="jvf_inputt" type="password" name="newpwd2" placeholder="{%member_modifypwd_newpw2}" value=""></td>
+       </tr>
+       <tr>
+            <td colspan="2" class="txc"> <a id="submitPwdForm" href="javascript:;"  class="btn p2153 f20 jvf_bold linebl">{%submit_text}</a></td>
+       </tr>
+       </tbody>
+   </table>
+</form>
+</div>

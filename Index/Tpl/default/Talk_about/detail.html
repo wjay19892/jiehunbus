@@ -1,0 +1,192 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(document).ready(function(){
+	talk_aboutDetail({$talk_aboutdata['tid']?$talk_aboutdata['tid']:$talk_aboutdata['id']});
+});
+</script>
+<!--头部——开始-->
+<div class="mainbody body_bot body_con clearfix">
+    <div class="jvf_body clearfix">
+        <div class="detail_left jvf_fl">
+            <div class="jvf_frame ss_detail_left_con clearfix">
+                <div class="ss_detail_le jvf_fl clearfix">
+                    <div class="ss_userpic jvf_fl">
+                        <a class="jvf_getUser" href="{:U('User/space/id/'.$talk_aboutdata['uid'])}" uid="{$talk_aboutdata['uid']}">
+                            <img src="{$talk_aboutdata.header}">
+                        </a>
+                    </div>
+                </div>
+                <div class="ss_detail_ri jvf_fr">
+                    <div class="ss_detail_ri_con">
+                        <a class="ft_bold" href="{:U('User/space/id/'.$talk_aboutdata['uid'])}">
+                            {$talk_aboutdata.name} ：
+                        </a>
+                        {$talk_aboutdata.content}
+                        <volist name="talk_aboutdata.accessory" id="vo">
+                        <img src="{$vo.origin}" />
+                        </volist>
+                    </div>
+                    <notempty name="talk_aboutdata.source">
+                    <div class="ss_zb">
+                        <a href="{:U('User/space/id/'.$talk_aboutdata['source']['uid'])}">
+                            {$talk_aboutdata.source.name}：
+                        </a>
+                        {$talk_aboutdata.source.content}
+                    </div>
+                    </notempty>
+                    <div class="user_say_bot clearfix">
+                        <div class="jvf_fl">
+                            <span title="{$talk_aboutdata.addtime|toDate}">
+                                {$talk_aboutdata.addtime|dgmdate}
+                            </span>
+                        </div>
+                        <div class="jvf_fr">
+                            <a tid="{$talk_aboutdata['tid']?$talk_aboutdata['tid']:$talk_aboutdata['id']}" class="tabroadcast" href="javascript:;">
+                                {%broadcast}({$talk_aboutdata.forwarding})
+                            </a>
+                            <span class="lin">
+                                |
+                            </span>
+                            <a tid="{$talk_aboutdata.id}" class="comment" href="javascript:;">
+                                {%comment} (
+                                <span>
+                                    {$talk_aboutdata.comment}
+                                </span>
+                                )
+                            </a>
+                            <span class="lin">
+                                |
+                            </span>
+                            <a tid="{$talk_aboutdata.id}" class="likes" href="javascript:;">
+                                {%like}(
+                                <span>
+                                    {$talk_aboutdata.likes}
+                                </span>
+                                )
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="jvf_cl"></div>
+            </div>
+            <div class="detail_bot jvf_allimg">
+            </div>
+            <div class="jvf_frame ss_detail clearfix">
+            	<div class="extension_top" id="exchange_tab">
+                	<ul class="clearfix">
+                    	<li class="selected"><a href="javascript:;">{%broadcast}</a></li>
+                        <li><a href="javascript:;">{%comment}</a></li>
+                    </ul>
+                </div>
+                <div id="exchange">
+                	<div class="extension_exchange clearfix"></div>
+                	<div class="extension_exchange clearfix ss_bgpingl" style="display:none;" tid="{$talk_aboutdata.id}">
+                    <ul class="ss_comment"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_bot jvf_allimg">
+            </div>
+            
+        </div>
+        <div class="detail_right jvf_fr">
+            <!--地图-->
+            <empty name="talk_aboutdata.gid">
+            	<div class="mb_head_user mg0a">
+       <div class="mb_head_img">
+  	<a href="{:U('User/space/id/'.$userdata['id'])}"><img src="{$userdata.header.path}" /></a>
+      <div class="space_operation clearfix">
+          <a href="{:U('Member/addfriend/id/'.$userdata['id'])}">{%addfriend}</a>
+          <a href="{:U('Member/sendpm/id/'.$userdata['id'])}">{%send_message}</a>
+          <a href="javascript:;" uid="{$userdata['id']}" class="jvf_callme">{%to_chat}</a>
+      </div>
+  </div>
+  <div class="mb_username clearfix"><a charset="jvf_fl" href="{:U('User/space/id/'.$userdata['id'])}">{$userdata.name}
+  	<eq name="userdata.sex" value="0">
+  	<span class="jvf_ico unman" >
+  	</eq>
+  	<eq name="userdata.sex" value="1">
+  	<span class="jvf_ico man" >
+  	</eq>
+  	<eq name="userdata.sex" value="2">
+  	<span class="jvf_ico woman" >
+  	</eq>
+  </span></a></div>
+ 
+  <div class="jvf_space clearfix">
+      <ul>
+          <li class="jvf_fl">
+              <a href="{:U('User/evaluate/id/'.$userdata['id'])}">({$userdata.evaluate})</a><br>
+              {%ta_evaluation_goods}
+          </li>
+          <li class="jvf_fr">
+              <a href="{:U('User/recommend/id/'.$userdata['id'])}">({$userdata.recommend})</a><br>
+              {%ta_recommend_goods}
+          </li>
+      </ul>
+  </div>  
+  <div class="space_verification clearfix">
+  	<span class="sp1 jvf_fl">{%verification_text}：</span>
+      <div class="sp2 jvf_fl clearfix"><span class="mail jvf_allimg jvf_fl"  title="{%mail_verification}"></span><span class="jvf_fl"><eq name="userdata.mailstatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+      <div class="sp3 jvf_fl clearfix"><span class="mobile jvf_allimg jvf_fl" title="{%phone_verification}"></span><span class="jvf_fl"><eq name="userdata.phonestatus" value="0">{%not_verified}<else />{%verified}</eq></span></div>
+  </div>
+<div class="jvf_spaadr">{%default_location}：<a href="javascript:;" class="jvf_address" uid="{$userdata.id}">{$userdata.address}<span class="jvf_juli fujin_ico">{:distance($locate['lat'],$locate['lng'],$userdata['location']['lat'],$userdata['location']['lng'])}</span></a></div>
+<div class="clearfix shop_renzheng">
+	<!-- <div class="jvf_shopman jvf_fl">
+      <span class="shopman_ico jvf_allimg jvf_fl" title="{%businesses_certified}"></span>
+      <span class="jvf_fl" style="line-height: 28px;margin-left: 7px;">{%businesses_certified}</span>
+    </div> -->
+    <div  class="space_guanzhu jvf_fr">
+    	<if condition="!in_array($userdata['id'],$memberdata['attention_ids'])">
+    	<a href="{:U('Member/attention/id/'.$userdata['id'])}" add="add">{%user_add_attention}</a>
+    	<else />
+    	<a href="{:U('Member/removeattention/id/'.$userdata['id'])}" remove="remove">{%user_remove_attention}</a>
+    	</if>
+    	</div>
+    </div>
+</div>
+            <else />
+				<div class="shop_all masonry-brick">
+				     <div class="jvf_frame w225">
+				         <div class="shopall_img"><a href="{:U('Goods/index/id/'.$goodsdata['id'])}"><img width="213" src="{$goodsdata.accessory.0.path}"></a></div>
+				         <div class="shop_name"><a href="{:U('Goods/index/id/'.$goodsdata['id'])}">{$goodsdata.title}</a></div>
+				         <div class="shop_adr clearfix"><a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" gid="{$goodsdata.id}">{$goodsdata.address}</a><span class="jvf_juli fujin_ico">{:distance($locate['lat'],$locate['lng'],$goodsdata['latitude'],$goodsdata['longitude'])}</span></div>
+				         <div class="shop_conbot clearfix">
+				         	<a href="{:U('Goods/index/id/'.$goodsdata['id'])}">{%detail_text}</a>
+				             <a href="{:U('Goods/index/id/'.$goodsdata['id'])}">{%recommend}({$goodsdata.recommend})</a>
+				             <a href="{:U('Goods/index/id/'.$goodsdata['id'])}">{%evaluate}({$goodsdata.comment})</a>
+				             <if condition="in_array($goodsdata['id'],$shoppingCartId)">
+				             <a class="jvf_ico cartHover icow" href="{:U('Goods/updateNum/id/'.$goodsdata['id'].'/num/0')}" rel="{$goodsdata['id']}"></a>
+				             <else />
+				             <a class="jvf_ico cart icow" href="{:U('Goods/buy/id/'.$goodsdata['id'])}" rel="{$goodsdata['id']}"></a>
+				             </if>
+				             <if condition="in_array($goodsdata['id'],$collection_arr)">
+				             <a class="jvf_ico collHover icow" href="{:U('Member/removeFavorites/gid/'.$goodsdata['id'])}"></a>
+				             <else />
+				             <a class="jvf_ico coll icow" href="{:U('Member/saveFavorites/gid/'.$goodsdata['id'])}"></a>
+				             </if>
+				         </div>
+				         <div class="jvf_frame_bot clearfix">
+				         	<div class="jvf_fl">
+				         	<a href="{:U('User/space/id/'.$goodsdata['promulgator']['id'])}" uid="{$goodsdata['promulgator']['id']}" class="jvf_getUser"><img width="35" height="35" src="{$goodsdata.promulgator.header.thumbnail}"></a>
+				             </div>
+				             <div class="shop_zur jvf_fl clearfix">
+				             	<span class="jvf_fl">{%cost_price}：</span><span class="yuanjia">&yen;{$goodsdata.original}</span>
+				                 <div class="jvf_cl"></div>
+				                 <span class="jvf_fl">{%goods_manager}：</span><span class="jvf_fl jvf_over w100 user_name"><a href="{:U('User/space/id/'.$goodsdata['promulgator']['id'])}">{$goodsdata.promulgator.name}</a></span>
+				             </div>
+				             <div class="jvf_xianjia">&yen;{$goodsdata.price}</div>
+				         </div>
+				         
+				     </div>
+				     <div class="jvf_allimg shop_bot"></div>
+				</div>
+			</empty>
+            </div>
+            <!--地图-->
+        </div>
+    </div>
+</div>
+<include file="Public:reply" />
+<include file="Public:footer" />

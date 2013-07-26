@@ -1,0 +1,237 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript" src="../Public/js/baidumap_location.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3&callback=load_map_wrapper"></script>
+<script>
+$(function(){
+	goodsRelease();
+});
+
+function load_map_wrapper(){
+	<if condition="($goodsdata.latitude neq '') AND ($goodsdata.latitude neq '')">
+	initialize('map_canvas');
+	addTags({$goodsdata.latitude},{$goodsdata.longitude},"{$goodsdata.address}","map_canvas",{$goodsdata.zoom});
+	<elseif condition="($memberdata.business.latitude neq '') AND ($memberdata.business.latitude neq '')" />
+	initialize('map_canvas');
+	addTags({$memberdata.business.latitude},{$memberdata.business.longitude},"{$memberdata.business.address}","map_canvas",{$memberdata.business.zoom});
+	<else />
+	initialize('map_canvas');
+	</if>
+}
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body clearfix">
+
+<div class="fb_shop jvf_frame ">
+<h2  class="fb_tit">发布商品</h2>
+<form action="{:U('Goods/doRelease')}" class="hosting_new" id="releaseForm" method="post">
+<notempty name="goodsdata.id">
+<input name="id" value="{$goodsdata.id}" type="hidden"/>
+</notempty>
+<div class="goods_fb">
+    <ul class="narrow_page_section_content rounded_bottom clearfix" id="details">
+        <li>
+            <div class="label_with_description">
+                <label for="title">
+                   {%goods_release_title}:
+                </label>
+            </div>
+            <input type="text"  class="w400" value="{$goodsdata.title}" name="title" id="title">
+        </li>
+        <li>
+            <div class="label_with_description">
+                <label for="short_title">
+                   {%goods_release_short_title}:
+                </label>
+            </div>
+            <input type="text" style="width: 129px" value="{$goodsdata.short_title}" name="short_title" id="short_title">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="addCategory">
+                  {%category_text}:
+              </label>
+          </div>
+          <input type="hidden" value="{$goodsdata.cid}" readonly="readonly" id="category" name="cid">
+          <input type="text" value="{$goodsdata.category_name}" style="width: 50px;" readonly="readonly" id="category_name" name="category_name">
+          <a id="addCategory" href="{:U('Search/categoryAll/inputType/radio/all/1')}">
+              {%category_add}
+          </a>
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="addRegion">
+                  {%region_text}:
+              </label>
+          </div>
+          <input type="hidden" value="{$goodsdata.rid}" readonly="readonly" id="region" name="rid">
+          <input type="text" style="width: 50px;" value="{$goodsdata.region_name}" readonly="readonly" id="region_name" name="region_name">
+          <a id="addRegion" href="{:U('Search/regionAll/inputType/radio/all/1')}">
+             {%region_add}
+          </a>
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="original">
+                  {%original_text}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata.original}" style="width: 50px;" name="original" id="original">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="payment">
+                  {%payment_text}:
+              </label>
+          </div>
+          
+          <label class="goods_danx"><input type="radio" value="0" name="payment" <eq name="goodsdata.payment" value="0">checked="checked"</eq>>{%now_price}</label>
+          <label class="goods_danx"><input type="radio" value="1" name="payment" <eq name="goodsdata.payment" value="1">checked="checked"</eq>>{%payment_deposit}</label>
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="price" id="price" <eq name="goodsdata.payment" value="1">style="display: none;"</eq>>
+                 {%now_price}:
+              </label>
+			  <label for="deposit" id="deposit" <eq name="goodsdata.payment" value="0">style="display: none;"</eq>>
+                  {%payment_deposit}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata.price}" style="width: 50px;" name="price">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="num">
+                 {%nums_text}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata.num}" style="width: 50px;" name="num" id="num">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="onenum">
+                  {%member_gooddetail_sales_quota}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata.onenum}" style="width: 50px;" name="onenum" id="onenum"><span>{%onenum_tip}</span>
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="onenum">
+                  {%goods_release_pre}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata.pre}" style="width: 50px;" name="pre" id="pre">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="starttime">
+                  {%goods_release_validity}:
+              </label>
+          </div>
+          <input type="text" readonly="readonly" style="width: 129px;" class="jvf_date" <empty name="goodsdata.starttime">value="{:toDateYmd(time())}"<else />value="{$goodsdata.starttime|toDateYmd}"</empty> name="starttime" id="starttime">
+          <span>～</span>
+          <input type="text" readonly="readonly" style="width: 129px;" class="jvf_date" <empty name="goodsdata.endtime">value="{:toDateYmd(time()+86400)}"<else />value="{$goodsdata.endtime|toDateYmd}"</empty> name="endtime" id="endtime">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="onenum">
+                  {%goods_release_phone}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata.tel}" style="width: 129px;" name="tel" id="tel">
+      </li>
+      <li>
+          <div class="label_with_description">
+              <label for="onenum">
+                  {%address_text}:
+              </label>
+          </div>
+          <input type="text" value="{$goodsdata['address']?$goodsdata['address']:$memberdata['business']['address']}" class="w400" name="address" id="address">
+          <a onclick="codeAddress($('#address').val());" href="javascript:;">{%map_addmarker}</a>
+          <a onclick="showMarker();" href="javascript:;">{%map_showmarker}</a>
+            </li>
+            <li>
+                <div id="map_canvas" class="fb_mpf"></div>
+                <input type="hidden" readonly="readonly" value="{$goodsdata['longitude']?$goodsdata['longitude']:$memberdata['business']['longitude']}" id="longitude" name="longitude">
+                <input type="hidden" readonly="readonly" value="{$goodsdata['latitude']?$goodsdata['latitude']:$memberdata['business']['latitude']}" id="latitude" name="latitude">
+                <input type="hidden" readonly="readonly" value="{$goodsdata['zoom']?$goodsdata['zoom']:$memberdata['business']['zoom']}" id="zoom" name="zoom">
+            </li>
+            <li>
+                <div class="label_with_description">
+                    <label for="short_title">
+                        SEO {%keywords}：
+                    </label>
+                </div>
+                <textarea rows="4" cols="57" name="keywords">{$goodsdata.keywords}</textarea>
+            </li>
+            <li>
+                <div class="label_with_description">
+                    <label for="short_title">
+                        SEO {%description}：
+                    </label>
+                </div>
+                <textarea rows="4" cols="57" name="description">{$goodsdata.description}</textarea>
+            </li>
+            
+            <li>
+                <div class="label_with_description">
+                    <label for="detail">
+                        {%content_text}：
+                    </label>
+                </div>
+                <textarea name="detail" style="width:500px;height: 302px;" class="editor" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" cols="40">{$goodsdata.detail}</textarea>
+            </li>
+            <li>
+                <div class="label_with_description">
+                    <label for="short_title">
+                        {%member_avatar_upload}：
+                    </label>
+                </div>
+                <div>
+                	<a href="javascript:;" id="upload_button" class="btn linebl f14 p2153">{%member_avatar_upload}</a>
+                	<ul id="imgBox" class="clearfix">
+                	<volist name="goodsdata.accessory" id="vo">
+                	<li class="sortableitem"><div class="jvf_clos"><span>×</span></div><input type="hidden" name="imgs[]" value="{$vo.id}"><img src="{$vo.thumbnail}"></li>
+                	</volist>
+                	</ul>
+                </div>
+            </li>
+            <li>
+                <div class="label_with_description">
+                    <label for="egid">{%goods_release_expand}:</label>
+                </div>
+                <select class="jvf_inputb" name="egid">
+                    <option value="0">{%goods_release_select}</option>
+                    <volist name="expand_groupList" id="item">
+                    <option value="{$item.id}" <eq name="goodsdata.egid" value="$item['id']">selected="selected"</eq>>{$item.name}</option>
+                    </volist>
+                </select>
+            </li>
+            <li id="expandBox">
+                <include file="Goods:expand" />
+            </li>
+        </ul>
+       
+    </div>
+    
+    <div class="good_bot clearfix">
+	<div class="jvf_fl xy">
+    <input type="checkbox" value="1" name="tos_confirm" id="tos_confirm">
+    <label for="tos_confirm">
+        <span style="cursor:pointer;">{%goods_release_agree}</span>
+        <a class="terms" href="{:U('Index/terms')}">{%goods_release_terms}</a>
+    </label>
+    </div>
+    <input type="button" value="{%goods_release_submit}" id="post_room_submit_button" class="btn p2153 f14 linebl">
+	<input type="button" value="{%goods_release_view}" id="post_room_view_button" class="btn p2153 f14 linebl">     
+</div>
+     </div> 
+
+</form>
+</div>
+<div class="detail_bot jvf_allimg"></div>
+ </div>
+ <div>       
+ 
+ <include file="Public:footer" />               

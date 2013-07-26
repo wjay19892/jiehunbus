@@ -1,0 +1,31 @@
+<script>
+$(function(){
+	memberFriendadd();
+});
+</script>
+<div style="width:320px;" id="simple" title="{%add_friend}">
+            <form class="cmxform" id="agree_addfriendform" action="{:U('Member/agree_addfriend')}" method="post">
+                <input type="hidden" value="{$frienddata['id']}" name="friend">
+                 <input type="hidden" value="{$frienddata['name']}" name="friendname">
+                <div class="segment add_segment clearfix">
+                        <div class="jvf_fl">
+                            <a title="{%view_profile}" href="{:U('User/space/id/'.$frienddata['id'])}"><img class="userpic50" height="50" width="50" title="{$frienddata.name}" src="{$frienddata.header.thumbnail}" alt="{$frienddata.name}"></a>
+                        </div>
+                        <div class="jvf_fl add_con">                 
+                            {%member_friendadd_approve}&nbsp;<a title="{%view_profile}" href="{:U('User/space/id/'.$frienddata['id'])}">{$frienddata.name}</a>{%add_con}:
+                            <select  class="jvf_inputb" name="gid">
+                                <option value="0">{%no_group}</option>
+                                <volist name='friendgroups' id='vo' >
+                                <option value="{$vo.id}">{$vo.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                </div>
+                <div class="jvf_box_buttom">
+                    <input type="button" value="{%enter}" name="commit" class="btn p2153 f14 linebl">
+                </div>
+            </form>
+     
+</div>
+
+		

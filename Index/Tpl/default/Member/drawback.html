@@ -1,0 +1,28 @@
+<script>
+$(function(){
+	memberDrawback();
+});
+</script>
+
+<div style="width:415px;" title="{%member_drawback_alert}">
+    <form class="cmxform" id="refundform" action="{:U('Member/applyrefund')}" method="post">
+        <input type="hidden" id="id" name="id" value="{$o_detailsdata.id}"/>
+        <div class="segment jvf_box_con clearfix">
+            <div class="text clearfix" style="color:#FF0000; margin-bottom:10px;">
+                <div id="commenttext" class="jvf_fl"><span>{%member_drawback_tip}：</span></div>
+                <div class="jvf_fl">{%member_drawback_div_before}{&sysconfig.site_couponname}{%member_drawback_div_after}</div>
+            </div>
+            <div class="text">
+                <div id="commenttext" class="jvf_fl"><span>{%member_drawback_reason}：</span></div><textarea id="refund_reason" class="jvf_fl jvf_inputt" name="refund_reason" rows="5" style="width:300px; resize:none;" placeholder="{%member_drawback_reason}"></textarea>
+            </div>
+        </div>
+        <div class="jvf_box_buttom">
+            <input type="button" value="{%submit_text}" name="commit" class="btn p2153 f14 linebl">
+        </div>
+    </form>
+     
+</div>
+
+
+
+		

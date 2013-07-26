@@ -1,0 +1,59 @@
+<script>
+$(function(){
+	memberReviews();
+});
+</script>
+<div class="edit_head_top clearfix">
+    <h2> <span class="pingj_ico jvf_mbpng jvf_fl"></span>
+        <p class="jvf_fl">{%member_reviews_post}</p>
+        <div class="jvf_fl">{%member_reviews_post_div}</div>
+    </h2>
+</div>
+<div class="reviews_section">
+    <h4> <span class="icons-tiny-light-grey"></span>{%waiting_for_evaluation}</h4>
+</div>
+    <div class="mb_pj">
+     	<ul>
+     	<volist name="ordersdata" id="vo">
+            <li class="reviews-list-item clearfix">
+
+                  <div class="jvf_fl userpic1">
+                       <a href="{:U('User/space/id/'.$vo['good']['promulgator']['id'])}" rel="no-follow">
+                       	<img width="50px" height="50px" alt="{$vo.good.promulgator.name}" src="{$vo.good.promulgator.header.thumbnail}">
+                       </a><br />
+                       {%goods_manager}
+                  </div>
+                <div class="bubble jvf_fl jvf_frame">
+             	   <p class="message">
+                	{%goods_manager}：<a class="name" href="{:U('User/space/id/'.$vo['good']['promulgator']['id'])}">{$vo.good.promulgator.name}</a><br />
+                  	{%order_sn}：{$vo.order_info.sn}<br>
+                  {%goods_title}：<a href="{:U('Goods/index/id/'.$vo['good']['id'])}">{$vo.good.title}</a><br>
+                  {%nums_text}：{$vo.num}<br>
+                  {%order_mark}：{%mark_buy}</p>
+                  <div class="bubble_bot">
+                  	<span class="date">
+                  		<span title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span>
+                  	</span>
+                  	<span class="edit">
+                  		<a href="{:U('Member/viewo_details/id/'.$vo['id'])}" class="vieworder">{%member_reviews_view_detail}</a>
+                  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  		<a href="{:U('Member/commentorder/id/'.$vo['id'])}" class="commentadd">{%evaluate}</a>
+                  	</span>
+                  </div>
+                  </div>
+            </li>
+        </volist>
+        </ul>
+     </div>
+     <div class="reviews_section">
+     <h4 class="bdt"> <span class="icons-tiny-light-grey"></span>{%member_reviews_set_host}</h4>
+     </div>
+                         
+    <div class="mb_pj">
+       <ul id="released_content">
+           
+       </ul>
+       <div class="jvf_page" id="released_page">
+	   </div>
+    </div>
+                         

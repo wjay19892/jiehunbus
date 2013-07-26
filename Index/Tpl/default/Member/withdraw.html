@@ -1,0 +1,33 @@
+<script>
+$(function(){
+	memberWithdraw();
+});
+</script>
+<div style="width:380px;" title="{%member_withdraw_title}">
+    <form class="cmxform" id="addwithdraw" action="{:U('Member/addwithdraw')}" method="post">
+        <div class="tixian jvf_box_con">
+            <div class="text">
+              <span>{%withdraw_cash}：</span><input class="jvf_inputt" id="cash" name="cash" placeholder="{%withdraw_cash}"  type="text" value=""/>
+            </div>
+            <div class="text">
+              <span>{%withdraw_bank_id}：</span><input class="jvf_inputt" id="bank_id" name="bank_id" placeholder="{%withdraw_bank_id}"  type="text" value=""/>
+            </div>
+            <div class="text">
+             <span>{%withdraw_bank_card}：</span><input class="jvf_inputt" id="bank_card" name="bank_card" placeholder="{%withdraw_bank_card}" type="text" value=""/>
+            </div>
+            <div class="text">
+              <span>{%withdraw_realname}：</span><input class="jvf_inputt" id="realname" name="realname" placeholder="{%withdraw_realname}" type="text" value=""/>
+            </div>
+            <div class="text">
+             <span>{%remark_text}：</span><textarea id="remark" class="jvf_inputt" name="remark" resize:none;" placeholder="{%remark_text}"></textarea>
+            </div>
+        </div>
+        <div class="jvf_box_buttom">
+            <input type="button" value="{%submit_text}" name="commit" id="submitAddwithdraw" class="btn p2153 f14 linebl">
+        </div>
+    </form>
+     
+</div>
+
+
+		

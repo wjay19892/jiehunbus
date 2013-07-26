@@ -1,0 +1,151 @@
+<include file="Public:top" /> 
+<include file="Public:header" />
+<script type="text/javascript">
+$(function(){
+	$('#bind-user-have').click(function(){
+		$('.have_not').hide();
+		$('.has_been').show();
+	});
+	$('#bind-user-new').click(function(){
+		$('.have_not').show();
+		$('.has_been').hide();
+	});
+	$('#bCreateAccount').click(function(){
+		var t = $(this);
+		var form = $('#bind_new');
+		var url = form.attr('action');
+		var para = form.serialize();
+		var name = form.find('input[name="name"]');
+		if(!name.val()){
+			name.tip('{%please_input_username}',2000);
+			return false;
+		}
+		
+		var email = form.find('input[name="email"]');
+		if(!email.val()){
+			email.tip('{%please_input_mail}',2000);
+			return false;
+		}else{
+			if(!email.val().match(/.+@.+\..+/)){
+				email.tip('{%release_validate_email}',2000);
+				return false;
+			}
+		}
+		
+		var password = form.find('input[name="password"]');
+		if(!password.val()){
+			password.tip('{%please_input_password}',2000);
+			return false;
+		}
+		
+		var password_confirmation = form.find('input[name="password_confirmation"]');
+		if(!password_confirmation.val()){
+			password_confirmation.tip('{%please_input_confirm_password}',2000);
+			return false;
+		}
+		$.post(url,para,function(data){
+			if(data.status==0){
+				t.tip(data.info,2000);
+			}else if(data.status==1){
+				goUrl(APP+"/Member/index");
+			}else if(data.status==2){
+				goUrl(APP+"/User/verifymail/id/"+data.data);
+			}else if(data.status==3){
+				goUrl(APP+"/User/verifymail/id/"+data.data);
+			}
+		},'json');
+	});
+	
+	$('#bCreateAccount_have').click(function(){
+		var t = $(this);
+		var form = $('#bind_have');
+		var url = form.attr('action');
+		var para = form.serialize();
+		
+		var email = form.find('input[name="email"]');
+		if(!email.val()){
+			email.tip('{%please_input_mail}',2000);
+			return false;
+		}
+		
+		var password = form.find('input[name="password"]');
+		if(!password.val()){
+			password.tip('{%please_input_password}',2000);
+			return false;
+		}
+		
+		$.post(url,para,function(data){
+			if(data.status==2){
+				goUrl(APP+"/User/noverifymail/id/"+data.data);
+			}else if(data.status==1){
+				goUrl(APP+'/Member/index');
+			}else{
+				t.tip(data.info,2000);
+			}
+		},'json');
+	});
+});
+</script>
+<div id="notice" style="display:none;"></div>
+<div class="mainbody body_bot body_con clearfix">
+	<h1 class="tithzuo">{%login_port_callback_title}</h1>
+	<div class="jvf_body">
+    <div id="section_signup" class="jvf_frame signin_con">
+      
+      <div id="bindBox" <empty name="memberdata">class="bind-new"<else />class="bind-have"</empty>>
+      	<div class="jvf_boder_top"></div>
+      	<div class="have_not">
+        <h2 id="bind-new" class="bd_wans">{%login_port_callback_bind_user_new}</h2>
+        <form action="{:U('Login_port/bind_register')}" class="user_new" id="bind_new" method="post">
+          <input type="hidden" name="inviteid" value="{$inviteid}" />
+          <input type="hidden" name="port" value="{$port}"/>
+          <input type="hidden" name="portid" value="{$portid}"/>
+          <div class="textinput jvf_allimg first_pos" id="inputFirst">
+            <input class="jvf_user_id" id="user_first_name" name="name" placeholder="{%username_text}" size="30" type="text" />
+          </div>
+          <div class="textinput jvf_allimg mail_pos" id="inputEmail">
+            <input class="jvf_user_mail" id="user_email" name="email" placeholder="{%mail_text}" size="30" type="text" />
+          </div>
+          <div  class="textinput jvf_allimg pas_pos" id="inputPassword">
+            <input class="jvf_user_pas" id="user_password" name="password" placeholder="{%password_text}" size="30" type="password" />
+          </div>
+          <div class="textinput jvf_allimg inp_pas" id="inputConfirmPassword">
+              <input class="jvf_user_repas" id="user_password_confirmation" name="password_confirmation" placeholder="{%confirm_password_text}" size="30" type="password" />
+
+          </div>
+          <div class="formActions">
+            <div class="pad">
+              <input type="button" tabindex="4" id="bCreateAccount" class="btn p2153 f20 jvf_bold linebl" value="{%create_account}" />
+              <p>{%create_account_detail}<a href="{:U('User/agreement')}" data-popup="true">{%terms_service}</a>. </p>
+            </div>
+          </div>
+          <a href="javascript:void(0);" id="bind-user-have">{%is_already}{&sysconfig.site_name}{%is_member}{%immediately_bind}</a>
+        </form>
+        </div>
+        <div class="has_been" style="display:none;">
+        <h2 id="bind-have" class="bd_wans">{%have_already_account}{%immediately_bind}</h2>
+        <form action="{:U('Login_port/bind_login')}" class="user_new" id="bind_have" method="post">
+          <input type="hidden" name="port" value="{$port}"/>
+          <input type="hidden" name="portid" value="{$portid}"/>
+          <div class="textinput jvf_allimg mail_pos" id="inputEmail">
+            <input class="jvf_user_mail" id="user_email" name="email" placeholder="{%mail_text}" size="30" type="text" value="{$memberdata.mail}" />
+          </div>
+          <div class="textinput jvf_allimg pas_pos" id="inputPassword">
+            <input class="jvf_user_pas" id="user_password" name="password" placeholder="{%password_text}" size="30" type="password" />
+          </div>
+          <div class="formActions">
+            <div class="pad">
+              <input type="button" tabindex="4" id="bCreateAccount_have" class="btn p2153 f20 jvf_bold linebl" value="{%immediately_bind}" />
+              <p>{%bind_account_detail}<a href="{:U('User/agreement')}" data-popup="true">{%terms_service}</a>. </p>
+            </div>
+          </div>
+          <a href="javascript:void(0);" id="bind-user-new">{%login_port_callback_bind_user_new}</a>
+        </form>
+        </div>
+        <div class="bind-have-disclaimer"></div>
+      </div>
+    </div>
+    <div class="jvf_520_bot jvf_allimg mg0a"></div>
+  </div>
+</div>
+<include file="Public:footer" />

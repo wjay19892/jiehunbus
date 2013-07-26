@@ -1,0 +1,56 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript">
+$(function(){
+	register();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<!--登陆页面-->
+        <div class="jvf_frame signin_con">
+        	<h2 class="other_login_tit signin_h">{%user_register_h2}</h2>
+            <div style="text-align:center;" class="other_login clearfix">
+              <volist name='login_portdata' id='vo'>
+                 <a href="{:U('Login_port/index/id/'.$vo['id'])}" class="big"><img src="__ROOT__{$vo.logo}" alt="{$vo.name}" /></a>
+              </volist>
+              </div>
+              <h3 class="signpainter signin_h jvf_allimg">{%or_text}</h3>
+              
+               <form action="{:U('User/signup')}" class="user_new" id="user_new" method="post">
+          <div class="textinput jvf_allimg first_pos" id="inputFirst">
+            <input class="jvf_user_id" id="user_first_name" name="name" placeholder="{%username_text}" size="30" type="text" />
+          </div>
+          <div class="textinput jvf_allimg mail_pos" id="inputEmail">
+            <input class="jvf_user_mail" id="user_email" name="email" placeholder="{%mail_text}" size="30" type="text" />
+          </div>
+          <div  class="textinput jvf_allimg pas_pos" id="inputPassword">
+            <input class="jvf_user_pas" id="user_password" name="password" placeholder="{%password_text}" size="30" type="password" />
+          </div>
+          <div class="textinput jvf_allimg pas_pos" id="inputConfirmPassword">
+            <div>
+              <input class="jvf_user_repas" id="user_password_confirmation" name="password_confirmation" placeholder="{%confirm_password_text}" size="30" type="password" />
+            </div>
+          </div>
+          <div class="lin"></div>
+          <div class="formactions">
+              <span class="jvf_mgf"><input type="button" tabindex="4" id="submit" class="btn p2153 f20 jvf_bold" value="{%create_account}" /></span>
+             
+          </div>
+           <div class="agreement">{%create_account_detail}<a href="{:U('User/agreement')}" data-popup="true" class="agreement">{%terms_service}</a>。 </div>
+        </form>
+              
+      </div>
+      </div>
+      <div class="jvf_520_bot jvf_allimg mg0a"></div>
+      
+      <div class="jvf_frame signin_con jvf_pad">
+    				<h2>{%is_already}{&sysconfig.site_name}{%is_member}<a rel="toggle-sign-up" href="{:U('User/signin')}">{%immediately_login_text}</a>。</h2>
+       </div>
+       <div class="jvf_520_bot jvf_allimg mg0a"></div>
+           
+        <!--登陆页面——end-->
+    </div>
+</div>
+
+<include file="Public:footer" />

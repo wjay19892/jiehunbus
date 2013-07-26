@@ -1,0 +1,17 @@
+<script type="text/javascript" src="../Public/js/baidumap_one.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3&callback=load_map_wrapper"></script>
+<script>
+function load_map_wrapper(){
+	<if condition="($data.latitude neq '') AND ($data.longitude neq '')">
+	var maps = new jvfMap('maps_{$data.id}',"{$data.latitude}","{$data.longitude}",{$data.zoom});
+	maps.addTags("{$data.latitude}","{$data.longitude}","{$data.address}",{$data.zoom},"{$data.short_title}<br />{%address_text}：{$data.address}<br />{%phone_text}：{$data.tel}");
+	maps.addTags('{$locate.lat}','{$locate.lng}','{$locate.address}',{$data.zoom},'locate');
+	<else />
+	initialize();
+	</if>
+}
+</script>
+<div style="width:800px;height:600px;">
+	<div id="maps_{$data.id}" style="width:800px; height:575px;"></div>
+	 
+</div>

@@ -1,0 +1,254 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript" src="../Public/js/baidumap_one.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3&callback=load_map_wrapper"></script>
+<script>
+$(document).ready(function(){
+	goodsIndex({$data.id});
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+});
+function load_map_wrapper(){
+	<if condition="($data.latitude neq '') AND ($data.longitude neq '')">
+	var map = new jvfMap("map","{$data.latitude}","{$data.longitude}",{$data.zoom},false);
+	map.addTags("{$data.latitude}","{$data.longitude}","{$data.address}",{$data.zoom},"{$data.short_title}<br />{%address_text}：{$data.address}<br />{%phone_text}：{$data.tel}");
+	map.addTags('{$locate.lat}','{$locate.lng}','{$locate.address}',{$data.zoom},'locate');
+	<else />
+	initialize();
+	</if>
+}
+</script>
+<!--头部——开始-->
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body clearfix">
+       <div class="detail_left jvf_fl">
+       		<div class="jvf_frame detail_left_con clearfix">
+            	<div class="pd10 clearfix">
+                	<div class="detail_shop_title">
+                            <h1><a href="javascript:;">{$data.title}</a></h1>
+                        </div>
+                    <div class="detail_left_con_l jvf_fl">
+                        <div class="jvf_allimg evaluation_all">
+                        	<div class="clearfix star_t">
+                            <div class="jvf_fl">{%goods_index_satisfaction_title}：</div><div class="rating_big jvf_fl">
+                  <div class="filled_big star_{$evaluate_data.total.star}"></div>
+                </div>
+                            </div>
+                        </div>
+                        <div class="smll_star clearfix">
+                        	<ul>
+                        	<volist name="evaluate_data.data" id="vo">
+                            	<li>
+                                	<div class="jvf_fl jvf_over" title="{$vo.name}" style="width:64px;">{$vo.name}：</div>
+                                    <div class=" rating jvf_fl ">
+                                            <div class="filled star_{$vo.star}"></div>
+                                    </div>
+                                </li>
+                             </volist>
+                            </ul>
+                        
+                        </div>
+                        
+                        <div class="price">
+                        	{%original_text}：<span style="text-decoration:line-through;">{$data.original}</span><br />
+                            {%now_price}：<span class="price_j">&yen;{$data.price}</span></br>
+                            <span><eq name="data.payment" value="0">{%goods_index_payment_price}<else />{%goods_index_payment_deposit}</eq>&yen;{$data.price}</span><br />
+                        </div>
+                        <div class="price_bot clearfix">
+                        	<if condition="in_array($data['id'],$collection_arr)">
+                        	<div class="price_collectionHover jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Member/removeFavorites/gid/'.$data['id'])}">{%remove_favorites}</a></div>
+                            <else />
+                            <div class="price_collection jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Member/saveFavorites/gid/'.$data['id'])}">{%add_favorites}</a></div>
+                            </if>
+                        	<if condition="in_array($data['id'],$shoppingCartId)">
+                        	<div class="price_cartHover jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Goods/updateNum/id/'.$data['id'].'/num/0')}" rel="{$data['id']}">{%remove_text}</a></div>
+                            <else />
+                            <div class="price_cart jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Goods/buy/id/'.$data['id'])}" rel="{$data['id']}">{%add_shoppingcart}</a></div>
+                            </if>
+                            <div class="price_purchase jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Goods/buy/id/'.$data['id'])}">{%goods_index_buy_button}</a></div>
+                        </div>
+                    </div>
+                    <div class="detail_left_con_r jvf_fr">
+                    
+                    	<div class="exhibition"><img src="{$data.accessory.0.path}" /></div>
+                        <div class="exhibition_list clearfix">
+                            <div class="exhibition_list_left jvf_fl"><a class="jvf_allimg" href="javascript:;"></a></div>
+                            <div class="exhibition_list_content jvf_fl">
+                                <ul class="exhibition_list_con jvf_fl clearfix">
+                                <volist name="data.accessory" id="vo">
+                                    <li <eq name="i" value="1">class="pic_active"</eq>><a href="{$vo.path}" ><img width="50" height="33" src="{$vo.thumbnail}" alt="{$vo.title}" /></a></li>
+                                </volist>
+                                </ul>
+                            </div>
+                           <div class="exhibition_list_right jvf_fl"><a class="jvf_allimg" href="javascript:;"></a></div>
+                        </div>
+                    </div>
+                    <div class="jvf_cl"></div>
+                    <div class="contact clearfix">
+                    	{%member_printcoupon_server}：{$data.tel}<br />
+                        <div class="clearfix"><span class="jvf_fl">{%address_text}：</span><a href="javascript:;" id="addressMap" rel="{$data['id']}"><span class="jvf_over mw210 jvf_fl">{$data.address}</span><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em>{:distance($locate['lat'],$locate['lng'],$data['latitude'],$data['longitude'])}</span></a></div>
+                        <if condition="!empty($memberdata) AND !$isComplaint">
+                        <div class="clearfix jvf_report">
+                        	<a href="{:U('Member/report/gid/'.$data['id'])}">
+                        		<div class="jvf_allimg jvf_report_ico jvf_fl"></div>
+                        		<div class="jvf_fl">{%report}</div>
+                        	</a>
+                        </div>
+                        </if>
+                    </div>
+                    <div>
+                    <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <span class="bds_more">{%share_to}：</span>
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+		<a class="shareCount"></a>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=668549" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<!-- Baidu Button END -->
+                    </div>
+                </div>
+            </div>
+       		<div class="detail_bot jvf_allimg"></div>
+            
+            <!--扩展字段-->
+            <div class="jvf_frame detail_left_con clearfix">
+            	<div class="extension_top" id="extension_detail">
+                	<ul class="clearfix">
+                    	<li class="selected"><a href="javascript:;">{%member_gooddetail_title}</a></li>
+                        <volist name="data.expand" id="vo">
+			              <li><a href="javascript:;">{$vo.key}</a></li>
+			            </volist>
+                    </ul>
+                </div>
+                <div id="extension">
+	                <div class="extension_con">
+	                	{$data.detail}
+	                </div>
+	                <notempty name="data.expand">
+		            <volist name="data.expand" id="vo">
+		            <div class="extension_con" style="display:none;">{$vo|expand_html}</div>
+		            </volist>
+				    </notempty>
+                </div>
+            
+            </div>
+            <div class="detail_bot jvf_allimg"></div>
+             <!--扩展字段-->
+             <!--发表感受-->
+            <div class="jvf_frame detail_left_con clearfix">
+            <form id="talk_aboutBox">
+           		<div class="jvf_sendcnt_tit">{%goods_index_jvf_sendcnt_tit}</div>
+                <div class="jvf_sendcnt">
+                	<div class="jvf_cntbox"><textarea autocomplete="off" name="content"></textarea></div>
+                	<div class="jvf_insertfun">
+                    	<a href="javascript:;" id="face"><em class="inserttximg jvf_allimg"></em>{%face_text}</a>
+                        <a href="javascript:;" id="imgs"><em class="insertimg jvf_allimg"></em>{%photos_text}</a>
+                        <div class="together jvf_fr"><input type="checkbox">{%synchronized_to_the} <a href="">[{%set_text}]</a></div>
+                    </div>
+                    <div class="jvf_sample_list clearfix" style="display: none;"></div>
+                    <input name="gid" type="hidden" value="{$data.id}">
+                </div>
+                <div class="jvf_sendbutj clearfix">
+                    <span class="jvf_sendbut jvf_fr"><a class="jvf_allimg" href="javascript:;">{%release_text}</a></span>
+                    <span class="jvf_counttxt jvf_fr" id="textNum">{%can_enter}<em>140</em>{%word_text}</span>
+                </div>
+            </form>
+            </div>
+            <div class="detail_bot jvf_allimg"></div>
+             <!--发表感受-->
+            <!--评价推荐-->
+            <div class="jvf_frame detail_left_con clearfix">
+            	<div class="extension_top" id="exchange_tab">
+                	<ul class="clearfix">
+                    	<li class="selected"><a href="javascript:;">{%mood}</a></li>
+                        <li><a href="javascript:;">{%evaluate}</a></li>
+                        <li><a href="javascript:;">{%recommend}</a></li>
+                    </ul>
+                </div>
+                <div id="exchange">
+                </div>
+            </div>
+            <div class="detail_bot jvf_allimg"></div>
+            <!--评价推荐——end-->
+             
+            
+       </div>
+       
+       <div class="detail_right jvf_fr">
+       		<!--地图-->
+       		<div class="jvf_frame w235 mg0a" id="smallMap">
+            	<div style="width:225px; margin:5px;height: 225px;" id="map">
+                </div>
+                <div class="amplification mg0a">
+                	<a href="javascript:;" id="bigMap" rel="{$data.id}"><span class="jvf_allimg"></span>{%view_map}</a>
+                </div>
+            </div>
+            <div class="jvf_allimg shop_bot mg0a"></div>
+            <!--地图-->
+            <!--店家信息-->
+            <div class="jvf_frame w225 mg0a">
+            	<div class="detail_head w213">
+                	<a href="{:U('User/space/id/'.$data['promulgator']['id'])}"><img src="{$data.promulgator.header.path}" /></a>
+                </div>
+                <div class="detail_username w213 jvf_over"><a href="{:U('User/space/id/'.$data['promulgator']['id'])}">{$data.promulgator.name}</a></div>
+                <div class="clearfix detail_tell">
+                	<div class="message jvf_fl"><a class="jvf_allimg" href="{:U('Member/sendpm/id/'.$data['promulgator']['id'])}">{%guestbook}</a></div>
+                    <div class="chat jvf_fr"><a class="jvf_allimg jvf_callme" href="javascript:;" uid="{:$data['promulgator']['id']}">{%real_time_chat}</a></div>
+                </div>
+                
+                <ul class="response clearfix">
+                      <li class="response_rate clearfix"> <span class="icon jvf_allimg"></span>
+                      <div class="jvf_fl">
+                        <h5>{$data.promulgator.level.name}</h5>
+                        <h6>{%level_text}</h6>
+                      </div>
+                      </li>
+                      <li class="response_time clearfix"> <span class="icon jvf_allimg"></span>
+                      <div class="jvf_fl">
+                        <h5>{$data.promulgator.lastlog.addtime|toDateRefer}</h5>
+                        <h6>{%goods_index_last_login_time}</h6>
+                      </div>
+                      </li>
+                      <li class="updatedness clearfix"> <span class="icon jvf_allimg"></span>
+                      <div class="jvf_fl">
+                        <h5>{$data.promulgator.regtime|toDateRefer}</h5>
+                        <h6>{%reg_time}</h6>
+                      	</div>
+                      </li>
+            	</ul>
+            </div>
+            <div class="jvf_allimg shop_bot mg0a"></div>
+            <!--店家信息-->
+            <!--同类商品-->
+            <div class="jvf_frame w225 mg0a">
+            	<div class="rig_title">{%goods_index_similar_list}</div>
+            	<volist name="similar" id="vo">
+                <div class="similar clearfix">
+                	<div class="similar_img"><a href="{:U('Goods/index/id/'.$vo['id'])}"><img src="{$vo.accessory.thumbnail}" alt="{$vo.title}" /></a></div>
+                    	<h4><a href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a></h4>
+                        <div class="author clearfix">
+                        	<div class="author_img jvf_fl">
+                            <img width="40" height="40" src=" ../Public/images/touxiang.jpg"/>
+                            </div>
+                            <div class="author_con jvf_fl">
+                            {%cost_price}：<span>{$vo.original}</span><br />
+                        	{%goods_manager}：<a href="{:U('User/space/id/'.$vo['promulgator']['id'])}">{$vo.promulgator.name}</a>
+                            <div class="author_xianjia">&yen;{$vo.price}</div>
+                            </div>
+                        </div>
+                        
+                </div>
+                </volist>
+            </div>
+            <div class="jvf_allimg shop_bot mg0a"></div>
+            <!--同类商品-->
+       </div>
+       
+       
+	</div>
+</div>
+<include file="Public:reply" />
+<include file="Public:footer" />

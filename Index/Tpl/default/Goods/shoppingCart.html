@@ -1,0 +1,104 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script type="text/javascript">
+$(function(){
+	shoppingCart();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<!--购物车-->
+         <div class="jvf_w100_con jvf_shoppcart">
+            <div class="jvf_w100_tit">{%shoppingcart_my_cart}</div>
+            	<div style="padding:10px;">
+                    <div class="emptygoods" id="emptyGoods" <empty name="goodsdata">style="display:block;"<else />style="display:none;"</empty>>
+                        <p><a href="{:U('Index/index')}">{%shoppingcart_return_index}</a></p>
+                    </div>
+                    <div id="haveGoods" <empty name="goodsdata">style="display:none;"<else />style="display:block;"</empty>>
+                      <table width="100%" cellspacing="0" cellpadding="0" class="jvf_cartList">
+                        <colgroup>
+                        <col width="32">
+                        <col width="160">
+                        <col>
+                        <col width="116">
+                        <col width="78">
+                        <col width="78">
+                        <col width="60">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="nobg"><input type="checkbox" id="cartSelectAllTop" name="cartSelectAllBot"></th>
+                            <th class="sc_left">{%select_all}</th>
+				            <th>{%goods_title}</th>
+				            <th>{%nums_text}</th>
+				            <th>{%unit_price}</th>
+				            <th>{%subtotal}</th>
+				            <th class="nobg">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr>
+                            <td><input type="checkbox" id="cartSelectAllBot" name="cartSelectAllTop"></td>
+                            <td colspan="6" class="sc_left">{%select_all}&nbsp;&nbsp;<a href="javascript:;" id="delGoodsMore" class="a_blue">{%bulk_delete}</a></td>
+                          </tr>
+                        </tfoot>
+                        <volist name="goodsdata" id="vo">
+                        <tbody>
+	                        <tr>
+	                          <td>&nbsp;</td>
+	                          <td class="sc_pt_inline"><input type="checkbox" name="cartIds" value="{$vo.id}">
+	                            <a href="{:U('Goods/index/id/'.$vo['id'])}" target="_blank">
+	                              <img src="{$vo.accessory.thumbnail}"></a>
+	                            </td>
+	                          <td><div class="sc_txt"><a href="{:U('Goods/index/id/'.$vo['id'])}" target="_blank">{$vo.title}</a></div>
+	                          </td><td class="sc_pt_inline2">
+	                              <a class="minus jvf_member_bg" title="{%minus_one}"></a>
+	                              <input type="text" class="sc_pt_count" maxlength="3" value="{$nums[$vo['id']]}" id="goods_{$vo.id}">
+	                              <a class="plus jvf_member_bg" title="{%plus_one}"></a>
+	                          </td>
+	                          <td class="fontred">&yen;<span id="unitprice_{$vo.id}">{$vo.price}</span></td>
+	                          <td>&yen;<span id="subtotal_{$vo.id}">{$vo['price'] * $nums[$vo['id']]}</span></td>
+	                          <td><a id="deleteGoods_{$vo.id}" href="javascript:;" class="a_blue">{%delete}</a></td>
+	                        </tr>
+                          </tbody>
+                          </volist>
+                          </table>
+                      <div class="sc_bot_total"><span>{%total_amount}：&yen;<strong id="totalPriceBot"></strong></span></div>
+                      <div class="go_pay"><a href="{:U('Index/index')}" class="jvf_continue">{%shoppingcart_return}&gt;&gt;</a><span class="jvf_mgf"><a class="btn p2153" href="javascript:loginAfter(function(){goUrl(APP+'/Member/payment')})" id="cartSubmitBot">{%shoppingcart_go_pay}</a></span></div>
+                    </div>
+                    <notempty name="latelydata">
+                    <dl class="recent_goods mt20">
+                    <dt><h2>{%recently_viewed_goods}</h2></dt>
+                    <dd>
+                    <div class="search_jieguo">
+                    <volist name="latelydata" id="vo">
+                        <ul class="shangpu_product_list">
+                            <li class="list_photo jvf_shoppingCart">
+                                <a href="{:U('Goods/index/id/'.$vo['id'])}" target="_blank">
+                                    <img src="{$vo.accessory.thumbnail}" alt="{$vo.title}">
+                                </a>
+                            </li>
+                            <li class="list_name">
+                                <a href="{:U('Goods/index/id/'.$vo['id'])}" target="_blank">{$vo.title}</a>
+                            </li>
+                        <li class="list_price">
+                          <div class="jvf_fl"><span class="jvf_fl">{%now_price}</span><font class="f18 fontred">&nbsp;&yen;{$vo.price}</font></div>
+                          <div class="jvf_fr">{%cost_price}：&yen;{$vo.original}</div>
+                        </li>
+                        </ul>
+                    </volist>
+                    </div>
+                    <div class="jvf_cl"></div>
+                    </dd>
+                  </dl>
+                  </notempty>
+                  </div>
+        
+          
+        </div>
+        <!--购物车——end-->
+        <div class="jvf_w100"></div>
+    </div>
+</div>
+
+<include file="Public:footer" />

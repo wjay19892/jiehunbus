@@ -1,0 +1,82 @@
+<div class="pageContent">
+    <script type="text/javascript" src="__PUBLIC__/dwz/js/adv.js"></script>
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" id="advid" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>广告名称：</label>
+				<input type="text" class="required"   name="name" value="{$vo.name}">
+			</div>
+            
+			<div class="unit">
+				<label>广告类型：</label>
+                <select name="type" onchange="changAdvType(this);" class="combox" id="advtype">
+                    <option <eq name="vo.type" value="1" >selected</eq> value="1">图片广告</option>
+                    <option <eq name="vo.type" value="2" >selected</eq> value="2">Flash广告</option>
+                    <option <eq name="vo.type" value="3" >selected</eq> value="3">自定义代码广告</option>
+                </select>
+			</div>
+            
+            <div class="unit">
+				<label>广告位置：</label>
+				<SELECT name="position_id" class="combox required">
+					<option value="">==广告位置==</option>
+					<volist name="list" id="position">
+						<option <eq name="position.id" value="$vo['position_id']">selected</eq> value="{$position.id}">{$position.name}</option>
+					</volist>
+				</SELECT>
+			</div>
+            
+    		<div class="unit" id="urlrow">
+				<label>广告地址：</label>
+				<input type="text" class="textInput" name="url" value="{$vo.url}">
+			</div>
+            
+          	<div class="unit">
+				<label>广告代码/文件：</label>
+                <div id="code"><input type="file" class="textInput"  name="code"></div>
+			</div>
+            
+          	<div class="unit">
+				<label>广告描述：</label>
+				<textarea name="desc" rows="3" cols="60" class="textInput">{$vo.desc}</textarea>
+			</div>
+            
+			<div class="unit">
+				<label>排序：</label>
+				<input type="text" class="digits textInput valid" name="sort" value="{$vo.sort}">
+			</div>
+			
+          	<div class="unit">
+				<label>开始时间：</label>
+                <input type="text" readonly="true" format="yyyy-MM-dd HH:mm:ss" class="date textInput readonly valid focus" name="adv_start_time" value="{$vo.adv_start_time|toDate}"><a class="inputDateButton" href="#">选择</a>
+			</div>
+            
+           <div class="unit">
+				<label>结束时间：</label>
+				<input type="text" readonly="true" format="yyyy-MM-dd HH:mm:ss" class="date textInput readonly valid focus" name="adv_end_time" value="{$vo.adv_end_time|toDate}"><a class="inputDateButton" href="#">选择</a>
+			</div>
+            
+			<div class="unit">
+				<label>状态：</label>
+				<select class="small bLeft combox"  name="status">
+					<option <eq name="vo.status" value="1" >selected</eq> value="1">启用</option>
+					<option <eq name="vo.status" value="0" >selected</eq> value="0">禁用</option>
+				</select>
+			</div>
+			
+		</div>
+    	<script type="text/javascript">
+		changAdvType(document.getElementById("advtype"));
+	    </script>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

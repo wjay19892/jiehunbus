@@ -1,0 +1,27 @@
+<table cellspacing="0" width="100%" cellpadding="0" border="0" class="trips_list jvf_mbwid">
+	<thead>
+		<tr>
+		  <th width="300px">{%member_valuelog_time}</th>
+		  <th width="200px">{&sysconfig.site_credits_name}</th>
+		  <th width="200px">{%detail_text}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<volist name="value_logdata" id="vo">
+		<tr>
+		  <td class="txc">
+		      <span>{$vo.addtime}</span>
+		  </td>
+		  <td class="txc">
+		      <span>{$vo.val}</span>
+		  </td>
+		  <td class="txc">
+		    <span>{$vo.content|getValueContent}</span>
+		  </td>
+		</tr>
+		</volist>
+		<tr>
+			<td colspan="10"><div class="jvf_page">{$page}</div></td>
+		</tr>
+	</tbody>
+</table>

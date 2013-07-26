@@ -1,0 +1,25 @@
+<div id="feed_div" class="e jvf_dynamic">
+<empty  name='feeds_list'>
+	<div style="width:680px;" id="like_space" class="block-space shop_all">
+			<div class="index-space">
+				<i></i>您的好友没有任何动静！！或者您在这里还没有结识新的朋友。赶快行动起来，和他们一起分享快乐吧！
+			</div>
+	</div>
+<else />
+<volist name="feeds_list" id="vo">
+ <h4 class="et"><if condition="$key eq 'today'">{%today}<elseif condition="$key eq 'yesterday'" />{%yesterday}<else />{$key}</if></h4>
+ <ul class="el">
+ <volist name="vo" id="value">
+ <iterate name="value.feed" id="feed">
+	 <li class="clearfix" id="feed_{$feed.id}_li">
+	     <div class="clearfix"> <a class="t" href="javascript:void(0);" title=""><img src="../Public/images/feed/{$feed.type}.gif"></a>{$feed.content}<span class="xg1"><span title="{$feed.addtime|toDate}">{$feed.addtime|dgmdate}</span></span></div>
+	 </li>
+ </iterate>
+ </volist>  
+ </ul>
+</volist>
+</empty>
+</div>
+<div class="jvf_page">
+{$page}
+</div>

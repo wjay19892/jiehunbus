@@ -1,0 +1,49 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">          
+			<div class="unit">
+				<label>扩展字段名称：</label>
+				<input type="text" class="required" name="key">
+			</div>
+			
+			<div class="unit">
+				<label>扩展字段默认值：</label>
+				<input type="text" class="textInput" name="default">
+			</div>
+            
+            <div class="unit">
+				<label>扩展字段类型：</label>
+				<select class="combox" name="type" >
+					<option value="0">单行文本框 </option>
+					<option value="1">单选框</option>
+                    <option value="2">下拉框</option>
+                    <option value="3">多行文本框</option>
+                    <option value="4">多选框</option>
+                    <option value="5">图片</option>
+                    <option value="6">日历控件</option>
+                    <option value="7">编辑器</option>
+				</select>
+			</div>
+            
+   			<div class="unit">
+				<label>扩展字段可选值：</label>
+				<textarea rows="5" cols="60" name="enum" class="textInput" ></textarea>
+			</div>
+            
+   			<div class="unit">
+				<label>扩展字段说明：</label>
+				<textarea rows="5" cols="60" name="explain" class="textInput"></textarea>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

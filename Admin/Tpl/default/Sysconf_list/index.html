@@ -1,0 +1,90 @@
+<form method="post" action="__URL__/save/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, navTabAjaxDone);" >
+<div class="pageContent">
+    <div class="pageFormContent" layoutH="56">
+        <div class="tabs">
+            <div class="tabsHeader">
+                <div class="tabsHeaderContent">
+                    <ul>
+                    <volist id="groupname" name="sysconf_grouplist">
+                        <li><a href="javascript:;"><span>{$groupname}</span></a></li>
+                     </volist>   
+                    </ul>
+                </div>
+            </div>
+            <div class="tabsContent" layoutH="90" style="padding:0px">
+    
+                <foreach name="conf_list" item="vo" >
+                <div>
+                <table width="100%" class="list">
+                  <thead>
+                    <tr height="25">
+                       <th width="250" style="text-align:center;">参数说明</th>
+                       <th style="text-align:center;">参数值</th>
+                       <th width="220" style="text-align:center;">变量名</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  <empty name="vo">
+                    <tr>
+                        <td colspan="3" style="text-align:center;">此分组暂无配置项</td>
+                    </tr>
+                  <else />
+                    <foreach name="vo" item="vo_item" >
+                    <tr>
+                        <td style="text-align:right;" width="250">{$vo_item['name']}：</td>
+                        <td>
+                            <if condition="$vo_item['list_type'] eq 0"><!-- 手动输入 -->
+                                <input type="text" name="{$vo_item.key}" class="" style="width:300px" value="{$vo_item.val}" />
+                            </if>
+                            
+                            <if condition="$vo_item['list_type'] eq 1">
+                                <foreach name="vo_item['val_arr']" item="val_item" ><!-- 单选 -->
+                                <label style="width:auto;">{:L("TITLE_".$vo_item['key']."_".$val_item)}：<input type="radio" name="{$vo_item.key}" class="" value="{$val_item}"  <if condition="$val_item eq $vo_item['val']">checked="checked" </if> /></label>
+                                </foreach>
+                            </if>
+                            
+                            <if condition="$vo_item['list_type'] eq 2">        
+                                <select name="{$vo_item.key}" class="combox">
+                                    <foreach name="vo_item['val_arr']" item="val_item" ><!-- 下拉 -->
+                                    <option value="{$val_item}" <if condition="$val_item eq $vo_item['val']">selected="selected"</if>>{:L("TITLE_".$vo_item['key']."_".$val_item)}</option>
+                                    </foreach>
+                                </select>
+                            </if>
+                            
+                            <if condition="$vo_item['list_type'] eq 3"><!-- 文本域 -->
+                                <textarea rows="4" cols="80" name="{$vo_item.key}" class="textInput">{$vo_item['val']}</textarea>
+                            </if>
+                                                           
+                            <if condition="$vo_item['list_type'] eq 4"><!-- 图片域 -->
+                                <input type="file"  name="{$vo_item.key}" class="valid" /> 
+                                <if condition="$vo_item['val'] neq ''">
+                                    <a href="__ROOT__{$vo_item.val}" target="_blank" >查看</a>
+                                </if>
+                            </if>
+                            
+                            <if condition="$vo_item['list_type'] eq 5"><!-- 编辑器 -->
+                                <textarea id="{$vo_item.key}"  class="editor" name="{$vo_item.key}" rows="8" cols="80" tools="mfull" upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf" upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">{$vo_item.val}</textarea>       
+                            </if>   
+                        </td>
+                        <td width="220" style="text-align:center;">{$vo_item['key']}</td>
+                    </tr>
+                    </foreach>
+                    </empty>
+                  <tbody>
+                </table>
+                </div>
+                </foreach>
+            </div>
+            <div class="tabsFooter">
+                <div class="tabsFooterContent"></div>
+            </div>
+	    </div>
+    </div>
+    <div class="formBar">
+        <ul>
+            <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+            <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+        </ul>
+    </div> 
+</div>
+</form>

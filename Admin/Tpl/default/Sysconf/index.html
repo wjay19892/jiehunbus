@@ -1,0 +1,85 @@
+<include file="Public:pagerForm" />
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>参数键：</label>
+				<input type="text" class="alphanumeric" name="key">
+			</li>
+            <li>
+				<label>参数名称：</label>
+				<input type="text" name="name">
+			</li>
+            <li>
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="">所有</option>
+					<option value="1">启用</option>
+					<option value="0">禁用</option>
+				</SELECT>
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+    <!--  功能操作区域  -->
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add" target="dialog" rel="__MODULE___add" height="310"><span>新增</span></a></li>
+			<li><a class="delete" href="__URL__/foreverdelete/id/{sid_node}/navTabId/__MODULE__" target="ajaxTodo" calback="navTabAjaxMenu" title="你确定要删除吗？" warn="请选择"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{sid_node}" target="dialog" rel="__MODULE___edit" warn="请选择" height="310"><span>修改</span></a></li>
+		</ul>
+	</div>
+   <!-- 功能操作区域结束 -->
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="80">编号</th>
+			<th width="150" orderField="key" <if condition="$_REQUEST._order eq 'key'">class="{$_REQUEST._sort}"</if>>参数键</th>
+			<th>参数名称</th>
+			<th width="120" orderField="group_id" <if condition="$_REQUEST._order eq 'group_id'">class="{$_REQUEST._sort}"</if>>所属组</th>
+			<th width="80" orderField="sort" <if condition="$_REQUEST._order eq 'sort'">class="{$_REQUEST._sort}"</if>>序号</th>
+			<th width="80" orderField="status" <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>>状态</th>
+			<th width="80">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_node" rel="{$vo['id']}">
+				<td>{$vo['id']}</td>
+				<td>{$vo['key']}</td>
+				<td>{$vo['name']}</td>
+				<td>{$vo['group_id']|getSysconf_groupName}</td>
+				<td>
+					<div class="jvf_fl">{$vo['sort']}</div>
+                	<div style=" height: 17px; padding: 2px 6px 0 0; float:right;">
+                    	<a class="jvf_jia" href="__URL__/sortInc/id/{$vo['id']}"></a>
+                        <a class="jvf_jian" href="__URL__/sortDec/id/{$vo['id']}"></a>
+                    </div>
+                    <div class="jvf_cl"></div>
+				</td>
+				<td>{$vo['status']|getStatus}</td>
+				<td>{$vo['status']|showStatus=$vo['id']} <a href="__URL__/edit/id/{$vo['id']}" target="dialog" rel="__MODULE___edit">编辑</a></td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
+

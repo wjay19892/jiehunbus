@@ -1,0 +1,20 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<div class="jvf_lists jvf_frame">
+        	<h2>{$categorydata.name}</h2>
+        	<ul>
+        	<volist name="articledata" id="vo">
+            	<li class="clearfix"><a class="jvf_over" href="{:U('Article/detail/id/'.$vo['id'])}">{$vo.title}</a><span>{$vo.addtime|toDate}</span></li>
+            </volist>
+            </ul>
+        </div>
+        <div class="detail_bot jvf_allimg"></div>
+		<div class="jvf_page">
+		{$page}
+		</div>
+    </div>
+</div>
+
+<include file="Public:footer" />

@@ -1,0 +1,24 @@
+<script type="text/javascript">
+$(function(){
+	memberRecharge();
+})
+</script>
+<div style="width:945px; padding-bottom:10px;" title="{%online_recharge}">
+    <form id="payForm"  method="post" target="_blank" action="{:U('Member/toRecharge')}">
+      <div class="jvf_box_con" >
+        <div class="cart_borbox" style="padding:5px;">
+          <ul class="account_info">
+            <li class="mobile bold"><label for="cash">{%recharge_cash}：</label><input id="cash" class="jvf_inputt" name="cash" placeholder="{%recharge_cash}" type="text"></li>
+          </ul>
+          <include file="Member:paylist" />
+        </div>
+      </div>
+      <div class="jvf_box_buttom">
+        <input type="button" value="{%member_recharge_submit}" class="btn p2153 f20 jvf_bold linebl"  id="goodsBuyBtn" />
+      </div>
+    </form>
+ 
+</div>
+
+
+		

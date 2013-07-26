@@ -1,0 +1,214 @@
+<script>
+$(function(){
+	memberPrivacy();
+});
+</script>
+<div class="edit_privacy">
+           	<div  class="edit_privacy_top">
+                 <h2 class="clearfix">
+                   <p class="jvf_fl">{%member_privacy_p}</p>
+                   <div class="jvf_fl">{%member_privacy_div}</div>
+                 </h2>
+                </div>
+                 <div class="padded-text">
+                   <form action="{:U('Member/editprivacy')}" class="edit_user_profile_info" id="editprivacy" method="post">
+                     <input type="hidden" value="{$infodata.id}" name="id" id="id">
+              		<input type="hidden" value="{$memberdata.id}" name="uid" id="user_id">
+                     <ul class="clearfix">
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%member_privacy_profile}：</label>
+                             <select name="index_privacy">
+		                        <option value="0" <eq name="infodata.index_privacy" value="0">selected="selected"</eq>>{%member_privacy_public}</option>
+		                        <option value="1" <eq name="infodata.index_privacy" value="1">selected="selected"</eq>>{%member_privacy_friends}</option>
+		                        <option value="2" <eq name="infodata.index_privacy" value="2">selected="selected"</eq>>{%member_privacy_secrecy}</option>
+		                        <option value="3" <eq name="infodata.index_privacy" value="3">selected="selected"</eq>>{%member_privacy_register}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%member_privacy_personal_infor}：</label>
+		                      <select name="info_privacy">
+		                        <option value="0" <eq name="infodata.info_privacy" value="0">selected="selected"</eq>>{%member_privacy_public}</option>
+		                        <option value="1" <eq name="infodata.info_privacy" value="1">selected="selected"</eq>>{%member_privacy_friends}</option>
+		                        <option value="2" <eq name="infodata.info_privacy" value="2">selected="selected"</eq>>{%member_privacy_secrecy}</option>
+		                        <option value="3" <eq name="infodata.info_privacy" value="3">selected="selected"</eq>>{%member_privacy_register}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%friend_privacy}：</label>
+		                      <select name="friend_privacy">
+		                        <option value="0" <eq name="infodata.friend_privacy" value="0">selected="selected"</eq>>{%member_privacy_public}</option>
+		                        <option value="1" <eq name="infodata.friend_privacy" value="1">selected="selected"</eq>>{%member_privacy_friends}</option>
+		                        <option value="2" <eq name="infodata.friend_privacy" value="2">selected="selected"</eq>>{%member_privacy_secrecy}</option>
+		                        <option value="3" <eq name="infodata.friend_privacy" value="3">selected="selected"</eq>>{%member_privacy_register}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%good_privacy}：</label>
+		                      <select name="good_privacy">
+		                        <option value="0" <eq name="infodata.good_privacy" value="0">selected="selected"</eq>>{%member_privacy_public}</option>
+		                        <option value="1" <eq name="infodata.good_privacy" value="1">selected="selected"</eq>>{%member_privacy_friends}</option>
+		                        <option value="2" <eq name="infodata.good_privacy" value="2">selected="selected"</eq>>{%member_privacy_secrecy}</option>
+		                        <option value="3" <eq name="infodata.good_privacy" value="3">selected="selected"</eq>>{%member_privacy_register}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%member_privacy_comment_privacy}：</label>
+		                      <select name="comment_privacy">
+		                        <option value="0" <eq name="infodata.comment_privacy" value="0">selected="selected"</eq>>{%member_privacy_public}</option>
+		                        <option value="1" <eq name="infodata.comment_privacy" value="1">selected="selected"</eq>>{%member_privacy_friends}</option>
+		                        <option value="2" <eq name="infodata.comment_privacy" value="2">selected="selected"</eq>>{%member_privacy_secrecy}</option>
+		                        <option value="3" <eq name="infodata.comment_privacy" value="3">selected="selected"</eq>>{%member_privacy_register}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%member_privacy_recommend_privacy}：</label>
+		                      <select name="recommend_privacy">
+		                        <option value="0" <eq name="infodata.recommend_privacy" value="0">selected="selected"</eq>>{%member_privacy_public}</option>
+		                        <option value="1" <eq name="infodata.recommend_privacy" value="1">selected="selected"</eq>>{%member_privacy_friends}</option>
+		                        <option value="2" <eq name="infodata.recommend_privacy" value="2">selected="selected"</eq>>{%member_privacy_secrecy}</option>
+		                        <option value="3" <eq name="infodata.recommend_privacy" value="3">selected="selected"</eq>>{%member_privacy_register}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                       <li>
+                         <div class="form_input clearfix">
+                             <label>{%member_privacy_online}：</label>
+		                      <select name="online">
+		                        <option value="0" <eq name="infodata.online" value="0">selected="selected"</eq>>{%status_stealth}</option>
+		                        <option value="1" <eq name="infodata.online" value="1">selected="selected"</eq>>{%status_online}</option>
+		                        <option value="2" <eq name="infodata.online" value="2">selected="selected"</eq>>{%status_busy}</option>
+		                        <option value="3" <eq name="infodata.online" value="3">selected="selected"</eq>>{%status_leave}</option>
+		                      </select>
+                         </div>
+                         <div class="form_helper"></div>
+                       </li>
+                     </ul>
+                     <div class="form_submit clearfix">
+                       <input type="button" class="btn p2153 f14 linebl" id="user_profile_info_submit" value="{%member_edit_submit}">
+                       <span class="spinner"></span> 
+                     </div>
+                   </form>
+                 </div>
+                 <div class="edit_privacy_top bdt">
+                 <h2 class="clearfix">
+                   <p class="jvf_fl">{%member_privacy_h2_p}</p>
+                   <div class="jvf_fl">{%member_privacy_h2_div}</div>
+                 </h2>
+                 </div>
+                 <div class="padded-text">
+                   <form action="{:U('Member/editprivacy')}" class="edit_user_profile_info" id="editisfeed" method="post">
+                     <input type="hidden" value="{$infodata.id}" name="id" id="id">
+              		 <input type="hidden" value="{$memberdata.id}" name="uid" id="user_id">
+                     <ul class="clearfix">
+                       <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="info_isfeed">
+                                <label for="user_preference_info_isfeed" class="inline-label">{%member_privacy_info_isfeed}</label>
+		                        <input type="checkbox" value="1" name="info_isfeed" id="user_preference_info_isfeed" <eq name="infodata.info_isfeed" value="1">checked="checked"</eq>>
+		                        
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="avatar_isfeed">
+                                 <label for="user_preference_avatar_isfeed" class="inline-label">{%member_privacy_avatar_isfeed}</label>
+		                        <input type="checkbox" value="1" name="avatar_isfeed" id="user_preference_avatar_isfeed" <eq name="infodata.avatar_isfeed" value="1">checked="checked"</eq>>
+		                       
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="good_isfeed">
+                                <label for="user_preference_good_isfeed" class="inline-label">{%goods_release}</label>
+		                        <input type="checkbox" value="1" name="good_isfeed" id="user_preference_good_isfeed" <eq name="infodata.good_isfeed" value="1">checked="checked"</eq>>
+		                        
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="friend_isfeed">
+                                <label for="user_preference_friend_isfeed" class="inline-label">{%member_privacy_friend_isfeed}</label>
+		                        <input type="checkbox" value="1" name="friend_isfeed" id="user_preference_friend_isfeed" <eq name="infodata.friend_isfeed" value="1">checked="checked"</eq>>
+		                        
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="attention_isfeed">
+                                <label for="user_preference_attention_isfeed" class="inline-label">{%member_privacy_attention_isfeed}</label>
+		                        <input type="checkbox" value="1" name="attention_isfeed" id="user_preference_attention_isfeed" <eq name="infodata.attention_isfeed" value="1">checked="checked"</eq>>
+		                        
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="order_isfeed">
+                                 <label for="user_preference_order_isfeed" class="inline-label">{%member_privacy_order_isfeed}</label>
+		                        <input type="checkbox" value="1" name="order_isfeed" id="user_preference_order_isfeed" <eq name="infodata.order_isfeed" value="1">checked="checked"</eq>>
+		                       
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="comment_isfeed">
+                                 <label for="user_preference_comment_isfeed" class="inline-label">{%member_privacy_comment_isfeed}</label>
+		                        <input type="checkbox" value="1" name="comment_isfeed" id="user_preference_comment_isfeed" <eq name="infodata.comment_isfeed" value="1">checked="checked"</eq>>
+		                       
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="recommend_isfeed">
+                                <label for="user_preference_recommend_isfeed" class="inline-label">{%member_privacy_recommend_isfeed}</label>
+		                        <input type="checkbox" value="1" name="recommend_isfeed" id="user_preference_recommend_isfeed" <eq name="infodata.recommend_isfeed" value="1">checked="checked"</eq>>
+		                        
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="commentreply_isfeed">
+                                 <label for="user_preference_commentreply_isfeed" class="inline-label">{%member_privacy_commentreply_isfeed}</label>
+		                        <input type="checkbox" value="1" name="commentreply_isfeed" id="user_preference_commentreply_isfeed" <eq name="infodata.commentreply_isfeed" value="1">checked="checked"</eq>>
+		                       
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="commented_isfeed">
+                                 <label for="user_preference_commented_isfeed" class="inline-label">{%member_privacy_commented_isfeed}</label>
+		                        <input type="checkbox" value="1" name="commented_isfeed" id="user_preference_commented_isfeed" <eq name="infodata.commented_isfeed" value="1">checked="checked"</eq>>
+		                       
+		                  </div>
+		                </li>
+		                <li>
+		                  <div class="form_input clearfix">
+		                        <input type="hidden" value="0" name="recommended_isfeed">
+                                  <label for="user_preference_recommended_isfeed" class="inline-label">{%member_privacy_recommended_isfeed}</label>
+		                        <input type="checkbox" value="1" name="recommended_isfeed" id="user_preference_recommended_isfeed" <eq name="infodata.recommended_isfeed" value="1">checked="checked"</eq>>
+		                      
+		                  </div>
+		                </li>
+                     </ul>
+                     <div class="form_submit">
+                       <input type="button" class="btn p2153 f14 linebl" id="user_preference_submit" value="{%member_privacy_submit}">
+                     </div>
+                   </form>
+                 </div>
+</div>

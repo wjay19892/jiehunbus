@@ -1,0 +1,41 @@
+<div id="simple" title="{%add_friend}" style="width:460px; height:320px;">
+<script>
+$(function(){
+	memberAddFriend();
+});
+</script>
+            <form class="cmxform" id="friendaddform" action="{:U('Member/addfriends_request')}" method="post">
+                <input type="hidden" value="{$frienddata['id']}" name="friend">
+
+               <div class="segment">
+                    <div class="clearfix">
+                        
+                        <div class="jvf_fl segment_head">
+                            <a title="{%view_profile}" href="{:U('User/space/id/'.$frienddata['id'])}"><img height="50" width="50" title="{$frienddata.name}" src="{$frienddata.header.thumbnail}" alt="{$frienddata.name}"></a>
+                        </div>
+                        
+                        
+                        <div class="jvf_fl segment_con">                 
+                            {%member_addfriend_add}&nbsp;<a title="{%view_profile}" href="{:U('User/space/id/'.$frienddata['id'])}">{$frienddata.name}</a>&nbsp;{%member_addfriend_note}:<br />
+                            <input class="jvf_user_id" id="note" name="note" placeholder="{%member_addfriend_placeholder}"  type="text" value="" />
+                            <p class="mtn xg1">({%member_addfriend_mtn_before}{$frienddata.name}{%member_addfriend_mtn_after})</p>
+                            {%member_addfriend_group}: <select class="fgid" name="gid">
+                                    <option value="0">{%no_group}</option>
+                                    <volist name='friendgroups' id='vo' >
+                                    <option value="{$vo.id}">{$vo.name}</option>
+                                    </volist>
+                                </select>
+                        </div>
+                        <div class="jvf_cl"></div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="jvf_box_buttom">
+                    <input type="button" value="{%enter}" id="submit" name="commit" class="btn p2153 f14 linebl">
+                </div>
+            </form>
+             
+</div>
+
+		

@@ -1,0 +1,89 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	new AjaxUpload('#upload_button', {
+	    action: APP+'/Xheditor/siteImgLoad',
+	    name: 'images',
+	    onSubmit : function(file , ext){
+	        if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)){
+	            /* Setting data */
+	            this.setData({
+	            'ext': ext
+	            });
+	            this.disable();
+	        } else {
+	            return false;
+	        }
+
+	    },
+	    onComplete : function(file,response){
+	    	var data=eval("("+response+")");
+	    	uploadOne('img','logo',data);
+	        this.enable();
+	    }
+	});
+});
+</script>
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>名称：</label>
+				<input type="text" class="required" name="name" value="{$vo.name}">
+			</div>
+			
+			<div class="unit">
+				<label>英文标识：</label>
+				<input type="text" class="required alphanumeric" name="remark" value="{$vo.remark}">
+			</div>
+			
+			<div class="unit">
+				<label>Logo：</label>
+				<input type="hidden" name="logo" id="logo" value="{$vo.logo}">
+				<div style="float: left;">
+				<div class="button" id="upload_button"><div class="buttonContent"><button type="button">上传</button></div></div>
+				<notempty name="vo.logo"><img id="img" src="__ROOT__{$vo.logo}" /><else /><img id="img" style="display: none;"/></notempty>
+				</div>
+			</div>
+			
+			<div class="unit">
+				<label>帐户KEY：</label>
+				<input type="text" name="appkey" value="{$vo.appkey}">
+			</div>
+			
+			<div class="unit">
+				<label>帐户SECRET：</label>
+				<input type="text" name="appsecret" value="{$vo.appsecret}">
+			</div>
+            
+			<div class="unit">
+				<label>描述：</label>
+             	<textarea class="editor" name="description" rows="5" cols="55" tools="mfull"
+					upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" 
+					upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" 
+					upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf"
+					upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">{$vo.description}
+				</textarea>
+			</div>
+            
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+					<option value="1" <eq name="vo.status" value="1">selected="selected"</eq>>启用</option>
+					<option value="0" <eq name="vo.status" value="0">selected="selected"</eq>>禁用</option>
+				</SELECT>
+			</div>
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

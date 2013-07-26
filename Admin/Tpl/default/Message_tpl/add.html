@@ -1,0 +1,41 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>模版标示：</label>
+				<input type="text" class="required alphanumeric" name="name" >
+			</div>
+            
+			<div class="unit">
+				<label>模版名称：</label>
+				<input type="text" class="required" name="title" >
+			</div>
+            
+			<div class="unit">
+				<label>内容：</label>
+				<textarea class="editor" name="content" rows="15" cols="100" tools="mfull"
+					upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" 
+					upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" 
+					upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf"
+					upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">
+				</textarea>
+			</div>
+			
+			<div class="unit">
+				<label>备注：</label>
+                <textarea rows="2" cols="130" name="description" class="textInput"></textarea>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

@@ -1,0 +1,44 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	memberListings({:json_encode($_REQUEST)});
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<div class="mb_left_con">
+            <include file="Member:sharebox" />
+      			<div class="extension_top">
+                	<ul class="clearfix">
+                    	<li class="selected"><a href="{:U('Circle/ajaxCircle/wasAttention/'.$memberdata['id'])}">{%my_listen}</a></li>
+                        <li><a href="{:U('Circle/ajaxCircle/attention/'.$memberdata['id'])}" get="get">{%my_audience}</a></li>
+                        <li><a href="{:U('Circle/ajaxCircle/at/my')}" get="get">{%mention_my}</a></li>
+                        <li><a href="{:U('Circle/ajaxCircle/like/my')}" get="get">{%my_likes}</a></li>
+                        <php>if(C('sysconfig.is_open_chat') == 1){</php>
+                        <li><a href="{:U('Member/chatLog')}" get="get">{%chat_log}</a></li>
+                        <php>}</php>
+                    </ul>
+                </div>
+                <div class="clearfix listings_box">
+                	<div class="listings_item"></div>
+                	<div class="listings_item" style="display:none;"></div>
+                    <div class="listings_item" style="display:none;"></div>
+                    <div class="listings_item" style="display:none;"></div>
+                	<php>if(C('sysconfig.is_open_chat') == 1){</php>
+                	<div class="listings_item" style="display:none;"></div>
+                	<php>}</php>
+                </div>
+                <div class="jvf_all_page" style="display:none;">
+                	<div class="jvf_page"></div>
+                	<div class="jvf_page"></div>
+                	<div class="jvf_page"></div>
+                	<div class="jvf_page"></div>
+				</div>
+            </div>
+       </div>
+       <include file="Member:right" />
+	</div>
+</div>
+<include file="Public:footer" />

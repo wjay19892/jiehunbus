@@ -1,0 +1,54 @@
+<div class="pageContent">
+    <script type="text/javascript" src="__PUBLIC__/dwz/js/adv.js"></script>
+	<form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="id" value="{$vo.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>广告位标示：</label>
+				<input type="text" class="required alphanumeric" name="tagname" value="{$vo.tagname}">
+			</div>
+            
+			<div class="unit">
+				<label>广告位名称：</label>
+				<input type="text" class="required" name="name" value="{$vo.name}">
+			</div>
+			
+			<div class="unit">
+				<label>广告位宽度：</label>
+				<input type="text" class="digits textInput valid" name="width" value="{$vo.width}">
+			</div>
+            
+			<div class="unit">
+				<label>广告位高度：</label>
+				<input type="text" class="digits textInput valid" name="height" value="{$vo.height}">
+			</div>
+            
+			<div class="unit">
+				<label style="width:130px;">FLASH图片轮播广告：</label>
+                <label onclick="UpdatePositionStyle(this);">
+					<input type="radio" value="1" name="is_flash">是
+					<input type="radio" value="0" name="is_flash" checked="checked" >否
+				</label>
+				<SELECT name="flash_style" class="combox">
+					<option <eq name="vo.flash_style" value="redfocus" >selected</eq> value="redfocus">redfocus</option>
+					<option <eq name="vo.flash_style" value="pinkfocus" >selected</eq> value="pinkfocus">pinkfocus</option>
+				</SELECT>
+			</div>
+            
+   			<div class="unit">
+				<label>广告位模板：</label>
+				<textarea rows="5" cols="60" name="style" id="style" class="textInput readonly" readonly="true" >{$vo.style}</textarea>
+			</div>
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+
+

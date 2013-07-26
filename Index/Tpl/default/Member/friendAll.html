@@ -1,0 +1,30 @@
+<script type="text/javascript">
+$(function(){
+	memberFriendAll();
+});
+</script>
+<div class="at_friend">
+	<span class="span_tp jvf_allimg"></span>
+	<div  class="at_cha clearfix">
+    	<span class="at_cha_ico jvf_allimg jvf_fl">
+    	<input type="text" name="friendname">
+        </span>
+        <div class="jvf_fr clos"><a href="javascript:;" class="jvf_allimg"></a></div>
+    </div>
+    
+    <div class="at_friend_list">
+    	<ul>
+    	<volist name="friendsdata" id="vo">
+        	<li title="{$vo.frienddata.name}">
+            	<a class="jvf_over" href="javascript:;">
+                	<img width="20px" height="20px" src="{$vo.frienddata.header.thumbnail}"/>
+                    <span>{$vo.frienddata.name}</span>
+                </a>
+            </li>
+        </volist>
+        </ul>
+    </div>
+    <div class="at_bz">
+    {%at_bz}
+    </div>
+</div>

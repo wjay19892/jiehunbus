@@ -1,0 +1,54 @@
+<volist name="expand" id="att">
+<div class="unit">
+    <label>{$att.key}：</label>
+    <if condition="$att['type'] eq 0"><!-- 手动输入 -->
+        <input type="text" name="{$att.id}" class="textInput" value="{$att.default}" />
+    </if>
+    
+    <if condition="$att['type'] eq 1">
+      <div style="width:475px; float:left">
+        <foreach name="att['enum']" item="enum_item" ><!-- 单选 -->
+        <label class="radioButton"><input type="radio" name="{$att.id}" value="{$enum_item}"  <if condition="$enum_item eq $att['default']">checked="checked" </if> />{$enum_item}</label>
+        </foreach>
+      </div>
+    </if>
+    
+    <if condition="$att['type'] eq 2">        
+        <select name="{$att.id}">
+            <foreach name="att['enum']" item="enum_item" ><!-- 下拉 -->
+            <option value="{$enum_item}" <if condition="$enum_item eq $att['default']">selected="selected"</if>>{$enum_item}</option>
+            </foreach>
+        </select>
+    </if>
+    
+    <if condition="$att['type'] eq 3"><!-- 文本域 -->
+        <textarea rows="3" cols="55" name="{$att.id}" class="textInput">{$att['default']}</textarea>
+    </if>
+    
+    <if condition="$att['type'] eq 4">
+      <div style="width:475px; float:left">
+        <foreach name="att['enum']" item="enum_item" ><!-- 多选 -->
+        <label class="radioButton"><input type="checkbox" name="{$att.id}[]" value="{$enum_item}"  <if condition="$enum_item eq $att['default']">checked="checked" </if> />{$enum_item}</label>
+        </foreach>
+      </div>
+    </if>     
+                                   
+    <if condition="$att['type'] eq 5"><!-- 图片域 -->
+        <input type="file"  name="{$att.id}" class="valid" /> 
+        <if condition="$att['default'] neq ''">
+            <a href="__ROOT__{$att.default}" target="_blank" >查看</a>
+        </if>
+    </if>
+    
+    <if condition="$att['type'] eq 6"><!-- 日历控件 -->
+        <input type="text" readonly="true" format="yyyy-MM-dd" class="date textInput readonly valid focus" name="{$att.id}"><a class="inputDateButton" href="#">选择</a>
+    </if>
+    
+    <if condition="$att['type'] eq 7"><!-- 编辑器 -->
+        <textarea id="{$att.id}"  class="editor" name="{$att.id}" rows="6" cols="55" tools="mfull" upLinkUrl="{:U('Xheditor/fileUpload')}" upLinkExt="zip,rar,txt" upImgUrl="{:U('Xheditor/upLoadImg')}" upImgExt="jpg,jpeg,gif,png" upFlashUrl="{:U('Xheditor/fileUpload')}" upFlashExt="swf" upMediaUrl="{:U('Xheditor/fileUpload')}" upMediaExt="avi">{$att.default}</textarea>       
+    </if>
+</div>
+</volist>
+		
+
+

@@ -1,0 +1,12 @@
+	<ul class="talk_aboutBox">
+    <empty  name='talk_aboutdata'>
+<li class="reviews-list-item">{%comment_reviewslist_empty}</li>
+<else />
+	<volist name="talk_aboutdata" id="vo">
+		<include file="Talk_about:getOne" />
+    </volist>
+    </empty>
+	</ul>
+	<div class="jvf_page">
+	{$page}
+	</div>

@@ -1,0 +1,96 @@
+<include file="Public:top" />
+<include file="Public:header" />
+<script>
+$(function(){
+	memberGoods();
+});
+</script>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl">
+       		<div class="mb_left_con">
+            <include file="Member:sharebox" />
+      			<div class="extension_top">
+                	<ul class="clearfix">
+                        <li class="selected"><a href="javascript:;">{%member_goods_mbtit}</a></li>
+                        <li><a href="{:U('Member/sellOrderList')}" get="get">{%sell_order}</a></li>
+                        <li><a href="{:U('Member/sellcoupons')}" get="get">{%site_couponname_list}</a></li>
+                        <li><a href="{:U('Member/verifycoupon')}" get="get">{%consumer_registration}</a></li>
+                        <li><a href="{:U('Member/businessInvitation')}" get="get">{%recommend_management}</a></li>
+                        <li><a href="{:U('Member/incomeEvaluation')}" get="get">{%member_reviews_get}</a></li>
+                    </ul>
+                </div>
+                <div class="jvf_goods_box">
+                	<div class="jvf_goods_item jvf_goods">
+                		<table cellspacing="0" cellpadding="0" border="0" class="trips_list jvf_mbwid">
+					          <thead>
+					            <tr>
+					              <th class="t_c_good">{%goods_title}</th>
+					              <th class="t_c_pw">{%price_text}</th>
+					              <th class="t_c_data">{%member_goods_t_c_data}</th>
+					              <th class="t_c_operate">{%operational_text}</th>
+					            </tr>
+					          </thead>
+					          <tbody>
+					          <volist name="goodsdata" id="vo">
+					           <tr>
+					              <td>
+					                <span>
+					                  <a class="shpc" target="_blank" href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a>
+					                  <if condition="$vo.audit eq 0">
+					                      <if condition="$vo.status eq 1">({%ing_status})<else />({%over_status})</if>
+					                  <else />
+					                  	<span style="color: red;">({%ing_audit})</span>
+					                  </if>
+                  					</span>
+					              </td>
+					              <td><span>{%unit_price}：<b class="weic">&yen;{$vo.price}</b><br>
+					                  {%required_pay}<eq name="vo.payment" value="1">{%payment_deposit}：<b style="font-weight:bold; color:#FF0000;">&yen;{$vo.price}</b><else />{%payment_price}</eq></span></td>
+					              <td class="txc"><span>{$vo.crrnum}</span></td>
+					              <td class="txc">
+					              		<if condition="$vo.audit eq 0">
+						                <a class="reject gooddetail" href="{:U('Member/gooddetail/id/'.$vo['id'])}">[{%detail_text}]</a>
+						                <a class="reject" href="{:U('Member/downcoupons/id/'.$vo['id'])}">[{%member_goods_down}]</a>
+						               <else />
+						                <a class="reject" href="{:U('Goods/view/id/'.$vo['id'])}">[{%goods_release_view}]</a>
+						               	<a class="reject" href="{:U('Goods/release/id/'.$vo['id'])}" target="_blank">[{%edit}]</a>
+						                <a class="reject delGoods" href="{:U('Member/delGoods/id/'.$vo['id'])}">[{%delete}]</a>
+						               </if>
+					              </td>
+					            </tr>
+					          </volist>
+         						<tr>
+					            <td class="pagination" colspan="10">
+					            	<div class="jvf_page">
+					            		{$page}
+					            	</div>
+					            </td>
+					            </tr>
+					          </tbody>
+					        </table>
+                	</div>
+                    <!--卖出订单-->
+                	<div class="jvf_goods_item" style="display:none; padding:10px;"></div>
+                    <!--卖出订单——end-->
+                    <!--优惠券列表-->
+                	<div class="jvf_goods_item" style="display:none;"></div>
+                    <!--优惠券列表——end-->
+                    <!--消费登记-->
+                	<div class="jvf_goods_item" style="display:none;"></div>
+                    <!--消费登记——end-->
+                    <!--发布商品-->
+                    <div class="jvf_goods_item" style="display:none;"></div>
+                    <!--发布商品——end-->
+                    <!--推荐管理-->
+                     <div class="jvf_goods_item" style="display:none;"></div>
+                    <!--推荐管理——end-->
+                    <!--收到的评价-->
+                    <div class="jvf_goods_item" style="display:none;"></div>
+                    <!--收到的评价-->
+                </div>
+            </div>
+       </div>
+       <include file="Member:right" />
+	</div>
+</div>
+<include file="Public:footer" />

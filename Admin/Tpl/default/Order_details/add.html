@@ -1,0 +1,67 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-valate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>商品：</label>
+				<input name="gid" type="hidden" group="goods" field="id"/>
+				<input class="required" name="title" type="text" readonly="readonly" group="goods" field="title"/>
+				<a class="btnLook" href="{:U('Goods/lookUp/group/goods/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="goods_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>会员：</label>
+				<input type="hidden" name="uid" group="member" field="id">
+				<input class="required" name="name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>订单：</label>
+				<input type="hidden" name="oid" group="order" field="id">
+				<input class="required" name="order_sn" type="text" readonly="readonly" group="order" field="sn"/>
+				<a class="btnLook" href="{:U('Order/lookUp/group/order/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="order_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>数量：</label>
+				<input type="text" name="num" class="digits textInput val">
+			</div>
+						
+			<div class="unit">
+				<label>单价：</label>
+				<input type="text" name="price">
+			</div>
+			
+			<div class="unit">
+				<label>总价：</label>
+				<input type="text" name="total">
+			</div>
+			
+			<div class="unit">
+				<label>下单时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			<div class="unit">
+				<label>状态：</label>
+				<SELECT name="status" class="combox">
+                    <option value="0">未支付</option>
+					<option value="1">已支付</option>
+                    <option value="2">已作废</option>
+				</SELECT>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

@@ -1,0 +1,23 @@
+<empty  name='recommenddata'>
+<li class="reviews-list-item">{%recommend_refernceslist_empty_data}</li>
+<else />
+<volist name='recommenddata' id='vo'>
+
+<li class="reviews-list-item clearfix">
+      <div class="jvf_fl userpic1">
+           <a rel="no-follow" href="{:U('User/space/id/'.$vo['reviewer']['id'])}"><img width="50px" height="50px" src="{$vo.reviewer.header.thumbnail}" alt="{$vo.reviewer.name}"></a><br>
+         {%recommended_by} </div>
+    <div class="bubble jvf_fl jvf_frame">
+       <p class="message">
+        {%recommended_by}：<a href="{:U('User/space/id/'.$vo['reviewer']['id'])}" class="name">{$vo.reviewer.name}</a><br>
+      </p><div class="clearfix pd510">
+        <span class="jvf_ico yh1 jvf_fl"></span>
+        <span class="jvf_fl jvf_over mw420">{$vo.content}</span>
+        <span class="jvf_ico yh2 jvf_fl"></span>
+      </div>
+      <div class="bubble_bot clearfix">
+      <span class="date"><span title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span></span>
+      </div>
+</li>
+</volist>
+</empty>

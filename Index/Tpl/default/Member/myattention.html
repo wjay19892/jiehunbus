@@ -1,0 +1,55 @@
+<script>
+$(function(){
+	memberMyattention();
+});
+</script>
+<div class="audience_gl">
+<div class="clearfix jvf_fl friends_list">
+     <div class="contentB p_lr_10">
+       <div class="friList mb10" id="attentionList">
+    <empty  name='attentionsdata'>
+	<div style="width:680px;" id="like_space" class="block-space shop_all">
+			<div class="index-space">
+				<i></i>您还没有收听任何人，赶快收听您感兴趣的人，看他们都在做干什么！
+			</div>
+	</div>
+       <volist name="attentionsdata" id="vo">
+       <dl class="clearfix nadlA">
+           <div class="jvf_fl friends_im">
+           	<a href="{:U('User/space/id/'.$vo['was'])}" class="img_50 _cardshow">
+           	<img width="50" height="50" src="{$vo.wasdata.header.thumbnail}">
+           	</a>
+           </div>
+             <div class="nadlCon">
+               <div class="nadlCon_l jvf_fl">
+                 <p class="mb5"> <a href="{:U('User/space/id/'.$vo['was'])}" class="b _cardshow">{$vo.wasdata.name}</a> </p>
+                 <p class="mb5"></p>
+                 <p>{%last_sign}: {$vo.wasdata.lastlog.addtime|toDateRefer}</p>
+               </div>
+               <div class="nadlCon_r jvf_fl">
+               <div class="shout yml"></div>
+                         {%you_have_listen}
+               </div>
+               <div class="nadlCon_c jvf_fr pr">
+                 <p class="mb5"><img src="../Public/images/feed/mnfollow.png"></p>
+                 <div class="f_gl" style="display:none;">
+                               	<ul>
+                                 	<li><a href="{:U('Member/removeattention/id/'.$vo['wasdata']['id'])}" class="cancel">{%cancel_attention}</a></li>
+                                     <li><a href="{:U('Member/addfriend/id/'.$vo['wasdata']['id'])}">{%addfriend}</a></li>
+                                     <li><a href="{:U('Member/sendpm/id/'.$vo['wasdata']['id'])}">{%private_letter}</a></li>
+                                 </ul>
+                               </div>
+                             </div>
+                             <div class="jvf_cl"></div>
+                           </div>
+                       </dl>
+                       </volist>  
+                       </empty>                            
+                     </div>
+                     <div class="jvf_page">
+{$page}
+</div>
+                     <div class="mb10 clearfix"></div>
+                   </div>
+               </div>
+               </div>

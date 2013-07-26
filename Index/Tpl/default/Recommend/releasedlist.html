@@ -1,0 +1,28 @@
+<empty name="recommenddata">
+<li class="reviews-list-item">{%recommend_releasedlist_empty_data}</li>
+<else />
+<volist name="recommenddata" id="vo">
+	<li class="reviews-list-item clearfix">
+              <div class="jvf_fl userpic1">
+                   <a href="{:U('User/space/id/'.$vo['goods']['promulgator']['id'])}" rel="no-follow"><img width="50px" height="50px" alt="{$vo.goods.promulgator.name}" src="{$vo.goods.promulgator.header.thumbnail}"></a><br />
+                  {%goods_manager}
+              </div>
+            <div class="bubble jvf_fl jvf_frame">
+         	   <p class="message">
+            	{%goods_manager}：<a class="name" href="{:U('User/space/id/'.$vo['goods']['promulgator']['id'])}">{$vo.goods.promulgator.name}</a><br />
+             	{%goods_title}：<a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.goods.title}</a><br>
+              <div class="clearfix pd510">
+              	<span class="jvf_ico yh1 jvf_fl"></span>
+              	<span class="jvf_fl jvf_over mw420">
+              		{$vo.content}
+              	</span>
+              	<span class="jvf_ico yh2 jvf_fl"></span>
+              </div>
+              <div class="bubble_bot clearfix">
+              <span class="date" title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span>
+              </div>
+              </div>
+        </li>
+  </li>
+</volist>
+</empty>

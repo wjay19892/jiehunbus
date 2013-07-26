@@ -1,0 +1,55 @@
+<script type="text/javascript">
+qqface('Chat_log_add');
+</script>
+<div class="pageContent">
+
+	<form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>发送者：</label>
+				<input type="hidden" name="send" group="member" field="id">
+				<input class="required" name="member_name" type="text" readonly="readonly" group="member" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+
+			<div class="unit">
+				<label>接收者：</label>
+				<input type="hidden" name="receive" group="member1" field="id">
+				<input class="required" name="member1_name" type="text" readonly="readonly" group="member1" field="name"/>
+				<a class="btnLook" href="{:U('Member/lookUp/group/member1/dialogId/'.MODULE_NAME.'_'.ACTION_NAME)}" target="dialog" rel="member_lookup">查找带回</a>
+			</div>
+			
+			<div class="unit">
+				<label>内容：</label>
+				<div style="float: left;">
+				<textarea rows="2" cols="60" name="content" class="textInput" id="message_Chat_log_add"></textarea>
+				<a id="face_Chat_log_add" class="faceBtn"></a>
+				</div>
+			</div>
+			
+			<div class="unit">
+				<label>发送时间：</label>
+				<input type="text" name="addtime" class="date" readonly="true" format="yyyy-MM-dd HH:mm:ss" value="{:toDate(time())}" />
+				<a class="inputDateButton" href="javascript:;">选择</a>
+			</div>
+			
+			<div class="unit">
+				<label>标记：</label>
+				<select class="combox" name="mark">
+					<option value="0">未读</option>
+					<option value="1">已读</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+
+

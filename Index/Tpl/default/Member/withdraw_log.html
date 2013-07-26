@@ -1,0 +1,52 @@
+<script>
+$(function(){
+	memberWithdraw_log();
+});
+</script>
+<table cellspacing="0" width="100%" cellpadding="0" border="0" class="trips_list withdraw_log">
+	<thead>
+		<tr>
+		  <th width="100px">{%withdraw_cash}</th>
+		  <th width="150px">{%withdraw_bank_id}</th>
+		  <th width="100px">{%withdraw_bank_card}</th>
+		  <th width="100px">{%withdraw_time}</th>
+		  <th width="100px">{%status_text}</th>
+		  <th width="150px">{%operational_text}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<volist name="withdrawdata" id="vo">
+        <tr>
+          <td class="txc">&yen;{$vo.cash}</td>
+          <td class="txc">{$vo.bank_id}</td>
+          <td class="txc">{$vo.bank_card}</td>
+          <td class="txc">{$vo.addtime}</td>
+          <td class="txc">
+            <eq name="vo.status" value="3">
+            <span>{%status_revocation}</span>
+            </eq>
+            <eq name="vo.status" value="2">
+            <span>{%status_handle}</span>
+            </eq>
+            <eq name="vo.status" value="1">
+            <span>{%status_processing}</span>
+            </eq>
+            <eq name="vo.status" value="0">
+            <span>{%status_unhandled}</span>
+            </eq>
+          </td>
+          <td class="txc">
+            <eq name="vo.status" value="0">
+            <a class="reject fl ma0 view" href="{:U('Member/view_withdraw/id/'.$vo['id'])}">{%member_withdraw_log_view}</a>
+            <a class="reject fr ma0 cancel" href="{:U('Member/undo_withdraw/id/'.$vo['id'])}">{%member_withdraw_log_revocation}</a>
+            <else />
+            <a class="reject view" href="{:U('Member/view_withdraw/id/'.$vo['id'])}">{%member_withdraw_log_view}</a>
+            </eq>
+          </td>
+        </tr>
+        </volist>
+		<tr>
+			<td colspan="10"><div class="jvf_page">{$page}</div></td>
+		</tr>
+	</tbody>
+</table>

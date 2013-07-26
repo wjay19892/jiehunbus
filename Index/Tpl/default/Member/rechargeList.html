@@ -1,0 +1,35 @@
+<table cellspacing="0" width="100%" cellpadding="0" border="0" class="trips_list">
+	<thead>
+		<tr>
+		  <th width="100px">{%recharge_sn}</th>
+		  <th width="300px">{%recharge_time}</th>
+		  <th width="100px">{%recharge_cash}</th>
+		  <th width="100px">{%recharge_paid_up}</th>
+		  <th width="100px">{%recharge_type}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<volist name="rechargedata" id="vo">
+        <tr>
+          <td class="txc">
+            <span>{$vo.sn}</span>
+          </td>
+          <td class="txc">
+              <span>{$vo.addtime}</span>
+          </td>
+          <td class="txc">
+              <span>&yen;{$vo.cash}</span>
+          </td>
+          <td class="txc">
+            <span>&yen;{$vo.cope}</span>
+          </td>
+          <td class="txc">
+            <span>{$vo.bank_id}</span>
+          </td>
+        </tr>
+        </volist>
+		<tr>
+		  <td colspan="10"><div class="jvf_page">{$page}</div></td>
+		</tr>
+	</tbody>
+</table>

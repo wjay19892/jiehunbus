@@ -1,0 +1,63 @@
+<empty  name='talk_aboutdata'>
+	<div style="width:680px;" id="like_space" class="block-space shop_all">
+			<div class="index-space">
+				<i></i>这里空空如也、寸草不生、空无一物、人去楼空、总之什么都没有！！
+			</div>
+	</div>
+<else />
+<volist name="talk_aboutdata" id="vo">
+<div class="shop_all">
+    <div class="jvf_frame w225 pr">
+    		<if condition="!empty($vo['accessory']) || !empty($vo['goods_accessory'])">
+        	<div class="comwit">
+        	<a href="{:U('Talk_about/detail/id/'.$vo['id'])}">
+        		<empty name="vo.gid">
+        		<img width="213" src="{$vo.accessory.0.thumbnail}" height="{$vo.accessory.0.thumbnail_height}">
+        		<else />
+        		<img width="213" src="{$vo.goods_accessory.thumbnail}" height="{$vo.goods_accessory.thumbnail_height}">
+        		</empty>
+        	</a>
+        	</div>
+        	</if>
+            <div class="comwit_c circle_con">
+            	<span class="marks_star jvf_ico"></span>
+            	{$vo.content}
+                <span class="marks_end jvf_ico"></span>
+            </div>
+            <div class="jvf_frame_bot clearfix">
+            	<div class="user_head jvf_fl"><a href="{:U('User/space/id/'.$vo['uid'])}" uid="{$vo['uid']}" class="jvf_getUser"><img width="35" height="35" src="{$vo.header}"></a></div>
+                <div class="user_at jvf_fl"><span class="user_name"><a href="{:U('User/space/id/'.$vo['uid'])}">{$vo.name}</a></span>
+                	<notempty name="vo.gid">
+	                    <span class="jvf_ico at"></span>
+	                    <a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.title}</a>
+                    <else />
+	                    <notempty name="vo.member">
+	                    <span class="jvf_ico at"></span>
+	                    <volist name="vo.member" id="v">
+	                    <a href="{:U('User/space/id/'.$v['uid'])}">{$v.name}；</a>
+	                    </volist>
+	                    <else />
+	                    <span class="jvf_ico bo"></span>
+	                    <volist name="vo.label" id="v">
+	                    <a href="{:U('Circle/index/lid/'.$v['lid'])}">#{$v.name}#</a>
+	                    </volist>
+	                    </notempty>
+                    </notempty>
+                    <notempty name="vo.source">
+	                    <span class="jvf_ico at"></span>
+	                    <a href="{:U('User/space/id/'.$vo['source']['uid'])}">{$vo.source.name}</a>
+	                    {$vo.source.content}
+                    </notempty>
+                </div>
+            </div>
+            
+            <div class="space_operation clearfix">
+                  <a href="{:U('Member/talk_aboutLike/tid/'.$vo['id'])}" class="like">{%like}</a>
+                  <a href="{:U('Talk_about/detail/id/'.$vo['id'])}" target="_blank">{%detail_text}</a>
+     		 </div>
+            
+    </div>
+    <div class="jvf_allimg shop_bot"></div>
+</div>
+</volist>
+</empty>
