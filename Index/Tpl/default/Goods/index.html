@@ -26,7 +26,7 @@ function load_map_wrapper(){
                 	<div class="detail_shop_title">
                             <h1><a href="javascript:;">{$data.title}</a></h1>
                         </div>
-                    <div class="detail_left_con_l jvf_fl">
+                    <div class="detail_left_con_l jvf_fl2">
                         <div class="jvf_allimg evaluation_all">
                         	<div class="clearfix star_t">
                             <div class="jvf_fl">{%goods_index_satisfaction_title}：</div><div class="rating_big jvf_fl">
@@ -59,15 +59,14 @@ function load_map_wrapper(){
                             <else />
                             <div class="price_collection jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Member/saveFavorites/gid/'.$data['id'])}">{%add_favorites}</a></div>
                             </if>
-                        	<if condition="in_array($data['id'],$shoppingCartId)">
-                        	<div class="price_cartHover jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Goods/updateNum/id/'.$data['id'].'/num/0')}" rel="{$data['id']}">{%remove_text}</a></div>
-                            <else />
-                            <div class="price_cart jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Goods/buy/id/'.$data['id'])}" rel="{$data['id']}">{%add_shoppingcart}</a></div>
-                            </if>
-                            <div class="price_purchase jvf_fl"><a class="jvf_allimg jvf_over" href="{:U('Goods/buy/id/'.$data['id'])}">{%goods_index_buy_button}</a></div>
+          
+                            <div class="chat jvf_fr">
+                                <a class="jvf_allimg jvf_callme" href="javascript:;" uid="{:$data['promulgator']['id']}">在线咨询</a>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="detail_left_con_r jvf_fr">
+                    <div class="detail_left_con_r jvf_fr2">
                     
                     	<div class="exhibition"><img src="{$data.accessory.0.path}" /></div>
                         <div class="exhibition_list clearfix">
@@ -148,7 +147,7 @@ function load_map_wrapper(){
                 	<div class="jvf_cntbox"><textarea autocomplete="off" name="content"></textarea></div>
                 	<div class="jvf_insertfun">
                     	<a href="javascript:;" id="face"><em class="inserttximg jvf_allimg"></em>{%face_text}</a>
-                        <a href="javascript:;" id="imgs"><em class="insertimg jvf_allimg"></em>{%photos_text}</a>
+                        <!--<a href="javascript:;" id="imgs"><em class="insertimg jvf_allimg"></em>{%photos_text}</a>-->
                         <div class="together jvf_fr">
 							<span class="hackie right_f share_published"> <span style="top: -3px;position: relative;">同步到：</span> 
 							<?php if($_SESSION['sina']['bind']){ ?>
@@ -180,7 +179,7 @@ function load_map_wrapper(){
             	<div class="extension_top" id="exchange_tab">
                 	<ul class="clearfix">
                     	<li class="selected"><a href="javascript:;">{%mood}</a></li>
-                        <li><a href="{:U('Comment/ajaxComment/gid/'.$data['id'])}" get="get">{%evaluate}</a></li>
+                        <!--<li><a href="{:U('Comment/ajaxComment/gid/'.$data['id'])}" get="get">{%evaluate}</a></li>-->
                         <li><a href="{:U('Recommend/ajaxRecommend/gid/'.$data['id'])}" get="get">{%recommend}</a></li>
                     </ul>
                 </div>
@@ -197,48 +196,38 @@ function load_map_wrapper(){
        </div>
        
        <div class="detail_right jvf_fr">
-       		<!--地图-->
-       		<div class="jvf_frame w235 mg0a" id="smallMap">
-            	<div style="width:225px; margin:5px;height: 225px;" id="map">
-                </div>
-                <div class="amplification mg0a">
-                	<a href="javascript:;" id="bigMap" rel="{$data.id}"><span class="jvf_allimg"></span>{%view_map}</a>
-                </div>
-            </div>
-            <div class="jvf_allimg shop_bot mg0a"></div>
-            <!--地图-->
-            <!--店家信息-->
+<!--店家信息-->
             <div class="jvf_frame w225 mg0a">
-            	<div class="detail_head w213">
-                	<a href="{:U('User/space/id/'.$data['promulgator']['id'])}"><img src="{$data.promulgator.business.logo}" /></a>
+                <div class="detail_head w213">
+                    <a href="{:U('User/space/id/'.$data['promulgator']['id'])}"><img src="{$data.promulgator.business.logo}" /></a>
                     <div class="attestation"></div>
                 </div>
                 <div class="detail_username w213 jvf_over"><a href="{:U('User/space/id/'.$data['promulgator']['id'])}">{$data.promulgator.business.name}</a></div>
                 <div class="clearfix detail_tell">
-                	<div class="message jvf_fl"><a class="jvf_allimg jvf_message" href="{:U('Member/sendpm/id/'.$data['promulgator']['id'])}">{%guestbook}</a></div>
+                    <div class="message jvf_fl"><a class="jvf_allimg jvf_message" href="{:U('Member/sendpm/id/'.$data['promulgator']['id'])}">{%guestbook}</a></div>
                     <div class="chat jvf_fr"><a class="jvf_allimg jvf_callme" href="javascript:;" uid="{:$data['promulgator']['id']}">{%real_time_chat}</a></div>
                 </div>
                 <div class="suspbtn">
-								<a class="btns-ex btn-ex-t1 follow" href="{:U('User/goods/id/'.$data['promulgator']['id'])}"><span>商家商品列表</span></a>
-							</div>
-				<notempty name="data['promulgator']['business']['characteristic']">
+                                <a class="btns-ex btn-ex-t1 follow" href="{:U('User/goods/id/'.$data['promulgator']['id'])}"><span>商家商品列表</span></a>
+                            </div>
+                <notempty name="data['promulgator']['business']['characteristic']">
                 <div class="sh-mod shop-serv">
-						<div class="hd">
-							<span class="n">商家特色</span>
-						</div>
-						<div class="bd">
-							<ul class="cls">
-							<?php
-								$characteristic = explode(',',str_replace('，',',',$data['promulgator']['business']['characteristic']));
-							?>
-							<volist name="characteristic" id="vo">
-							    <li><span>{$vo}</span></li>
-							</volist>
-							</ul>
+                        <div class="hd">
+                            <span class="n">商家特色</span>
+                        </div>
+                        <div class="bd">
+                            <ul class="cls">
+                            <?php
+                                $characteristic = explode(',',str_replace('，',',',$data['promulgator']['business']['characteristic']));
+                            ?>
+                            <volist name="characteristic" id="vo">
+                                <li><span>{$vo}</span></li>
+                            </volist>
+                            </ul>
                             <span class="x1"></span>
-						</div>
-				</div>
-				</notempty>
+                        </div>
+                </div>
+                </notempty>
                 
                 <ul class="response clearfix">
                       <li class="response_rate clearfix"> <span class="icon jvf_allimg"></span>
@@ -257,12 +246,24 @@ function load_map_wrapper(){
                       <div class="jvf_fl">
                         <h5>{$data.promulgator.regtime|toDateRefer}</h5>
                         <h6>{%reg_time}</h6>
-                      	</div>
+                        </div>
                       </li>
-            	</ul>
+                </ul>
             </div>
             <div class="jvf_allimg shop_bot mg0a"></div>
             <!--店家信息-->
+
+       		<!--地图-->
+       		<div class="jvf_frame w235 mg0a" id="smallMap">
+            	<div style="width:225px; margin:5px;height: 225px;" id="map">
+                </div>
+                <div class="amplification mg0a">
+                	<a href="javascript:;" id="bigMap" rel="{$data.id}"><span class="jvf_allimg"></span>{%view_map}</a>
+                </div>
+            </div>
+            <div class="jvf_allimg shop_bot mg0a"></div>
+            <!--地图-->
+            
             <!--同类商品-->
             <div class="jvf_frame w225 mg0a">
             	<div class="rig_title">{%goods_index_similar_list}</div>

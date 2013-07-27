@@ -2,7 +2,7 @@
 var scrolltotop={
 
 	setting: {startline:1, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
-	controlHTML: '<img src="'+IMG_PATH+'up.gif" style="width:50px; height:50px;" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
+	controlHTML: '<img src="'+IMG_PATH+'top.png" style="width:50px; height:50px;" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
 	controlattrs: {offsetx:10, offsety:150}, //offset of control relative to right/ bottom of window corner
 	anchorkeyword: '#top', //Enter href value of HTML anchors on the page that should also act as "Scroll Up" links
 

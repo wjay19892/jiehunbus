@@ -89,7 +89,7 @@ $(function(){
                    <div class="middle_edit">
                      <ul class="edit_verification_list">
                      <notempty name="login_portdata">
- 					<volist name='login_portdata' id='vo'>
+ 					           <volist name='login_portdata' id='vo'>
                      <li class="edit_verification_list_item clearfix">
                          <h3><span class="icon <eq name="vo.verified" value="1">yes<else />no</eq>"></span>{%member_verification_vo_before}{$vo.name}{%member_verification_vo_after}</h3>
                          <p class="description">{$vo.description}</p>

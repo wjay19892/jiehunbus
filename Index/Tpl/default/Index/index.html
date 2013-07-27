@@ -127,52 +127,7 @@
         </div>
         
 
-        <div class="mainbody_right jvf_fr">
-            <div class="jvf_title">
-                <h2>{%announcement}<span><a target="_blank" href="{:U('Article/lists/cid/2')}">{%more_text}</a></span></h2>
-                <div class="mainbody_right_list">
-                    <ul class="clearfix">
-                    <volist name="announcement" id="vo">
-                        <li><a target="_blank" href="{:U('Article/detail/id/'.$vo['id'])}" >{$vo.title}</a> <span>{$vo.addtime|toDate}</span></li>
-                    </volist>
-                    </ul>
-                </div class="mainbody_right_list2">
-                
-                <h2>{%recently_talk_about}<span><a target="_blank" href="{:U('Circle/index')}">{%more_text}</a></span></h2>
-                <div class="mainbody_right_listj">
-                    <ul>
-                    <volist name="recentlyTalk_about" id="vo">
-                        <li>
-                        <span class="user_name"><a href="{:U('User/space/id/'.$vo['uid'])}">{$vo.name}</a></span>
-                        <notempty name="vo.gid">
-                        <span class="jvf_ico at"></span>
-                        <a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.title}：</a>
-                        <else />
-	                        <notempty name="vo.member">
-	                        <span class="jvf_ico at"></span>
-	                        <volist name="vo.member" id="v">
-	                        <a href="{:U('User/space/id/'.$v['uid'])}">{$v.name}：</a>
-	                        </volist>
-	                        <else />
-	                        <span class="jvf_ico bo"></span>
-	                        <volist name="vo.label" id="v">
-	                        <a href="{:U('Circle/index/lid/'.$v['lid'])}">{$v.name}：</a>
-	                        </volist>
-	                        </notempty>
-                        </notempty>
-                        {$vo.content}
-                        <notempty name="vo.source">
-                        <span class="jvf_ico at"></span>
-                        <a href="{:U('User/space/id/'.$vo['source']['uid'])}">{$vo.source.name}</a>
-                        {$vo.source.content}
-                        </notempty>
-                        </li>
-                    </volist>                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="jvf_cl"></div>
+        
         <!--显示欢迎词<div class="jvf_advertising">{%jvf_advertising}</div>-->
         
         <div class="mainbody_con clearfix">
@@ -209,7 +164,7 @@
                                 <a class="fujin_a jvf_over jvf_fl" href="{:U('Goods/index/id/'.$vo['id'])}">{$vo.title}</a>
                                 <div class="jvf_fr jvf_jitj">
                                    
-                                    <div class="jvf_tuijianb pr fr"><em class="fujin_ico"></em>{$vo.comment}</div>
+                                    
                                      <div class="jvf_julia pr fr"><em class="fujin_ico"></em>{$vo.distance|formatDistance}</div>
                                 </div>
                             </div>
@@ -224,31 +179,59 @@
             </div>
             <div class=" jvf_fl mainbody_conv"></div>
             <div class="mainbody_conf jvf_con_cm jvf_fr">
-                <h2 class="clearfix"><span class="jvf_fl">{%new_comment}</span><span class="jvf_fr mor"><a href="{:U('Comment/index')}" target="_blank">{%more_text}</a></span></h2>
+               
                 <div class="pingjj">
-                <div id="newComment">
-                <volist name="newcomment" id="vo">
-                <div class="pingjia_con clearfix">
-                    <div class="pingjia_img jvf_fl boder_img">
-                        <img width="35" height="35" src="{$vo.reviewer.header.thumbnail}">
-                    </div>
-                    <div class="jvf_fl pingjia_rig">
-                        <div class="pingjia_tit jvf_over w382">
-                        	<span class="user_name"><a href="{:U('User/space/id/'.$vo['reviewer']['id'])}">{$vo.reviewer.name}</a></span>
-                        	<span class="jvf_ico at"></span><a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.title}</a>
-                            <div class="jvf_star mb clearfix">
-                                        <span class="jvf_fl">{%evaluate}：</span>
-                                        <div class="jvf_fl rating">
-                                            <div class="filled star_{$vo.evaluate.total.star}"></div>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jvf_cl"></div>
-                    <div class="pingjia_hf clearfix"><span class="jvf_ico yh1 jvf_fl"></span><span class="jvf_fl jvf_over mw420">{$vo.content}</span><span class="jvf_ico yh2 jvf_fl"></span></div>
+               
+                    <div class="mainbody_right jvf_fr">
+            <div class="jvf_title">
+                <h2>{%announcement}<span><a target="_blank" href="{:U('Article/lists/cid/2')}">{%more_text}</a></span></h2>
+                <div class="mainbody_right_list">
+                    <ul class="clearfix">
+                    <volist name="announcement" id="vo">
+                        <li>
+                            <a target="_blank" href="{:U('Article/detail/id/'.$vo['id'])}" >{$vo.title}</a> 
+                            <span>{$vo.addtime|toDate}</span>
+                        </li>
+                    </volist>
+                    </ul>
+                </div class="mainbody_right_list2">
+                
+                <h2 style="margin-top:20px;">{%recently_talk_about}<span><a target="_blank" href="{:U('Circle/index')}">{%more_text}</a></span></h2>
+                <div class="mainbody_right_listj">
+                    <ul>
+                    <volist name="recentlyTalk_about" id="vo">
+                        <li>
+                        <span class="user_name"><a href="{:U('User/space/id/'.$vo['uid'])}">{$vo.name}</a></span>
+                        <notempty name="vo.gid">
+                        <span class="jvf_ico at"></span>
+                        <a href="{:U('Goods/index/id/'.$vo['gid'])}">{$vo.title}：</a>
+                        <else />
+                            <notempty name="vo.member">
+                            <span class="jvf_ico at"></span>
+                            <volist name="vo.member" id="v">
+                            <a href="{:U('User/space/id/'.$v['uid'])}">{$v.name}：</a>
+                            </volist>
+                            <else />
+                            <span class="jvf_ico bo"></span>
+                            <volist name="vo.label" id="v">
+                            <a href="{:U('Circle/index/lid/'.$v['lid'])}">{$v.name}：</a>
+                            </volist>
+                            </notempty>
+                        </notempty>
+                        {$vo.content}
+                        <notempty name="vo.source">
+                        <span class="jvf_ico at"></span>
+                        <a href="{:U('User/space/id/'.$vo['source']['uid'])}">{$vo.source.name}</a>
+                        {$vo.source.content}
+                        </notempty>
+                        </li>
+                    </volist>                        
+                    </ul>
                 </div>
-                </volist>
-                </div>
+            </div>
+        </div>
+        <div class="jvf_cl"></div>
+
                 </div>
             </div>
         </div>

@@ -3002,6 +3002,9 @@ class MemberAction extends CommonAction
 		if(empty($data['gid']) && empty($data['content']) && empty($data['imgs'])){
 			$this->error(L('release_error'));
 		}
+		if(empty($data['content'])){
+			$this->error(L('release_error'));
+		}
 		$data['uid'] = $this->memberinfo['id'];
 		$talk_about = D('Talk_about');
 		$info = $talk_about->insert($data);

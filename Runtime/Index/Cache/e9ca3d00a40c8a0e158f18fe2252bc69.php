@@ -236,38 +236,7 @@
         </div>
         
 
-        <div class="mainbody_right jvf_fr">
-            <div class="jvf_title">
-                <h2><?php echo L("announcement");?><span><a target="_blank" href="<?php echo U('Article/lists/cid/2');?>"><?php echo L("more_text");?></a></span></h2>
-                <div class="mainbody_right_list">
-                    <ul class="clearfix">
-                    <?php if(is_array($announcement)): $i = 0; $__LIST__ = $announcement;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li><a target="_blank" href="<?php echo U('Article/detail/id/'.$vo['id']);?>" ><?php echo ($vo["title"]); ?></a> <span><?php echo (toDate($vo["addtime"])); ?></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </div class="mainbody_right_list2">
-                
-                <h2><?php echo L("recently_talk_about");?><span><a target="_blank" href="<?php echo U('Circle/index');?>"><?php echo L("more_text");?></a></span></h2>
-                <div class="mainbody_right_listj">
-                    <ul>
-                    <?php if(is_array($recentlyTalk_about)): $i = 0; $__LIST__ = $recentlyTalk_about;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
-                        <span class="user_name"><a href="<?php echo U('User/space/id/'.$vo['uid']);?>"><?php echo ($vo["name"]); ?></a></span>
-                        <?php if(!empty($vo["gid"])): ?><span class="jvf_ico at"></span>
-                        <a href="<?php echo U('Goods/index/id/'.$vo['gid']);?>"><?php echo ($vo["title"]); ?>：</a>
-                        <?php else: ?>
-	                        <?php if(!empty($vo["member"])): ?><span class="jvf_ico at"></span>
-	                        <?php if(is_array($vo["member"])): $i = 0; $__LIST__ = $vo["member"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): ++$i;$mod = ($i % 2 )?><a href="<?php echo U('User/space/id/'.$v['uid']);?>"><?php echo ($v["name"]); ?>：</a><?php endforeach; endif; else: echo "" ;endif; ?>
-	                        <?php else: ?>
-	                        <span class="jvf_ico bo"></span>
-	                        <?php if(is_array($vo["label"])): $i = 0; $__LIST__ = $vo["label"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): ++$i;$mod = ($i % 2 )?><a href="<?php echo U('Circle/index/lid/'.$v['lid']);?>"><?php echo ($v["name"]); ?>：</a><?php endforeach; endif; else: echo "" ;endif; ?><?php endif; ?><?php endif; ?>
-                        <?php echo ($vo["content"]); ?>
-                        <?php if(!empty($vo["source"])): ?><span class="jvf_ico at"></span>
-                        <a href="<?php echo U('User/space/id/'.$vo['source']['uid']);?>"><?php echo ($vo["source"]["name"]); ?></a>
-                        <?php echo ($vo["source"]["content"]); ?><?php endif; ?>
-                        </li><?php endforeach; endif; else: echo "" ;endif; ?>                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="jvf_cl"></div>
+        
         <!--显示欢迎词<div class="jvf_advertising"><?php echo L("jvf_advertising");?></div>-->
         
         <div class="mainbody_con clearfix">
@@ -303,7 +272,7 @@
                                 <a class="fujin_a jvf_over jvf_fl" href="<?php echo U('Goods/index/id/'.$vo['id']);?>"><?php echo ($vo["title"]); ?></a>
                                 <div class="jvf_fr jvf_jitj">
                                    
-                                    <div class="jvf_tuijianb pr fr"><em class="fujin_ico"></em><?php echo ($vo["comment"]); ?></div>
+                                    
                                      <div class="jvf_julia pr fr"><em class="fujin_ico"></em><?php echo (formatDistance($vo["distance"])); ?></div>
                                 </div>
                             </div>
@@ -317,29 +286,45 @@
             </div>
             <div class=" jvf_fl mainbody_conv"></div>
             <div class="mainbody_conf jvf_con_cm jvf_fr">
-                <h2 class="clearfix"><span class="jvf_fl"><?php echo L("new_comment");?></span><span class="jvf_fr mor"><a href="<?php echo U('Comment/index');?>" target="_blank"><?php echo L("more_text");?></a></span></h2>
+               
                 <div class="pingjj">
-                <div id="newComment">
-                <?php if(is_array($newcomment)): $i = 0; $__LIST__ = $newcomment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><div class="pingjia_con clearfix">
-                    <div class="pingjia_img jvf_fl boder_img">
-                        <img width="35" height="35" src="<?php echo ($vo["reviewer"]["header"]["thumbnail"]); ?>">
-                    </div>
-                    <div class="jvf_fl pingjia_rig">
-                        <div class="pingjia_tit jvf_over w382">
-                        	<span class="user_name"><a href="<?php echo U('User/space/id/'.$vo['reviewer']['id']);?>"><?php echo ($vo["reviewer"]["name"]); ?></a></span>
-                        	<span class="jvf_ico at"></span><a href="<?php echo U('Goods/index/id/'.$vo['gid']);?>"><?php echo ($vo["title"]); ?></a>
-                            <div class="jvf_star mb clearfix">
-                                        <span class="jvf_fl"><?php echo L("evaluate");?>：</span>
-                                        <div class="jvf_fl rating">
-                                            <div class="filled star_<?php echo ($vo["evaluate"]["total"]["star"]); ?>"></div>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jvf_cl"></div>
-                    <div class="pingjia_hf clearfix"><span class="jvf_ico yh1 jvf_fl"></span><span class="jvf_fl jvf_over mw420"><?php echo ($vo["content"]); ?></span><span class="jvf_ico yh2 jvf_fl"></span></div>
-                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+               
+                    <div class="mainbody_right jvf_fr">
+            <div class="jvf_title">
+                <h2><?php echo L("announcement");?><span><a target="_blank" href="<?php echo U('Article/lists/cid/2');?>"><?php echo L("more_text");?></a></span></h2>
+                <div class="mainbody_right_list">
+                    <ul class="clearfix">
+                    <?php if(is_array($announcement)): $i = 0; $__LIST__ = $announcement;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
+                            <a target="_blank" href="<?php echo U('Article/detail/id/'.$vo['id']);?>" ><?php echo ($vo["title"]); ?></a> 
+                            <span><?php echo (toDate($vo["addtime"])); ?></span>
+                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </ul>
+                </div class="mainbody_right_list2">
+                
+                <h2 style="margin-top:20px;"><?php echo L("recently_talk_about");?><span><a target="_blank" href="<?php echo U('Circle/index');?>"><?php echo L("more_text");?></a></span></h2>
+                <div class="mainbody_right_listj">
+                    <ul>
+                    <?php if(is_array($recentlyTalk_about)): $i = 0; $__LIST__ = $recentlyTalk_about;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
+                        <span class="user_name"><a href="<?php echo U('User/space/id/'.$vo['uid']);?>"><?php echo ($vo["name"]); ?></a></span>
+                        <?php if(!empty($vo["gid"])): ?><span class="jvf_ico at"></span>
+                        <a href="<?php echo U('Goods/index/id/'.$vo['gid']);?>"><?php echo ($vo["title"]); ?>：</a>
+                        <?php else: ?>
+                            <?php if(!empty($vo["member"])): ?><span class="jvf_ico at"></span>
+                            <?php if(is_array($vo["member"])): $i = 0; $__LIST__ = $vo["member"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): ++$i;$mod = ($i % 2 )?><a href="<?php echo U('User/space/id/'.$v['uid']);?>"><?php echo ($v["name"]); ?>：</a><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php else: ?>
+                            <span class="jvf_ico bo"></span>
+                            <?php if(is_array($vo["label"])): $i = 0; $__LIST__ = $vo["label"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): ++$i;$mod = ($i % 2 )?><a href="<?php echo U('Circle/index/lid/'.$v['lid']);?>"><?php echo ($v["name"]); ?>：</a><?php endforeach; endif; else: echo "" ;endif; ?><?php endif; ?><?php endif; ?>
+                        <?php echo ($vo["content"]); ?>
+                        <?php if(!empty($vo["source"])): ?><span class="jvf_ico at"></span>
+                        <a href="<?php echo U('User/space/id/'.$vo['source']['uid']);?>"><?php echo ($vo["source"]["name"]); ?></a>
+                        <?php echo ($vo["source"]["content"]); ?><?php endif; ?>
+                        </li><?php endforeach; endif; else: echo "" ;endif; ?>                        
+                    </ul>
                 </div>
+            </div>
+        </div>
+        <div class="jvf_cl"></div>
+
                 </div>
             </div>
         </div>

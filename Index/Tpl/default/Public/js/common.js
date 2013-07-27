@@ -3883,7 +3883,7 @@ function apply_seller(){
 		}
 	});
 }
-
+//发布商品
 function goodsRelease(){
 	$('input.jvf_date').datepicker();
 	$('input[name="payment"]').click(function(){

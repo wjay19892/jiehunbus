@@ -13,11 +13,11 @@ $(function(){
       			<div class="extension_top">
                 	<ul class="clearfix">
                         <li class="selected"><a href="javascript:;">{%member_goods_mbtit}</a></li>
-                        <li><a href="{:U('Member/sellOrderList')}" get="get">{%sell_order}</a></li>
+                        <!--<li><a href="{:U('Member/sellOrderList')}" get="get">{%sell_order}</a></li>
                         <li><a href="{:U('Member/sellcoupons')}" get="get">{%site_couponname_list}</a></li>
-                        <li><a href="{:U('Member/verifycoupon')}" get="get">{%consumer_registration}</a></li>
+                        <li><a href="{:U('Member/verifycoupon')}" get="get">{%consumer_registration}</a></li>-->
                         <li><a href="{:U('Member/businessInvitation')}" get="get">{%recommend_management}</a></li>
-                        <li><a href="{:U('Member/incomeEvaluation')}" get="get">{%member_reviews_get}</a></li>
+                        <!--<li><a href="{:U('Member/incomeEvaluation')}" get="get">{%member_reviews_get}</a></li>-->
                     </ul>
                 </div>
                 <div class="jvf_goods_box">
@@ -27,7 +27,7 @@ $(function(){
 					            <tr>
 					              <th class="t_c_good">{%goods_title}</th>
 					              <th class="t_c_pw">{%price_text}</th>
-					              <th class="t_c_data">{%member_goods_t_c_data}</th>
+					              <!--<th class="t_c_data">{%member_goods_t_c_data}</th>-->
 					              <th class="t_c_operate">{%operational_text}</th>
 					            </tr>
 					          </thead>
@@ -44,13 +44,13 @@ $(function(){
 					                  </if>
                   					</span>
 					              </td>
-					              <td><span>{%unit_price}：<b class="weic">&yen;{$vo.price}</b><br>
+					              <td align="center"><span>{%unit_price}：<b class="weic">&yen;{$vo.price}</b><!--<br>
 					                  {%required_pay}<eq name="vo.payment" value="1">{%payment_deposit}：<b style="font-weight:bold; color:#FF0000;">&yen;{$vo.price}</b><else />{%payment_price}</eq></span></td>
-					              <td class="txc"><span>{$vo.crrnum}</span></td>
+					              <!--<td class="txc"><span>{$vo.crrnum}</span>--></td>
 					              <td class="txc">
 					              		<if condition="$vo.audit eq 0">
 						                <a class="reject gooddetail" href="{:U('Member/gooddetail/id/'.$vo['id'])}">[{%detail_text}]</a>
-						                <a class="reject" href="{:U('Member/downcoupons/id/'.$vo['id'])}">[{%member_goods_down}]</a>
+						               <!-- <a class="reject" href="{:U('Member/downcoupons/id/'.$vo['id'])}">[{%member_goods_down}]</a>-->
 						               <else />
 						                <a class="reject" href="{:U('Goods/view/id/'.$vo['id'])}">[{%goods_release_view}]</a>
 						               	<a class="reject" href="{:U('Goods/release/id/'.$vo['id'])}" target="_blank">[{%edit}]</a>

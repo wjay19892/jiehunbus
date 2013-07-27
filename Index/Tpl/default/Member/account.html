@@ -13,10 +13,10 @@ $(function(){
       			<div class="extension_top">
                 	<ul class="clearfix">
                         <li class="selected"><a href="javascript:;">{%my_account}</a></li>
-                        <li><a href="{:U('Member/mycoupons')}" get="get">{%my_coupons}</a></li>
-                        <li><a href="{:U('Member/cashlogs')}" get="get">{%account_log}</a></li>
+                        <!--<li><a href="{:U('Member/mycoupons')}" get="get">{%my_coupons}</a></li>-->
+                        <!--<li><a href="{:U('Member/cashlogs')}" get="get">{%account_log}</a></li>
                         <li><a href="{:U('Member/rechargeList')}" get="get">{%recharge_log}</a></li>
-                        <li><a href="{:U('Member/withdraw_log')}" get="get">{%withdraw_log}</a></li>
+                        <li><a href="{:U('Member/withdraw_log')}" get="get">{%withdraw_log}</a></li>-->
                         <li><a href="{:U('Member/valueLog')}" get="get">{%integral_log}</a></li>
                     </ul>
                 </div>
@@ -26,7 +26,7 @@ $(function(){
                 		<div class="jvf_account1">	
 		                	<div class="jvf_allimg acclin"></div>
 		                	<ul class="clearfix">
-		                    	<li>
+		                    	<!--<li>
 		                        	<div class="jvf_zhxx"></div>
 		                        	<div class="zhxx_wz">{%account_balance}:{$memberdata.cash}</div>
 		                            <div class="jvf_center">
@@ -36,7 +36,7 @@ $(function(){
 		                                <span>|</span>
 		                                <span><a href="{:U('Member/withdraw')}" id="recharge">{%withdraw}</a></span>                
 		                    		</div>
-		                        </li>
+		                        </li>-->
 		                        <li>
 		                        	<div class="jvf_zhxx zhjf_bg"></div>
 		                        	<div class="zhxx_wz">{&sysconfig.site_credits_name}：{$memberdata.value}</div>
