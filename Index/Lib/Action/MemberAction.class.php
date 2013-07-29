@@ -2049,24 +2049,28 @@ class MemberAction extends CommonAction
     	}
     	
  		//使用余额支付
- 		if($iscash){
+ 		//if($iscash){
+
  			$incharge = $this->memberinfo['cash'];
- 			if($cope <= $incharge){
- 				$incharge = $cope;
- 			}
+ 			//修改<=到>
+ 			//if($cope <= $incharge){
+ 			//	$incharge = $cope;
+ 			//}
  			$cope = $cope - $incharge;
- 			if($cope > 0){
+ 			//if($cope > 0){
  				//部分支付
- 				$money_status = 1;
- 			}else{
+ 			//	$money_status = 1;
+ 			//}else{
  				//全部支付
  				$money_status = 2;
  				$status = 1;
  				$paytype = L('order_cash_paytype');
- 			}
- 		}else{
- 			$incharge = 0;
- 		}
+ 			//}
+ 		//}else{
+ 		//	$incharge = 0;
+ 		//}
+
+
 		$payment = D('Payment');
  		//支付方式
  		if(empty($paytype)){

@@ -11,17 +11,17 @@ class PaymentAction extends CommonAction
 			'status'=>array('eq',1),
 		);
 		$paymentdata = $payment->getOne($paymentmap);
-		if(empty($paymentdata)){
-			return false;
-		}else{
+		//if(empty($paymentdata)){
+		//	return false;
+		//}else{
 			$import_status = import("@.ORG.{$paymentdata['mark']}");
-			if($import_status){
-				$pay = new $paymentdata['mark']($paymentdata);
-				return $pay;
-			}else{
+			//if($import_status){
+			//	$pay = new $paymentdata['mark']($paymentdata);
+				//return $pay;
+			//}else{
 				return false;
-			}
-		}
+			//}
+		//}
 	}
 
 	protected function _returnVerify($pay){

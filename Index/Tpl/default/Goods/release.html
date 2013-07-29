@@ -78,7 +78,7 @@ function load_map_wrapper(){
           </div>
           <input type="text" value="{$goodsdata.original}" style="width: 50px;" name="original" id="original">
       </li>
-      <li>
+      <!--<li>
           <div class="label_with_description">
               <label for="payment">
                   {%payment_text}:
@@ -87,15 +87,15 @@ function load_map_wrapper(){
           
           <label class="goods_danx"><input type="radio" value="0" name="payment" <eq name="goodsdata.payment" value="0">checked="checked"</eq>>{%now_price}</label>
           <label class="goods_danx"><input type="radio" value="1" name="payment" <eq name="goodsdata.payment" value="1">checked="checked"</eq>>{%payment_deposit}</label>
-      </li>
+      </li>-->
       <li>
           <div class="label_with_description">
               <label for="price" id="price" <eq name="goodsdata.payment" value="1">style="display: none;"</eq>>
                  {%now_price}:
               </label>
-			  <label for="deposit" id="deposit" <eq name="goodsdata.payment" value="0">style="display: none;"</eq>>
+			  <!--<label for="deposit" id="deposit" <eq name="goodsdata.payment" value="0">style="display: none;"</eq>>
                   {%payment_deposit}:
-              </label>
+              </label>-->
           </div>
           <input type="text" value="{$goodsdata.price}" style="width: 50px;" name="price">
       </li>
@@ -107,23 +107,23 @@ function load_map_wrapper(){
           </div>
           <input type="text" value="{$goodsdata.num}" style="width: 50px;" name="num" id="num">
       </li>
-      <li>
+      <!--<li>
           <div class="label_with_description">
               <label for="onenum">
                   {%member_gooddetail_sales_quota}:
               </label>
           </div>
           <input type="text" value="{$goodsdata.onenum}" style="width: 50px;" name="onenum" id="onenum"><span>{%onenum_tip}</span>
-      </li>
-      <li>
+      </li>-->
+      <!--<li>
           <div class="label_with_description">
               <label for="onenum">
                   {%goods_release_pre}:
               </label>
           </div>
           <input type="text" value="{$goodsdata.pre}" style="width: 50px;" name="pre" id="pre">
-      </li>
-      <li>
+      </li>-->
+      <!--<li>
           <div class="label_with_description">
               <label for="starttime">
                   {%goods_release_validity}:
@@ -132,11 +132,11 @@ function load_map_wrapper(){
           <input type="text" readonly="readonly" style="width: 129px;" class="jvf_date" <empty name="goodsdata.starttime">value="{:toDateYmd(time())}"<else />value="{$goodsdata.starttime|toDateYmd}"</empty> name="starttime" id="starttime">
           <span>～</span>
           <input type="text" readonly="readonly" style="width: 129px;" class="jvf_date" <empty name="goodsdata.endtime">value="{:toDateYmd(time()+86400)}"<else />value="{$goodsdata.endtime|toDateYmd}"</empty> name="endtime" id="endtime">
-      </li>
+      </li>-->
       <li>
           <div class="label_with_description">
               <label for="onenum">
-                  {%goods_release_phone}:
+                  店长{%goods_release_phone}:
               </label>
           </div>
           <input type="text" value="{$goodsdata.tel}" style="width: 129px;" name="tel" id="tel">

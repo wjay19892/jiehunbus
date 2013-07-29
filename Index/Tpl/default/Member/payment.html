@@ -60,11 +60,11 @@ $(function(){
       	<input id="oid" name="oid" type="hidden" value="{$orderdata.id}">
       </notempty>
             <div class="bargain_bor mt10 mb">
-            <img alt="" src="../Public/images/bg_30.png"> 
+
         <div class="cart_bor">
           <ul class="account_info">
             <li class="mobile bold">{%mail_text}：<eq name="memberdata.mailstatus" value="1">{$memberdata.mail}<else />{%no_verification}</eq></li>
-            <li class="balance"><strong class="font14px bold">{%account_balance}：</strong><span class="arial font18px">&yen;<b id="balanceTf">{$memberdata.cash|toPrice}</b></span></li>
+            <!--<li class="balance"><strong class="font14px bold">{%account_balance}：</strong><span class="arial font18px">&yen;<b id="balanceTf">{$memberdata.cash|toPrice}</b></span></li>-->
             <li class="mobile bold"><label for="phone">{%phone_text}：</label><input type="text" class="jvf_inputt" value="<empty name="orderdata">{$memberdata.phone}<else />{$orderdata.phone}</empty>" placeholder="{%phone_text}" name="phone" id="phone">
             	<if condition="C('sysconfig.verify_phone_format')">
 	            <span>{%phone_example_international}</span>
@@ -72,12 +72,12 @@ $(function(){
 				<span>{%phone_example_domestic}</span>
 				</if>
 			</li>
-            <li id="needPriceWrap" class="balance hidden" style="display: list-item;"><gt name="orderdata.incharge" value='0'><strong class="font14px bold">{%status_pay}：</strong><span class="arial font18px fontff5500">&yen;<b id="incharge">{$orderdata.incharge}</b></span>，</gt><strong class="font14px bold">{%member_payment_needpricewrap}：</strong><span class="arial font18px fontff5500">&yen;<b id="needPrice">0</b></span></li>
+            <!--<li id="needPriceWrap" class="balance hidden" style="display: list-item;"><gt name="orderdata.incharge" value='0'><strong class="font14px bold">{%status_pay}：</strong><span class="arial font18px fontff5500">&yen;<b id="incharge">{$orderdata.incharge}</b></span>，</gt><strong class="font14px bold">{%member_payment_needpricewrap}：</strong><span class="arial font18px fontff5500">&yen;<b id="needPrice">0</b></span></li>
             <li class="mobile">{%member_payment_verification}</li>
-            <li class="balance"><input type="checkbox" id="iscash" value="1" name="iscash"><label for="iscash">{%member_payment_iscash}</label></li>
+            <li class="balance"><input type="checkbox" id="iscash" value="1" name="iscash"><label for="iscash">{%member_payment_iscash}</label></li>-->
             <li class="mobile bold" style="height: auto;line-height: auto;"><label class="jvf_fl" for="remark">{%remark_text}：</label><textarea cols="30" rows="4" placeholder="{%remark_text}" class="jvf_inputt" name="remark" id="remark">{$orderdata.remark}</textarea></li>
           </ul>
-			<include file="Member:paylist" />
+
         </div>
       </div>
       <div class="goods_buy_butt">

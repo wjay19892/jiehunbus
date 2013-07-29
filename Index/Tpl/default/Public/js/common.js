@@ -2911,14 +2911,15 @@ function memberPayment(){
         var incharge = Number($('#incharge').html());
         var balanceTf = parseFloat($('#balanceTf').text());
         var result = totalPrices-incharge;
-        if($('#iscash').attr('checked')){
+
+        //if($('#iscash').attr('checked')){
             var cope = totalPrices-incharge;
-            if(cope > balanceTf){
+            //if(cope > balanceTf){
                 result = j(cope,'-',balanceTf);
-            }else{
+           // }else{
                 result = 0;
-            }
-        }
+           // }
+       // }
         $('#needPrice').text(toPrice(result));
     }
     needPrice();

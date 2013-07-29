@@ -400,7 +400,7 @@ a:focus { outline: none; }
 
 /*top_menu*/
 .header_con{ margin:0 auto; width:960px;}
-.header_logo{width: 190px;}
+.header_logo{width: 280px;}
 .header_logo h1 a{
     height:50px;
     overflow: hidden;
@@ -491,6 +491,14 @@ a:focus { outline: none; }
     position: relative;
     z-index: 1;
 }
+#car_top2{
+    background: none repeat scroll 0 0 #F5F5F5;
+    height: 68px;
+    width: 100%;
+    padding: 105px 0 7px;
+    position: relative;
+    z-index: 1;
+}
 #main_box{
     margin: 0 auto;
     width: 890px;
@@ -573,8 +581,26 @@ a:focus { outline: none; }
     text-indent:20px;
     outline:none;
 }
+.search_sp2{
+    background: url("../images/cx2.png") no-repeat scroll center center transparent;
+    float: left;
+    height: 47px;
+    left: 0px;
+    margin-left: 5px;
+    position: absolute;
+    width: 765px;
+    z-index: 999;
+    border:none;
+    font-size: 14px;
+    color: #AAAAAA;
+    text-indent:20px;
+    outline:none;
+}
 .search_sp:hover{
     background: url("../images/cxhv.png") no-repeat scroll center center transparent;
+}
+.search_sp2:hover{
+    background: url("../images/cxhv2.png") no-repeat scroll center center transparent;
 }
 .searchbg2{
     float: right;
@@ -1157,7 +1183,7 @@ position: relative;
     width: 148px;text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);}
 .price_purchase a:hover{background-position:0 -419px; text-decoration:none;}
 
-.detail_left_con_r{width:344px; border:#E4E4E4 solid 1px;border-radius: 3px 3px 3px 3px;}
+.detail_left_con_r{width:344px; border:#E4E4E4 solid 2px;}
 .exhibition{ height: 223px;margin: 5px auto;width: 334px;text-align: center;cursor: pointer;}
 .exhibition img{max-width: 334px;max-height: 223px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>334?"334px":"");_height:expression((document.documentElement.clientHeight||document.body.clientHeight)>223?"223px":"");_overflow:hidden;}
 .exhibition_list{border: 1px solid #E4E4E4;margin:0 5px 5px;}
@@ -1858,7 +1884,7 @@ ul.panels li.selected {
 .jvf_visit{}
 .jvf_w100_tit{
     border-bottom: 1px solid #D0D0D0;
-    color: #1D95CB;
+    color: #ff7800;
     font-size: 18px;
     font-weight: bold;
     height: 20px;
@@ -1989,7 +2015,7 @@ ul.panels li.selected {
 .recent_goods{ margin-top:10px;}
 .recent_goods dt {
     border-bottom: 1px solid #ECECEC;
-    color: #1D95CB;
+    color: #ff7800;
     font-size: 18px;
     height: 25px;
 	padding:0px 20px 0;
@@ -2041,7 +2067,7 @@ ul.panels li.selected {
     margin: 0 auto;
     width: 970px;
 }
-.bargain_bor{border:1px solid #E4E4E4;background:#FFF;box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);border-radius: 3px 3px 3px 3px;}
+.bargain_bor{background:#FFF;}
 .bargain_borbox{background:#FFF; margin:10px;}
 
 .cart_bor{color: #666666; padding: 10px 20px 0;}

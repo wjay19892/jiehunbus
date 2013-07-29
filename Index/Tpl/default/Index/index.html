@@ -184,13 +184,14 @@
                
                     <div class="mainbody_right jvf_fr">
             <div class="jvf_title">
-                <h2>{%announcement}<span><a target="_blank" href="{:U('Article/lists/cid/2')}">{%more_text}</a></span></h2>
+                <h2>{%announcement}<span><a target="_blank" href="{:U('Article/lists/cid/2')}">{%more_text}</a></span>
+                </h2>
                 <div class="mainbody_right_list">
                     <ul class="clearfix">
                     <volist name="announcement" id="vo">
                         <li>
-                            <a target="_blank" href="{:U('Article/detail/id/'.$vo['id'])}" >{$vo.title}</a> 
-                            <span>{$vo.addtime|toDate}</span>
+                            <a style="float:left;width:303px;overflow:hidden;" target="_blank" href="{:U('Article/detail/id/'.$vo['id'])}" >{$vo.title}</a> 
+                            <span style="float:right;padding-right:10px;">{$vo.addtime|toDate}</span>
                         </li>
                     </volist>
                     </ul>

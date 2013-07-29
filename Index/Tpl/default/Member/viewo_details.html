@@ -47,11 +47,11 @@ $(function(){
           </td>
           <td align="tl">
 
-                  {%goods_total}：<strong class="weic">&yen;<?php echo $vo['good']['price']*$vo['num']; ?></strong><br />
-                  <eq name="vo.status" value="1">{%status_pay}<else />{%required_pay}</eq><eq name="vo.good.payment" value="1">{%payment_deposit}<else />{%payment_price}</eq>：<strong class="weic"> &yen;{$vo.total}</strong>
+                  {%goods_total}：<strong class="weic">&yen;<?php echo $vo['good']['price']*$vo['num']; ?></strong>
+                 
 
           </td>
-          <td>
+          <td align="center">
             <dl class="people">
               <dt></dt>
               <dd class="p_name">{%seller}：<a href="{:U('User/space/id/'.$vo['good']['promulgator']['id'])}" target="_blank">{$vo.good.promulgator.name}</a> </dd>
@@ -63,7 +63,7 @@ $(function(){
               <php>if(C('sysconfig.site_refund_isallow') == 1){</php>
                 <eq name="vo.refund_state" value="0">
                 <empty name="vo.comment_id"><a class="commentadd" href="{:U('Member/commentorder/id/'.$vo['id'])}">{%evaluate}</a></empty>
-                <a class="drawback" href="{:U('Member/drawback/id/'.$vo['id'])}">{%member_viewo_apply}</a>
+              <!--  <a class="drawback" href="{:U('Member/drawback/id/'.$vo['id'])}">{%member_viewo_apply}</a>-->
                 </eq>
                 <eq name="vo.refund_state" value="1">{%member_viewo_audit}</eq>
                 <eq name="vo.refund_state" value="2">{%member_viewo_success}</eq>
