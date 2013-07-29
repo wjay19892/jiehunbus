@@ -26,7 +26,7 @@
         <span class="date">
         	<span title="{$vo.addtime|toDate}">{$vo.addtime|dgmdate}</span>
         </span>
-        	<if condition="($now - $vo['addtime']) elt 1209600"><span class="edit"><a class="editcomment" href="{:U('Member/editcomment/id/'.$vo['id'])}">{%edit_text}</a></span></if>
+        	<!--<if condition="($now - $vo['addtime']) elt 1209600"><span class="edit"><a class="editcomment" href="{:U('Member/editcomment/id/'.$vo['id'])}">{%edit_text}</a></span></if>-->
         </div>
        </div>
   </li>

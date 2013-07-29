@@ -5,7 +5,26 @@ $(function(){
 	nearbyFriend({$condition});
 });
 </script>
-<div class="mainbody body_bot body_con clearfix">
+<!----搜索开始---->
+
+<form id="searchForm" action="{:U('Search/index')}" method="get">
+<div id="car_top2" class="clearfix">
+    <div id="main_box">
+
+        <div id="select_box">
+            <div class="searchbg"> 
+                <input class="search_sp2" type="text" placeholder="您还可以直接输入商品名搜索" name="search_key">
+                <div class="searchbg2">
+                    <input class="searchbg1" type="button" value="搜 索" name="submit_button">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>
+<!----搜索结束---->
+<div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
 	<div class="jvf_body">
       	<div class="jvf_advertising">
         	{%jvf_advertising}

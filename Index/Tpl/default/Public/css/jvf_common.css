@@ -1595,7 +1595,8 @@ _overflow:hidden;}
 .mb_account_ico{background-position:-464px -543px;}
 .mb_goods_ico{background-position:-512px -543px;}
 
-.jvf_sendcnt_tit{font-size: 14px; font-weight: bold; padding:15px 10px 0 20px;}
+.jvf_sendcnt_tit{background: no-repeat url("../images/jvf_sendcnt_tit.png"); width:700px; height:30px;}
+.jvf_sendcnt_tit2{background: no-repeat url("../images/jvf_sendcnt_tit2.png"); width:700px; height:30px;}
 
 .together{ position:relative; padding-left:16px;}
 .together input{left:0px;position: absolute;top: 1px;}
@@ -1781,8 +1782,8 @@ ul.panels li.selected {
 	text-decoration:none;
 	color:#ffffff;
 }
-.btn:active{background: -moz-linear-gradient(center top , #0183ae, #006e92) repeat scroll 0 0 #0099CC;
-    border-color: #1a74d2;}
+.btn:active{background: -moz-linear-gradient(center top , #ff9000, #ff9000) repeat scroll 0 0 #ff9000;
+    border-color: #orange;}
 .citieslist h2 {
 	*display:inline;
     background: none repeat scroll 0 0 #ff7800;
@@ -1913,7 +1914,7 @@ ul.panels li.selected {
     border-bottom: 1px solid #E2E2E2;
     height: 24px;
     margin-top:30px;
-    padding: 74px 0 15px 196px;
+    padding: 74px 0 15px 823px;
 }
 .top_total_btn {
     float: right;
