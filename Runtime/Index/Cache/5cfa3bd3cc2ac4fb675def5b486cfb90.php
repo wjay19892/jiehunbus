@@ -8,6 +8,19 @@
 <meta name="description" content="<?php if(empty($description)): ?><?php echo C("sysconfig.site_description");?><?php else: ?><?php echo ($description); ?><?php endif; ?>" />
 <link type="text/css" rel="stylesheet" media="screen" href="../Public/css/jvf_common.css" />
 <?php if(!empty($memberdata) AND (C('sysconfig.is_open_chat') == 1) ): ?><link href="../Public/css/chat.css" rel="stylesheet" type="text/css" /><?php endif; ?>
+<script type="text/javascript"> 
+ieGo();
+function ieGo(){ 
+		var ie = !-[1,];  
+		if(ie == true) {
+			var ua = navigator.userAgent.toLowerCase();
+			var version = parseInt(ua.match(/msie ([\d.]+)/)[1]);
+			if(version <= 7) {
+				location.href='<?php echo U('Ie6/index');?>'; 
+			}
+		}
+	}
+</script>
 <script src="__PUBLIC__/dwz/js/jquery-1.7.2.min.js"></script>
 <script src="__PUBLIC__/dwz/js/jquery-ui-1.8.19.custom.min.js" type="text/javascript"></script>
 <script src="<?php echo U('Index/language');?>" type="text/javascript"></script>
@@ -26,6 +39,7 @@
 	<?php else: ?>
 	var first_landing = false;<?php endif; ?>
 </script>
+
 <!--[if IE 6]>
 		<script src="../Public/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
 		<script type="text/javascript">
@@ -124,7 +138,7 @@ $(function(){
 </script>
 <div class="mainbody body_bot body_con clearfix">
 	<div class="jvf_member_body clearfix">
-       <div class="mb_left jvf_fl">
+       <div class="mb_left jvf_fl3">
        		<div class="mb_left_con">
             	<div class="mb_index_j">
 	 <!--发表感受-->
@@ -196,7 +210,7 @@ $(function(){
                 </div>      	
             </div>
        </div>
-       <div class="mb_right jvf_fr">
+       <div class="mb_right jvf_fr3">
 
 		<div class="mb_nav">
      	<div class="mb_index <?php if((ACTION_NAME)  ==  "index"): ?>current<?php endif; ?>">

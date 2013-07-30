@@ -8,6 +8,10 @@ $(function(){
 <div class="mainbody body_bot body_con clearfix">
 	<div class="jvf_body">
     	<!--登陆页面-->
+        <div class="signshow">
+            <img src="../Public/images/lshow.jpg"/>
+        </div>
+
         <div class="jvf_frame signin_con">
         	<h2 class="other_login_tit signin_h">{%user_register_h2}</h2>
             <div style="text-align:center;" class="other_login clearfix">
@@ -32,17 +36,15 @@ $(function(){
                         <span><input type="checkbox" tabindex="3" value="true" id="remember_me2" name="remember_me" ></span>
                         <span>{%user_signin_remember_me}</span>
                     </label>
+                    {%user_signin_pad} <a href="{:U('User/register')}">{%immediately_reg_text}</a>
                 </div>
                 </form>
               
       </div>
       </div>
-      <div class="jvf_520_bot jvf_allimg mg0a"></div>
-      
-      <div class="jvf_frame signin_con jvf_pad">
-    				<h2>{%user_signin_pad} <a href="{:U('User/register')}">{%immediately_reg_text}</a></h2>
-       </div>
-       <div class="jvf_520_bot jvf_allimg mg0a"></div>
+
+
+
            
         <!--登陆页面——end-->
     </div>

@@ -24,6 +24,8 @@ input,textarea,select { color:#999999;}
 .jvf_fr{ float:right; display:block;}
 .jvf_fl2{ float:right; display:block;}
 .jvf_fr2{ float:left; display:block;}
+.jvf_fl3{ float:right; display:block;}
+.jvf_fr3{ float:left; display:block;}
 .jvf_cl{ clear:both; display:block; overflow:hidden; height:0px;}
 .cb { clear:both;}
 .cl { clear:left;}
@@ -1162,17 +1164,20 @@ position: relative;
     display: block;
     padding-top:32px;
     text-align: center;
-    width: 70px;}
+    width: 70px;
+    color: #999999;
+}
 .price_collection a:hover{background-position: -849px -372px;}
 .price_collectionHover a{background-position: -849px -372px;display: block;padding-top:32px;text-align: center;width: 70px;}
-.price_cart a{background-position:-850px -443px;
+.price_cart a{color: #999999;background-position:-850px -443px;
     display: block;
     padding-top:32px;
     text-align: center;
     width:70px;}
 .price_cart a:hover{ background-position:-851px -523px;}
 .price_cartHover a{background-position:-851px -523px;display: block;padding-top:32px;text-align: center;width:70px;}
-.price_purchase a{background-position: 0 -370px;
+.price_purchase a{
+    background-position: 0 -370px;
     color: #FFFFFF;
     display: block;
     font-size: 18px;
@@ -1180,7 +1185,9 @@ position: relative;
     height: 48px;
     line-height: 46px;
     text-align: center;
-    width: 148px;text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);}
+    width: 148px;
+
+}
 .price_purchase a:hover{background-position:0 -419px; text-decoration:none;}
 
 .detail_left_con_r{width:344px; border:#E4E4E4 solid 2px;}
@@ -2190,7 +2197,9 @@ ul.panels li.selected {
     padding: 15px;
     text-align: center; margin-bottom:10px;}
 .veri_con{width:520px; margin:40px auto 0;}
-.signin_con{width:520px; margin:2px auto 0;}
+.signin_con{width:520px; float:right;}
+.signshow{width:420px;float: left;height: 415px;}
+.signshow2{width:420px;float: left;height: 550px;}
 .other_login_tit{padding: 30px 0 20px;}
 .other_login{ width:400px; margin:0 auto;}
 .other_login img{ margin:5px;}
@@ -2230,6 +2239,12 @@ ul.panels li.selected {
     padding: 37px 0;
     text-align: center;}
 .jvf_pad h2 a{ color:#0099cc;}
+
+.jvf_pad2 h2{ font-size: 14px;
+    font-weight: normal;
+    padding: 37px 0;
+    text-align: center;}
+.jvf_pad2 h2 a{ color:#0099cc;}
 .agreement{margin: 0 auto;
     padding:5px 0 40px;
     width: 410px;}
@@ -3778,3 +3793,38 @@ margin-left: 5px;
 .btn-ex-t1:hover {
     background-position: 0 -152px;
 }
+
+
+/****ie6******/
+.ie6{
+    margin:0;
+    padding:0;
+    width:100%;
+    min-height:900px;
+    background: #1cb484;
+}
+.ie6 .con{
+    margin:0 auto;
+    width:995px;
+    height:100px;
+}
+.ie6 .con h1{color: #ffffff;font-size: 25px;padding-top:130px;width: 995px;text-align: center;}
+.ie6 .con h1 span{color:yellow;}
+.ie6 .con p{color:#ffffff;widht:995px;text-align: center;padding-top: 20px;}
+.ie6 .con p span{color:yellow;}
+.ie6 .con .iedown{width: 995px;min-height: 165px;margin-top:20px;border: 1px solid #25ca96;}
+.ie6 .con .iedown .l{float:left;width: 230px;margin-top: -60px;}
+.ie6 .con .iedown .r{float:left;width: 700px;}
+.ie6 .con .iedown .l h1{color: #ffffff;font-size: 25px;width: 180px;vertical-align: middle;}
+.ie6 .con .iedown .r ul{height:180px;width:700px;padding-top: 20px;}
+.ie6 .con .iedown .r ul li{float: left;}
+.ie6 .con .iedown .r ul li a{color:#ffffff;display: block;width:125px;height: 125px;text-align: center;}
+.ie6 .con .iedown .r ul li a:hover{background-color: #1ebf8c;}
+.ie6 .con .tip{margin-top:50px;width: 995px;height: 263px;background:url("../images/jbtip.png") no-repeat scroll center transparent;}
+.ie6 .con .tip:hover{width: 995px;height: 263px;background:url("../images/jbtiphv.png") no-repeat scroll center transparent;}
+
+
+
+
+
+

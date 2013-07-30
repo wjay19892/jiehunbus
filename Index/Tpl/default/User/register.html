@@ -8,6 +8,9 @@ $(function(){
 <div class="mainbody body_bot body_con clearfix">
 	<div class="jvf_body">
     	<!--登陆页面-->
+       <div class="signshow2">
+          <img src="../Public/images/rshow.jpg"/>
+        </div>
         <div class="jvf_frame signin_con">
         	<h2 class="other_login_tit signin_h">{%user_register_h2}</h2>
             <div style="text-align:center;" class="other_login clearfix">
@@ -35,19 +38,14 @@ $(function(){
           <div class="lin"></div>
           <div class="formactions">
               <span class="jvf_mgf"><input type="button" tabindex="4" id="submit" class="btn p2153 f20 jvf_bold" value="{%create_account}" /></span>
-             
+             {%is_already}{&sysconfig.site_name}{%is_member}<a rel="toggle-sign-up" href="{:U('User/signin')}">{%immediately_login_text}</a>
           </div>
            <div class="agreement">{%create_account_detail}<a href="{:U('User/agreement')}" data-popup="true" class="agreement">{%terms_service}</a>。 </div>
         </form>
               
       </div>
       </div>
-      <div class="jvf_520_bot jvf_allimg mg0a"></div>
-      
-      <div class="jvf_frame signin_con jvf_pad">
-    				<h2>{%is_already}{&sysconfig.site_name}{%is_member}<a rel="toggle-sign-up" href="{:U('User/signin')}">{%immediately_login_text}</a>。</h2>
-       </div>
-       <div class="jvf_520_bot jvf_allimg mg0a"></div>
+
            
         <!--登陆页面——end-->
     </div>

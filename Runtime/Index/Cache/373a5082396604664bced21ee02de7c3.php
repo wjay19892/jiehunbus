@@ -8,6 +8,19 @@
 <meta name="description" content="<?php if(empty($description)): ?><?php echo C("sysconfig.site_description");?><?php else: ?><?php echo ($description); ?><?php endif; ?>" />
 <link type="text/css" rel="stylesheet" media="screen" href="../Public/css/jvf_common.css" />
 <?php if(!empty($memberdata) AND (C('sysconfig.is_open_chat') == 1) ): ?><link href="../Public/css/chat.css" rel="stylesheet" type="text/css" /><?php endif; ?>
+<script type="text/javascript"> 
+ieGo();
+function ieGo(){ 
+		var ie = !-[1,];  
+		if(ie == true) {
+			var ua = navigator.userAgent.toLowerCase();
+			var version = parseInt(ua.match(/msie ([\d.]+)/)[1]);
+			if(version <=6) {
+				location.href='<?php echo U('Ie6/index');?>'; 
+			}
+		}
+	}
+</script>
 <script src="__PUBLIC__/dwz/js/jquery-1.7.2.min.js"></script>
 <script src="__PUBLIC__/dwz/js/jquery-ui-1.8.19.custom.min.js" type="text/javascript"></script>
 <script src="<?php echo U('Index/language');?>" type="text/javascript"></script>
@@ -26,6 +39,7 @@
 	<?php else: ?>
 	var first_landing = false;<?php endif; ?>
 </script>
+
 <!--[if IE 6]>
 		<script src="../Public/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
 		<script type="text/javascript">
@@ -125,6 +139,10 @@ $(function(){
 <div class="mainbody body_bot body_con clearfix">
 	<div class="jvf_body">
     	<!--登陆页面-->
+        <div class="signshow">
+            <img src="../Public/images/lshow.jpg"/>
+        </div>
+
         <div class="jvf_frame signin_con">
         	<h2 class="other_login_tit signin_h"><?php echo L("user_register_h2");?></h2>
             <div style="text-align:center;" class="other_login clearfix">
@@ -147,17 +165,15 @@ $(function(){
                         <span><input type="checkbox" tabindex="3" value="true" id="remember_me2" name="remember_me" ></span>
                         <span><?php echo L("user_signin_remember_me");?></span>
                     </label>
+                    <?php echo L("user_signin_pad");?> <a href="<?php echo U('User/register');?>"><?php echo L("immediately_reg_text");?></a>
                 </div>
                 </form>
               
       </div>
       </div>
-      <div class="jvf_520_bot jvf_allimg mg0a"></div>
-      
-      <div class="jvf_frame signin_con jvf_pad">
-    				<h2><?php echo L("user_signin_pad");?> <a href="<?php echo U('User/register');?>"><?php echo L("immediately_reg_text");?></a></h2>
-       </div>
-       <div class="jvf_520_bot jvf_allimg mg0a"></div>
+
+
+
            
         <!--登陆页面——end-->
     </div>

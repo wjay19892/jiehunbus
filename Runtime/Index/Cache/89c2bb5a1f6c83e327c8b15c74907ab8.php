@@ -8,6 +8,19 @@
 <meta name="description" content="<?php if(empty($description)): ?><?php echo C("sysconfig.site_description");?><?php else: ?><?php echo ($description); ?><?php endif; ?>" />
 <link type="text/css" rel="stylesheet" media="screen" href="../Public/css/jvf_common.css" />
 <?php if(!empty($memberdata) AND (C('sysconfig.is_open_chat') == 1) ): ?><link href="../Public/css/chat.css" rel="stylesheet" type="text/css" /><?php endif; ?>
+<script type="text/javascript"> 
+ieGo();
+function ieGo(){ 
+		var ie = !-[1,];  
+		if(ie == true) {
+			var ua = navigator.userAgent.toLowerCase();
+			var version = parseInt(ua.match(/msie ([\d.]+)/)[1]);
+			if(version <=6) {
+				location.href='<?php echo U('Ie6/index');?>'; 
+			}
+		}
+	}
+</script>
 <script src="__PUBLIC__/dwz/js/jquery-1.7.2.min.js"></script>
 <script src="__PUBLIC__/dwz/js/jquery-ui-1.8.19.custom.min.js" type="text/javascript"></script>
 <script src="<?php echo U('Index/language');?>" type="text/javascript"></script>
@@ -26,6 +39,7 @@
 	<?php else: ?>
 	var first_landing = false;<?php endif; ?>
 </script>
+
 <!--[if IE 6]>
 		<script src="../Public/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
 		<script type="text/javascript">
@@ -122,7 +136,26 @@ $(function(){
 	circleIndex(<?php echo ($condition); ?>);
 });
 </script>
-<div class="mainbody body_bot body_con clearfix">
+<!----搜索开始---->
+
+<form id="searchForm" action="<?php echo U('Circle/index');?>" method="get">
+<div id="car_top2" class="clearfix">
+    <div id="main_box">
+
+        <div id="select_box">
+            <div class="searchbg"> 
+                <input class="search_sp2" type="text" placeholder="输入您想要知道的信息" name="search_key">
+                <div class="searchbg2">
+                    <input class="searchbg1" type="button" value="搜 索" name="submit_button">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>
+<!----搜索结束---->
+<div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
 	<div class="jvf_body">
        <div class="category_shop clearfix" style="margin-top:0px;">
                 <div class="shop_all">
