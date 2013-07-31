@@ -25,7 +25,7 @@ q:before, q:after { content: "";}
 blockquote, q { quotes: "" "";}
 
 img { border:none;}
-a { color:#000; text-decoration:none;}
+a { color:#302e3c; text-decoration:none;}
 a:hover {text-decoration:underline;}
 
 /* Panel */

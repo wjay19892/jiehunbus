@@ -863,7 +863,7 @@ return array(
 	'member_formatremind_good_text_before'=>'您的商品',
 	'member_formatremind_good_text_after'=>'发布成功！',
 	'member_formatremind_attention_text'=>'收听了您！',
-	'member_formatremind_order_text'=>'购买了您的商品',
+	'member_formatremind_order_text'=>'预约了您的商品',
 	'member_formatremind_commented_text'=>'评论了您！',
 	'member_formatremind_commented_goods_text'=>'评论了您的商品',
 	'member_formatremind_recommended_text'=>'推荐了您的商品',

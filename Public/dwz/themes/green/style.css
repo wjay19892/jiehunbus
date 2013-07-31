@@ -142,7 +142,7 @@ body, #splitBar { background:#cdef7d;}
 
 #header, #header .headerNav { background:url(../green/images/header_bg.png) repeat-x;}
 #header { background-color:#5b9700;}
-#header .logo { background:url(./images/logo.gif) no-repeat;}
+#header .logo { background:url(./images/logo.png) no-repeat;}
 #header .nav li { float:left; margin-left:-1px; padding:0 8px; line-height:11px; background:url(../green/images/listLine.png) no-repeat;}
 #header .nav li a { color:#FFF;}
 #header .themeList li div { background:url(../default/images/themeButton.png) no-repeat;}
