@@ -3824,6 +3824,82 @@ margin-left: 5px;
 .ie6 .con .tip:hover{width: 995px;height: 263px;background:url("../images/jbtiphv.png") no-repeat scroll center transparent;}
 
 
+/****business list***/
+.business_list{
+    width:980px;
+    margin-top: 10px;
+}
+.business_list li{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    padding: 20px 15px;
+}
+.business_list li:hover{
+    background:none repeat scroll 0 0 #f3f3f3;
+}
+.business_list li .clogo{
+    border:1px solid #f3f3f3;
+    float: left;
+    padding: 4px;
+    width: 110px;
+}
+.business_list li .clogo img{width:110px;height:110px;}
+.business_list li .cneir{float: right;overflow: hidden;width:810px;}
+.business_list li .cneir .ctil{height: 18px;line-height: 18px;}
+.business_list li .cneir .ctil .name a{float: left;font-size: 17px;font-weight: 600;padding-right: 10px;}
+.business_list li .cneir .ctil .name a:hover{color:#e62044;}
+.business_list li .cneir .csprank{
+    clear: both;
+    color: #666666;
+    height: 24px;
+    line-height: 24px;
+    padding-top: 5px;
+}
+.business_list li .cneir .csprank span{
+    color: #f82244;
+}
+.business_list li .cneir .cadr{
+    color: #666666;
+    height: 24px;
+    line-height: 24px;
+    width: 810px;
+}
+.business_list li .cneir .cadr .add{
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 320px;
+    text-overflow: ellipsis;
+}
+.business_list li .cneir .cadr .num{color: #999999;float: right;padding-right: 15px;}
+.business_list li .cneir .chod{
+    color: #666666;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 530px;
+}
+.business_list li .cneir .chod a{color: #999999;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

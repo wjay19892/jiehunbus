@@ -140,15 +140,14 @@ CREATE TABLE `jh_article` (
   `status` tinyint(1) DEFAULT NULL COMMENT '文章状态0禁用不可读1可读2仅会员可读',
   PRIMARY KEY (`id`),
   KEY `FK_Reference_37` (`cid`)
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 
 INSERT INTO jh_article VALUES ('1','0','服务条款','0','																				服务条款 内容								','','','http://www.baidu.com','1','0','1');
-INSERT INTO jh_article VALUES ('48','11','关于我们','0','','','','','0','1338863944','1');
+INSERT INTO jh_article VALUES ('48','11','关于我们','0','<p align=\"left\"><strong>简介</strong></p><p align=\"left\">结婚巴士网是一个专做婚纱摄影的网站，是婚纱摄影预约平台和社会化准新人心得分享平台，专为准新人提供精准的婚纱摄影推荐和预约服务。通过互联网结合线下服务的O2O模式，解决了用户在寻找婚纱摄影机构时所遇到的各种困难，通过结婚巴士网的贴心服务，真正让喜事办得省时、省力、省钱。</p><p align=\"left\">通过新人地理位置定位，为新人提供周边最合适的商家，通过线上和商家沟通，避免打电话的陌生感，一对一的和商家沟通预约，把自主权完全交给你。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>服务优势</strong></p><p align=\"left\">结婚巴士网的服务优势可以浓缩为简单的几个字：多、快、好</p><p align=\"left\"><strong>1、『多』海量各城市婚纱摄影机构供您选择，总有一个适合您</strong></p><p align=\"left\">&quot;结婚巴士网&quot;已经与众多知名影楼、工作室、摄影会所等婚纱摄影机构建立了良好的合作关系。无论您是偏爱豪华大气的高端影楼，还是个性创意的摄影工作室，或是想尝试异域风情的海外跟拍，结婚巴士都可以帮您找到最理想的选择。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>2、『快』积极快速地响应，为您精准推荐</strong></p><p align=\"left\">在结婚巴士网上，您可以精确查找您喜欢的婚纱摄影风格，我们从不干扰您的操作习惯，努力给你提供一个直接简单清晰的友好信息界面。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>3、『好』一对一的贴心服务，婚纱摄影量身推荐</strong></p><p align=\"left\">结合社会化分享评价体系，为用户量身推荐最合适的摄影机构，力求为新人多操办、让新人少操心，灵活满足新人的需求，您可以在线和商家砍价等，无需在线支付产生的焦虑感，一切自主权交给您。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>Slogan</strong></p><p align=\"left\">结婚巴士——专做婚纱摄影的网站。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>企业理念</strong></p><p align=\"left\">结婚巴士的理念：准新人和商家之间的桥梁。帮助新人们省时、省力、省钱的找到合适婚纱摄影的同时，也为商家带去了精准的高质量客户，实现新人和商家的双赢。</p><p align=\"left\">&nbsp;</p><p align=\"left\">用户第一</p><p align=\"left\">用户是我们存在的唯一理由，也是客户的根本利益所在！ 我们的战略和业务决策要从用户出发，以用户信赖为目标，反对任何损害用户利益的行为。</p><p align=\"left\">&nbsp;</p><p align=\"left\">简单高效</p><p align=\"left\">简单高效是我们为人做事的风格。 我们简单做人、坦诚沟通、开放直言，专业领域无上下级；我们高效做事、专注业务、结果导向。</p><p align=\"left\">&nbsp;</p><p align=\"left\">主动协作</p><p align=\"left\">主动协作是我们倡导的工作态度。 我们立足全局、开放资源、相互协作、主动承担，充分发挥个人和团队价值。</p><p align=\"left\">&nbsp;</p><p align=\"left\">学习成长</p><p align=\"left\">学习成长是我们的共同追求。 我们拥抱变化、主动学习、勇于实践、持续进步，追求个人与公司的共同发展。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>如果您是即将步入婚姻殿堂的新人</strong></p><p align=\"left\">•&nbsp; 结婚巴士网为您提供最全面的婚纱摄影信息；</p><p align=\"left\">•&nbsp; 结婚巴士网为您提供实惠透明的价格，一定物超所值；</p><p align=\"left\">•&nbsp;&nbsp; 结婚巴士网为您提供最贴心的免费服务，量身推荐最合适的婚纱摄影机构。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>如果您是婚纱摄影的商家：</strong></p><p align=\"left\">•&nbsp; 结婚巴士网有值得您期待的消费者；</p><p align=\"left\">•&nbsp; 结婚巴士网有保证效果的广告价值，和消费者沟通的自主权交给您；</p><p align=\"left\">•&nbsp; 结婚巴士网是您到达消费者的桥梁。</p><p align=\"left\">&nbsp;</p><p align=\"left\"><strong>联系方式</strong></p><p align=\"left\">商务合作：jiehunbus@126.com</p><p>&nbsp;</p>','结婚巴士网简介','结婚巴士网简介','','0','1338863944','1');
 INSERT INTO jh_article VALUES ('49','14','帮助中心','0','','','','','0','1338863958','1');
-INSERT INTO jh_article VALUES ('50','15','服务条款','0','','','','','0','1338863964','1');
-INSERT INTO jh_article VALUES ('51','2','公告测试','0','','','','','0','1373638358','1');
-INSERT INTO jh_article VALUES ('53','17','联系我们','0','','','','','0','1373715951','1');
-INSERT INTO jh_article VALUES ('54','16','法律声明','0','','','','','0','1373715969','1');
+INSERT INTO jh_article VALUES ('50','15','服务条款','0','<p align=\"left\"><strong>一、结婚巴士服务条款的确认和接纳</strong></p><p align=\"left\">结婚巴士网（www.jiehunBus.com）（以下，简称&quot;本站&quot;）的各项电子服务的执行、运作及决策相关权属归本站。本站提供的服务将完全按照其发布的服务条款和操作规则严格执行。您必须同意所有服务条款并完成注册程序，才能成为本站的正式用户。用户确认，本协议条款是处理双方权利义务的当然约定依据，除非违反国家强制性法律，否则始终有效。</p><p align=\"left\"><br></p><p align=\"left\"><strong>二、服务保护条款</strong></p><p align=\"left\">1、 本站运用自己的操作系统通过国际互联网络为用户提供各项服务，用户必须: </p><p align=\"left\">（1）提供设备，包括个人电脑一台、调制解调器一个及配备上网装置。</p><p align=\"left\"> （2）个人上网和支付与此服务有关的费用。</p><p align=\"left\"> 2、考虑到本站产品服务的重要性，用户同意: </p><p align=\"left\">（1）提供及时、详尽及准确的资料（包含但不限于邮箱、身份证号码、联系方式、账户信息、营业执照、公司信息等）。</p><p align=\"left\"> （2）不断更新注册资料，符合及时、详尽准确的要求。</p><p align=\"left\"> 3、如果用户提供的资料不准确，不真实，不合法有效，本站保留结束用户使用本站各项服务的权利。 </p><p align=\"left\">4、用户在享用本站各项服务的同时，同意接受本站提供的各类信息服务。</p><p align=\"left\"> 5、本站定义的信息内容包括:文字、软件、声音、相片、录像、图表；本站为用户提供的商业信息等，所有这些内容受版权、商标权、和其它知识产权及所有权法律的保护。所以，用户只能在本站授权下才能使用这些内容，而不能擅自复制、修改、编撰这些内容、或创造与内容有关的衍生产品。 </p><p align=\"left\">6、如果用户未遵守本服务条款的任何一项，本站有权利即终止提供一切服务，并保留通过法律手段追究责任的权利。</p><p align=\"left\"> 7、使用本站提供的服务由用户自己承担风险，在适用法律允许的最大范围内，本站在任何情况下不就因使用或不能使用本站提供的服务所发生的特殊的、意外的、直接或间接的损失承担赔偿责任。即使已事先被告知该损害发生的可能性。</p><p align=\"left\"> 8、用户须明白，本站提供的服务可能会受到各个环节不稳定因素的影响。因此服务存在因不可抗力、计算机病毒或黑客攻击、国家相关行业主管部门及电信运营商的调整、系统不稳定、用户所在位置、用户关机以及其他任何技术、互联网络、通信线路原因等造成的服务中断或不能满足用户要求的风险。用户须承担以上风险，本站不作担保。对因此导致用户不能发送、上传和接受阅读消息、或接发错消息，或无法实现其他通讯条件，本站不承担任何责任。</p><p align=\"left\"> 9、用户须明白，在使用本站提供的服务存在有来自任何他人的包括威胁性的、诽谤性的、令人反感的或非法的内容或行为或对他人权利的侵犯（包括知识产权）的匿名或冒名的信息的风险，用户须承担以上风险，本站和合作公司对服务不作任何类型的担保，不论是明确的或隐含的，包括所有有关信息真实性、适用性、所有权和非侵权性的默示担保和条件，对因此导致任何因用户不正当或非法使用服务产生的直接、间接、偶然、特殊及后续的损害，不承担任何责任。</p><p align=\"left\"><br></p><p align=\"left\"><strong>三、用户使用规则</strong></p><p align=\"left\">特别提示用户，使用互联网必须遵守国家有关的政策和法律，包括刑法、国家安全法、保密法、计算机信息系统安全保护条例等，保护国家利益，保护国家安全，对于违法使用互联网络而引起的一切责任，由用户负全部责任。 </p><p align=\"left\">1、用户注册成功后，本站将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。 </p><p align=\"left\">2、用户不得使用本站服务发送或传播敏感信息和违反国家法律制度的信息，包括但不限于下列信息: </p><p align=\"left\">(a) 反对宪法所确定的基本原则的；</p><p align=\"left\"> (b) 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的； </p><p align=\"left\">(c) 损害国家荣誉和利益的；</p><p align=\"left\"> (d) 煽动民族仇恨、民族歧视，破坏民族团结的；</p><p align=\"left\"> (e) 破坏国家宗教政策，宣扬邪教和封建迷信的；</p><p align=\"left\"> (f) 散布谣言，扰乱社会秩序，破坏社会稳定的；</p><p align=\"left\"> (g) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的； </p><p align=\"left\">(h) 侮辱或者诽谤他人，侵害他人合法权益的；</p><p align=\"left\"> (i) 含有法律、行政法规禁止的其他内容的。</p><p align=\"left\"> 3、用户在使用本站络服务过程中，必须遵循以下原则:</p><p align=\"left\"> (a) 遵守中国有关的法律和法规；</p><p align=\"left\"> (b) 不得为任何非法目的而使用网络服务系统；</p><p align=\"left\"> (c) 遵守所有与网络服务有关的网络协议、规定和程序；</p><p align=\"left\"> (d) 不得利用本站网络服务系统进行任何可能对互联网的正常运转造成不利影响的行为； </p><p align=\"left\">(e) 不得利用本站网络服务系统传输任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；&nbsp;</p><p align=\"left\">(f) 不得利用本站网络服务系统进行任何不利于本站的行为。</p><p align=\"left\"> 4、用户保证：</p><p align=\"left\">(a)对其上传或提供给本站的全部信息拥有版权或其他合法权利，可以授权本站使用该等信息；</p><p align=\"left\">(b)其提供给本站的全部信息真实、准确、合法，并且不会侵害任何第三方的合法权利。如因用户违反上述保证而引起任何争议，用户应负责解决。如给本站造成任何损失，用户应负责全额赔偿。</p><p align=\"left\"> 5、用户理解本站为了网站的正常运行，需要定期或不定期地对网站进行停机维护，如因此类情况而造成的本协议项下的内容不能按计划进行发布，用户不对此追究责任。但本站有义务尽力避免服务中断或将中断时间限制在最短时间内。</p><p align=\"left\"> 6、使用本站站服务，用户应加强个人资料的保护意识，并注意个人密码的密码保护。</p><p align=\"left\"> 7、盗取他人用户帐号或利用网络通讯骚扰他人，均属于非法行为。用户不得采用测试、欺骗等任何非法手段，盗取其他用户的帐号和对他人进行骚扰。</p><p align=\"left\"><br></p><p align=\"left\"><strong>四、服务条款的修改</strong></p><p align=\"left\">本站会在必要时修改服务条款，服务条款一旦发生变动，本站司将会在用户进入下一步使用前的页面提示修改内容。如果用户同意改动，则再一次激活&quot;我同意&quot;按钮。如果您不接受，则及时取消您的用户使用服务资格。 用户要继续使用本站各项服务需要两方面的确认: </p><p align=\"left\">（1）首先确认本站服务条款及其变动。 </p><p align=\"left\">（2）同意接受所有的服务条款限制。</p><p align=\"left\"><br></p><p align=\"left\"><strong>五、其他</strong></p><p>1、 本站将视向用户所提供服务内容之特性，要求用户在注册本站提供的有关服务时，遵守特定的条件和条款；如该特定条件和条款与以上服务条款有任何不一致之处，则已特定条件和条款为准。</p><p> 2、本服务条款中的任何条款无论因何种原因完全或部分无效或不具有执行力，其余条款仍应有效并且有约束力。 </p><p>3、本服务条款执行过程中所产生的任何问题本网站和用户都将友好协商解决。</p><p> 4、以上条款的解释权归本站最终所有。</p>','结婚巴士服务条款','结婚巴士服务条款','','0','1338863964','1');
+INSERT INTO jh_article VALUES ('53','17','联系我们','0','<p align=\"left\"><br></p><p align=\"left\"><span style=\"color:#333333;\">商务合作：jiehunbus@126.com</span></p><p align=\"left\"><span style=\"color:#333333;\"><br></span></p><p align=\"left\"><span style=\"font-family: Arial, sans-serif; text-align: center;\"><span style=\"color:#333333;\">工作时间：周一至周五 9:00-17:00</span></span><br></p><p>&nbsp;</p>','结婚巴士网－联系我们','结婚巴士网－联系我们','','0','1373715951','1');
+INSERT INTO jh_article VALUES ('54','16','法律声明','0','<p align=\"left\">1、 任何单位或个人认为通过结婚巴士的内容可能涉嫌侵犯其合法权益，应该及时向结婚巴士或服务网站书面反馈，并提供身份证明、权属证明及详细侵权情况证明，在收到上述法律文件后，结婚巴士将会尽快移除被控侵权内容。</p><p align=\"left\"><br></p><p align=\"left\">2、 结婚巴士不对用户自行发表的内容的真实、完整、准确及合法性进行任何保证。用户在结婚巴士发布的内容或文件仅表明其个人的立场和观点，并不代表结婚巴士的立场或观点。</p><p align=\"left\"><br></p><p>3、 对于使用结婚巴士而引致的任何意外、疏忽、合约毁坏、诽谤、版权或知识产权侵犯及其所造成的损失（包括因下载而感染电脑病毒），结婚巴士概不负责，亦不承担任何法律责任。</p>','结婚巴士网法律声明','结婚巴士网法律声明','','0','1373715969','1');
 
 DROP TABLE IF EXISTS jh_articles_category;
 CREATE TABLE `jh_articles_category` (
@@ -166,7 +165,7 @@ INSERT INTO jh_articles_category VALUES ('1','底部信息','0','0','0,1','1','0
 INSERT INTO jh_articles_category VALUES ('14','帮助中心','1','1','0,1,14','0','1');
 INSERT INTO jh_articles_category VALUES ('15','服务条款','1','1','0,1,15','0','3');
 INSERT INTO jh_articles_category VALUES ('11','关于我们','1','1','0,1,11','0','5');
-INSERT INTO jh_articles_category VALUES ('2','公告','0','0','0,2','1','0');
+INSERT INTO jh_articles_category VALUES ('2','最新动态','0','0','0,2','1','0');
 INSERT INTO jh_articles_category VALUES ('16','法律声明','1','1','0,1,16','0','2');
 INSERT INTO jh_articles_category VALUES ('17','联系我们','1','1','0,1,17','0','4');
 
@@ -203,9 +202,9 @@ CREATE TABLE `jh_cache` (
   `datasize` int(11) DEFAULT NULL,
   `datacrc` int(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 
-INSERT INTO jh_cache VALUES ('1','online_check','-1','i:1375231387;','13','0');
+INSERT INTO jh_cache VALUES ('1','online_check','-1','i:1375338088;','13','0');
 INSERT INTO jh_cache VALUES ('2','User_index','-1','a:2:{s:2:\"id\";a:2:{i:0;s:3:\"egt\";i:1;i:2;}s:7:\"account\";a:2:{i:0;s:4:\"like\";i:1;s:2:\"%%\";}}','91','0');
 INSERT INTO jh_cache VALUES ('3','Role_index','-1','a:1:{s:4:\"name\";a:2:{i:0;s:4:\"like\";i:1;s:2:\"%%\";}}','51','0');
 INSERT INTO jh_cache VALUES ('4','currentNodeId','-1','s:1:\"1\";','8','0');
@@ -213,7 +212,6 @@ INSERT INTO jh_cache VALUES ('5','Node_index','-1','a:1:{s:3:\"pid\";s:1:\"1\";}
 INSERT INTO jh_cache VALUES ('6','Groups_navList','-1','a:5:{i:4;s:12:\"权限管理\";i:2;s:12:\"前台设置\";i:3;s:12:\"系统设置\";i:5;s:12:\"会员管理\";i:6;s:12:\"商品管理\";}','126','0');
 INSERT INTO jh_cache VALUES ('7','Member_1','-1','a:7:{s:5:\"login\";N;s:32:\"85252c1209572c9d6a75bbc4f7e163b3\";a:0:{}s:32:\"5ded47d659662ed952741647241e076d\";a:0:{}s:32:\"63503dbc3a7dadead7c5d92be80e50d1\";a:0:{}s:32:\"5d6f532221ce362d81de6d7a6bd49982\";a:0:{}s:32:\"341f323e92703704604d60789ea6630c\";a:0:{}s:32:\"2981f74c4fca33e48696bd3ca53bfd96\";a:0:{}}','296','0');
 INSERT INTO jh_cache VALUES ('45','nodeGroupList','-1','a:16:{i:2;s:12:\"后台权限\";i:6;s:12:\"后台导航\";i:7;s:12:\"系统配置\";i:8;s:15:\"数据库操作\";i:10;s:12:\"广告管理\";i:11;s:12:\"友情链接\";i:12;s:12:\"文章管理\";i:13;s:12:\"会员管理\";i:14;s:12:\"等级管理\";i:15;s:12:\"其他管理\";i:16;s:12:\"商品附属\";i:17;s:12:\"商品管理\";i:18;s:12:\"商品日志\";i:19;s:12:\"前台导航\";i:20;s:12:\"会员日志\";i:21;s:12:\"会员信息\";}','406','0');
-INSERT INTO jh_cache VALUES ('46','backup_table','-1','a:77:{i:0;s:9:\"jh_access\";i:1;s:12:\"jh_accessory\";i:2;s:21:\"jh_accessory_relation\";i:3;s:14:\"jh_advertising\";i:4;s:23:\"jh_advertising_position\";i:5;s:8:\"jh_apply\";i:6;s:10:\"jh_article\";i:7;s:20:\"jh_articles_category\";i:8;s:13:\"jh_attachment\";i:9;s:12:\"jh_attention\";i:10;s:8:\"jh_cache\";i:11;s:11:\"jh_cash_log\";i:12;s:11:\"jh_chat_log\";i:13;s:9:\"jh_circle\";i:14;s:13:\"jh_collection\";i:15;s:10:\"jh_comment\";i:16;s:16:\"jh_comment_reply\";i:17;s:13:\"jh_commission\";i:18;s:17:\"jh_commission_log\";i:19;s:12:\"jh_complaint\";i:20;s:17:\"jh_complaint_item\";i:21;s:9:\"jh_coupon\";i:22;s:17:\"jh_distance_range\";i:23;s:11:\"jh_evaluate\";i:24;s:17:\"jh_evaluate_items\";i:25;s:9:\"jh_expand\";i:26;s:15:\"jh_expand_group\";i:27;s:10:\"jh_friends\";i:28;s:16:\"jh_friends_group\";i:29;s:18:\"jh_friends_request\";i:30;s:8:\"jh_goods\";i:31;s:17:\"jh_goods_category\";i:32;s:15:\"jh_goods_expand\";i:33;s:18:\"jh_goods_recommend\";i:34;s:8:\"jh_group\";i:35;s:13:\"jh_groups_nav\";i:36;s:8:\"jh_label\";i:37;s:17:\"jh_label_relation\";i:38;s:8:\"jh_level\";i:39;s:7:\"jh_link\";i:40;s:12:\"jh_login_log\";i:41;s:13:\"jh_login_port\";i:42;s:11:\"jh_mail_log\";i:43;s:9:\"jh_member\";i:44;s:20:\"jh_member_attachment\";i:45;s:17:\"jh_member_comment\";i:46;s:14:\"jh_member_feed\";i:47;s:14:\"jh_member_info\";i:48;s:15:\"jh_member_label\";i:49;s:18:\"jh_member_location\";i:50;s:10:\"jh_message\";i:51;s:14:\"jh_message_tpl\";i:52;s:13:\"jh_navigation\";i:53;s:7:\"jh_node\";i:54;s:8:\"jh_order\";i:55;s:16:\"jh_order_details\";i:56;s:10:\"jh_payment\";i:57;s:15:\"jh_prepaid_card\";i:58;s:14:\"jh_price_range\";i:59;s:11:\"jh_recharge\";i:60;s:12:\"jh_recommend\";i:61;s:9:\"jh_region\";i:62;s:10:\"jh_release\";i:63;s:9:\"jh_remind\";i:64;s:7:\"jh_role\";i:65;s:12:\"jh_role_user\";i:66;s:10:\"jh_sms_log\";i:67;s:10:\"jh_sysconf\";i:68;s:16:\"jh_sysconf_group\";i:69;s:13:\"jh_talk_about\";i:70;s:21:\"jh_talk_about_comment\";i:71;s:18:\"jh_talk_about_like\";i:72;s:22:\"jh_talk_about_relation\";i:73;s:7:\"jh_user\";i:74;s:12:\"jh_value_log\";i:75;s:15:\"jh_verification\";i:76;s:11:\"jh_withdraw\";}','1975','0');
 INSERT INTO jh_cache VALUES ('43','Refunds_index','-1','a:2:{s:12:\"refund_state\";a:2:{i:0;s:2:\"gt\";i:1;i:0;}s:6:\"status\";a:2:{i:0;s:2:\"eq\";i:1;i:1;}}','93','0');
 INSERT INTO jh_cache VALUES ('38','Member_4','-1','a:21:{s:5:\"login\";N;s:32:\"e668409acc2d817cce4dcf0ed914323f\";a:0:{}s:32:\"ab88040b580a8b35eb419cae937d8431\";a:0:{}s:32:\"ffadaa03a7ba56a4275bb70e974603e0\";a:0:{}s:32:\"d86b52211fef832751b892a9886b4b99\";a:0:{}s:32:\"d7f341e2f44dec0fc86475d31bcac0ed\";a:0:{}s:32:\"65ea3ef9a466b358ecf80273eee0f967\";a:0:{}s:32:\"53f0199778908288cd7e61f6cc9d05b7\";a:0:{}s:32:\"be0a3641e089999b1aec8c87861ea6bc\";a:0:{}s:32:\"2833336cff8fee61b2560b0e493820ce\";a:0:{}s:32:\"ba34a84f4dd7db9b3ba77c1ecf6b48da\";a:0:{}s:32:\"a725e1a94fef3229f5b82bd9efb79901\";a:0:{}s:32:\"a577a896d6120fb2143a874521e1a3cb\";a:0:{}s:32:\"a3321d5f6c6b468071653ebb98186e51\";a:0:{}s:32:\"ede7b906000abc55861e9a75ae6d2b17\";a:0:{}s:32:\"d8921d36676bb198e7a73a546ddae7a6\";a:0:{}s:32:\"da99f3da3f283b592e57c2380690db08\";a:0:{}s:32:\"d1bbd829733e7b3ff90e45c17e2c5ed6\";a:0:{}s:32:\"6a536323d7cc91ed8ceccfc35f5a75f4\";a:0:{}s:32:\"9e7bdac9cb5efb12cd1e0acfe3771cdf\";a:0:{}s:32:\"528b0f45d58bf4efeeb811b3b837b0ba\";a:0:{}}','941','0');
 INSERT INTO jh_cache VALUES ('8','online','-1','a:0:{}','6','0');
@@ -226,12 +224,13 @@ INSERT INTO jh_cache VALUES ('40','Member_5','-1','a:10:{s:5:\"login\";N;s:32:\"
 INSERT INTO jh_cache VALUES ('31','Member_3','-1','a:8:{s:5:\"login\";N;s:32:\"65e1bb4a43cd3a4acc682787025ce36c\";a:0:{}s:32:\"808404b62c6e5054c61d5ee01e081253\";a:0:{}s:32:\"636c313e4a253c4e08c4540f0ebdb6ce\";a:0:{}s:32:\"7c80548cbade02a25b2fd1d9ff907b7f\";a:0:{}s:32:\"7b70aa4d774ec6f8de15b0bd63b0fb4d\";a:0:{}s:32:\"97429239882ac7725e994daa33dcd019\";a:0:{}s:32:\"dfd1a26935d7dcffc396b14180adf758\";a:0:{}}','342','0');
 INSERT INTO jh_cache VALUES ('23','currentGoods_categoryId','-1','i:0;','4','0');
 INSERT INTO jh_cache VALUES ('24','Goods_category_index','-1','a:1:{s:3:\"pid\";i:0;}','20','0');
-INSERT INTO jh_cache VALUES ('19','currentArticles_categoryId','-1','i:0;','4','0');
-INSERT INTO jh_cache VALUES ('20','Articles_category_index','-1','a:1:{s:3:\"pid\";i:0;}','20','0');
-INSERT INTO jh_cache VALUES ('17','currentRegionId','-1','i:0;','4','0');
-INSERT INTO jh_cache VALUES ('18','Region_index','-1','a:1:{s:3:\"pid\";i:0;}','20','0');
+INSERT INTO jh_cache VALUES ('19','currentArticles_categoryId','-1','s:1:\"1\";','8','0');
+INSERT INTO jh_cache VALUES ('20','Articles_category_index','-1','a:1:{s:3:\"pid\";s:1:\"1\";}','24','0');
+INSERT INTO jh_cache VALUES ('17','currentRegionId','-1','s:1:\"3\";','8','0');
+INSERT INTO jh_cache VALUES ('18','Region_index','-1','a:1:{s:3:\"pid\";s:1:\"3\";}','24','0');
 INSERT INTO jh_cache VALUES ('21','Adv_posList','-1','a:1:{i:2;s:15:\"首页幻灯片\";}','33','0');
 INSERT INTO jh_cache VALUES ('22','Sysconf_groupList','-1','a:9:{i:1;s:12:\"基本配置\";i:2;s:12:\"邮件设置\";i:3;s:6:\"其他\";i:4;s:12:\"上传设置\";i:5;s:18:\"会员相关配置\";i:6;s:12:\"短信设置\";i:7;s:12:\"程序设置\";i:8;s:12:\"利润分配\";i:9;s:12:\"发布设置\";}','221','0');
+INSERT INTO jh_cache VALUES ('47','backup_table','-1','a:77:{i:0;s:9:\"jh_access\";i:1;s:12:\"jh_accessory\";i:2;s:21:\"jh_accessory_relation\";i:3;s:14:\"jh_advertising\";i:4;s:23:\"jh_advertising_position\";i:5;s:8:\"jh_apply\";i:6;s:10:\"jh_article\";i:7;s:20:\"jh_articles_category\";i:8;s:13:\"jh_attachment\";i:9;s:12:\"jh_attention\";i:10;s:8:\"jh_cache\";i:11;s:11:\"jh_cash_log\";i:12;s:11:\"jh_chat_log\";i:13;s:9:\"jh_circle\";i:14;s:13:\"jh_collection\";i:15;s:10:\"jh_comment\";i:16;s:16:\"jh_comment_reply\";i:17;s:13:\"jh_commission\";i:18;s:17:\"jh_commission_log\";i:19;s:12:\"jh_complaint\";i:20;s:17:\"jh_complaint_item\";i:21;s:9:\"jh_coupon\";i:22;s:17:\"jh_distance_range\";i:23;s:11:\"jh_evaluate\";i:24;s:17:\"jh_evaluate_items\";i:25;s:9:\"jh_expand\";i:26;s:15:\"jh_expand_group\";i:27;s:10:\"jh_friends\";i:28;s:16:\"jh_friends_group\";i:29;s:18:\"jh_friends_request\";i:30;s:8:\"jh_goods\";i:31;s:17:\"jh_goods_category\";i:32;s:15:\"jh_goods_expand\";i:33;s:18:\"jh_goods_recommend\";i:34;s:8:\"jh_group\";i:35;s:13:\"jh_groups_nav\";i:36;s:8:\"jh_label\";i:37;s:17:\"jh_label_relation\";i:38;s:8:\"jh_level\";i:39;s:7:\"jh_link\";i:40;s:12:\"jh_login_log\";i:41;s:13:\"jh_login_port\";i:42;s:11:\"jh_mail_log\";i:43;s:9:\"jh_member\";i:44;s:20:\"jh_member_attachment\";i:45;s:17:\"jh_member_comment\";i:46;s:14:\"jh_member_feed\";i:47;s:14:\"jh_member_info\";i:48;s:15:\"jh_member_label\";i:49;s:18:\"jh_member_location\";i:50;s:10:\"jh_message\";i:51;s:14:\"jh_message_tpl\";i:52;s:13:\"jh_navigation\";i:53;s:7:\"jh_node\";i:54;s:8:\"jh_order\";i:55;s:16:\"jh_order_details\";i:56;s:10:\"jh_payment\";i:57;s:15:\"jh_prepaid_card\";i:58;s:14:\"jh_price_range\";i:59;s:11:\"jh_recharge\";i:60;s:12:\"jh_recommend\";i:61;s:9:\"jh_region\";i:62;s:10:\"jh_release\";i:63;s:9:\"jh_remind\";i:64;s:7:\"jh_role\";i:65;s:12:\"jh_role_user\";i:66;s:10:\"jh_sms_log\";i:67;s:10:\"jh_sysconf\";i:68;s:16:\"jh_sysconf_group\";i:69;s:13:\"jh_talk_about\";i:70;s:21:\"jh_talk_about_comment\";i:71;s:18:\"jh_talk_about_like\";i:72;s:22:\"jh_talk_about_relation\";i:73;s:7:\"jh_user\";i:74;s:12:\"jh_value_log\";i:75;s:15:\"jh_verification\";i:76;s:11:\"jh_withdraw\";}','1975','0');
 
 DROP TABLE IF EXISTS jh_cash_log;
 CREATE TABLE `jh_cash_log` (
@@ -439,8 +438,11 @@ CREATE TABLE `jh_expand` (
   `enum` text COMMENT '枚举值 序列化存放 勇于多选下拉等',
   `explain` text COMMENT '字段说明',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
+INSERT INTO jh_expand VALUES ('1','交通方式','','3','','');
+INSERT INTO jh_expand VALUES ('2','联系方式','','3','','');
+INSERT INTO jh_expand VALUES ('3','服务特色','','4','一对多,一对一,免费上网,提供茶水,免费午餐,可以优惠,礼物赠送,支持快递','');
 
 DROP TABLE IF EXISTS jh_expand_group;
 CREATE TABLE `jh_expand_group` (
@@ -473,8 +475,6 @@ CREATE TABLE `jh_friends_group` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-INSERT INTO jh_friends_group VALUES ('1','1','朋友');
-INSERT INTO jh_friends_group VALUES ('2','1','同事');
 
 DROP TABLE IF EXISTS jh_friends_request;
 CREATE TABLE `jh_friends_request` (
@@ -1631,12 +1631,16 @@ CREATE TABLE `jh_price_range` (
   `sort` int(11) NOT NULL,
   `status` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
-INSERT INTO jh_price_range VALUES ('1','3000以内','1','2999','0','1');
-INSERT INTO jh_price_range VALUES ('2','3000-4999','3000','4999','0','1');
-INSERT INTO jh_price_range VALUES ('3','5000-7999','5000','7999','0','1');
-INSERT INTO jh_price_range VALUES ('4','8000以上','8000','10000','0','1');
+INSERT INTO jh_price_range VALUES ('1','2500以内','1','2500','8','1');
+INSERT INTO jh_price_range VALUES ('2','2500-3500','2500','3500','7','1');
+INSERT INTO jh_price_range VALUES ('3','3500-4500','3500','4500','6','1');
+INSERT INTO jh_price_range VALUES ('4','4500-5500','4500','5500','5','1');
+INSERT INTO jh_price_range VALUES ('8','10000以上','10000','999999','1','1');
+INSERT INTO jh_price_range VALUES ('5','5500-6500','5500','6500','4','1');
+INSERT INTO jh_price_range VALUES ('6','6500-7500','6500','7500','3','1');
+INSERT INTO jh_price_range VALUES ('7','7500-10000','7500','10000','2','1');
 
 DROP TABLE IF EXISTS jh_recharge;
 CREATE TABLE `jh_recharge` (
@@ -1803,14 +1807,14 @@ INSERT INTO jh_sysconf VALUES ('1','site_name','网站名称','结婚巴士','1'
 INSERT INTO jh_sysconf VALUES ('2','site_url','网站网址','http://127.0.0.1','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('3','site_title','网站标题','结婚巴士','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('4','site_keywords','网站默认关键字','婚纱摄影','1','0','0','','1','1');
-INSERT INTO jh_sysconf VALUES ('5','site_description','网站描述','结婚巴士-婚纱摄影第一站.www.jiehunbus.com','1','0','0','','1','1');
-INSERT INTO jh_sysconf VALUES ('6','site_powerby','网站版权信息','Copyright © 2013 JiehunBus.com. ','1','0','0','','1','1');
+INSERT INTO jh_sysconf VALUES ('5','site_description','网站描述','结婚巴士-专做婚纱摄影的网站.www.jiehunbus.com','1','0','0','','1','1');
+INSERT INTO jh_sysconf VALUES ('6','site_powerby','网站版权信息','Copyright © 2012-2013 JiehunBus.com. ','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('7','site_beian','网站备案号','苏ICP证66688888号','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('8','site_closed','关闭网站','0','1','0','1','0,1','1','1');
 INSERT INTO jh_sysconf VALUES ('9','site_logo','网站LOGO','/Public/upload/img/site/51f480d73b232.png','1','0','4','','1','1');
 INSERT INTO jh_sysconf VALUES ('10','site_tongji','统计代码','','1','0','3','','1','1');
 INSERT INTO jh_sysconf VALUES ('11','site_services_tel','客服电话','0512-66668888','1','0','0','','1','1');
-INSERT INTO jh_sysconf VALUES ('12','site_services_email','客服邮箱','1037591982@qq.com','1','0','0','','1','1');
+INSERT INTO jh_sysconf VALUES ('12','site_services_email','客服邮箱','jiehunbus@126.com','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('13','site_upload_allowexts','允许上传的文件类型','jpg,gif,png,jpeg','1','0','0','','4','1');
 INSERT INTO jh_sysconf VALUES ('14','site_upload_maxsize','最大上传限制（字节）','1024000','1','0','0','','4','1');
 INSERT INTO jh_sysconf VALUES ('15','site_water_mark','开启水印','1','1','0','1','0,1','4','1');
@@ -1829,7 +1833,7 @@ INSERT INTO jh_sysconf VALUES ('27','site_reply_address','回复地址','jiehunb
 INSERT INTO jh_sysconf VALUES ('28','site_smtp_auth','SMTP验证','1','1','0','1','0,1','2','1');
 INSERT INTO jh_sysconf VALUES ('29','site_smtp_is_ssl','SSL连接加密','0','1','0','1','0,1','2','1');
 INSERT INTO jh_sysconf VALUES ('31','site_water_alpha','水印透明度','80','1','0','0','','4','1');
-INSERT INTO jh_sysconf VALUES ('32','site_work_times','工作时间','周一至周六 9:00-18:00','1','0','3','','1','1');
+INSERT INTO jh_sysconf VALUES ('32','site_work_times','工作时间','周一至周五 9:00-17:00','1','0','3','','1','1');
 INSERT INTO jh_sysconf VALUES ('33','site_page_listrows','通用分页量','20','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('34','site_mb_allowreg','是否允许新会员注册','1','1','0','1','0,1','5','1');
 INSERT INTO jh_sysconf VALUES ('35','site_price_decimal','价格类型小数位数','2','1','0','0','','3','1');
@@ -1865,7 +1869,7 @@ INSERT INTO jh_sysconf VALUES ('72','site_sendsms_coupon_num','优惠券短信�
 INSERT INTO jh_sysconf VALUES ('73','site_sendsms_usecoupon','优惠券消费短信通知','0','1','0','1','0,1','6','1');
 INSERT INTO jh_sysconf VALUES ('74','site_sendsms_code_time','短信验证码有效期（分钟）','60','1','0','0','','6','1');
 INSERT INTO jh_sysconf VALUES ('75','online_check','在线检测间隔（秒）','600','1','0','0','','3','1');
-INSERT INTO jh_sysconf VALUES ('76','site_replacestr','替换词语（词语会被替换）用|分开,结尾不加','她妈|它妈|他妈|你妈|去死|贱人','1','0','0','','1','1');
+INSERT INTO jh_sysconf VALUES ('76','site_replacestr','替换词语（词语会被替换）用|分开,结尾不加','她妈|它妈|他妈|你妈|去死|贱人|www|日|操','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('77','site_prepaid_card_name','网站充值卡名称','充值卡','1','0','0','','1','1');
 INSERT INTO jh_sysconf VALUES ('78','sys_tpl_cache','是否开启模版缓存','0','1','0','1','0,1','7','1');
 INSERT INTO jh_sysconf VALUES ('79','sys_tpl_time','模版缓存有效期（秒）','-1','1','0','0','','7','1');
@@ -2001,7 +2005,7 @@ CREATE TABLE `jh_user` (
   UNIQUE KEY `account` (`account`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-INSERT INTO jh_user VALUES ('1','admin','管理员','3ed218177fed0d0ec36f04304e29e4af','','1375231962','','17','','','','0','0','1','0','');
+INSERT INTO jh_user VALUES ('1','admin','管理员','3ed218177fed0d0ec36f04304e29e4af','','1375314752','','18','','','','0','0','1','0','');
 
 DROP TABLE IF EXISTS jh_value_log;
 CREATE TABLE `jh_value_log` (
