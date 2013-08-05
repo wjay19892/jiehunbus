@@ -302,8 +302,45 @@ class MemberModel extends CommonModel {
 		return $data;
 	}
 	
+	function getBusiness($latlng,$map = '',$limit = ''){
+		$field = 'M.* , (round(6378.137 * 2 * sin(sqrt(pow(sin((radians('.$latlng['lat'].')-radians(ML.`lat`))/2),2) + cos(radians('.$latlng['lat'].'))*cos(radians(ML.`lat`))*pow(sin(((radians('.$latlng['lng'].')-radians(ML.`lng`))/2)),2)))*10000)/10000) as distance';
+		$prefix = C('DB_PREFIX');
+		if(!empty($map)){
+			$map = addPre($map,'M');
+			$map['_string'] = '!isNULL(ML.lat)';
+			$map['ML.type'] = array('eq',1);
+		}
+		$data = $this->Table("{$prefix}member as M")->
+		join("{$prefix}member_location as ML ON M.id = ML.uid")->
+		field($field)->
+		where($map)->
+		order('distance asc')->
+		limit($limit)->
+		findAll();
+		$apply = D('Apply');
+		if(!empty($data)){
+			foreach ($data as &$value){
+				$value['header'] = $this->getHeader($value['header']);
+				$value['attention'] = $this->getAttentionNum($value['id']);
+				$value['was_attention'] = $this->getWasAttentionNum($value['id']);
+				$value['talk_about'] = $this->getTalk_aboutNum($value['id']);
+				$value['business'] = $apply->getOne(array('uid'=>array('eq',$value['id']),'status'=>array('eq',1)));
+			}
+		}
+
+		
+		
+
+		return $data;
+	}
+
 	public function _defaultWhere($map = array()){
 		$map['status'] = array('eq',1);
+		return $map;
+	}
+	public function _defaultbusinessWhere($map = array()){
+		$map['status'] = array('eq',1);
+		$map['isbusiness']=array('eq',1);
 		return $map;
 	}
 

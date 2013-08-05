@@ -24,36 +24,44 @@
 <div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
     <div class="jvf_body">
         <ul class="business_list">
+            <volist name="nerbyfriend" id="vo">
             <li>
                 <div class="clogo">
-                    <a href="#" target="_blank" title="苏州天姿尊爵婚纱摄影">
-                        <img src="http://pic9.wed114.cn/201211/2012112009525049276.jpg" width="110" height="110" alt="苏州天姿尊爵婚纱摄影"/>
+                    <a href="{:U('User/goods/id/'.$vo['id'])}" target="_blank" title="">
+                        <img src="{$vo.header.path}" width="110" height="110" alt=""/>
                     </a>
                 </div>
                 <div class="cneir">
                     <div class="ctil">
-                        <h4 class="name"><a href="#" target="_blank">苏州天姿尊爵婚纱摄影</a></h4>
+                        <h4 class="name"><a href="{:U('User/goods/id/'.$vo['id'])}" target="_blank">{$vo.business.name}</a></h4>
+                        <a href="javascript:;" uid="{$vo['id']}" class="jvf_callme">和TA{%chat}</a>
                     </div>
                     <div class="csprank">
-                        系数：
-                        <span>9</span>
-                        热度：
-                        <span>5641</span>
-                        人气：
-                        <span>351432</span>
+                        {%audience}：
+                        <span><a href="javascript:;">{$vo.was_attention}</a></span>
+                        {%listen}：
+                        <span><a href="javascript:;">{$vo.attention}</a></span>
+                        {%mood}：
+                        <span><a href="javascript:;">{$vo.talk_about}</a></span>
+                        营业时间：
+                        <span><a href="javascript:;">{$vo.business.opening}</a></span>
                     </div>
                     <div class="cadr">
-                        <div class="add">地址：景德路202号（建设银行旁）</div>
-                        <div class="num">口碑(599) 套系(49) 作品(486)</div>
+                        <div class="add">地址：{$vo.business.address}</div>
+                        <div class="num">
+                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="{$vo.id}">{%default_location_away}</a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em>{$vo.distance|formatDistance}</span>
+                        </div>
                     </div>
                     <div class="chod">
-                         优惠：
-                        <a target="_blank" href="#">大智摄影7周年品质婚照</a>
+                         店长：
+                         <a href="{:U('User/space/id/'.$vo['id'])}">{$vo.name}</a>
                     </div>
                 </div>
             </li>
+            </volist>
         </ul>
     </div>
 </div>
+
 
 <include file="Public:footer" />

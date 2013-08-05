@@ -3844,6 +3844,7 @@ margin-left: 5px;
     padding: 4px;
     width: 110px;
 }
+
 .business_list li .clogo img{width:110px;height:110px;}
 .business_list li .cneir{float: right;overflow: hidden;width:810px;}
 .business_list li .cneir .ctil{height: 18px;line-height: 18px;}
@@ -3857,6 +3858,10 @@ margin-left: 5px;
     padding-top: 5px;
 }
 .business_list li .cneir .csprank span{
+    color: #f82244;
+    padding-right: 10px;
+}
+.business_list li .cneir .csprank span a{
     color: #f82244;
 }
 .business_list li .cneir .cadr{
@@ -3882,7 +3887,7 @@ margin-left: 5px;
     white-space: nowrap;
     width: 530px;
 }
-.business_list li .cneir .chod a{color: #999999;}
+.business_list li .cneir .chod a{color: #f82244;}
 
 
 
