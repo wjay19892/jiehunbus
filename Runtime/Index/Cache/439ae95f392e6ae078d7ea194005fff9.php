@@ -131,90 +131,39 @@ function ieGo(){
         </div>
     </div>
 <!--头部——结束-->
-<link type="text/css" rel="stylesheet" media="screen" href="../Public/css/slide_style.css" /> 
 <script>
 $(function(){
-	city();
+	$('.help_con img').ieImg({maxWidth:745});
 });
 </script>
-
 <div class="mainbody body_bot body_con clearfix">
-	<div class="jvf_body">
-        <div class="choosecities jvf_w100_con">
-            <div class="hotcities">
-                <h2>
-                    <?php echo L("city_enter");?>
-                    <a href="__APP__/<?php echo ($switch_region["crr"]["spelling"]); ?>">
-                        <?php echo ($switch_region["crr"]["name"]); ?>
-                        <span>
-                            »
-                        </span>
-                    </a>
-                </h2>
-                <p>
-                    <label>
-                       <?php echo L("hot_cities");?>：
-                    </label>
-                    <?php if(is_array($citydata["default"])): $i = 0; $__LIST__ = $citydata["default"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><a href="__APP__/<?php echo ($vo["spelling"]); ?>">
+	<div class="jvf_body help_all">
+        <div class="jvf_frame jvf_fl jvf_help">
+            <div class="help_nav">
+                <div class="rig_title">
+                    <h2 class="title">
+                        <?php echo C("sysconfig.site_name");?><?php echo L("help_text");?>
+                    </h2>
+                </div>
+                <div class="help_nav_list">
+                	<?php if(is_array($articles_categorydata)): $i = 0; $__LIST__ = $articles_categorydata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><h3>
                         <?php echo ($vo["name"]); ?>
-                    </a><?php endforeach; endif; else: echo "" ;endif; ?>
-                </p>
-            </div>
-            <div class="filter">
-                <div id="changeCity">
-                    <label>
-                        <?php echo L("city_province");?>：
-                    </label>
-                         <select name="province">
-                            <option value="-1" selected="selected">
-                                <?php echo L("city_select_province");?>
-                            </option>
-                            <?php if(is_array($citydata["top"])): $i = 0; $__LIST__ = $citydata["top"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><option value="<?php echo ($vo["id"]); ?>">
-                                <?php echo ($vo["name"]); ?>
-                            </option><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </select>
-                        <select name="city">
-                            <option value="-1">
-                                <?php echo L("city_select_city");?>
-                            </option>
-                        </select>
-                        <div id="defaultCity" style="display:none;">
-                        	<option value="-1">
-                                <?php echo L("city_select_city");?>
-                            </option>
-                        </div>
-                    </span>
-                    <span class="jvf_mgf"><input type="button" value="<?php echo L("enter_text");?>" class="btn p2153 f14"></span>
+                    </h3>
+                    <ul class="disc">
+                    <?php if(is_array($vo["articles"])): $i = 0; $__LIST__ = $vo["articles"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): ++$i;$mod = ($i % 2 )?><li>
+                            <a href="<?php echo U('Help/index/id/'.$v['id']);?>">
+                               <?php echo ($v["title"]); ?>
+                            </a>
+                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </ul><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
-            <div class="citieslist">
-                <h2 class="jvf_fl">
-                    <?php echo L("city_letter");?>
-                    <span class="arrow">
-                        »
-                    </span>
-                </h2>
-                <div class="jvf_cl"></div>
-                <ol class="hasallcity">
-                <?php if(is_array($citydata["all"])): $i = 0; $__LIST__ = $citydata["all"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><?php if(($vo["letter"])  !=  $citydata['all'][$key-1]['letter']): ?><li <?php if(($i)  ==  "1"): ?>class="hover"<?php endif; ?>>
-                        <p class="clearfix">
-                            <label>
-                                <strong>
-                                    <?php echo ($vo["letter"]); ?>
-                                </strong>
-                            </label>
-                            <span><?php endif; ?>
-                    
-                                <a href="__APP__/<?php echo ($vo["spelling"]); ?>" class="isonline">
-                                    	<?php echo ($vo["name"]); ?>
-                                </a>
-                <?php if(($vo["letter"])  !=  $citydata['all'][$key+1]['letter']): ?></span>
-                        </p>
-                    </li><?php endif; ?><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ol>
-            </div>
         </div>
-        <div class="jvf_w100"></div>
+        
+        <div class="jvf_fr help_con">
+        <h1><?php echo ($data["title"]); ?></h1>
+        	<div class="article"><?php echo ($data["content"]); ?></div>
+       </div>
     </div>
 </div>
 

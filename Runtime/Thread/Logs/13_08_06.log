@@ -1,0 +1,918 @@
+[ 2013-08-06T09:06:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:06:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:06:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:06:44+00:00 ] NOTIC: [8] Undefined index: 138813aa98c2610c64e8899fde100353 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:07:09+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:07:09+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:06:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:06:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:06:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:06:46+00:00 ] NOTIC: [8] Undefined index: 68e3e923fe7b84a17ac3c3666ad19237 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:07:11+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:07:11+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:07:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:07:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:07:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:07:11+00:00 ] NOTIC: [8] Undefined index: 9cbdd5257a2142faf2d2c102e792d236 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:07:36+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:07:36+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:07:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:07:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:07:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:07:36+00:00 ] NOTIC: [8] Undefined index: 9f9989a802c8b9805ee2ab422781d367 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:08:02+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:08:02+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:08:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:08:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:08:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:08:02+00:00 ] NOTIC: [8] Undefined index: c5d83cc5b699828e44f4847afd7de7ad IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:08:27+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:08:27+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:08:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:08:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:08:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:08:27+00:00 ] NOTIC: [8] Undefined index: 61a17c8426baeee96f7f77092e1beb98 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:08:52+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:08:52+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:08:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:08:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:08:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:08:52+00:00 ] NOTIC: [8] Undefined index: d451d4af1be24a5304bac6920c945383 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:09:17+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:09:17+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:09:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:09:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:09:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:09:17+00:00 ] NOTIC: [8] Undefined index: 5608a0c3df564836a362b4afa1b36d1a IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:09:42+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:09:42+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:09:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:09:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:09:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:09:42+00:00 ] NOTIC: [8] Undefined index: 318280dc55edcc33013680bd18ec20fb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:10:07+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:10:07+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:10:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:10:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:10:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:10:08+00:00 ] NOTIC: [8] Undefined index: 627d75880ccf765813144e75b8066ccd IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:10:33+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:10:33+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:10:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:10:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:10:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:10:33+00:00 ] NOTIC: [8] Undefined index: a34e31db37a6ff9c5263cdab73ebf80f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:10:58+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:10:58+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:10:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:10:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:10:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:10:58+00:00 ] NOTIC: [8] Undefined index: 90d4b40287c7b238e9d0255a965020ae IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:11:23+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:11:23+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:11:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:11:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:11:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:11:23+00:00 ] NOTIC: [8] Undefined index: 18c3aa3118a1a1cffd5b98ababf60b58 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:11:48+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:11:48+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:11:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:11:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:11:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:11:48+00:00 ] NOTIC: [8] Undefined index: d427931b011532f7ae5726a7e0224700 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:12:13+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:12:13+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:12:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:12:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:12:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:12:13+00:00 ] NOTIC: [8] Undefined index: bced314856e8cd4c92986af50474c71f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:12:38+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:12:38+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:12:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:12:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:12:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:12:38+00:00 ] NOTIC: [8] Undefined index: 72afa86951cf5175f5364b200bbafdde IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:13:03+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:13:03+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:12:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:12:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:12:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:12:53+00:00 ] NOTIC: [8] Undefined index: 65e5da4d5bb39c47779bd987271ea4e9 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:13:18+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:13:18+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:13:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:13:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:13:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:13:18+00:00 ] NOTIC: [8] Undefined index: 43c652461d3116258c16df1a2e6d2cb8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:13:43+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:13:43+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:13:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:13:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:13:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:13:43+00:00 ] NOTIC: [8] Undefined index: b1cd0387f72da3a91038c36c04d4bc36 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:14:08+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:14:08+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:14:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:14:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:14:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:14:08+00:00 ] NOTIC: [8] Undefined index: c9d2066c74f1778e9998c176d40702c9 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:14:33+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:14:33+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:14:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:14:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:14:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:14:33+00:00 ] NOTIC: [8] Undefined index: e9dda433bc467f1ed7ac549c7f175e31 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:14:58+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:14:58+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:14:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:14:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:14:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:14:58+00:00 ] NOTIC: [8] Undefined index: 44e38a844547e119acf0004d09abda3e IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:15:23+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:15:23+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:15:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:15:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:15:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:15:23+00:00 ] NOTIC: [8] Undefined index: efe41618ce19a155b01544f8bc5f1951 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:15:48+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:15:48+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:15:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:15:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:15:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:15:48+00:00 ] NOTIC: [8] Undefined index: b2ac6164414de09636f1b3ccbbe136cb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:16:13+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:16:13+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:16:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:16:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:16:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:16:13+00:00 ] NOTIC: [8] Undefined index: d019b69b7b93d2ac677230ca614723db IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:16:38+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:16:38+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:16:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:16:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:16:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:16:38+00:00 ] NOTIC: [8] Undefined index: e89f2e402a08da33cd21448d1b645ab8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:17:03+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:17:03+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:17:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:17:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:17:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:17:03+00:00 ] NOTIC: [8] Undefined index: 7151ccc86f4cda2ed38c51fd94612f2b IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:17:29+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:17:29+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:17:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:17:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:17:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:17:29+00:00 ] NOTIC: [8] Undefined index: cccd8eb0935cf48b8dcd580ab1a44cf6 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:17:54+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:17:54+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:17:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:17:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:17:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:17:54+00:00 ] NOTIC: [8] Undefined index: 8d55400363f6cf4794ffb047a7906c26 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:18:19+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:18:19+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:18:19+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:18:19+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:18:19+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:18:19+00:00 ] NOTIC: [8] Undefined index: 65d795f14718448aabd612c504b9c200 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:18:44+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:18:44+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:18:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:18:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:18:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:18:44+00:00 ] NOTIC: [8] Undefined index: 64c46ef0317549fe9d7d03db0831ccc7 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:19:09+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:19:09+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:19:09+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:19:09+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:19:09+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:19:09+00:00 ] NOTIC: [8] Undefined index: 2094ea46d33be29bb03180f7995a35a2 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:19:34+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:19:34+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:19:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:19:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:19:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:19:34+00:00 ] NOTIC: [8] Undefined index: c8764096554abb5b1b00517c0966e863 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:19:59+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:19:59+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:19:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:19:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:19:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:19:59+00:00 ] NOTIC: [8] Undefined index: fd9caafe68f6788e2b01ec12b7eea909 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:20:24+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:20:24+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:20:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:20:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:20:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:20:24+00:00 ] NOTIC: [8] Undefined index: 4a3cbea69eeab6c17867b43471871918 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:20:49+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:20:49+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:20:49+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:20:49+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:20:49+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:20:49+00:00 ] NOTIC: [8] Undefined index: 792bd03bf34e77a9b7193894be2fb3c5 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:21:14+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:21:14+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:21:14+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:21:14+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:21:14+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:21:14+00:00 ] NOTIC: [8] Undefined index: 40600e2631497b4e0a62404f380160ce IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:21:39+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:21:39+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:21:39+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:21:39+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:21:39+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:21:39+00:00 ] NOTIC: [8] Undefined index: 64457cc31e5e247dc1b80f19460ba52d IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:22:04+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:22:04+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:22:04+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:22:04+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:22:04+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:22:04+00:00 ] NOTIC: [8] Undefined index: 0f3776e05780425c8abbe697b10c2384 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:22:29+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:22:29+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:22:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:22:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:22:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:22:29+00:00 ] NOTIC: [8] Undefined index: 74c12f11dcd6245b77966cf5ec3f2463 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:22:54+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:22:54+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:22:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:22:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:22:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:22:54+00:00 ] NOTIC: [8] Undefined index: e8143b7b86ff1260b099bab0f6bf361d IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:23:19+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:23:19+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:23:19+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:23:19+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:23:19+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:23:19+00:00 ] NOTIC: [8] Undefined index: 8281cfd19b803a72beb1377c1aa717ab IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:23:45+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:23:45+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:23:45+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:23:45+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:23:45+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:23:45+00:00 ] NOTIC: [8] Undefined index: ec90fea37ca01cd9bd08bea9eeba207c IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:24:10+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:24:10+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:24:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:24:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:24:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:24:10+00:00 ] NOTIC: [8] Undefined index: 61b5584a76f4c9066472d80d22580133 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:24:35+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:24:35+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:24:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:24:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:24:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:24:35+00:00 ] NOTIC: [8] Undefined index: 2060dec08cb4f25a286c7600a43ab439 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:25:00+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:25:00+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:25:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:25:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:25:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:25:00+00:00 ] NOTIC: [8] Undefined index: 2a39ff37e40b38408e3f352eef231faf IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:25:25+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:25:25+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:25:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:25:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:25:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:25:25+00:00 ] NOTIC: [8] Undefined index: eaa1787bfcd12f71695607b6d63177f7 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:25:50+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:25:50+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:25:50+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:25:50+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:25:50+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:25:50+00:00 ] NOTIC: [8] Undefined index: c2ed157f259be52a43f9e8cceddbe130 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:26:15+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:26:15+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:26:15+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:26:15+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:26:15+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:26:15+00:00 ] NOTIC: [8] Undefined index: c6d922b836d8a9daa7956b637a9d8027 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:26:40+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:26:40+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:26:40+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:26:40+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:26:40+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:26:40+00:00 ] NOTIC: [8] Undefined index: c5b44a4f559e5ca3724ac95f290f2204 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:27:05+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:27:05+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:27:05+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:27:05+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:27:05+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:27:05+00:00 ] NOTIC: [8] Undefined index: fed081b36fecd9d574aebe93198b8d4f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:27:30+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:27:30+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:27:30+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:27:30+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:27:30+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:27:30+00:00 ] NOTIC: [8] Undefined index: 64dab10ecd062096f5b9409bf88037ed IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:27:55+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:27:55+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:27:55+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:27:55+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:27:55+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:27:55+00:00 ] NOTIC: [8] Undefined index: 6ad86422dacc03d2577701b18ae2028d IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:28:20+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:28:20+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:28:20+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:28:20+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:28:20+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:28:20+00:00 ] NOTIC: [8] Undefined index: 8f323bb89223ca732a4e054f7c0c51b9 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:28:45+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:28:45+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:28:45+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:28:45+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:28:45+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:28:45+00:00 ] NOTIC: [8] Undefined index: 44a2881fd5bebc71e318a27c1291c9ab IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:29:10+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:29:10+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:29:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:29:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:29:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:29:11+00:00 ] NOTIC: [8] Undefined index: 75d71d31d00cd77db8da8426c56f1504 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:29:36+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:29:36+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:29:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:29:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:29:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:29:36+00:00 ] NOTIC: [8] Undefined index: b9999bf76f3bcd661c96e42bc526c409 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:30:01+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:30:01+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:30:01+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:30:01+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:30:01+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:30:01+00:00 ] NOTIC: [8] Undefined index: 1c0505e64ce6827429e319a207c53f97 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:30:26+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:30:26+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:30:26+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:30:26+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:30:26+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:30:26+00:00 ] NOTIC: [8] Undefined index: 51c3e0d65fe350f0b273cec513b4dc75 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:30:51+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:30:51+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:30:51+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:30:51+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:30:51+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:30:51+00:00 ] NOTIC: [8] Undefined index: 029a764c4e570383d7bf4daf0bcd105d IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:31:16+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:31:16+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:31:16+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:31:16+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:31:16+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:31:16+00:00 ] NOTIC: [8] Undefined index: c20f452953c2985d523feb819f222961 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:31:41+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:31:41+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:31:41+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:31:41+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:31:41+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:31:41+00:00 ] NOTIC: [8] Undefined index: 4d13247764d383032d3f1f1834ca34d8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:32:06+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:32:06+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:32:06+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:32:06+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:32:06+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:32:06+00:00 ] NOTIC: [8] Undefined index: 2e36631851eff9b506477bf431493ddc IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:32:31+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:32:31+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:32:31+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:32:31+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:32:31+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:32:31+00:00 ] NOTIC: [8] Undefined index: 1de26fd419a9d92868b34685dc96ec7b IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:32:56+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:32:56+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:32:56+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:32:56+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:32:56+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:32:56+00:00 ] NOTIC: [8] Undefined index: ceae813a9d372907614bc71ed528ca8b IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:33:21+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:33:21+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:33:21+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:33:21+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:33:21+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:33:21+00:00 ] NOTIC: [8] Undefined index: 22047e9203a9c736b74e16e402b0daa7 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:33:46+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:33:46+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:33:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:33:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:33:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:33:46+00:00 ] NOTIC: [8] Undefined index: e4fdd469b7b27de37a9e6c267f83f2cb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:34:11+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:34:11+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:34:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:34:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:34:11+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:34:11+00:00 ] NOTIC: [8] Undefined index: dbed691940a6c857e7a5c75e40b6d2cb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:34:36+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:34:36+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:34:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:34:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:34:36+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:34:36+00:00 ] NOTIC: [8] Undefined index: 2f1d942606a6bdfd03fb0296039298f9 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:35:01+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:35:01+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:35:01+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:35:01+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:35:01+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:35:01+00:00 ] NOTIC: [8] Undefined index: 18ffe9e51f36b17bf8f292bf6d5fc457 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:35:26+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:35:26+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:35:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:35:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:35:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:35:27+00:00 ] NOTIC: [8] Undefined index: 2af4cdba23a8577e209c6dc27f7143f8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:35:52+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:35:52+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:35:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:35:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:35:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:35:52+00:00 ] NOTIC: [8] Undefined index: e7551d18df0c8666aae2ebf155295ad0 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:36:17+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:36:17+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:36:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:36:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:36:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:36:17+00:00 ] NOTIC: [8] Undefined index: 869e20b0af3c4acce364ca01c545aaba IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:36:42+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:36:42+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:36:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:36:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:36:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:36:42+00:00 ] NOTIC: [8] Undefined index: 401bad18d86e61bb87c0e7fb7b831afb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:37:07+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:37:07+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:37:07+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:37:07+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:37:07+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:37:07+00:00 ] NOTIC: [8] Undefined index: 266256d345c2efb04f2ec15111d34a30 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:37:32+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:37:32+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:37:32+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:37:32+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:37:32+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:37:32+00:00 ] NOTIC: [8] Undefined index: 0e52f7063e9acbf64b9c163add8b3423 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:37:57+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:37:57+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:37:57+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:37:57+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:37:57+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:37:57+00:00 ] NOTIC: [8] Undefined index: d84f6ac77bb7d4192a142ef8ef90bab0 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:38:22+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:38:22+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:38:22+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:38:22+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:38:22+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:38:22+00:00 ] NOTIC: [8] Undefined index: 1366f8597a7f4f478e2d1dabbd55f3fa IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:38:47+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:38:47+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:38:47+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:38:47+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:38:47+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:38:47+00:00 ] NOTIC: [8] Undefined index: 3778b9ff9418a5efe2b385423a426530 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:39:12+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:39:12+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:39:12+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:39:12+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:39:12+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:39:12+00:00 ] NOTIC: [8] Undefined index: a42dfece197bbfacf8775622d31b25b3 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:39:37+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:39:37+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:39:37+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:39:37+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:39:37+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:39:37+00:00 ] NOTIC: [8] Undefined index: 3a6f49a396c687b5790e4d54f286277b IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:40:02+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:40:02+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:40:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:40:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:40:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:40:02+00:00 ] NOTIC: [8] Undefined index: fa662babe9315ec9289ab7eb3507ee20 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:40:27+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:40:27+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:40:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:40:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:40:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:40:27+00:00 ] NOTIC: [8] Undefined index: 1c5264d919369fb8699b527d56faf37b IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:40:52+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:40:52+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:40:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:40:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:40:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:40:52+00:00 ] NOTIC: [8] Undefined index: b875772b5084dafbbd9a09c76781eabc IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:41:17+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:41:17+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:41:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:41:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:41:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:41:17+00:00 ] NOTIC: [8] Undefined index: 410a9d9fd1d353f17b1a27fb7af2e4ff IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:41:43+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:41:43+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:41:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:41:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:41:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:41:43+00:00 ] NOTIC: [8] Undefined index: 3a3f3a9bb1e9ffd00295ca4d6de943b5 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:42:08+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:42:08+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:42:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:42:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:42:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:42:08+00:00 ] NOTIC: [8] Undefined index: 4708249842265c5f1a71955aff18b002 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:42:33+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:42:33+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:42:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:42:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:42:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:42:33+00:00 ] NOTIC: [8] Undefined index: bcb08888582dd501824cf918b69c867f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:42:58+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:42:58+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:42:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:42:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:42:58+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:42:58+00:00 ] NOTIC: [8] Undefined index: 42743f607120a83151a717d9652fabfc IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:43:23+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:43:23+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:43:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:43:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:43:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:43:23+00:00 ] NOTIC: [8] Undefined index: 3bcfedbcb7c9934ca0d43ad473a0a1b3 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:43:48+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:43:48+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:43:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:43:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:43:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:43:48+00:00 ] NOTIC: [8] Undefined index: a05f03ba65cd591c35acbdfb38496562 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:44:13+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:44:13+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:44:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:44:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:44:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:44:13+00:00 ] NOTIC: [8] Undefined index: 0fb256376471cb40f8adc123a050e91f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:44:38+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:44:38+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:44:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:44:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:44:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:44:38+00:00 ] NOTIC: [8] Undefined index: 0cd4e4dc44473a4ccede3f8c8e8fff4c IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:45:03+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:45:03+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:45:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:45:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:45:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:45:03+00:00 ] NOTIC: [8] Undefined index: e81fffa6fa45f33fdcb7461e6fb60d46 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:45:28+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:45:28+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:45:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:45:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:45:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:45:28+00:00 ] NOTIC: [8] Undefined index: 469c3ef3346d84473715d8ff9f6c9b99 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:45:53+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:45:53+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:45:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:45:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:45:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:45:53+00:00 ] NOTIC: [8] Undefined index: ac89a032717d180db6f5587ca54b6c6d IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:46:18+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:46:18+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:46:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:46:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:46:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:46:18+00:00 ] NOTIC: [8] Undefined index: 38e95667874e7622e95c1e20fece5181 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:46:43+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:46:43+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:46:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:46:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:46:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:46:43+00:00 ] NOTIC: [8] Undefined index: 615fc2736eed7005d5397319e5e005a7 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:47:08+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:47:08+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:47:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:47:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:47:08+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:47:08+00:00 ] NOTIC: [8] Undefined index: c45bb87982326f20eccd4fceaad6db66 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:47:33+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:47:33+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:47:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:47:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:47:33+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:47:33+00:00 ] NOTIC: [8] Undefined index: 69cf03d942dccc55cc320a21f7cc3ceb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:47:59+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:47:59+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:47:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:47:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:47:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:47:59+00:00 ] NOTIC: [8] Undefined index: b7be019588506fcd0109fd554488a3ba IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:48:24+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:48:24+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:48:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:48:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:48:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:48:24+00:00 ] NOTIC: [8] Undefined index: 9649b3b703dd305219e84615db027659 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:48:49+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:48:49+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:48:49+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:48:49+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:48:49+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:48:49+00:00 ] NOTIC: [8] Undefined index: fa6c6b5068ae3f83783a63ec5ff49c4e IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:49:14+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:49:14+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:49:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:49:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:49:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:49:10+00:00 ] NOTIC: [8] Undefined index: 16b36c6db95f5985621a4b5a473cfc7f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:49:35+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:49:35+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:56:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:56:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:56:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:56:25+00:00 ] NOTIC: [8] Undefined index: d1b3dfa6737e2bdf00c629eb16217812 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:56:50+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:56:50+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:56:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:56:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:56:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:56:28+00:00 ] NOTIC: [8] Undefined index: d8314f38022af60b3b4f9634dc07c52f IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:56:53+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:56:53+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:56:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:56:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:56:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:56:53+00:00 ] NOTIC: [8] Undefined index: 24f44833884aa985088a775ce81a1b88 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:57:18+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:57:18+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:57:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:57:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:57:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:57:18+00:00 ] NOTIC: [8] Undefined index: 821ab078b595ef60e7375c6f4063edd7 IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:57:43+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:57:43+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:59:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:59:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:59:23+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:59:23+00:00 ] NOTIC: [8] Undefined index: 568353b17125a0130434497d0c7efb3a IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:59:48+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:59:48+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:59:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:59:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:59:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:59:25+00:00 ] NOTIC: [8] Undefined index: cb06e9e41ee53c0d0e7ae62fbc9bf9bb IndexAction.class.php 第 28 行.
+[ 2013-08-06T09:59:50+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:59:50+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T09:59:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T09:59:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T09:59:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T09:59:48+00:00 ] NOTIC: [8] Undefined index: 1109331698f14d362d1251153de91e89 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:00:13+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:00:13+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:00:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:00:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:00:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:00:13+00:00 ] NOTIC: [8] Undefined index: 619724801665da74efa59c2ff0d7fc9d IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:00:38+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:00:38+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:00:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:00:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:00:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:00:35+00:00 ] NOTIC: [8] Undefined index: f70bb215ea2e2f7e3cea265ebe5822e0 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:01:00+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:00+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:01:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:01:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:01:00+00:00 ] NOTIC: [8] Undefined index: 31394ec9fa3bfa1b370b409d0b9d5b9f IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:01:25+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:25+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:14+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:01:14+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:01:14+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:01:14+00:00 ] NOTIC: [8] Undefined index: bab5e0833025d20bdb0e7c3f02ae0ccc IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:01:39+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:39+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:16+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:01:16+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:01:16+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:01:16+00:00 ] NOTIC: [8] Undefined index: 4432ea5fdc74f6765179cb8aedbc23f8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:01:41+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:41+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:01:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:01:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:01:34+00:00 ] NOTIC: [8] Undefined index: 0360ffd09ed81a829226c50b87c62fb8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:01:59+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:59+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:01:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:01:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:01:44+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:01:44+00:00 ] NOTIC: [8] Undefined index: c4154518476f4a764c73a074ffeacf82 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:02:09+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:02:09+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:02:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:02:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:02:10+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:02:10+00:00 ] NOTIC: [8] Undefined index: db4525d48a8601c1ca7eab7bc461db4a IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:02:35+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:02:35+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:02:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:02:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:02:35+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:02:35+00:00 ] NOTIC: [8] Undefined index: 597b97b87b8eb07e135333e45a01305d IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:03:00+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:00+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:03:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:03:00+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:03:00+00:00 ] NOTIC: [8] Undefined index: a58f5f02df01110136839204888b785a IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:03:25+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:25+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:03:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:03:25+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:03:25+00:00 ] NOTIC: [8] Undefined index: b8a0c532ab8d05805168cd3747116c33 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:03:50+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:50+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:26+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:03:26+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:03:26+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:03:26+00:00 ] NOTIC: [8] Undefined index: 056e76d6a1a6250374b375a05f44d7d1 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:03:51+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:51+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:03:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:03:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:03:52+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:03:52+00:00 ] NOTIC: [8] Undefined index: d53bec7fcb637f07a568e68dd04cbbda IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:04:17+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:04:17+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:04:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:04:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:04:17+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:04:17+00:00 ] NOTIC: [8] Undefined index: a896b11b8aef942637adac8b4f68556d IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:04:42+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:04:42+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:04:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:04:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:04:42+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:04:42+00:00 ] NOTIC: [8] Undefined index: d7577fd461d7bcd79b48307835a53f29 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:05:07+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:05:07+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:05:09+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:05:09+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:05:09+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:05:09+00:00 ] NOTIC: [8] Undefined index: 7fd519050765be3a51bc4a59b25bfb13 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:05:34+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:05:34+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:05:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:05:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:05:34+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:05:34+00:00 ] NOTIC: [8] Undefined index: 8bd2e069c95431169ebea6f99cc166dd IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:05:59+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:05:59+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:05:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:05:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:05:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:05:59+00:00 ] NOTIC: [8] Undefined index: 8a128b164d2dba5f47c984f5e50902ec IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:06:24+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:06:24+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:06:04+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:06:04+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:06:04+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:06:04+00:00 ] NOTIC: [8] Undefined index: b8ad27c25e346739247286eade9818ff IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:06:29+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:06:29+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:06:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:06:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:06:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:06:29+00:00 ] NOTIC: [8] Undefined index: 3cb1d730fae92aea91ccc17f0a3df9cb IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:06:54+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:06:54+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:06:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:06:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:06:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:06:54+00:00 ] NOTIC: [8] Undefined index: f51a23e263a43458cfc6c214f6670de9 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:07:19+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:07:19+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:07:06+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:07:06+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:07:06+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:07:06+00:00 ] NOTIC: [8] Undefined index: dfb2513c8d5132520675706b6378bc0f IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:07:31+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:07:31+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:07:31+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:07:31+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:07:31+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:07:31+00:00 ] NOTIC: [8] Undefined index: 532a181ecacebff336cadb3b0dccc9c6 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:07:56+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:07:56+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:07:56+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:07:56+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:07:56+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:07:56+00:00 ] NOTIC: [8] Undefined index: 9428b3152a3d9c335f2a194be7b6bef1 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:08:21+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:08:21+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:08:21+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:08:21+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:08:21+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:08:21+00:00 ] NOTIC: [8] Undefined index: b596027537814abe612df202d6a35190 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:08:46+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:08:46+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:08:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:08:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:08:46+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:08:46+00:00 ] NOTIC: [8] Undefined index: 96dc3fa590cc6827c273ab98dc2a089a IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:09:11+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:09:11+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:09:12+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:09:12+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:09:12+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:09:12+00:00 ] NOTIC: [8] Undefined index: 5a78c8951fbccea754d8882ec3f49b3c IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:09:37+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:09:37+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:09:37+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:09:37+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:09:37+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:09:37+00:00 ] NOTIC: [8] Undefined index: 3dda24b1e11dc8a29e5ebe8471f59b53 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:10:02+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:02+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:10:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:10:02+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:10:02+00:00 ] NOTIC: [8] Undefined index: 131a9806e15fc23648aafb3089ecaa3a IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:10:27+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:27+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:10:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:10:27+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:10:27+00:00 ] NOTIC: [8] Undefined index: 62a6bd496e9dc21c3aea72a6898c07b9 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:10:52+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:52+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:10:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:10:29+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:10:29+00:00 ] NOTIC: [8] Undefined index: b9a1c3ec4356bec815e88c4ac395fd9d IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:10:54+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:54+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:10:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:10:54+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:10:54+00:00 ] NOTIC: [8] Undefined index: 6abd33aafc1f7236b66e9269e5f16b65 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:11:19+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:11:19+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:10:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:10:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:10:59+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:10:59+00:00 ] NOTIC: [8] Undefined index: b2979cf64b5512e8921ca5e2c64d732e IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:11:24+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:11:24+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:11:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:11:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:11:24+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:11:24+00:00 ] NOTIC: [8] Undefined index: 0a85d2e03ea376ca7543d01ce41553e8 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:11:49+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:11:49+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:11:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:11:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:11:48+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:11:48+00:00 ] NOTIC: [8] Undefined index: 62df78df312f3ad1b15ea4a1c83c09d2 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:12:13+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:12:13+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:12:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:12:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:12:13+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:12:13+00:00 ] NOTIC: [8] Undefined index: b08d599cd9348601967e7bff24a20bd4 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:12:38+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:12:38+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:12:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:12:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:12:38+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:12:38+00:00 ] NOTIC: [8] Undefined index: 070c1fc740a35e37322853e939350150 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:13:03+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:13:03+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:13:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:13:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:13:03+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:13:03+00:00 ] NOTIC: [8] Undefined index: f4698899d8fdac42623431e5b0eb2e50 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:13:28+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:13:28+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:13:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:13:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:13:28+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:13:28+00:00 ] NOTIC: [8] Undefined index: 4076330723b88ea8235f6bbd4f256f10 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:13:53+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:13:53+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:13:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:13:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:13:53+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:13:53+00:00 ] NOTIC: [8] Undefined index: fb3fd6556e1af1b569b13d824bd848c1 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:14:18+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:14:18+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:14:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:14:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:14:18+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:14:18+00:00 ] NOTIC: [8] Undefined index: 5bce21f4ace4c739e18bd3fe8bb8a31d IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:14:43+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:14:43+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:14:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 109 行.
+[ 2013-08-06T10:14:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 114 行.
+[ 2013-08-06T10:14:43+00:00 ] NOTIC: [8] Indirect modification of overloaded property MemberModel::$fields has no effect Model.class.php 第 115 行.
+[ 2013-08-06T10:14:43+00:00 ] NOTIC: [8] Undefined index: 932fac3f390e7a4772594ca27d27fe08 IndexAction.class.php 第 28 行.
+[ 2013-08-06T10:15:09+00:00 ] NOTIC: [8] Undefined variable: arr IndexAction.class.php 第 45 行.
+[ 2013-08-06T10:15:09+00:00 ] NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed IndexAction.class.php 第 45 行.

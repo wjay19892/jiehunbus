@@ -1743,6 +1743,72 @@ function circleIndex(condition){
 	ajaxCircle();
 }
 
+function businessIndex(condition){
+	var $container = $('.category_shop');
+	var $page = $('.jvf_page');
+	$.getScript(PUBLIC+'/dwz/js/jquery.masonry.min.js',function(){
+		reset();
+	});
+	
+	$('.circle_list li a').click(function(){
+		condition.lid = $(this).attr('lid');
+		reset();
+	});
+	
+	
+	var scrollboot = true;
+	
+	$(window).scroll(function(){
+		var bottom = $container.offset().top + $container.outerHeight() - $(this).height();
+		var scrollTop=$(document).scrollTop();//滚动条距离
+		if(scrollTop>=bottom && scrollboot){
+			scrollboot = false;
+			var href = $page.find('.current').next('a').attr('href');
+			if(href){
+				loading.loadingStart('.jvf_body');
+				$.getJSON(href,function(data){
+					loading.loadingEnd();
+					$page.html(data.info.page);
+					$newElems = $(data.info.html);
+					$container.append($newElems).masonry( 'appended', $newElems, false );
+					scrollboot = true;
+				});
+			}else{
+				loading.loadingNot('.jvf_body');
+			}
+		}
+	});
+	
+	function reset(){
+		loading.loadingStart('.jvf_body');
+		$.post(APP+'/Business/ajaxBusiness',getPara(),function(data){
+			loading.loadingEnd();
+			$page.html(data.info.page);
+			$container.find('.shop_all:not(:first)').remove();
+			var html = $(data.info.html);
+			$container.append(html);
+			if($container.is('.masonry')){
+					$container.masonry('reload');
+			}else{
+			      $container.masonry({
+			        itemSelector : '.shop_all'
+			      });
+			}
+			scrollboot = true;
+		},'json');
+	}
+	
+	function getPara(){
+		var para = [];
+		for(var k in condition){
+			para.push(k+'='+condition[k]);
+		}
+		return para.join('&');
+	}
+	
+	ajaxBusiness();
+	addressMap();
+}
 
 function nearbyIndex(condition){
 	condition = condition?condition:{};

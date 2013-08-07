@@ -1,6 +1,10 @@
 <include file="Public:top" />
 <include file="Public:header" />
-
+<script>
+$(function(){
+    businessIndex({$condition});
+});
+</script>
 <!----搜索开始---->
 
 <form id="searchForm" action="{:U('Business/index')}" method="get">
@@ -38,28 +42,32 @@
                     </div>
                     <div class="csprank">
                         {%audience}：
-                        <span><a href="javascript:;">{$vo.was_attention}</a></span>
+                        <span><a href="{:U('User/attention/id/'.$vo['id'])}" target="_blank">{$vo.was_attention}</a></span>
                         {%listen}：
-                        <span><a href="javascript:;">{$vo.attention}</a></span>
+                        <span><a href="{:U('User/wasAttention/id/'.$vo['id'])}" target="_blank">{$vo.attention}</a></span>
                         {%mood}：
-                        <span><a href="javascript:;">{$vo.talk_about}</a></span>
+                        <span><a href="{:U('User/space/id/'.$vo['id'])}" target="_blank">{$vo.talk_about}</a></span>
                         营业时间：
-                        <span><a href="javascript:;">{$vo.business.opening}</a></span>
+                        <span>{$vo.business.opening}</span>
                     </div>
                     <div class="cadr">
-                        <div class="add">地址：{$vo.business.address}</div>
+                        <div class="add">地址：<a class="jvf_address" href="javascript:;" uid="{$vo.business.uid}">{$vo.business.address}</a></div>
                         <div class="num">
-                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="{$vo.id}">{%default_location_away}</a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em>{$vo.distance|formatDistance}</span>
+                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="{$vo.business.uid}">{%default_location_away}</a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em>{$vo.distance|formatDistance}</span>
                         </div>
                     </div>
                     <div class="chod">
                          店长：
                          <a href="{:U('User/space/id/'.$vo['id'])}">{$vo.name}</a>
                     </div>
+
+
+
                 </div>
             </li>
             </volist>
         </ul>
+        <div class="jvf_page" style="display:none;"></div>
     </div>
 </div>
 

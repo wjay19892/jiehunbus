@@ -301,6 +301,7 @@ class MemberModel extends CommonModel {
 		}
 		return $data;
 	}
+
 	
 	function getBusiness($latlng,$map = '',$limit = ''){
 		$field = 'M.* , (round(6378.137 * 2 * sin(sqrt(pow(sin((radians('.$latlng['lat'].')-radians(ML.`lat`))/2),2) + cos(radians('.$latlng['lat'].'))*cos(radians(ML.`lat`))*pow(sin(((radians('.$latlng['lng'].')-radians(ML.`lng`))/2)),2)))*10000)/10000) as distance';
@@ -325,11 +326,10 @@ class MemberModel extends CommonModel {
 				$value['was_attention'] = $this->getWasAttentionNum($value['id']);
 				$value['talk_about'] = $this->getTalk_aboutNum($value['id']);
 				$value['business'] = $apply->getOne(array('uid'=>array('eq',$value['id']),'status'=>array('eq',1)));
+	
 			}
 		}
 
-		
-		
 
 		return $data;
 	}
@@ -341,6 +341,19 @@ class MemberModel extends CommonModel {
 	public function _defaultbusinessWhere($map = array()){
 		$map['status'] = array('eq',1);
 		$map['isbusiness']=array('eq',1);
+		return $map;
+	}
+	//有关键词的时候，加入限定
+	public function _schdefaultbusinessWhere($map = array(),$search_key){
+		//$prefix = C('DB_PREFIX');
+		$map['status'] = array('eq',1);
+		$map['isbusiness']=array('eq',1);
+		$apply = M("apply");
+		$m['name'] = array('like',"%".$search_key."%");
+		//$ap = $apply->where($m)->field('uid')->select();
+		$ap = $apply->where($m)->field('uid')->find();
+		//var_dump($ap);
+		$map['id']=array('in',$ap['uid']);
 		return $map;
 	}
 

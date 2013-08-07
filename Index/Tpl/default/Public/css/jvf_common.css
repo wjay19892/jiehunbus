@@ -161,8 +161,7 @@ a:focus { outline: none; }
 .ui-widget-content { color: #999999;}
 .ui-widget-content a { }
 .ui-widget {background: none repeat scroll 0 0 #FFFFFF;
-    border: 9px solid #C9C9C9;
-    border-radius: 8px 8px 8px 8px;
+    border: 5px solid #000000;
     box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
     font-family: Verdana,Arial,sans-serif;
     font-size: 1.1em;}
@@ -874,7 +873,7 @@ _width:expression(function(el){el.style.width=el.clientWidth > 420 ? "420px" : "
     line-height: 19px;
     margin-left: 10px;
 }
-.shop_zur .yuanjia{ text-decoration:line-through;}
+.shop_zur .yuanjia{ text-decoration:line-through;font-size: 12px;}
 .w100{ width:100px;}
 .jvf_xianjia{color: #e30800;
     font-size:18px;
