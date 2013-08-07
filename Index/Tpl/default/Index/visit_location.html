@@ -24,11 +24,12 @@ $(function(){
           <span class="visit_pd">{%visit_location_address}：</span>
           <input type="text" placeholder="{%visit_location_address}" value="{$locate.address}" id="address" name="address" class="visit_address">
           <a href="javascript:;" id="addmarker">{%map_addmarker}</a>
-          <a href="javascript:;" id="showmarker">{%map_showmarker}</a>
+          <!--<a href="javascript:;" id="showmarker">{%map_showmarker}</a>-->
           <input type="hidden" readonly="readonly" value="" id="longitude" name="longitude">
           <input type="hidden" readonly="readonly" value="" id="latitude" name="latitude">
           <input type="hidden" readonly="readonly" value="" id="zoom" name="zoom">
           <span class="jvf_mgf f14"><input type="button" id="submit" class="btn p2153" name="commit" value="{%submit_text}"></span>
+          （*先标记，再提交）
         </form>
     </div>
         </div>

@@ -1,0 +1,81 @@
+Searching 576 files for "showmarker"
+
+/Applications/AMPPS/www/Index/Lang/zh-cn/common.php:
+  920  	'visit_location_set_success'=>'当前位置设置成功',
+  921  	'map_addmarker'=>'标记',
+  922: 	'map_showmarker'=>'显示标记',
+  923  	'map_delmarker'=>'删除标记',
+  924  	'map_clearmarker'=>'隐藏标记',
+
+/Applications/AMPPS/www/Index/Lang/zh-tw/common.php:
+  917  	'visit_location_set_success'=>'當前位置設置成功',
+  918  	'map_addmarker'=>'標記',
+  919: 	'map_showmarker'=>'顯示標記',
+  920  	'map_delmarker'=>'刪除標記',
+  921  	'map_clearmarker'=>'隱藏標記',
+
+/Applications/AMPPS/www/Index/Tpl/default/Goods/release.html:
+  150            <input type="text" value="{$goodsdata['address']?$goodsdata['address']:$memberdata['business']['address']}" class="w400" name="address" id="address">
+  151            <a onclick="codeAddress($('#address').val());" href="javascript:;">{%map_addmarker}</a>
+  152:           <a onclick="showMarker();" href="javascript:;">{%map_showmarker}</a>
+  153              </li>
+  154              <li>
+
+/Applications/AMPPS/www/Index/Tpl/default/Index/visit_location.html:
+   25            <input type="text" placeholder="{%visit_location_address}" value="{$locate.address}" id="address" name="address" class="visit_address">
+   26            <a href="javascript:;" id="addmarker">{%map_addmarker}</a>
+   27:           <!--<a href="javascript:;" id="showmarker">{%map_showmarker}</a>-->
+   28            <input type="hidden" readonly="readonly" value="" id="longitude" name="longitude">
+   29            <input type="hidden" readonly="readonly" value="" id="latitude" name="latitude">
+
+/Applications/AMPPS/www/Index/Tpl/default/Member/apply_seller.html:
+   78                              <input type="text" value="" class="sns-text" name="address" id="address"></strong>
+   79                              <a onclick="codeAddress($('#address').val());" href="javascript:;">{%map_addmarker}</a>
+   80:                             <a onclick="showMarker();" href="javascript:;">{%map_showmarker}</a>
+   81                              <em></em>
+   82                          </span>
+
+/Applications/AMPPS/www/Index/Tpl/default/Member/location.html:
+   37  		     <input class="jvf_inputt" type="text" value="" placeholder="{%member_location_address}" name="address" id="address">
+   38  		     <a href="javascript:;" id="addmarker">{%map_addmarker}</a>
+   39: 		     <a href="javascript:;" id="showmarker">{%map_showmarker}</a>
+   40  		</div>
+   41  	    <div>
+
+/Applications/AMPPS/www/Index/Tpl/default/Member/step.html:
+   52                   <input type="text" id="address" name="address" placeholder="{%visit_location_address}" value="{$locate.address}" class="jvf_inputt">
+   53                   <a id="addmarker" href="javascript:;" onclick="codeAddress($('.setmap_startit #address').val());">{%map_addmarker}</a>
+   54:                  <a id="showmarker" href="javascript:;" onclick="showMarker($('.setmap_startit #address').val())">{%map_showmarker}</a>
+   55          	</div>
+   56          	<input type="hidden" readonly="readonly" value="" id="longitude" name="longitude">
+
+/Applications/AMPPS/www/Index/Tpl/default/Public/js/baidumap_location.js:
+  213  }
+  214  // 显示标记
+  215: function showMarker() {
+  216      if(map_marker==null ) return ;
+  217      map['map_canvas'].addOverlay(map_marker);
+
+/Applications/AMPPS/www/Index/Tpl/default/Public/js/common.js:
+  771  	});
+  772  	
+  773: 	$('#setvisit_locationform #showmarker').click(function(){
+  774: 		showMarker();
+  775  	});
+  776  	
+  ...
+ 3059  		codeAddress($('#addlocation #address').val());
+ 3060  	});
+ 3061: 	$('#addlocation #showmarker').click(function(){
+ 3062: 		showMarker($('#addlocation #address').val());
+ 3063  	});
+ 3064  	
+
+/Applications/AMPPS/www/Index/Tpl/default/Public/js/googlemap_location.js:
+  247  }
+  248  // 显示标记
+  249: function showMarker() {
+  250      if(map_marker==null ) return ;
+  251      map_marker.setMap(map['map_canvas']);
+
+19 matches across 10 files

@@ -50,8 +50,8 @@ function load_map_wrapper(){
             <div class="setmap_startit">
                  <label for="user_name">{%visit_location_address}</label>
                  <input type="text" id="address" name="address" placeholder="{%visit_location_address}" value="{$locate.address}" class="jvf_inputt">
-                 <a id="addmarker" href="javascript:;" onclick="codeAddress($('.setmap_startit #address').val());">{%map_addmarker}</a>
-                 <a id="showmarker" href="javascript:;" onclick="showMarker($('.setmap_startit #address').val())">{%map_showmarker}</a>
+                 <a id="addmarker" href="javascript:;" onclick="codeAddress($('.setmap_startit #address').val());">{%map_addmarker}</a>（*填好后标记一下）
+                 <!--<a id="showmarker" href="javascript:;" onclick="showMarker($('.setmap_startit #address').val())">{%map_showmarker}</a>-->
         	</div>
         	<input type="hidden" readonly="readonly" value="" id="longitude" name="longitude">
 	          <input type="hidden" readonly="readonly" value="" id="latitude" name="latitude">

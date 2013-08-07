@@ -149,7 +149,7 @@ function load_map_wrapper(){
           </div>
           <input type="text" value="{$goodsdata['address']?$goodsdata['address']:$memberdata['business']['address']}" class="w400" name="address" id="address">
           <a onclick="codeAddress($('#address').val());" href="javascript:;">{%map_addmarker}</a>
-          <a onclick="showMarker();" href="javascript:;">{%map_showmarker}</a>
+          <!--<a onclick="showMarker();" href="javascript:;">{%map_showmarker}</a>-->
             </li>
             <li>
                 <div id="map_canvas" class="fb_mpf"></div>
