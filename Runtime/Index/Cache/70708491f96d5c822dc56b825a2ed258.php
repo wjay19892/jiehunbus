@@ -132,79 +132,99 @@ function ieGo(){
     </div>
 <!--头部——结束-->
 <script>
-$(function(){
-    businessIndex(<?php echo ($condition); ?>);
-    
-});
+	$(function(){
+		userSpace(<?php echo ($userdata['id']); ?>);
+	});
 </script>
-<!----搜索开始---->
-
-<form id="searchForm" action="<?php echo U('Business/index');?>" method="get">
-<div id="car_top2" class="clearfix">
-    <div id="main_box">
-
-        <div id="select_box">
-            <div class="searchbg"> 
-                <input class="search_sp2" type="text" placeholder="输入商家名称" name="search_key">
-                <div class="searchbg2">
-                    <input class="searchbg1" type="button" value="搜 索" name="submit_button">
-                </div>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_member_body clearfix">
+       <div class="mb_left jvf_fl3">
+       		<!--粉丝-->
+            <div class="mb_left_con">
+            	<h2 class="jvf_space_tit"><?php echo L("ta_say");?></h2>
+            	<div class="left_box"></div>
+            	<div class="jvf_page" style="display:none;">
+				</div>       	
             </div>
-        </div>
-
+            <!--粉丝-->
+       </div>
+       <div class="mb_right jvf_fr3">
+<div class="mb_head_user mg0a" style="padding-top:10px;">
+       <div class="mb_head_img">
+  	<a href="<?php echo U('User/space/id/'.$userdata['id']);?>"><img src="<?php echo ($userdata["header"]["path"]); ?>" /></a>
+      <div class="space_operation clearfix" style="padding-left:1px; z-index:1;">
+          <a href="<?php echo U('Member/addfriend/id/'.$userdata['id']);?>"><?php echo L("addfriend");?></a>
+          <a href="<?php echo U('Member/sendpm/id/'.$userdata['id']);?>"><?php echo L("send_message");?></a>
+          <a href="javascript:;" uid="<?php echo ($userdata['id']); ?>" class="jvf_callme"><?php echo L("to_chat");?></a>
+      </div>
+      <div class="attestation"></div>
+  </div>
+  <div class="mb_username clearfix"><a charset="jvf_fl" href="<?php echo U('User/space/id/'.$userdata['id']);?>">
+	<?php if(($userdata["isbusiness"])  ==  "1"): ?><?php echo ($userdata["business"]["name"]); ?></br>
+	(<?php echo L("goods_manager");?>:<?php echo ($userdata["name"]); ?>)
+	<?php else: ?>
+	<?php echo ($userdata["name"]); ?><?php endif; ?>
+  	<?php if(($userdata["sex"])  ==  "0"): ?><span class="jvf_ico unman" ><?php endif; ?>
+  	<?php if(($userdata["sex"])  ==  "1"): ?><span class="jvf_ico man" ><?php endif; ?>
+  	<?php if(($userdata["sex"])  ==  "2"): ?><span class="jvf_ico woman" ><?php endif; ?>
+  </span></a></div>
+ 
+  <div class="jvf_space clearfix">
+      <ul>
+          <li class="jvf_fl">
+              <a href="<?php echo U('User/evaluate/id/'.$userdata['id']);?>">(<?php echo ($userdata["evaluate"]); ?>)</a><br>
+              <?php echo L("ta_evaluation_goods");?>
+          </li>
+          <li class="jvf_fr">
+              <a href="<?php echo U('User/recommend/id/'.$userdata['id']);?>">(<?php echo ($userdata["recommend"]); ?>)</a><br>
+              <?php echo L("ta_recommend_goods");?>
+          </li>
+      </ul>
+  </div>  
+  <div class="space_verification clearfix">
+  	<span class="sp1 jvf_fl"><?php echo L("verification_text");?>：</span>
+      <div class="sp2 jvf_fl clearfix"><span class="mail jvf_allimg jvf_fl"  title="<?php echo L("mail_verification");?>"></span><span class="jvf_fl"><?php if(($userdata["mailstatus"])  ==  "0"): ?><?php echo L("not_verified");?><?php else: ?><?php echo L("verified");?><?php endif; ?></span></div>
+      <div class="sp3 jvf_fl clearfix"><span class="mobile jvf_allimg jvf_fl" title="<?php echo L("phone_verification");?>"></span><span class="jvf_fl"><?php if(($userdata["phonestatus"])  ==  "0"): ?><?php echo L("not_verified");?><?php else: ?><?php echo L("verified");?><?php endif; ?></span></div>
+      <div class="sp4 jvf_fl clearfix"><span class="tmall jvf_allimg jvf_fl" title="商家验证"></span><span class="jvf_fl"><?php if(($userdata["phonestatus"])  ==  "0"): ?><?php echo L("not_verified");?><?php else: ?><?php echo L("verified");?><?php endif; ?></span></div>
+  </div>
+  		
+<div class="jvf_spaadr"><?php echo L("default_location");?>：<a href="javascript:;" class="jvf_address" uid="<?php echo ($userdata["id"]); ?>"><?php echo ($userdata["address"]); ?><span class="jvf_juli fujin_ico"><?php echo distance($locate['lat'],$locate['lng'],$userdata['location']['lat'],$userdata['location']['lng']);?></span></a></div>
+<div class="clearfix shop_renzheng">
+	<!-- <div class="jvf_shopman jvf_fl">
+      <span class="shopman_ico jvf_allimg jvf_fl" title="<?php echo L("businesses_certified");?>"></span>
+      <span class="jvf_fl" style="line-height: 28px;margin-left: 7px;"><?php echo L("businesses_certified");?></span>
+    </div> -->
+    <div  class="space_guanzhu jvf_fr">
+    	<?php if(!in_array($userdata['id'],$memberdata['attention_ids'])): ?><a href="<?php echo U('Member/attention/id/'.$userdata['id']);?>" add="add"><?php echo L("user_add_attention");?></a>
+    	<?php else: ?>
+    	<a href="<?php echo U('Member/removeattention/id/'.$userdata['id']);?>" remove="remove"><?php echo L("user_remove_attention");?></a><?php endif; ?>
+    	</div>
     </div>
 </div>
-</form>
-<!----搜索结束---->
-
-<div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
-    <div class="jvf_body">
-        <div class="jvf_advertising">
-            <?php echo L("jvf_advertising");?>
-        </div>
-        <ul class="business_list">
-            <?php if(is_array($nerbyfriend)): $i = 0; $__LIST__ = $nerbyfriend;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
-                <div class="clogo">
-                    <a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank" title="">
-                        <img src="<?php echo ($vo["header"]["path"]); ?>" width="110" height="110" alt=""/>
-                    </a>
-                </div>
-                <div class="cneir">
-                    <div class="ctil">
-                        <h4 class="name"><a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["business"]["name"]); ?></a></h4>
-                        <a href="javascript:;" uid="<?php echo ($vo['id']); ?>" class="jvf_callme">和TA<?php echo L("chat");?></a>
-                    </div>
-                    <div class="csprank">
-                        <?php echo L("audience");?>：
-                        <span><a href="<?php echo U('User/attention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["was_attention"]); ?></a></span>
-                        <?php echo L("listen");?>：
-                        <span><a href="<?php echo U('User/wasAttention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["attention"]); ?></a></span>
-                        <?php echo L("mood");?>：
-                        <span><a href="<?php echo U('User/space/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["talk_about"]); ?></a></span>
-                        营业时间：
-                        <span><?php echo ($vo["business"]["opening"]); ?></span>
-                    </div>
-                    <div class="cadr">
-                        <div class="add">地址：<a class="jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo ($vo["business"]["address"]); ?></a></div>
-                        <div class="num">
-                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo L("default_location_away");?></a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em><?php echo (formatDistance($vo["distance"])); ?></span>
-                        </div>
-                    </div>
-                    <div class="chod">
-                         店长：
-                         <a href="<?php echo U('User/space/id/'.$vo['id']);?>"><?php echo ($vo["name"]); ?></a>
-                    </div>
-
-
-
-                </div>
-            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
-        <div class="jvf_page" style="display:none;"></div>
+<div class="mb_nav">
+	<div class="jvf_shuo <?php if((ACTION_NAME)  ==  "space"): ?>current<?php endif; ?>">
+    	<a class="jvf_allimg" href="<?php echo U('User/space/id/'.$userdata['id']);?>"><em class="jvf_allimg jvf_shuo_ico"></em><?php echo L("ta_talk_about");?><span>(<?php echo ($userdata["talk_about"]); ?>)</span></a>
+    </div>
+    <div class="jvf_fesi <?php if((ACTION_NAME)  ==  "attention"): ?>current<?php endif; ?>">
+    	<a class="jvf_allimg" href="<?php echo U('User/attention/id/'.$userdata['id']);?>"><em class="jvf_allimg jvf_fesi_ico"></em><?php echo L("ta_audience");?><span>(<?php echo ($userdata["was_attention"]); ?>)</span></a>
+    </div>
+    <div class="jvf_guzu <?php if((ACTION_NAME)  ==  "wasAttention"): ?>current<?php endif; ?>">
+    	<a class="jvf_allimg" href="<?php echo U('User/wasAttention/id/'.$userdata['id']);?>"><em class="jvf_allimg jvf_guzu_ico"></em><?php echo L("ta_listen");?><span>(<?php echo ($userdata["attention"]); ?>)</span></a>
+    </div>
+    <div class="jvf_hayo <?php if((ACTION_NAME)  ==  "friends"): ?>current<?php endif; ?>">
+    	<a class="jvf_allimg" href="<?php echo U('User/friends/id/'.$userdata['id']);?>"><em class="jvf_allimg jvf_hayo_ico"></em><?php echo L("ta_friends");?><span>(<?php echo ($userdata["friends"]); ?>)</span></a>
+    </div>
+    <div class="jvf_zila <?php if((ACTION_NAME)  ==  "info"): ?>current<?php endif; ?>">
+    	<a class="jvf_allimg" href="<?php echo U('User/info/id/'.$userdata['id']);?>"><em class="jvf_allimg jvf_zila_ico"></em><?php echo L("ta_data");?></a>
+    </div>
+	<?php if(($userdata["isbusiness"])  ==  "1"): ?><div class="jvf_zila <?php if((ACTION_NAME)  ==  "goods"): ?>current<?php endif; ?>">
+    	<a class="jvf_allimg" href="<?php echo U('User/goods/id/'.$userdata['id']);?>"><em class="jvf_allimg jvf_shop_ico"></em>TA发布的商品<span>(<?php echo ($userdata["goodsnum"]); ?>)</span></a>
+    </div><?php endif; ?>
     </div>
 </div>
-
-
+       </div>
+	</div>
+</div>
 <!--jvf_list-->
 <div class="jvf_list body_bot">
 	<div class="pad10 clearfix">

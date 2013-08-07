@@ -133,19 +133,18 @@ function ieGo(){
 <!--头部——结束-->
 <script>
 $(function(){
-    businessIndex(<?php echo ($condition); ?>);
-    
+	nearbyFriend(<?php echo ($condition); ?>);
 });
 </script>
 <!----搜索开始---->
 
-<form id="searchForm" action="<?php echo U('Business/index');?>" method="get">
+<form id="searchForm" action="<?php echo U('Search/index');?>" method="get">
 <div id="car_top2" class="clearfix">
     <div id="main_box">
 
         <div id="select_box">
             <div class="searchbg"> 
-                <input class="search_sp2" type="text" placeholder="输入商家名称" name="search_key">
+                <input class="search_sp2" type="text" placeholder="您还可以直接输入商品名搜索" name="search_key">
                 <div class="searchbg2">
                     <input class="searchbg1" type="button" value="搜 索" name="submit_button">
                 </div>
@@ -156,54 +155,33 @@ $(function(){
 </div>
 </form>
 <!----搜索结束---->
-
 <div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
-    <div class="jvf_body">
-        <div class="jvf_advertising">
-            <?php echo L("jvf_advertising");?>
+	<div class="jvf_body">
+      	<div class="jvf_advertising">
+        	<?php echo L("jvf_advertising");?>
         </div>
-        <ul class="business_list">
-            <?php if(is_array($nerbyfriend)): $i = 0; $__LIST__ = $nerbyfriend;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
-                <div class="clogo">
-                    <a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank" title="">
-                        <img src="<?php echo ($vo["header"]["path"]); ?>" width="110" height="110" alt=""/>
-                    </a>
-                </div>
-                <div class="cneir">
-                    <div class="ctil">
-                        <h4 class="name"><a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["business"]["name"]); ?></a></h4>
-                        <a href="javascript:;" uid="<?php echo ($vo['id']); ?>" class="jvf_callme">和TA<?php echo L("chat");?></a>
-                    </div>
-                    <div class="csprank">
-                        <?php echo L("audience");?>：
-                        <span><a href="<?php echo U('User/attention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["was_attention"]); ?></a></span>
-                        <?php echo L("listen");?>：
-                        <span><a href="<?php echo U('User/wasAttention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["attention"]); ?></a></span>
-                        <?php echo L("mood");?>：
-                        <span><a href="<?php echo U('User/space/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["talk_about"]); ?></a></span>
-                        营业时间：
-                        <span><?php echo ($vo["business"]["opening"]); ?></span>
-                    </div>
-                    <div class="cadr">
-                        <div class="add">地址：<a class="jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo ($vo["business"]["address"]); ?></a></div>
-                        <div class="num">
-                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo L("default_location_away");?></a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em><?php echo (formatDistance($vo["distance"])); ?></span>
-                        </div>
-                    </div>
-                    <div class="chod">
-                         店长：
-                         <a href="<?php echo U('User/space/id/'.$vo['id']);?>"><?php echo ($vo["name"]); ?></a>
-                    </div>
-
-
-
-                </div>
-            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
-        <div class="jvf_page" style="display:none;"></div>
+        <div class="shop_nav clearfix">
+        	<ul class="nav_left jvf_fl">
+            	<li><a href="<?php echo U('Nearby/index');?>"><?php echo L("nerby_goods");?></a></li>
+                <li><a class="fontbold" href="<?php echo U('Nearby/friend');?>"><?php echo L("nearby_friends");?></a></li>
+            </ul>
+            <ul class="nav_right jvf_fr">
+                <li><?php echo L("sort_by");?>：</li>
+                <li><a class="fontbold" href="javascript:;" sex=""><?php echo L("all_text");?></a></li>
+                <li><a href="javascript:;" sex="1"><?php echo L("man");?></a></li>
+                <li><a href="javascript:;" sex="2"><?php echo L("woman");?></a></li>
+                <li><a href="javascript:;" sex="0"><?php echo L("unman");?></a></li>
+            </ul>
+        </div>
+        <div class="linkbg"></div>
+        
+        <div class="category_shop clearfix">
+                 
+        </div>
+        <div class="jvf_page" style="display:none;">
+		</div>
     </div>
 </div>
-
 
 <!--jvf_list-->
 <div class="jvf_list body_bot">

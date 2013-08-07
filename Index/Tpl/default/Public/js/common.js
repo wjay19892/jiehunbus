@@ -1806,7 +1806,7 @@ function businessIndex(condition){
 		return para.join('&');
 	}
 	
-	ajaxBusiness();
+	//ajaxBusiness();
 	addressMap();
 }
 

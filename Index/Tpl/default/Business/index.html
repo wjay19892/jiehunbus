@@ -3,6 +3,7 @@
 <script>
 $(function(){
     businessIndex({$condition});
+    
 });
 </script>
 <!----搜索开始---->
@@ -27,6 +28,9 @@ $(function(){
 
 <div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
     <div class="jvf_body">
+        <div class="jvf_advertising">
+            {%jvf_advertising}
+        </div>
         <ul class="business_list">
             <volist name="nerbyfriend" id="vo">
             <li>

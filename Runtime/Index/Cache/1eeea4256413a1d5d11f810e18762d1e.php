@@ -131,79 +131,100 @@ function ieGo(){
         </div>
     </div>
 <!--头部——结束-->
-<script>
+<script type="text/javascript">
 $(function(){
-    businessIndex(<?php echo ($condition); ?>);
-    
+	shoppingCart();
 });
 </script>
-<!----搜索开始---->
-
-<form id="searchForm" action="<?php echo U('Business/index');?>" method="get">
-<div id="car_top2" class="clearfix">
-    <div id="main_box">
-
-        <div id="select_box">
-            <div class="searchbg"> 
-                <input class="search_sp2" type="text" placeholder="输入商家名称" name="search_key">
-                <div class="searchbg2">
-                    <input class="searchbg1" type="button" value="搜 索" name="submit_button">
-                </div>
-            </div>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<!--购物车-->
+         <div class="jvf_w100_con jvf_shoppcart">
+            <div class="jvf_w100_tit"><?php echo L("shoppingcart_my_cart");?></div>
+            	<div style="padding:10px;">
+                    <div class="emptygoods" id="emptyGoods" <?php if(empty($goodsdata)): ?>style="display:block;"<?php else: ?>style="display:none;"<?php endif; ?>>
+                        <p><a href="<?php echo U('Index/index');?>"><?php echo L("shoppingcart_return_index");?></a></p>
+                    </div>
+                    <div id="haveGoods" <?php if(empty($goodsdata)): ?>style="display:none;"<?php else: ?>style="display:block;"<?php endif; ?>>
+                      <table width="100%" cellspacing="0" cellpadding="0" class="jvf_cartList">
+                        <colgroup>
+                        <col width="32">
+                        <col width="160">
+                        <col>
+                        <col width="116">
+                        <col width="78">
+                        <col width="78">
+                        <col width="60">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="nobg"><input type="checkbox" id="cartSelectAllTop" name="cartSelectAllBot"></th>
+                            <th class="sc_left"><?php echo L("select_all");?></th>
+				            <th><?php echo L("goods_title");?></th>
+				            <th><?php echo L("nums_text");?></th>
+				            <th><?php echo L("unit_price");?></th>
+				            <th><?php echo L("subtotal");?></th>
+				            <th class="nobg">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr>
+                            <td><input type="checkbox" id="cartSelectAllBot" name="cartSelectAllTop"></td>
+                            <td colspan="6" class="sc_left"><?php echo L("select_all");?>&nbsp;&nbsp;<a href="javascript:;" id="delGoodsMore" class="a_blue"><?php echo L("bulk_delete");?></a></td>
+                          </tr>
+                        </tfoot>
+                        <?php if(is_array($goodsdata)): $i = 0; $__LIST__ = $goodsdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tbody>
+	                        <tr>
+	                          <td>&nbsp;</td>
+	                          <td class="sc_pt_inline"><input type="checkbox" name="cartIds" value="<?php echo ($vo["id"]); ?>">
+	                            <a href="<?php echo U('Goods/index/id/'.$vo['id']);?>" target="_blank">
+	                              <img src="<?php echo ($vo["accessory"]["thumbnail"]); ?>"></a>
+	                            </td>
+	                          <td><div class="sc_txt"><a href="<?php echo U('Goods/index/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["title"]); ?></a></div>
+	                          </td><td class="sc_pt_inline2">
+	                              <a class="minus jvf_member_bg" title="<?php echo L("minus_one");?>"></a>
+	                              <input type="text" class="sc_pt_count" maxlength="3" value="<?php echo ($nums[$vo['id']]); ?>" id="goods_<?php echo ($vo["id"]); ?>">
+	                              <a class="plus jvf_member_bg" title="<?php echo L("plus_one");?>"></a>
+	                          </td>
+	                          <td class="fontred">&yen;<span id="unitprice_<?php echo ($vo["id"]); ?>"><?php echo ($vo["price"]); ?></span></td>
+	                          <td>&yen;<span id="subtotal_<?php echo ($vo["id"]); ?>"><?php echo ($vo['price'] * $nums[$vo['id']]); ?></span></td>
+	                          <td><a id="deleteGoods_<?php echo ($vo["id"]); ?>" href="javascript:;" class="a_blue"><?php echo L("delete");?></a></td>
+	                        </tr>
+                          </tbody><?php endforeach; endif; else: echo "" ;endif; ?>
+                          </table>
+                      <div class="sc_bot_total"><span><?php echo L("total_amount");?>：&yen;<strong id="totalPriceBot"></strong></span></div>
+                      <div class="go_pay"><a href="<?php echo U('Index/index');?>" class="jvf_continue"><?php echo L("shoppingcart_return");?>&gt;&gt;</a><span class="jvf_mgf"><a class="btn p2153" href="javascript:loginAfter(function(){goUrl(APP+'/Member/payment')})" id="cartSubmitBot"><?php echo L("shoppingcart_go_pay");?></a></span></div>
+                    </div>
+                    <?php if(!empty($latelydata)): ?><dl class="recent_goods mt20">
+                    <dt><h2><?php echo L("recently_viewed_goods");?></h2></dt>
+                    <dd>
+                    <div class="search_jieguo">
+                    <?php if(is_array($latelydata)): $i = 0; $__LIST__ = $latelydata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><ul class="shangpu_product_list">
+                            <li class="list_photo jvf_shoppingCart">
+                                <a href="<?php echo U('Goods/index/id/'.$vo['id']);?>" target="_blank">
+                                    <img src="<?php echo ($vo["accessory"]["thumbnail"]); ?>" alt="<?php echo ($vo["title"]); ?>">
+                                </a>
+                            </li>
+                            <li class="list_name">
+                                <a href="<?php echo U('Goods/index/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["title"]); ?></a>
+                            </li>
+                        <li class="list_price">
+                          <div class="jvf_fl"><span class="jvf_fl"><?php echo L("now_price");?></span><font class="f18 fontred">&nbsp;&yen;<?php echo ($vo["price"]); ?></font></div>
+                          <div class="jvf_fr"><?php echo L("cost_price");?>：&yen;<?php echo ($vo["original"]); ?></div>
+                        </li>
+                        </ul><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </div>
+                    <div class="jvf_cl"></div>
+                    </dd>
+                  </dl><?php endif; ?>
+                  </div>
+        
+          
         </div>
-
+        <!--购物车——end-->
+        <div class="jvf_w100"></div>
     </div>
 </div>
-</form>
-<!----搜索结束---->
-
-<div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
-    <div class="jvf_body">
-        <div class="jvf_advertising">
-            <?php echo L("jvf_advertising");?>
-        </div>
-        <ul class="business_list">
-            <?php if(is_array($nerbyfriend)): $i = 0; $__LIST__ = $nerbyfriend;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
-                <div class="clogo">
-                    <a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank" title="">
-                        <img src="<?php echo ($vo["header"]["path"]); ?>" width="110" height="110" alt=""/>
-                    </a>
-                </div>
-                <div class="cneir">
-                    <div class="ctil">
-                        <h4 class="name"><a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["business"]["name"]); ?></a></h4>
-                        <a href="javascript:;" uid="<?php echo ($vo['id']); ?>" class="jvf_callme">和TA<?php echo L("chat");?></a>
-                    </div>
-                    <div class="csprank">
-                        <?php echo L("audience");?>：
-                        <span><a href="<?php echo U('User/attention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["was_attention"]); ?></a></span>
-                        <?php echo L("listen");?>：
-                        <span><a href="<?php echo U('User/wasAttention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["attention"]); ?></a></span>
-                        <?php echo L("mood");?>：
-                        <span><a href="<?php echo U('User/space/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["talk_about"]); ?></a></span>
-                        营业时间：
-                        <span><?php echo ($vo["business"]["opening"]); ?></span>
-                    </div>
-                    <div class="cadr">
-                        <div class="add">地址：<a class="jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo ($vo["business"]["address"]); ?></a></div>
-                        <div class="num">
-                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo L("default_location_away");?></a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em><?php echo (formatDistance($vo["distance"])); ?></span>
-                        </div>
-                    </div>
-                    <div class="chod">
-                         店长：
-                         <a href="<?php echo U('User/space/id/'.$vo['id']);?>"><?php echo ($vo["name"]); ?></a>
-                    </div>
-
-
-
-                </div>
-            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
-        <div class="jvf_page" style="display:none;"></div>
-    </div>
-</div>
-
 
 <!--jvf_list-->
 <div class="jvf_list body_bot">

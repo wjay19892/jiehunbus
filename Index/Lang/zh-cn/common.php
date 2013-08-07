@@ -1073,7 +1073,7 @@ return array(
 		'set_cent'=>'设置常用位置可以方便您找到附近最优惠的商品，还可以看看附近都有谁也在。',
 		'jvf_sendcnt_tit'=>'来！说说你在想什么！有什么有趣的事情分享给大家！',
 		'site_couponname_list'=>C('sysconfig.site_couponname').'列表',
-		'jvf_advertising'=>'<span>来认识我一下吧！</span>我是一个婚纱摄影行业的专家，我知道哪有最好、最优惠的！  ',
+		'jvf_advertising'=>'若无内容显示，请到左上角 ↑【我的位置】设置你的当前位置！',
 		'report_box_fk'=>'您好！您觉得这件商品哪些地方不符合要求或者有错误！请给予反馈，我们会及时处理！',
 	//===========function===========//
 	'hours_before'=>'小时前',

@@ -131,79 +131,45 @@ function ieGo(){
         </div>
     </div>
 <!--头部——结束-->
-<script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+<script src="../Public/js/baidumap_location.js" type="text/javascript"></script>
+<script type="text/javascript">
 $(function(){
-    businessIndex(<?php echo ($condition); ?>);
-    
+	try{
+		setTimeout(function() {
+			initialize("map_canvas");
+			addTags('<?php echo ($locate["lat"]); ?>','<?php echo ($locate["lng"]); ?>','<?php echo ($locate["address"]); ?>',"map_canvas",'');
+		},0);
+	}catch(e){
+	}
+	visit_location();
 });
+
 </script>
-<!----搜索开始---->
-
-<form id="searchForm" action="<?php echo U('Business/index');?>" method="get">
-<div id="car_top2" class="clearfix">
-    <div id="main_box">
-
-        <div id="select_box">
-            <div class="searchbg"> 
-                <input class="search_sp2" type="text" placeholder="输入商家名称" name="search_key">
-                <div class="searchbg2">
-                    <input class="searchbg1" type="button" value="搜 索" name="submit_button">
-                </div>
-            </div>
+<div class="mainbody body_bot body_con clearfix">
+	<div class="jvf_body">
+    	<div class="jvf_w100_con jvf_visit">
+        	<div class="jvf_w100_tit"><h2><?php echo L("setvisit_location");?></h2></div>
+            <div class="clearfix visit_tit2">
+        <form method="post" action="<?php echo U('Index/setvisit_location');?>" class="clearfix" id="setvisit_locationform">
+          <span class="visit_pd"><?php echo L("visit_location_address");?>：</span>
+          <input type="text" placeholder="<?php echo L("visit_location_address");?>" value="<?php echo ($locate["address"]); ?>" id="address" name="address" class="visit_address">
+          <a href="javascript:;" id="addmarker"><?php echo L("map_addmarker");?></a>
+          <a href="javascript:;" id="showmarker"><?php echo L("map_showmarker");?></a>
+          <input type="hidden" readonly="readonly" value="" id="longitude" name="longitude">
+          <input type="hidden" readonly="readonly" value="" id="latitude" name="latitude">
+          <input type="hidden" readonly="readonly" value="" id="zoom" name="zoom">
+          <span class="jvf_mgf f14"><input type="button" id="submit" class="btn p2153" name="commit" value="<?php echo L("submit_text");?>"></span>
+        </form>
+    </div>
         </div>
-
+        <div class="jvf_w100"></div>
+        <div class="jvf_w100_con" style="padding: 10px;">
+        <div id="map_canvas" style="height:500px;"></div>
+        </div>
+        <div class="jvf_w100"></div>
     </div>
 </div>
-</form>
-<!----搜索结束---->
-
-<div class="mainbody body_bot body_con clearfix" style="padding:0px 0 20px;">
-    <div class="jvf_body">
-        <div class="jvf_advertising">
-            <?php echo L("jvf_advertising");?>
-        </div>
-        <ul class="business_list">
-            <?php if(is_array($nerbyfriend)): $i = 0; $__LIST__ = $nerbyfriend;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><li>
-                <div class="clogo">
-                    <a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank" title="">
-                        <img src="<?php echo ($vo["header"]["path"]); ?>" width="110" height="110" alt=""/>
-                    </a>
-                </div>
-                <div class="cneir">
-                    <div class="ctil">
-                        <h4 class="name"><a href="<?php echo U('User/goods/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["business"]["name"]); ?></a></h4>
-                        <a href="javascript:;" uid="<?php echo ($vo['id']); ?>" class="jvf_callme">和TA<?php echo L("chat");?></a>
-                    </div>
-                    <div class="csprank">
-                        <?php echo L("audience");?>：
-                        <span><a href="<?php echo U('User/attention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["was_attention"]); ?></a></span>
-                        <?php echo L("listen");?>：
-                        <span><a href="<?php echo U('User/wasAttention/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["attention"]); ?></a></span>
-                        <?php echo L("mood");?>：
-                        <span><a href="<?php echo U('User/space/id/'.$vo['id']);?>" target="_blank"><?php echo ($vo["talk_about"]); ?></a></span>
-                        营业时间：
-                        <span><?php echo ($vo["business"]["opening"]); ?></span>
-                    </div>
-                    <div class="cadr">
-                        <div class="add">地址：<a class="jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo ($vo["business"]["address"]); ?></a></div>
-                        <div class="num">
-                            <a class="jvf_fl jvf_over mw145 jvf_address" href="javascript:;" uid="<?php echo ($vo["business"]["uid"]); ?>"><?php echo L("default_location_away");?></a><span class="jvf_adr jvf_fl pr"><em class="jvf_ico"></em><?php echo (formatDistance($vo["distance"])); ?></span>
-                        </div>
-                    </div>
-                    <div class="chod">
-                         店长：
-                         <a href="<?php echo U('User/space/id/'.$vo['id']);?>"><?php echo ($vo["name"]); ?></a>
-                    </div>
-
-
-
-                </div>
-            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
-        <div class="jvf_page" style="display:none;"></div>
-    </div>
-</div>
-
 
 <!--jvf_list-->
 <div class="jvf_list body_bot">
