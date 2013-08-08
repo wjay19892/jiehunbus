@@ -1,0 +1,69 @@
+<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" action="__URL__" method="post">
+	<input type="hidden" name="pageNum" value="1"/>
+	<input type="hidden" name="_order" value="<?php echo ($_REQUEST["_order"]); ?>"/>
+	<input type="hidden" name="_sort" value="<?php echo ($_REQUEST["_sort"]); ?>"/>
+</form>
+
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>等级名称：</label>
+				<input name="lid" type="hidden" group="level" field="id"/>
+				<input name="title" type="text" readonly="readonly" group="level" field="name"/>
+				<a class="btnLook" href="<?php echo U('Level/lookUp/group/level/dialogId/'.MODULE_NAME.'_'.ACTION_NAME);?>" target="dialog" rel="level_lookup">查找带回</a>
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+    <!--  功能操作区域  -->
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add" target="dialog" rel="__MODULE___add"><span>新增</span></a></li>
+			<li><a class="delete" href="__URL__/foreverdelete/id/{sid_node}/navTabId/__MODULE__" target="ajaxTodo" calback="navTabAjaxMenu" title="你确定要删除吗？" warn="请选择"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{sid_node}" target="dialog" rel="__MODULE___edit" warn="请选择"><span>修改</span></a></li>
+		</ul>
+	</div>
+   <!-- 功能操作区域结束 -->
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="60">编号</th>
+			<th width="500" orderField="lid" <?php if($_REQUEST["_order"] == 'lid'): ?>class="<?php echo ($_REQUEST["_sort"]); ?>"<?php endif; ?>>等级名称</th>
+			<th width="200" orderField="type" <?php if($_REQUEST["_order"] == 'type'): ?>class="<?php echo ($_REQUEST["_sort"]); ?>"<?php endif; ?>>佣金类型</th>
+			<th width="100" orderField="value" <?php if($_REQUEST["_order"] == 'value'): ?>class="<?php echo ($_REQUEST["_sort"]); ?>"<?php endif; ?>>佣金</th>
+			<th width="80">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr target="sid_node" rel="<?php echo ($vo['id']); ?>">
+				<td><?php echo ($vo['id']); ?></td>
+				<td><?php echo (getParent('Level',$vo['lid'],'name')); ?></td>
+				<td>
+					<?php if(($vo["type"])  ==  "0"): ?>固定<?php endif; ?>
+					<?php if(($vo["type"])  ==  "1"): ?>比例<?php endif; ?>
+				</td>
+				<td><?php echo ($vo['value']); ?></td>
+				<td><a href="__URL__/edit/id/<?php echo ($vo['id']); ?>" target="dialog" rel="__MODULE___edit">编辑</a></td>
+			</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共<?php echo ($totalCount); ?>条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="<?php echo ($totalCount); ?>" numPerPage="<?php echo ($numPerPage); ?>" pageNumShown="10" currentPage="<?php echo ($currentPage); ?>"></div>
+	</div>
+</div>

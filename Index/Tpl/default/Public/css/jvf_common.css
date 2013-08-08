@@ -999,7 +999,7 @@ _width:expression(function(el){el.style.width=el.clientWidth > 420 ? "420px" : "
     float: left;
     padding: 0 8px;
 }
-.linkbg{background: repeat-x url("../images/linkbot.png") scroll 0 0 transparent; height:11px;}
+.linkbg{background: repeat-x url("../images/linkbot.png") scroll 0 0 transparent; height:5px;}
 .link_bot{}
 .footernav {
     text-align: center;

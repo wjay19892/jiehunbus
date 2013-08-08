@@ -16,7 +16,7 @@ return array(
 	'site_page_listrows'=>'20',
 	'site_credits_name'=>'积分',
 	'site_couponname'=>'优惠券',
-	'site_replacestr'=>'她妈|它妈|他妈|你妈|去死|贱人|www|日|操',
+	'site_replacestr'=>'她妈|它妈|他妈|你妈|去死|贱人|www|日|操|草你马|狗日的',
 	'site_prepaid_card_name'=>'充值卡',
 	'site_mail_on'=>'1',
 	'site_smtp_server'=>'smtp.126.com',
